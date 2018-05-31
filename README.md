@@ -12,7 +12,7 @@
 
 ### Baixe o projeto no repositório do GitHub (Deve ter o git instalado)
 
-<pre>git clone https://github.com/roggerior/4GroupSoftwareEngineering.git</pre>
+<pre>git clone https://github.com/pedrohenriquebrandao/4GroupSoftwareEngineering.git</pre>
 
 ### Dentro do diretório do projeto execute o comando
 
