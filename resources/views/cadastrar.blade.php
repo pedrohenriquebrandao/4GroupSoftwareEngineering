@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>Login V4</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -90,7 +90,7 @@
 							Ainda não possui uma conta?
 						</span> 
 
-						<a href="/cadastrar" class="txt2">
+						<a href="#" class="txt2">
 							Criar conta
 						</a> 
 					</div>
