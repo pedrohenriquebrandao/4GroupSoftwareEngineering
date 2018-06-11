@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.bg-lightgray{
-    background-color:Black;
+.bg-red{
+    background-color: rgb(173, 30, 25);
     position: fixed;
     height: 100px;
     bottom: 0;
@@ -10,10 +10,9 @@
 .float{
    float:center;
 }
-
 </style>
 
-<footer class="container-fluid text-center bg-lightgray">
+<footer class="container-fluid text-center bg-red">
 <!--Facebook-->
 <div class="float">
 <br>
