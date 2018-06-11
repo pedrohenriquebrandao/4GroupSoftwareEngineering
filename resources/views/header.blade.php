@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top" role="navigation">
     <div class="container">
         <div>
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Logotipo</a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <img src="{!! asset('image/logo.png') !!}" height= "150">            
+            </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
