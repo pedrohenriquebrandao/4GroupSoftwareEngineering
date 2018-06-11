@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .bg-lightgray{
-    background-color:Black;
+    background-color: rgb(173, 30, 25);
     position: fixed;
     height: 100px;
     bottom: 0;
