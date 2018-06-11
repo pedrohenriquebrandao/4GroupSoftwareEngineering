@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#entrar">
+                    <a class="nav-link js-scroll-trigger" href="/login">
                         <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
