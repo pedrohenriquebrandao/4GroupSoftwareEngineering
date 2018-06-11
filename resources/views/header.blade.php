@@ -1,8 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top" role="navigation">
+<style>
+    .bg-red{
+        background-color: rgb(173, 30, 25);
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-red navbar-fixed-top" role="navigation">
     <div class="container">
         <div>
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <img src="{!! asset('image/logo.png') !!}" height= "150">            
+            <a style="margin-left: 0px" class="navbar-brand js-scroll-trigger" href="#page-top">
+                
+            <img src="{!! asset('image/logo.png') !!}" height= "130">
+            <img src="{!! asset('image/nomelogo.png') !!}" height= "120">            
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
