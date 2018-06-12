@@ -25,3 +25,6 @@ Route::get('cadastrar', function () {
 Route::get('admin', function () {
     return view('admin');
 });
+Route::get('recsenha', function () {
+    return view('recsenha');
+});

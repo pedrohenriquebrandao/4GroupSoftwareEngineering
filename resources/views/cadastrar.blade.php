@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V4</title>
+	<title>Entrar</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -32,13 +32,13 @@
 		<div class="container-login100" style="background-image: url({!! asset('image/bg-login.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
-					<center><img style=""  src="{!! asset('image/logoEntrar.png') !!}" height= "130"></center>
+					<center><img style=""  src="{!! asset('image/logocadastrar.png') !!}" height= "110"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
-						<span class="label-input100">E-mail</span>
+						<span class="label-input100"Nome</span>
 						<input class="input100" type="text" name="e-mail" placeholder="Digite seu e-mail">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
