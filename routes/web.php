@@ -22,3 +22,6 @@ Route::get('login', function () {
 Route::get('cadastrar', function () {
     return view('cadastrar');
 });
+Route::get('admin', function () {
+    return view('admin');
+});
