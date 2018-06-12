@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
+	<title>Entrar</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -29,7 +29,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url({!! asset('image/bg-login.jpg') !!});">
+		<div class="container-login100" style="background-image: url({!! asset('image/ingred.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
 					<center><img style=""  src="{!! asset('image/logoEntrar.png') !!}" height= "130"></center>
