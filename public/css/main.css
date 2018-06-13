@@ -312,6 +312,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 20px;
 }
 
 .wrap-login100-form-btn {
@@ -473,4 +474,4 @@ iframe {
     padding-left: 15px;
     padding-right: 15px;
   }
-} 
+}
