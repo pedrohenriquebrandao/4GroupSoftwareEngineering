@@ -21,10 +21,8 @@ class CreateEnderecoTable extends Migration
             $table->string('numero');
             $table->string('cidade');
             $table->string('estado');
-            $table->string('complementos');
+            $table->string('complemento');
             $table->string('zona');
-            $table->integer('produtor_id')->unsigned();
-            $table->foreign('produtor_id')->references('id')->on('produtores')->onDelete('cascade');
             $table->timestamps();
         });
     }

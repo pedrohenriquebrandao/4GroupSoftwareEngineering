@@ -10,6 +10,7 @@ class EnderecoController extends Controller
     public function addEndereco(Endereco $endereco){
         try{    
             $endereco->save();
+            return $endereco->id;
         } catch(\Exception $e){
             return "ERRO: " . $e->getMessage();
         }

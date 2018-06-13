@@ -17,6 +17,8 @@ class CreateProdutorTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('cnpj');
+            //$table->integer('endereco_id')->unsigned();
+            //$table->foreign('endereco_id')->references('id')->on('enderecos');
             $table->timestamps();
         });
     }

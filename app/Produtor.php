@@ -9,7 +9,8 @@ class Produtor extends Model
     protected $fillable = [
         'id',
         'nome',
-        'cnpj'
+        'cnpj',
+        'endereco_id'
     ];
 
     protected $table = 'produtores';

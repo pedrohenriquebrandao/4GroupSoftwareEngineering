@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class ControllerProdutor extends Controller
 {
     private $enderecos_controller;
+    private $produtor;
 
     public function __construct(EnderecoController $enderecos_controller){
         $this->enderecos_controller = $enderecos_controller;
+        $this->produtor = new Produtor();
     }
 
     public function cadProdutor(Request $request){
-        $produtor = Produtor::create($request->all()); //Método create retorna o objeto salvo no bd.
-        
         if($request->cep){
             //Cadastra o endereço, mas ainda não o associa ao produtor.
             $endereco = new Endereco();
@@ -28,10 +28,12 @@ class ControllerProdutor extends Controller
             $endereco->estado = $request->estado;
             $endereco->complemento = $request->complemento;
             $endereco->zona = $request->zona;
-            $endereco->produtor_id = $produtor->id;
             
-            $this->enderecos_controller->addEndereco($endereco);
+            $id = $this->enderecos_controller->addEndereco($endereco);
+            //$produtor->id = $id;
         }
+
+        $produtor = Produtor::create($request->all()); //Método create retorna o objeto salvo no bd.
         return redirect("/")->with("message", "Produtor criado com sucesso!");
     }
 }
