@@ -31,7 +31,8 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({!! asset('image/ingred.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="{{url('cadProdutor')}}" method="POST">
+				{{csrf_field()}}
 					<center><img style=""  src="{!! asset('image/logocadastrar.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
@@ -39,13 +40,13 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Name is required">
 						<span class="label-input100">Nome da Empresa/Produtor</span>
-                        <input class="input100" type="text" name="e-mail" placeholder="Digite o Nome de sua Empresa">
+                        <input class="input100" type="text" name="nome" placeholder="Digite o Nome de sua Empresa">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">CNPJ</span>
-						<input class="input100" type="senha" name="pass" placeholder="Digite o CNPJ">
+						<input class="input100" type="text" name="cnpj" placeholder="Digite o CNPJ">
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
 					</br>
@@ -53,35 +54,56 @@
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Rua</span>
-						<input class="input100" type="senha" name="pass" placeholder="Digite o nome da rua">
+						<input class="input100" type="text" name="rua" placeholder="Digite o nome da rua">
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Bairro</span>
-						<input class="input100" type="senha" name="pass" placeholder="Digite o nome do Bairro">
+						<input class="input100" type="text" name="bairro" placeholder="Digite o nome do Bairro">
+						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+						<span class="label-input100">CEP</span>
+						<input class="input100" type="text" name="cep" placeholder="Digite o CEP">
+						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+						<span class="label-input100">Número</span>
+						<input class="input100" type="text" name="numero" placeholder="Digite o número">
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Cidade</span>
-						<input class="input100" type="senha" name="pass" placeholder="Digite o nome da Cidade">
+						<input class="input100" type="text" name="cidade" placeholder="Digite o nome da Cidade">
+						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+						<span class="label-input100">Estado</span>
+						<input class="input100" type="text" name="estado" placeholder="Digite o Estado">
+						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+						<span class="label-input100">Complemento</span>
+						<input class="input100" type="text" name="complemento" placeholder="Digite o Complemento">
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
 
                     <div class="row">
-                        <div class="wrap-input100 validate-input col-md-5" data-validate="CNPJ is required">
-						    <span class="label-input100">Cidade</span>
-						    <input class="input100" type="senha" name="pass" placeholder="Digite o nome da Cidade">
-						    <span class="focus-input100" data-symbol="&#xf10a;"></span>
-					    </div>
-                        <div class="wrap-input100 validate-input col-md-7" data-validate="CNPJ is required">
-						    <span class="label-input100">Cidade</span>
-						    <input class="input100" type="senha" name="pass" placeholder="Digite o nome da Cidade">
-						    <span class="focus-input100" data-symbol="&#xf10a;"></span>
-					    </div>
+                        <div class="form-check col-sm-6">
+                            <input type="radio" class="form-check-input" name="zona" id="radioUrbana" value="urbana" checked>
+                            <label class="form-check-label" for="radioUrnaba">Zona Urbana</label>
+                        </div>
+                        <div class="form-check col-sm-6">
+                            <input type="radio" class="form-check-input" name="zona" id="radioRural" value="rural" checked>
+                            <label class="form-check-label" for="radioRural">Zona Rural</label>  
+                        </div>
                     </div>
-
 
 
 					<div class="container-login100-form-btn">
