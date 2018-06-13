@@ -28,3 +28,6 @@ Route::get('admin', function () {
 Route::get('recsenha', function () {
     return view('recsenha');
 });
+Route::get('cadastrarProdutor', function () {
+    return view('cadastrarProdutor');
+});

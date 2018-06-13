@@ -32,67 +32,65 @@
 		<div class="container-login100" style="background-image: url({!! asset('image/ingred.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
-					<center><img style=""  src="{!! asset('image/logoEntrar.png') !!}" height= "130"></center>
+					<center><img style=""  src="{!! asset('image/logocadastrar.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
-						<span class="label-input100">E-mail</span>
-						<input class="input100" type="text" name="e-mail" placeholder="Digite seu e-mail">
-						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Name is required">
+						<span class="label-input100">Nome da Empresa/Produtor</span>
+                        <input class="input100" type="text" name="e-mail" placeholder="Digite o Nome de sua Empresa">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<span class="label-input100">Senha</span>
-						<input class="input100" type="senha" name="pass" placeholder="Digite sua senha">
-						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					<div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+						<span class="label-input100">CNPJ</span>
+						<input class="input100" type="senha" name="pass" placeholder="Digite o CNPJ">
+						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
-					
-					<div class="text-right p-t-8 p-b-31">
-						<a href="#">
-							Esqueceu a senha?
-						</a>
+
+                    <center><h2>Endereço</h2></center>
+
+                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+						<span class="label-input100">Rua</span>
+						<input class="input100" type="senha" name="pass" placeholder="Digite o nome da rua">
+						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
-					
+
+                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+						<span class="label-input100">Bairro</span>
+						<input class="input100" type="senha" name="pass" placeholder="Digite o nome do Bairro">
+						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+						<span class="label-input100">Cidade</span>
+						<input class="input100" type="senha" name="pass" placeholder="Digite o nome da Cidade">
+						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+					</div>
+
+                    <div class="row">
+                        <div class="wrap-input100 validate-input col-md-5" data-validate="CNPJ is required">
+						    <span class="label-input100">Cidade</span>
+						    <input class="input100" type="senha" name="pass" placeholder="Digite o nome da Cidade">
+						    <span class="focus-input100" data-symbol="&#xf10a;"></span>
+					    </div>
+                        <div class="wrap-input100 validate-input col-md-7" data-validate="CNPJ is required">
+						    <span class="label-input100">Cidade</span>
+						    <input class="input100" type="senha" name="pass" placeholder="Digite o nome da Cidade">
+						    <span class="focus-input100" data-symbol="&#xf10a;"></span>
+					    </div>
+                    </div>
+
+
+
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								Entrar
+								Cadastrar-se
 							</button>
 						</div>
-					</div>
-
-					<div class="txt1 text-center p-t-54 p-b-20">
-						<span>
-							Ou entre usando
-						</span>
-					</div>
-
-					<div class="flex-c-m">
-						<a href="#" class="login100-social-item bg1">
-							<i class="fa fa-facebook"></i>
-						</a>
-
-						<!--<a href="#" class="login100-social-item bg2">
-							<i class="fa fa-twitter"></i>
-						</a>-->
-
-						<a href="#" class="login100-social-item bg3">
-							<i class="fa fa-google"></i>
-						</a>
-						
-					</div>
-
-					 <div class="flex-col-c p-t-155">
-						<span class="txt1 p-b-17">
-							Ainda não possui uma conta?
-						</span> 
-
-						<a href="/cadastrar" class="txt2">
-							Criar conta
-						</a> 
 					</div>
 				</form>
 			</div>
