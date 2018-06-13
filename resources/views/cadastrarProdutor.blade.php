@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Entrar</title>
+	<title>Cadastro de Produtor</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -48,7 +48,7 @@
 						<input class="input100" type="senha" name="pass" placeholder="Digite o CNPJ">
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
-
+					</br>
                     <center><h2>Endereço</h2></center>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">

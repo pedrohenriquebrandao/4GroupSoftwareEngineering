@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Recuperação de Senha</title>
+	<title>Confirmar Senha</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,29 +19,29 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url({!! asset('image/recsenha.jpg') !!});">
+		<div class="container-login100" style="background-image: url({!! asset('image/bgsenhaconfirm.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
 					<center><img style=""  src="{!! asset('image/logoAdmin.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
-					</span>
-					<div class="txt1 text-center p-t-54 p-b-20">
-						<span>
-							Digite sua conta de e-mail onde será enviado um link para ser definida uma nova senha.
-						</span>
-					</div>
+					</span>					
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
-						<span class="label-input100">E-mail</span>
-						<input class="input100" type="text" name="e-mail" placeholder="Digite seu e-mail">
-						<span class="focus-input100" data-symbol="&#xf206;"></span>
-					</div>					
+						<span class="label-input100">Nova senha</span>
+						<input class="input100" type="password" name="e-mail" placeholder="Digite a nova senha">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>	
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+						<span class="label-input100">Confirmar senha</span>
+						<input class="input100" type="password" name="e-mail" placeholder="Digite a senha novamente">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>				
 					
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								Confirmar
+								Redefinir senha
 							</button>
 						</div>
 					</div> 
