@@ -31,7 +31,8 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({!! asset('image/ingred.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="{{url('cadProdutor')}}" method="POST">
+				{{csrf_field()}}
 					<center><img style=""  src="{!! asset('image/logocadastrar.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
@@ -39,7 +40,7 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Name is required">
 						<span class="label-input100">Nome da Empresa/Produtor</span>
-                        <input class="input100" type="text" name="e-mail" placeholder="Digite o Nome de sua Empresa">
+                        <input class="input100" type="text" name="nome" placeholder="Digite o Nome de sua Empresa">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
@@ -72,7 +73,7 @@
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Número</span>
-						<input class="input100" type="text" name="num" placeholder="Digite o número">
+						<input class="input100" type="text" name="numero" placeholder="Digite o número">
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
 
@@ -90,17 +91,17 @@
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Complemento</span>
-						<input class="input100" type="text" name="compl" placeholder="Digite o Complemento">
+						<input class="input100" type="text" name="complemento" placeholder="Digite o Complemento">
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
 
                     <div class="row">
                         <div class="form-check col-sm-6">
-                            <input type="radio" class="form-check-input" name="zona" id="radioUrbana" value="option1" checked>
+                            <input type="radio" class="form-check-input" name="zona" id="radioUrbana" value="urbana" checked>
                             <label class="form-check-label" for="radioUrnaba">Zona Urbana</label>
                         </div>
                         <div class="form-check col-sm-6">
-                            <input type="radio" class="form-check-input" name="zona" id="radioRural" value="option2" checked>
+                            <input type="radio" class="form-check-input" name="zona" id="radioRural" value="rural" checked>
                             <label class="form-check-label" for="radioRural">Zona Rural</label>  
                         </div>
                     </div>

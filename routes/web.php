@@ -31,3 +31,5 @@ Route::get('recsenha', function () {
 Route::get('cadastrarProdutor', function () {
     return view('cadastrarProdutor');
 });
+
+Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
