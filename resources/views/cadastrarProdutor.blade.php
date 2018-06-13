@@ -50,7 +50,7 @@
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
 					</br>
-                    <center><h2>Endereço</h2></center>
+                    <span class="label-input100">Endereço:</span>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Rua</span>
@@ -93,13 +93,13 @@
 						<input class="input100" type="text" name="complemento" placeholder="Digite o Complemento">
 						<span class="focus-input100" data-symbol="&#xf10a;"></span>
 					</div>
-
+					<span class="label-input100">Área:</span>			
                     <div class="row">
-                        <div class="form-check col-sm-6">
+                        <div class="form-check col-sm-6 p-t-10 p-b-10 p-l-10">
                             <input type="radio" class="form-check-input" name="zona" id="radioUrbana" value="urbana" checked>
                             <label class="form-check-label" for="radioUrnaba">Zona Urbana</label>
                         </div>
-                        <div class="form-check col-sm-6">
+                        <div class="form-check col-sm-6 p-l-10">
                             <input type="radio" class="form-check-input" name="zona" id="radioRural" value="rural" checked>
                             <label class="form-check-label" for="radioRural">Zona Rural</label>  
                         </div>

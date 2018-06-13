@@ -86,18 +86,16 @@
 						<span class="label-input100">Sobrenome</span>
 						<input class="input100" type="text" name="e-mail" placeholder="Digite seu sobrenome">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
-					</div>
+					</div>		
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
-						<span class="label-input100">Sexo</span>
-						<div class="form-group">	
-							<input class="input100" type="list" name="sexo" placeholder="Selecione seu sexo">						
-							<select class="form-control" id="sel1">
-								<option>Masculino</option>
-								<option>Feminino</option>								
-							</select>
-						</div>
-					</div>
+						<span class="label-input100">Sexo:</span>
+						<select class="form-control p-b-10" id="sel1">
+							<option>Masculino</option>
+							<option>Feminino</option>								
+						</select>						
+					</div>				
+										
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Telefone</span>
@@ -109,7 +107,7 @@
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn" href="/landing">
-								Confirmar Cadastro
+								Cadastrar-se
 							</button>
 						</div>
 					</div>	
