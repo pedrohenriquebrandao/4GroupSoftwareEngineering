@@ -12,44 +12,21 @@
     <!-- Bootstrap core CSS >
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- -->
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
     
     <!-- Custom styles for this template -->
     <link href="css/half-slider.css" rel="stylesheet">
 
   </head>
 
-  <body>
+<body>
 
-    <!-- Navigation >
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-<!-- -->
+    <!-- Navigation -->
+    
 @include ('header')
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -91,8 +68,21 @@
         </a>
       </div>
     </header>
-
-    <!-- Page Content -->
+    <!-- Cards-->
+    <hr>
+    <div class="container">
+        <div class="row text-center">
+          @include('card')
+          @include('card')
+          @include('card')
+          @include('card')
+          @include('card')
+          @include('card')
+          @include('card')
+          @include('card')
+        </div>
+    </div>
+    <!-- Page Content >
     <section class="py-5">
       <div class="container">
         <h1>Half Slider by Start Bootstrap</h1>
@@ -101,19 +91,15 @@
           file.</p>
       </div>
     </section>
+    <!-- -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
+    @include('footer')
+    
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 
-  </body>
+</body>
 
 </html>
