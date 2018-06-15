@@ -27,9 +27,10 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+
+        
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url({!! asset('image/ingred.jpg') !!});">
+		<div class="container-login100" style="background-image: url({!! asset('image/ingred.png') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
 					<center><img style=""  src="{!! asset('image/logoEntrar.png') !!}" height= "130"></center>
@@ -118,6 +119,6 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
+	@include('footer')
 </body>
 </html>
