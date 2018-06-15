@@ -26,8 +26,8 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<body>
-	
+<body>	 
+        
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({!! asset('image/ingred.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
@@ -50,7 +50,7 @@
 					</div>
 					
 					<div class="text-right p-t-8 p-b-31">
-						<a href="#">
+						<a href="/recsenha">
 							Esqueceu a senha?
 						</a>
 					</div>
@@ -73,11 +73,7 @@
 					<div class="flex-c-m">
 						<a href="#" class="login100-social-item bg1">
 							<i class="fa fa-facebook"></i>
-						</a>
-
-						<!--<a href="#" class="login100-social-item bg2">
-							<i class="fa fa-twitter"></i>
-						</a>-->
+						</a>						
 
 						<a href="#" class="login100-social-item bg3">
 							<i class="fa fa-google"></i>
@@ -117,7 +113,6 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
+	<script src="js/main.js"></script>	
 </body>
 </html>

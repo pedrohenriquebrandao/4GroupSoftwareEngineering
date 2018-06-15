@@ -31,8 +31,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({!! asset('image/bgCadastro.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form" action="{{url('cadUsuario')}}" method="POST">
-					{{csrf_field()}}
+				<form class="login100-form validate-form">
 					<center><img style=""  src="{!! asset('image/logocadastrar.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
@@ -55,13 +54,13 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">E-mail</span>
-						<input class="input100" type="text" name="email" placeholder="Digite seu e-mail">
+						<input class="input100" type="text" name="e-mail" placeholder="Digite seu e-mail">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Senha</span>
-						<input class="input100" type="password" name="senha" placeholder="Digite sua senha">
+						<input class="input100" type="password" name="pass" placeholder="Digite sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
@@ -73,35 +72,43 @@
 
 					<div class="wrap-input100 validate-input" data-validate="CPF is required">
 						<span class="label-input100">CPF</span>
-						<input class="input100" type="text" name="cpf" placeholder="Digite seu CPF">
-						<span class="focus-input100" data-symbol="&#xf190;"></span>
+						<input class="input100" type="text" name="pass" placeholder="Digite seu CPF">
+						<span class="focus-input100" data-symbol="&#xf2c3;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Nome</span>
-						<input class="input100" type="text" name="nome" placeholder="Digite seu nome">
-						<span class="focus-input100" data-symbol="&#xf206;"></span>
+						<input class="input100" type="text" name="e-mail" placeholder="Digite seu nome">
+						<span class="focus-input100" data-symbol="&#xf20d;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Sobrenome</span>
-						<input class="input100" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
-						<span class="focus-input100" data-symbol="&#xf206;"></span>
+						<input class="input100" type="text" name="e-mail" placeholder="Digite seu sobrenome">
+						<span class="focus-input100" data-symbol="&#xf20d;"></span>
 					</div>		
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+					<div class="wrap-input100 validate-input" data-validate = "Username is required" style="padding-bottom: 20px;">
 						<span class="label-input100">Sexo:</span>
-						<select class="form-control p-b-10" name="sexo">
-							<option value="masculino" name="sexo">Masculino</option>
-							<option value="feminino" name="sexo">Feminino</option>								
-						</select>						
-					</div>				
+						<div class="row">
+							<div class="form-check col-sm-6 p-t-10 p-b-10 p-l-10">
+								<input type="radio" class="form-check-input" name="sexo" id="radioUrbana" value="urbana" checked>
+								<label class="form-check-label" for="radioUrnaba">Masculino</label>
+							</div>
+							<div class="form-check col-sm-6 p-l-10">
+								<input type="radio" class="form-check-input" name="sexo" id="radioRural" value="rural" checked>
+								<label class="form-check-label" for="radioRural">Feminino</label>  
+							</div>
+                    	</div>
+										
+					</div>	
+								
 										
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Telefone</span>
-						<input class="input100" type="text" name="telefone" placeholder="Digite seu número de telefone">
-						<span class="focus-input100" data-symbol="&#xf206;"></span>
+						<input class="input100" type="text" name="e-mail" placeholder="Digite seu número de telefone">
+						<span class="focus-input100" data-symbol="&#xf2bc;"></span>
 					</div>					
 					
 					<div class="container-login100-form-btn">
