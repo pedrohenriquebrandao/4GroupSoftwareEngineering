@@ -14,11 +14,11 @@ class CreateProdutorAvaliacaoTable extends Migration
     {
         Schema::create('produtor_avaliacao', function (Blueprint $table) {
             $table->increments('id');
-            $table->tinyint('ruim');
-            $table->tinyint('pessimo');
-            $table->tinyint('mediano');
-            $table->tinyint('bom');
-            $table->tinyint('otimo');
+            $table->tinyInteger('ruim');
+            $table->tinyInteger('pessimo');
+            $table->tinyInteger('mediano');
+            $table->tinyInteger('bom');
+            $table->tinyInteger('otimo');
             $table->timestamps();
             
         });

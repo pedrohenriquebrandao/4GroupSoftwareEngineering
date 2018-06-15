@@ -17,7 +17,7 @@ class CreateAdmAdministradorTable extends Migration
             $table->string('email');
             $table->string('senha');
             $table->string('nome');
-            $table->tinyint('telefone', 11);
+            $table->tinyInteger('telefone');
             $table->timestamps();
         });
     }

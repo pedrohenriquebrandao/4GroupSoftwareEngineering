@@ -14,10 +14,10 @@ class CreateConsumidorEnderecoTable extends Migration
     {
         Schema::create('consumidor_endereco', function (Blueprint $table) {
             $table->increments('id');
-            $table->tinyint('cep', 8);
+            $table->tinyInteger('cep');
             $table->string('rua');
             $table->string('bairro');
-            $table->tinyint('numero');
+            $table->tinyInteger('numero');
             $table->string('complemento');
             $table->string('referencia');
             $table->string('cidade');
