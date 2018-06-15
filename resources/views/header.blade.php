@@ -19,15 +19,14 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#carrinho">
-                        <i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i>
+            <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#pesquisar">
+                        <i class="fa fa-search fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#pesquisar">
-                        <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                    <a class="nav-link js-scroll-trigger" href="#carrinho">
+                        <i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>     
                 <li class="nav-item">

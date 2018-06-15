@@ -37,24 +37,24 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item active" style="background-image: url('https://sportlife.com.br/wp-content/uploads/2017/09/benef%C3%ADcios-da-ma%C3%A7%C3%A3-para-o-corpo-humano-iloveimg-resized.jpg')">
             <div class="carousel-caption d-none d-md-block">
-              <h3>First Slide</h3>
-              <p>This is a description for the first slide.</p>
+              <h3>Produto 1</h3>
+              <p>Descrição blá blá blá</p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item" style="background-image: url('https://www.greenme.com.br/images/usos-beneficios/alface-beneficios.jpg')">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Second Slide</h3>
-              <p>This is a description for the second slide.</p>
+              <h3>Produto 2</h3>
+              <p>Descrição blá blá blá</p>
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item" style="background-image: url('https://sfagro.uol.com.br/wp-content/uploads/2016/05/1005_tomate.jpg')">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Third Slide</h3>
-              <p>This is a description for the third slide.</p>
+              <h3>Produto 3</h3>
+              <p>Descrição blá blá blá</p>
             </div>
           </div>
         </div>
@@ -82,6 +82,7 @@
           @include('card')
         </div>
     </div>
+    <hr>
     <!-- Page Content >
     <section class="py-5">
       <div class="container">

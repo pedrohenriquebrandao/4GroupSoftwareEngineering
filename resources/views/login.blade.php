@@ -26,12 +26,8 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
-<<<<<<< HEAD
 <body>
 
-=======
-<body>	 
->>>>>>> 0703818507cae662c2dcbbfc1c083d38c03103d3
         
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({!! asset('image/ingred.png') !!});">
@@ -118,11 +114,7 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-<<<<<<< HEAD
 	<script src="js/main.js"></script>
 	@include('footer')
-=======
-	<script src="js/main.js"></script>	
->>>>>>> 0703818507cae662c2dcbbfc1c083d38c03103d3
 </body>
 </html>
