@@ -7,7 +7,8 @@
 <!--===============================================================================================-->	
 	
 <!--===============================================================================================-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
 <!--===============================================================================================-->
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css" >
@@ -29,7 +30,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url({!! asset('image/ingred.jpg') !!});">
+		<div class="container-login100" style="background-image: url({!! asset('image/ingred.png') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form" action="{{url('cadProdutor')}}" method="POST">
 				{{csrf_field()}}
@@ -47,51 +48,52 @@
 					<div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">CNPJ</span>
 						<input class="input100" type="text" name="cnpj" placeholder="Digite o CNPJ">
-						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+						<span class="focus-input100" data-symbol="&#xf2c3;"></span>
 					</div>
 					</br>
+					
                     <span class="label-input100">Endereço:</span>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Rua</span>
 						<input class="input100" type="text" name="rua" placeholder="Digite o nome da rua">
-						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+						
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Bairro</span>
 						<input class="input100" type="text" name="bairro" placeholder="Digite o nome do Bairro">
-						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+						
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">CEP</span>
 						<input class="input100" type="text" name="cep" placeholder="Digite o CEP">
-						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+						
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Número</span>
 						<input class="input100" type="text" name="numero" placeholder="Digite o número">
-						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+						
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Cidade</span>
 						<input class="input100" type="text" name="cidade" placeholder="Digite o nome da Cidade">
-						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+						
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Estado</span>
 						<input class="input100" type="text" name="estado" placeholder="Digite o Estado">
-						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+						
 					</div>
 
                     <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
 						<span class="label-input100">Complemento</span>
 						<input class="input100" type="text" name="complemento" placeholder="Digite o Complemento">
-						<span class="focus-input100" data-symbol="&#xf10a;"></span>
+						
 					</div>
 					<span class="label-input100">Área:</span>			
                     <div class="row">
@@ -121,7 +123,7 @@
 	
 
 	<div id="dropDownSelect1"></div>
-	
+	@include('footer')
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

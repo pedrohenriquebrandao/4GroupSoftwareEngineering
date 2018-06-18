@@ -22,7 +22,7 @@
 		<div class="container-login100" style="background-image: url({!! asset('image/bgsenhaconfirm.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
-					<center><img style=""  src="{!! asset('image/logoAdmin.png') !!}" height= "130"></center>
+					<center><img style=""  src="{!! asset('image/recsenha.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
 					</span>					
@@ -52,6 +52,6 @@
 	
 
 	<div id="dropDownSelect1"></div>
-	
+	@include('footer')
 </body>
 </html>

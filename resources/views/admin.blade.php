@@ -19,7 +19,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url({!! asset('image/bg-admin.png') !!}); background-size:auto; background-repeat:repeat-x;">
+		<div class="container-login100" style="background-image: url({!! asset('image/bgAdmin.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form class="login100-form validate-form">
 					<center><img style=""  src="{!! asset('image/logoAdmin.png') !!}" height= "130"></center>
@@ -39,8 +39,8 @@
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 					
-					<div class="text-right p-t-8 p-b-31">
-						<a href="#">
+					<div class="text-right p-t-8 p-b-13">
+						<a href="/recsenha">
 							Esqueceu a senha?
 						</a>
 					</div>
