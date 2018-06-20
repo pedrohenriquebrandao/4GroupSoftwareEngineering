@@ -18,7 +18,7 @@ class Endereco extends Model
         'zona'
     ];
 
-    protected $table = 'enderecos';
+    protected $table = 'consumidor_endereco';
 
     public function produtor(){
         return $this->belongsTo(Produtor::class, "produtor_id");

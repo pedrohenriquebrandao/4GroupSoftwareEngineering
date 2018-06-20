@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class EnderecoController extends Controller
 {
+    public function AddEnderecoProdutor(Request $request){
+        $endereco = Endereco::create($request->all());
+
+        return $endereco->id;
+    }
+
     public function addEndereco(Endereco $endereco){
         try{    
             $endereco->save();

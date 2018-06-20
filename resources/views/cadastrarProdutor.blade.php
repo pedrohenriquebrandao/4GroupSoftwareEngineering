@@ -39,60 +39,105 @@
 						<!--Entrar-->
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Name is required">
+					<div class="wrap-input100 m-b-23 {{$errors->has('nome') ? 'has-error' : ''}}">
 						<span class="label-input100">Nome da Empresa/Produtor</span>
-                        <input class="input100" type="text" name="nome" placeholder="Digite o Nome de sua Empresa">
+                        @if($errors->has('nome'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('nome')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="nome" value="{{old('nome')}}" placeholder="Digite o Nome de sua Empresa">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+					<div class="wrap-input100 {{$errors->has('cnpj') ? 'has-error' : ''}}">
 						<span class="label-input100">CNPJ</span>
-						<input class="input100" type="text" name="cnpj" placeholder="Digite o CNPJ">
+						@if($errors->has('cnpj'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('cnpj')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="cnpj" value="{{old('cnpj')}}" placeholder="Digite o CNPJ">
 						<span class="focus-input100" data-symbol="&#xf2c3;"></span>
 					</div>
 					</br>
 					
                     <span class="label-input100">Endereço:</span>
 
-                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+                    <div class="wrap-input100 {{$errors->has('rua') ? 'has-error' : ''}}">
 						<span class="label-input100">Rua</span>
-						<input class="input100" type="text" name="rua" placeholder="Digite o nome da rua">
+						@if($errors->has('rua'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('rua')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="rua" value="{{old('rua')}}" placeholder="Digite o nome da rua">
 						
 					</div>
 
-                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+                    <div class="wrap-input100 {{$errors->has('bairro') ? 'has-error' : ''}}">
 						<span class="label-input100">Bairro</span>
-						<input class="input100" type="text" name="bairro" placeholder="Digite o nome do Bairro">
+						@if($errors->has('bairro'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('bairro')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="bairro" value="{{old('bairro')}}" placeholder="Digite o nome do Bairro">
 						
 					</div>
 
-                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+                    <div class="wrap-input100 {{$errors->has('cep') ? 'has-error' : ''}}">
 						<span class="label-input100">CEP</span>
-						<input class="input100" type="text" name="cep" placeholder="Digite o CEP">
+						@if($errors->has('cep'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('cep')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="cep" value="{{old('cep')}}" placeholder="Digite o CEP">
 						
 					</div>
 
-                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+                    <div class="wrap-input100 {{$errors->has('numero') ? 'has-error' : ''}}">
 						<span class="label-input100">Número</span>
-						<input class="input100" type="text" name="numero" placeholder="Digite o número">
+						@if($errors->has('cidade'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('cidade')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="numero" value="{{old('numero')}}" placeholder="Digite o número">
 						
 					</div>
 
-                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+                    <div class="wrap-input100 {{$errors->has('cidade') ? 'has-error' : ''}}">
 						<span class="label-input100">Cidade</span>
-						<input class="input100" type="text" name="cidade" placeholder="Digite o nome da Cidade">
+						@if($errors->has('cidade'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('cidade')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="cidade" value="{{old('cidade')}}" placeholder="Digite o nome da Cidade">
 						
 					</div>
 
-                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+                    <div class="wrap-input100 {{$errors->has('estado') ? 'has-error' : ''}}">
 						<span class="label-input100">Estado</span>
-						<input class="input100" type="text" name="estado" placeholder="Digite o Estado">
+						@if($errors->has('estado'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('estado')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="estado" value="{{old('estado')}}" placeholder="Digite o Estado">
 						
 					</div>
 
-                    <div class="wrap-input100 validate-input" data-validate="CNPJ is required">
+                    <div class="wrap-input100 {{$errors->has('complemento') ? 'has-error' : ''}}">
 						<span class="label-input100">Complemento</span>
-						<input class="input100" type="text" name="complemento" placeholder="Digite o Complemento">
+						@if($errors->has('complemento'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('complemento')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="complemento" value="{{old('complemento')}}" placeholder="Digite o Complemento">
 						
 					</div>
 					<span class="label-input100">Área:</span>			
