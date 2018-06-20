@@ -63,9 +63,9 @@
                     <img src="{!! asset('image/logocadastrar.png') !!}" height="50" alt="">
                   </div>
                   <div>
-                    <p>Produto X</p>
-                    <p>Vendido e Entregue por XXX</p>
-                    <p>Quantidade XXX</p>
+                    <p class="titulo-produto">Produto X</p>
+                    <p class="descricao-produto">Vendido e Entregue por: XXX</p>
+                    <p class="descricao-produto">Quantidade: XXX</p>
                     <a href="http://">Remover</a>
                   </div>
                 </div>

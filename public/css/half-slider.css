@@ -40,3 +40,12 @@ button{
 .produto{
   display: block;
 }
+
+.titulo-produto{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.descricao-produto{
+  font-size: 12px;  
+}

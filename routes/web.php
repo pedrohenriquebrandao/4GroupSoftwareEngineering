@@ -40,6 +40,9 @@ Route::get('perfilProdutor', function () {
 Route::get('carrinho', function () {
     return view('carrinho');
 });
+Route::get('pagamento', function () {
+    return view('pagamento');
+});
 
 Route::post("/cadUsuario", "LoginController@cadLogin");
 
