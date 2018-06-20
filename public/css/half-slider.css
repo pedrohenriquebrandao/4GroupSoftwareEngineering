@@ -13,3 +13,22 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+.space{
+  width: 100%;
+  padding-top: 18px;
+}
+
+.posicao{
+  float: left;
+}
+
+button{
+  padding: 0 20px;
+  width: 50%;
+  height: 50px;
+}
+
+.espacemento{
+  padding-right: 10px;
+}

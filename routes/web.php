@@ -37,6 +37,10 @@ Route::get('recsenhaconfirm', function () {
 Route::get('perfilProdutor', function () {
     return view('perfilProdutor');
 });
+Route::get('carrinho', function () {
+    return view('carrinho');
+});
+
 Route::post("/cadUsuario", "LoginController@cadLogin");
 
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
