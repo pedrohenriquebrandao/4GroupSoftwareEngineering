@@ -52,9 +52,9 @@ class LoginController extends Controller
             }
         }
 
-        $regras['email'] = 'required';
+        $regras['email'] = 'required|email'; //Verifica o preenchimento do e-mail e se o e-mail é valido.
         $regras['senha'] = 'required';
-        $regras['confirmasenha'] = 'required';
+        $regras['confirmasenha'] = 'required|same:senha'; //Verifica o preenchimento da confirmação de senha e se é igual ao campo senha;
 
         $mensagens = [
             'nome.required' => 'Campo Nome é obrigatório',
@@ -65,8 +65,10 @@ class LoginController extends Controller
             'telefone.required' => 'Campo Telefone obrigatório',
             'telefone.min' => 'Campo Telefone deve conter no mínimo 8 digitos',
             'email.required' => 'Campo email obrigatório',
+            'email.email' => 'E-mail inserido invalido',
             'senha.required' => 'Campo senha obrigatório',
-            'confirmasenha.required' => 'Confirmação de senha necessária'
+            'confirmasenha.required' => 'Confirmação de senha necessária',
+            'confirmasenha.same' => 'Confirmação de senha difere do campo senha'
         ];
 
         return Validator::make($data, $regras, $mensagens);
