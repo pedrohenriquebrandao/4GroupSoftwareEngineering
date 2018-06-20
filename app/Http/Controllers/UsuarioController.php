@@ -15,8 +15,7 @@ class UsuarioController extends Controller
         try{
             $usuario->save();
         } catch(\Exception $e){
-            var_dump($e->getMessage());
-            //return "Erro: ".$e->getMessage();
+            return "Erro: ".$e->getMessage();
         }
     }
 }

@@ -53,44 +53,74 @@
 						</a>						
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+					<div class="wrap-input100 m-b-23 {{$errors->has('email') ? 'has-error' : ''}}">
 						<span class="label-input100">E-mail</span>
-						<input class="input100" type="text" name="email" placeholder="Digite seu e-mail">
+						@if($errors->has('email'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('email')}}
+							</span>
+						@endif
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
+						<input class="input100" type="text" name="email" value="{{old('email')}}" placeholder="Digite seu e-mail">
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
+					<div class="wrap-input100 {{$errors->has('senha') ? 'has-error' : ''}}">
 						<span class="label-input100">Senha</span>
-						<input class="input100" type="password" name="senha" placeholder="Digite sua senha">
+						@if($errors->has('senha'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('senha')}}
+							</span>
+						@endif
+						<input class="input100" type="password" name="senha" value="{{old('Senha')}}" placeholder="Digite sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
+					<div class="wrap-input100 {{$errors->has('senha') ? 'has-error' : ''}}">
 						<span class="label-input100">Confirmar Senha</span>
-						<input class="input100" type="password" name="" placeholder="Confirme sua senha">
+						@if($errors->has('confirmasenha'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('confirmasenha')}}
+							</span>
+						@endif
+						<input class="input100" type="password" name="confirmasenha" placeholder="Confirme sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="CPF is required">
+					<div class="wrap-input100 {{$errors->has('email') ? 'has-error' : ''}}">
 						<span class="label-input100">CPF</span>
-						<input class="input100" type="text" name="cpf" placeholder="Digite seu CPF">
+						@if($errors->has('cpf'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('cpf')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="cpf" value="{{old('cpf')}}" placeholder="Digite seu CPF">
 						<span class="focus-input100" data-symbol="&#xf2c3;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+					<div class="wrap-input100 m-b-23 {{$errors->has('email') ? 'has-error' : ''}}">
 						<span class="label-input100">Nome</span>
-						<input class="input100" type="text" name="nome" placeholder="Digite seu nome">
+						@if($errors->has('nome'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('nome')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="nome" value="{{old('nome')}}" placeholder="Digite seu nome">
 						<span class="focus-input100" data-symbol="&#xf20d;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Sobrenome</span>
-						<input class="input100" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
+						<input class="input100" type="text" name="sobrenome" value="{{old('sobrenome')}}" placeholder="Digite seu sobrenome">
 						<span class="focus-input100" data-symbol="&#xf20d;"></span>
 					</div>		
 
-					<div class="wrap-input100 validate-input" data-validate = "Username is required" style="padding-bottom: 20px;">
+					<div class="wrap-input100 {{$errors->has('email') ? 'has-error' : ''}}" style="padding-bottom: 20px;">
 						<span class="label-input100">Sexo:</span>
+						@if($errors->has('sexo'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('sexo')}}
+							</span>
+						@endif
 						<div class="row">
 							<div class="form-check col-sm-6 p-t-10 p-b-10 p-l-10">
 								<input type="radio" class="form-check-input" name="sexo" id="radioUrbana" value="urbana" checked>
@@ -106,9 +136,14 @@
 								
 										
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+					<div class="wrap-input100 m-b-23 {{$errors->has('telefone') ? 'has-error' : ''}}">
 						<span class="label-input100">Telefone</span>
-						<input class="input100" type="text" name="telefone" placeholder="Digite seu número de telefone">
+						@if($errors->has('telefone'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('telefone')}}
+							</span>
+						@endif
+						<input class="input100" type="text" name="telefone" value="{{old('telefone')}}" placeholder="Digite seu número de telefone">
 						<span class="focus-input100" data-symbol="&#xf2bc;"></span>
 					</div>					
 					
