@@ -6,16 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\Usuario as Authenticatable;
 
-class Usuario extends Model
+class Login extends Model
 {
     protected $fillable = [
-        'id',
-        'nome',
-        'cpf',
-        'sexo',
-        'telefone',
-        'login_id'
+        'email',
+        'senha'
     ];
 
-    protected $table = 'consumidor_usuario';
+    protected $table = 'consumidor_login';
 }

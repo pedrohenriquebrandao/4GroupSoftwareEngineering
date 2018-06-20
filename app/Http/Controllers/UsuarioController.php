@@ -7,8 +7,16 @@ use Illuminate\Http\Request;
 class UsuarioController extends Controller
 {
     public function cadUsuario(Request $request){
-        $request->sexo = 'teste';
         Usuario::create($request->all());
         return redirect("/")->with("message", "Usuário criado com sucesso!");
+    }
+
+    public function cadastrarUsuario(Usuario $usuario){
+        try{
+            $usuario->save();
+        } catch(\Exception $e){
+            var_dump($e->getMessage());
+            //return "Erro: ".$e->getMessage();
+        }
     }
 }

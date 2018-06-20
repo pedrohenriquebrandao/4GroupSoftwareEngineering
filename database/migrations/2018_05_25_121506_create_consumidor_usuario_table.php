@@ -14,10 +14,12 @@ class CreateConsumidorUsuarioTable extends Migration
     {
         Schema::create('consumidor_usuario', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('telefone', 10);
-            $table->string('nascimento', 8);
+            $table->string('cpf')->unique();
+            $table->string('nome');
             $table->string('sexo', 10);
+            $table->string('telefone', 10);
+            $table->integer('login_id')->unsigned();
+            $table->foreign('login_id')->references('id')->on('consumidor_login')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -31,7 +31,8 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({!! asset('image/bgCadastro.jpg') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="{{ url('/cadUsuario') }}" method="POST">
+					{{csrf_field()}}
 					<center><img style=""  src="{!! asset('image/logocadastrar.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
@@ -54,37 +55,37 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">E-mail</span>
-						<input class="input100" type="text" name="e-mail" placeholder="Digite seu e-mail">
+						<input class="input100" type="text" name="email" placeholder="Digite seu e-mail">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Senha</span>
-						<input class="input100" type="password" name="pass" placeholder="Digite sua senha">
+						<input class="input100" type="password" name="senha" placeholder="Digite sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Confirmar Senha</span>
-						<input class="input100" type="password" name="pass" placeholder="Confirme sua senha">
+						<input class="input100" type="password" name="" placeholder="Confirme sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="CPF is required">
 						<span class="label-input100">CPF</span>
-						<input class="input100" type="text" name="pass" placeholder="Digite seu CPF">
+						<input class="input100" type="text" name="cpf" placeholder="Digite seu CPF">
 						<span class="focus-input100" data-symbol="&#xf2c3;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Nome</span>
-						<input class="input100" type="text" name="e-mail" placeholder="Digite seu nome">
+						<input class="input100" type="text" name="nome" placeholder="Digite seu nome">
 						<span class="focus-input100" data-symbol="&#xf20d;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Sobrenome</span>
-						<input class="input100" type="text" name="e-mail" placeholder="Digite seu sobrenome">
+						<input class="input100" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
 						<span class="focus-input100" data-symbol="&#xf20d;"></span>
 					</div>		
 
@@ -107,7 +108,7 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
 						<span class="label-input100">Telefone</span>
-						<input class="input100" type="text" name="e-mail" placeholder="Digite seu número de telefone">
+						<input class="input100" type="text" name="telefone" placeholder="Digite seu número de telefone">
 						<span class="focus-input100" data-symbol="&#xf2bc;"></span>
 					</div>					
 					

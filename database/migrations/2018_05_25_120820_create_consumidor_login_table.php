@@ -14,7 +14,7 @@ class CreateConsumidorLoginTable extends Migration
     {
         Schema::create('consumidor_login', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('senha', 10);
             $table->timestamps();
         });
