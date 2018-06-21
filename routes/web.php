@@ -40,7 +40,6 @@ Route::get('perfilProdutor', function () {
 Route::get('carrinho', function () {
     return view('carrinho');
 });
-<<<<<<< HEAD
 Route::get('indexProdutor', function () {
     return view('indexProdutor');
 });
@@ -53,10 +52,8 @@ Route::get('forms', function () {
 });
 Route::get('chartsProdutor', function () {
     return view('chartsProdutor');
-=======
 Route::get('pagamento', function () {
     return view('pagamento');
->>>>>>> ed99ef1c212785ed945344ae40f11c185463d252
 });
 
 Route::post("/cadUsuario", "LoginController@cadLogin");
