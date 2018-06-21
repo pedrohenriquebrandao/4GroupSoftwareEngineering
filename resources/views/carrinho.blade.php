@@ -36,35 +36,60 @@
       <div class="col-md-7">
         <h2>Carrinho</h1>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 direita">
         <a href="/">Continuar Comprando</a>
         <button class="btn btn-success">Concluir</button>
       </div>
+    </div>
 
-      <div col-md-12>
-        <table class="table table-bordered">
+    <div class="space">
+      <div>
+        <table class="table table-bordered " width="100%">
           <thead>
             <tr>
-              <th scope="col">
+              <th scope="col" colspan=2>
                 <h4>Assinaturas</h4>
               </th>
-              <th scope="col"><h4>Preço</h4></th>
+              <th scope="col">
+                <h4>Preço</h4>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
+              <td scope="row" colspan="2">
+                <div class="produto">
+                  <div>
+                    <img src="{!! asset('image/logocadastrar.png') !!}" height="50" alt="">
+                  </div>
+                  <div>
+                    <p class="titulo-produto">Produto X</p>
+                    <p class="descricao-produto">Vendido e Entregue por: XXX</p>
+                    <p class="descricao-produto">Quantidade: XXX</p>
+                    <a href="http://">Remover</a>
+                  </div>
+                </div>
+              </td>
+              <td>XXX</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
+              <td scope="row">
+                <div class="posicao">
+                  <label for="">Digite cep para calcular o frete:</label>
+                  <input type="text" class="form-control" id="frete" placeholder="Digite o frete">
+                  <button class="btn btn-dark ">Calcular Frete</button>
+                </div>
+              </td>
+              <td>
+                <h5 class="direita">FRETE</h5>
+              </td>
+              <td>XXX</td>
             </tr>
             <tr>
-              <th scope="row" colspan="2">Larry the Bird</th>
-              <td>Larry the Bird</td>
+              <th scope="row" colspan="2">
+                <h5 class="direita">TOTAL</h5>
+              </th>
+              <td>XXX</td>
             </tr>
           </tbody>
         </table>

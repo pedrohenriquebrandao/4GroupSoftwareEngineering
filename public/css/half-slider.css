@@ -20,7 +20,11 @@
 }
 
 .posicao{
-  float: left;
+  display: inline-block;
+}
+
+.direita{
+  float: right;
 }
 
 button{
@@ -31,4 +35,17 @@ button{
 
 .espacemento{
   padding-right: 10px;
+}
+
+.produto{
+  display: block;
+}
+
+.titulo-produto{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.descricao-produto{
+  font-size: 12px;  
 }
