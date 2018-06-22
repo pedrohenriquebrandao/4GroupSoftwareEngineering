@@ -1,4 +1,4 @@
-<?php
+<?php   
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +52,7 @@ Route::get('forms', function () {
 });
 Route::get('chartsProdutor', function () {
     return view('chartsProdutor');
+});   
 Route::get('pagamento', function () {
     return view('pagamento');
 });
@@ -59,3 +60,4 @@ Route::get('pagamento', function () {
 Route::post("/cadUsuario", "LoginController@cadLogin");
 
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
+
