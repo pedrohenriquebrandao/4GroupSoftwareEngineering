@@ -87,10 +87,10 @@
                   </div>
                 </div>
                 <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-xl-3 col-sm-6" >
                   <div class="item d-flex align-items-center">
                     <div class="icon bg-yellow"><i class="icon-padnote"></i></div>
-                    <div class="title"><a href="/"><span>Novas <br>Assinaturas</span></a>
+                    <div class="title"><a href="/"><span>Novas <br>Avaliações</span></a>
                       <div class="progress">
                         <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-yellow"></div>
                       </div>
@@ -99,7 +99,7 @@
                   </div>
                 </div>
                 <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-xl-3 col-sm-6" style="padding-left:1px">
                   <div class="item d-flex align-items-center">
                     <div class="icon bg-green"><i class="icon-mail"></i></div>
                     <div class="title"><a href="/"><span>Novos<br>Comentários</span></a>
