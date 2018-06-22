@@ -5,7 +5,7 @@
 
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-red navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-red navbar-fixed-top" role="navigation"  style="padding">
     <div class="container">
         <div>
             <a style="margin-left: 0px" class="navbar-brand js-scroll-trigger" href="#page-top">

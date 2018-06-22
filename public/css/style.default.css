@@ -196,7 +196,7 @@ input {
 }
 
 .bg-blue {
-  background: #85b4f2 !important;
+  background:  rgb(238, 106, 106) !important;
   color: #fff;
 }
 
@@ -232,7 +232,7 @@ input {
 }
 
 .bg-violet {
-  background: #796AEE !important;
+  background: rgb(238, 106, 106) !important;
   color: #fff;
 }
 
@@ -281,11 +281,11 @@ input {
 }
 
 .text-violet {
-  color: #796AEE;
+  color:  rgb(238, 106, 106);
 }
 
 .text-violet:hover {
-  color: #796AEE;
+  color:  rgb(238, 106, 106);
 }
 
 .text-blue {
@@ -452,8 +452,8 @@ nav.side-navbar ul li a {
 }
 
 nav.side-navbar ul li a:hover {
-  background: #796AEE;
-  border-left: 4px solid #3b25e6;
+  background: rgb(173, 30, 25);
+  border-left: 4px solid #e66c25;
   color: #fff;
 }
 
@@ -463,17 +463,17 @@ nav.side-navbar ul li li a {
 }
 
 nav.side-navbar ul li.active > a {
-  background: #796AEE;
+  background:rgb(173, 30, 25);
   color: #fff;
-  border-left: 4px solid #3b25e6;
+  border-left: 4px solid #e66c25;
 }
 
 nav.side-navbar ul li.active > a:hover {
-  background: #796AEE;
+  background: #e66c25;
 }
 
 nav.side-navbar ul li li.active > a {
-  background: #8e81f1;
+  background: #e66c25;
 }
 
 nav.side-navbar ul li ul {
@@ -1502,7 +1502,7 @@ footer.main-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #2f333e;
+  background:rgb(173, 30, 25);
   color: #fff;
   padding: 20px 10px;
 }

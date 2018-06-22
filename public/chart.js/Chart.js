@@ -1,11 +1,11 @@
 /*!
  * Chart.js
- * http://chartjs.org/
+ * http://.org/
  * Version: 2.7.2
  *
  * Copyright 2018 Chart.js Contributors
  * Released under the MIT license
- * https://github.com/chartjs/Chart.js/blob/master/LICENSE.md
+ * https://github.com//Chart.js/blob/master/LICENSE.md
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Chart = f()}})(function(){var define,module,exports;return (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
 
@@ -2935,7 +2935,7 @@ module.exports = function(Chart) {
 				line._model = {
 					// Appearance
 					// The default behavior of lines is to break at null values, according
-					// to https://github.com/chartjs/Chart.js/issues/2435#issuecomment-216718158
+					// to https://github.com//Chart.js/issues/2435#issuecomment-216718158
 					// This option gives lines the ability to span gaps
 					spanGaps: dataset.spanGaps ? dataset.spanGaps : options.spanGaps,
 					tension: custom.tension ? custom.tension : helpers.valueOrDefault(dataset.lineTension, lineElementOptions.tension),
@@ -3935,7 +3935,7 @@ module.exports = function(Chart) {
 				// The given item is not a compatible context2d element, let's return before finalizing
 				// the chart initialization but after setting basic chart / controller properties that
 				// can help to figure out that the chart is not valid (e.g chart.canvas !== null);
-				// https://github.com/chartjs/Chart.js/issues/2807
+				// https://github.com//Chart.js/issues/2807
 				console.error("Failed to create chart: can't acquire context from the given item");
 				return;
 			}
@@ -4193,7 +4193,7 @@ module.exports = function(Chart) {
 			updateConfig(me);
 
 			// plugins options references might have change, let's invalidate the cache
-			// https://github.com/chartjs/Chart.js/issues/5111#issuecomment-355934167
+			// https://github.com//Chart.js/issues/5111#issuecomment-355934167
 			plugins._invalidate(me);
 
 			if (plugins.notify(me, 'beforeUpdate') === false) {
@@ -4355,7 +4355,7 @@ module.exports = function(Chart) {
 			} else {
 				me.draw();
 
-				// See https://github.com/chartjs/Chart.js/issues/3781
+				// See https://github.com//Chart.js/issues/3781
 				onComplete(new Chart.Animation({numSteps: 0, chart: me}));
 			}
 
@@ -4615,7 +4615,7 @@ module.exports = function(Chart) {
 			});
 
 			// Elements used to detect size change should not be injected for non responsive charts.
-			// See https://github.com/chartjs/Chart.js/issues/2210
+			// See https://github.com//Chart.js/issues/2210
 			if (me.options.responsive) {
 				listener = function() {
 					me.resize();
@@ -4777,12 +4777,12 @@ module.exports = function(Chart) {
 	 * called on the 'onData*' callbacks (e.g. onDataPush, etc.) with same arguments.
 	 */
 	function listenArrayEvents(array, listener) {
-		if (array._chartjs) {
-			array._chartjs.listeners.push(listener);
+		if (array._) {
+			array._.listeners.push(listener);
 			return;
 		}
 
-		Object.defineProperty(array, '_chartjs', {
+		Object.defineProperty(array, '_', {
 			configurable: true,
 			enumerable: false,
 			value: {
@@ -4801,7 +4801,7 @@ module.exports = function(Chart) {
 					var args = Array.prototype.slice.call(arguments);
 					var res = base.apply(this, args);
 
-					helpers.each(array._chartjs.listeners, function(object) {
+					helpers.each(array._.listeners, function(object) {
 						if (typeof object[method] === 'function') {
 							object[method].apply(object, args);
 						}
@@ -4815,10 +4815,10 @@ module.exports = function(Chart) {
 
 	/**
 	 * Removes the given array event listener and cleanup extra attached properties (such as
-	 * the _chartjs stub and overridden methods) if array doesn't have any more listeners.
+	 * the _ stub and overridden methods) if array doesn't have any more listeners.
 	 */
 	function unlistenArrayEvents(array, listener) {
-		var stub = array._chartjs;
+		var stub = array._;
 		if (!stub) {
 			return;
 		}
@@ -4837,7 +4837,7 @@ module.exports = function(Chart) {
 			delete array[key];
 		});
 
-		delete array._chartjs;
+		delete array._;
 	}
 
 	// Base class for all dataset controllers (line, bar, etc)
@@ -5745,7 +5745,7 @@ module.exports = function(Chart) {
 
 		// If no style has been set on the canvas, the render size is used as display size,
 		// making the chart visually bigger, so let's enforce it to the "correct" values.
-		// See https://github.com/chartjs/Chart.js/issues/3575
+		// See https://github.com//Chart.js/issues/3575
 		if (!canvas.style.height && !canvas.style.width) {
 			canvas.style.height = height + 'px';
 			canvas.style.width = width + 'px';
@@ -6807,7 +6807,7 @@ module.exports = {
 	/**
 	 * Invalidates cache for the given chart: descriptors hold a reference on plugin option,
 	 * but in some cases, this reference can be changed by the user when updating options.
-	 * https://github.com/chartjs/Chart.js/issues/5111#issuecomment-355934167
+	 * https://github.com//Chart.js/issues/5111#issuecomment-355934167
 	 * @private
 	 */
 	_invalidate: function(chart) {
@@ -10490,7 +10490,7 @@ module.exports.options = require(44);
 },{"41":41,"42":42,"43":43,"44":44}],46:[function(require,module,exports){
 /**
  * Platform fallback implementation (minimal).
- * @see https://github.com/chartjs/Chart.js/pull/4591#issuecomment-319575939
+ * @see https://github.com//Chart.js/pull/4591#issuecomment-319575939
  */
 
 module.exports = {
@@ -10513,8 +10513,8 @@ module.exports = {
 
 var helpers = require(45);
 
-var EXPANDO_KEY = '$chartjs';
-var CSS_PREFIX = 'chartjs-';
+var EXPANDO_KEY = '$';
+var CSS_PREFIX = '-';
 var CSS_RENDER_MONITOR = CSS_PREFIX + 'render-monitor';
 var CSS_RENDER_ANIMATION = CSS_PREFIX + 'render-animation';
 var ANIMATION_START_EVENTS = ['animationstart', 'webkitAnimationStart'];
@@ -10579,7 +10579,7 @@ function initCanvas(canvas, config) {
 
 	// Force canvas to display as block to avoid extra space caused by inline
 	// elements, which would interfere with the responsive resize process.
-	// https://github.com/chartjs/Chart.js/issues/2538
+	// https://github.com//Chart.js/issues/2538
 	style.display = style.display || 'block';
 
 	if (renderWidth === null || renderWidth === '') {
@@ -10627,7 +10627,7 @@ var supportsEventListenerOptions = (function() {
 }());
 
 // Default passive to true as expected by Chrome for 'touchstart' and 'touchend' events.
-// https://github.com/chartjs/Chart.js/issues/4287
+// https://github.com//Chart.js/issues/4287
 var eventListenerOptions = supportsEventListenerOptions ? {passive: true} : false;
 
 function addEventListener(node, type, listener) {
@@ -10747,7 +10747,7 @@ function watchForRender(node, handler) {
 	// is removed then added back immediately (same animation frame?). Accessing the
 	// `offsetParent` property will force a reflow and re-evaluate the CSS animation.
 	// https://gist.github.com/paulirish/5d52fb081b3570c81e3a#box-metrics
-	// https://github.com/chartjs/Chart.js/issues/4737
+	// https://github.com//Chart.js/issues/4737
 	expando.reflow = !!node.offsetParent;
 
 	node.classList.add(CSS_RENDER_MONITOR);
@@ -10856,16 +10856,16 @@ module.exports = {
 
 		// To prevent canvas fingerprinting, some add-ons undefine the getContext
 		// method, for example: https://github.com/kkapsner/CanvasBlocker
-		// https://github.com/chartjs/Chart.js/issues/2807
+		// https://github.com//Chart.js/issues/2807
 		var context = item && item.getContext && item.getContext('2d');
 
 		// `instanceof HTMLCanvasElement/CanvasRenderingContext2D` fails when the item is
 		// inside an iframe or when running in a protected environment. We could guess the
 		// types from their toString() value but let's keep things flexible and assume it's
 		// a sufficient condition if the item has a context2D which has item as `canvas`.
-		// https://github.com/chartjs/Chart.js/issues/3887
-		// https://github.com/chartjs/Chart.js/issues/4102
-		// https://github.com/chartjs/Chart.js/issues/4152
+		// https://github.com//Chart.js/issues/3887
+		// https://github.com//Chart.js/issues/4102
+		// https://github.com//Chart.js/issues/4152
 		if (context && context.canvas === item) {
 			initCanvas(item, config);
 			return context;
@@ -10975,7 +10975,7 @@ var implementation = dom._enabled ? dom : basic;
 
 /**
  * @namespace Chart.platform
- * @see https://chartjs.gitbooks.io/proposals/content/Platform.html
+ * @see https://.gitbooks.io/proposals/content/Platform.html
  * @since 2.4.0
  */
 module.exports = helpers.extend({
@@ -11050,8 +11050,8 @@ module.exports.title = require(52);
 },{"50":50,"51":51,"52":52}],50:[function(require,module,exports){
 /**
  * Plugin based on discussion from the following Chart.js issues:
- * @see https://github.com/chartjs/Chart.js/issues/2380#issuecomment-279961569
- * @see https://github.com/chartjs/Chart.js/issues/2440#issuecomment-256461897
+ * @see https://github.com//Chart.js/issues/2380#issuecomment-279961569
+ * @see https://github.com//Chart.js/issues/2440#issuecomment-256461897
  */
 
 'use strict';
@@ -11905,7 +11905,7 @@ module.exports = {
 	 * Backward compatibility: since 2.1.5, the legend is registered as a plugin, making
 	 * Chart.Legend obsolete. To avoid a breaking change, we export the Legend as part of
 	 * the plugin, which one will be re-exposed in the chart.js file.
-	 * https://github.com/chartjs/Chart.js/pull/2640
+	 * https://github.com//Chart.js/pull/2640
 	 * @private
 	 */
 	_element: Legend,
@@ -12166,7 +12166,7 @@ module.exports = {
 	 * Backward compatibility: since 2.1.5, the title is registered as a plugin, making
 	 * Chart.Title obsolete. To avoid a breaking change, we export the Title as part of
 	 * the plugin, which one will be re-exposed in the chart.js file.
-	 * https://github.com/chartjs/Chart.js/pull/2640
+	 * https://github.com//Chart.js/pull/2640
 	 * @private
 	 */
 	_element: Title,
@@ -14031,7 +14031,7 @@ module.exports = function(Chart) {
 		 * Data distribution along the scale:
 		 * - 'linear': data are spread according to their time (distances can vary),
 		 * - 'series': data are spread at the same distance from each other.
-		 * @see https://github.com/chartjs/Chart.js/pull/4507
+		 * @see https://github.com//Chart.js/pull/4507
 		 * @since 2.7.0
 		 */
 		distribution: 'linear',
@@ -14040,7 +14040,7 @@ module.exports = function(Chart) {
 		 * Scale boundary strategy (bypassed by min/max time options)
 		 * - `data`: make sure data are fully visible, ticks outside are removed
 		 * - `ticks`: make sure ticks are fully visible, data outside are truncated
-		 * @see https://github.com/chartjs/Chart.js/pull/4556
+		 * @see https://github.com//Chart.js/pull/4556
 		 * @since 2.7.0
 		 */
 		bounds: 'data',
@@ -14075,7 +14075,7 @@ module.exports = function(Chart) {
 			 * - 'auto': generates "optimal" ticks based on scale size and time options.
 			 * - 'data': generates ticks from data (including labels from data {t|x|y} objects).
 			 * - 'labels': generates ticks from user given `data.labels` values ONLY.
-			 * @see https://github.com/chartjs/Chart.js/pull/4507
+			 * @see https://github.com//Chart.js/pull/4507
 			 * @since 2.7.0
 			 */
 			source: 'auto',
