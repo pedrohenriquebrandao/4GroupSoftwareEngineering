@@ -64,9 +64,8 @@
             <li ><a href="/assinaturasativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
             <li ><a href="/assinaturpausadas"> <i class="icon-list-1"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>          
-            
-          </ul>
+            <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
+           </ul>
         </nav>
         <div class="content-inner">    
           
