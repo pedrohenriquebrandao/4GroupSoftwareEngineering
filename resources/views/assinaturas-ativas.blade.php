@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Perfil do Produtor</title>
+    <title>Gerencia de produtos</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -29,55 +29,41 @@
     <div class="page">
       <!-- Main Navbar-->
       <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" role="navigation" style="background-color:rgb(173, 30, 25);padding-right: 220px;">
-            <div class="container">
-              <div>
-                  <a style="margin-right: 100px" class="navbar-brand js-scroll-trigger" href="#page-top">
-                      <img src="{!! asset('image/logo.png') !!}" height="80">
-                      <img src="{!! asset('image/nomelogo.png') !!}" height="70">
-                  </a>
-                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>                
-              </div>
-              <div><h2 class="no-margin-bottom" style="padding-right:270px">Gerencia da Loja</h2></div>
-            </div>        
-        </nav>
+        @include('navbarprodutor')
       </header>
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">Mark Stephen</h1>
-              <p>Web Designer</p>
+              <h1 class="h4">Joao e o pé de feijão</h1>
+              <p>Fazendeiro</p>
             </div>
           </div>
-          <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+          <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
-            <li class="active"><a href="/perfilprodutor"> <i class="icon-home"></i>Página principal </a></li>
+            <li class="active"><a href="/dashboardprodutor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciarprodutos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
-            <li ><a href="/assinaturasativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
-            <li ><a href="/assinaturpausadas"> <i class="icon-list-1"></i>Assinaturas pausadas</a></li>  
+            <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
+            <li ><a href="/assinaturpausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
-           </ul>
+          </ul>
         </nav>
         <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Lista de produtos</h2>
+              <h2 class="no-margin-bottom">Estoque</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/perfilprodutor">Página Principal</a></li>
-              <li class="breadcrumb-item active">Estoque</li>
+              <li class="breadcrumb-item"><a href="/dashboardprod">Página principal</a></li>
+              <li class="breadcrumb-item active">Estoque         </li>
             </ul>
           </div>
           <section class="tables">   
@@ -87,42 +73,61 @@
                   <div class="card">
                     <div class="card-close">
                       <div class="dropdown">
-                        <button type="button" id="closeCard3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                        <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button>
                         <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Estoque</h3>
+                      <h3 class="h4">Produtos</h3>
                     </div>
                     <div class="card-body">
-                      <div class="table-responsive">                       
-                        <table class="table table-striped table-hover">
+                      <div class="table-responsive-xl">                       
+                        <table class="table table-striped table-hover">                        
                           <thead>
                             <tr>
-                              <th>#</th>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Username</th>
+                              <th scope="col">ID</th>
+                              <th scope="col">Imagem</th>
+                              <th scope="col">Nome do produto</th>
+                              <th scope="col">Valor</th>
+                              <th scope="col">Avaliação</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td>Mark</td>
-                              <td>Otto</td>
-                              <td>@mdo</td>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td>Tomate</td>
+                              <td>R$10,00</td>
+                              <td><div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                      40% 
+                                    </div>
+                                  </div>
+                              </td>
                             </tr>
                             <tr>
-                              <th scope="row">2</th>
-                              <td>Jacob</td>
-                              <td>Thornton</td>
-                              <td>@fat</td>
+                            <th scope="row">1</th>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td>Tomate</td>
+                              <td>R$10,00</td>
+                              <td><div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                      40% 
+                                    </div>
+                                  </div>
+                              </td>
                             </tr>
                             <tr>
-                              <th scope="row">3</th>
-                              <td>Larry</td>
-                              <td>the Bird</td>
-                              <td>@twitter                            </td>
+                            <th scope="row">1</th>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td>Tomate</td>
+                              <td>R$10,00</td>
+                              <td><div class="progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                      40% 
+                                    </div>
+                                  </div>
+                              </td>
                             </tr>
                           </tbody>
                         </table>

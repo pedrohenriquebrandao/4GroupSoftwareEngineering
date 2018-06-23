@@ -29,21 +29,7 @@
     <div class="page">
       <!-- Main Navbar-->
       <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" role="navigation" style="background-color:rgb(173, 30, 25);padding-right: 220px;">
-            <div class="container">
-              <div>
-                  <a style="margin-right: 100px" class="navbar-brand js-scroll-trigger" href="#page-top">
-                      <img src="{!! asset('image/logo.png') !!}" height="80">
-                      <img src="{!! asset('image/nomelogo.png') !!}" height="70">
-                  </a>
-                  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>                
-              </div>
-              <div><h2 class="no-margin-bottom" style="padding-right:270px">Gerencia da Loja</h2></div>
-            </div>        
-        </nav>
+        @include('navbarprodutor')
       </header>
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
@@ -58,13 +44,13 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
-            <li ><a href="/perfilprodutor"> <i class="icon-home"></i>Página principal </a></li>        
-            <li  class="active"><a href="/gerenciarprodutos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
-            <li ><a href="/assinaturasativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
-            <li ><a href="/assinaturpausadas"> <i class="icon-list-1"></i>Assinaturas pausadas</a></li>  
+            <li ><a href="/dashboardprodutor"> <i class="icon-home"></i>Página principal </a></li>        
+            <li class="active" ><a href="/gerenciarprodutos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
+            <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
+            <li ><a href="/assinaturpausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
-           </ul>
+          </ul>
         </nav>
         <div class="content-inner">
           <!-- Page Header-->

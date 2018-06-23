@@ -57,14 +57,14 @@ Route::get('chartsProdutor', function () {
 Route::get('pagamento', function () {
     return view('pagamento');
 });
-Route::get('listadeprodutos', function () {
-    return view('listadeprodutos');
+Route::get('assinaturas-ativas', function () {
+    return view('assinaturas-ativas');
 });
 Route::get('gerenciarprodutos', function () {
     return view('gerenciarprodutos');
 });
-Route::get('cardProdutor', function () {
-    return view('cardProdutor');
+Route::get('navbarprodutor', function () {
+    return view('navbarprodutor');
 });
 
 
