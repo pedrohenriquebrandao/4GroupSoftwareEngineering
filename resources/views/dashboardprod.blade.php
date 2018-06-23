@@ -12,13 +12,13 @@
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
     <!-- Fontastic Custom icon font-->
-    <link rel="stylesheet" href="css/fontastic.css">
+    <link rel="stylesheet" href="produtor/css/fontastic.css">
     <!-- Google fonts - Poppins -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="produtor/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="produtor/css/custom.css">
     <!-- Favicon-->
     <link href="css/half-slider.css" rel="stylesheet">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -50,7 +50,7 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
               <h1 class="h4">João e o pé de feijão</h1>
               <p>Fazendeiro</p>
@@ -58,8 +58,7 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
-            <li class="active"><a href="/perfilprodutor"> <i class="icon-home"></i>Página principal </a></li>            
-            <li ><a href="/listadeprodutos"> <i class="icon-grid"></i>Lista de produtos</a></li>
+            <li class="active"><a href="/perfilprodutor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciarprodutos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li ><a href="/assinaturasativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
             <li ><a href="/assinaturpausadas"> <i class="icon-list-1"></i>Assinaturas pausadas</a></li>  
@@ -162,14 +161,14 @@
       </div>
     </div>
     <!-- JavaScript files-->
-    <script src="jquery/jquery.min.js"></script>
-    <script src="popper.js/umd/popper.min.js"> </script>
+    <script src="produtor/jquery/jquery.min.js"></script>
+    <script src="produtor/popper.js/umd/popper.min.js"> </script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="jquery.cookie/jquery.cookie.js"> </script>
-    <script src="chart.js/Chart.min.js"></script>
-    <script src="jquery-validation/jquery.validate.min.js"></script>
-    <script src="js/charts-home.js"></script>
+    <script src="produtor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="produtor/chart.js/Chart.min.js"></script>
+    <script src="produtor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="produtor/js/charts-home.js"></script>
     <!-- Main File-->
-    <script src="js/front.js"></script>
+    <script src="produtor/js/front.js"></script>
   </body>
 </html>
