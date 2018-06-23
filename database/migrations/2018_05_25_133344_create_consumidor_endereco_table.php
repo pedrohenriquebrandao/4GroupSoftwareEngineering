@@ -16,8 +16,8 @@ class CreateConsumidorEnderecoTable extends Migration
             $table->increments('id');
             $table->string('rua');
             $table->string('bairro');
-            $table->tinyInteger('cep');
-            $table->tinyInteger('numero');
+            $table->string('cep');
+            $table->string('numero');
             $table->string('cidade');
             $table->string('estado');
             $table->string('complemento');

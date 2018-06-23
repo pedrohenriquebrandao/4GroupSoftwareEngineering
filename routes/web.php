@@ -31,6 +31,7 @@ Route::get('recsenha', function () {
 Route::get('cadastrarProdutor', function () {
     return view('cadastrarProdutor');
 });
+
 Route::get('recsenhaconfirm', function () {
     return view('recsenhaconfirm');
 });
