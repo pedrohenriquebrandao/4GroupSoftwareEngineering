@@ -63,6 +63,10 @@ Route::get('listadeprodutos', function () {
 Route::get('gerenciarprodutos', function () {
     return view('gerenciarprodutos');
 });
+Route::get('cardProdutor', function () {
+    return view('cardProdutor');
+});
+
 
 Route::post("/cadUsuario", "LoginController@cadLogin");
 
