@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css" >
+	<link rel="stylesheet" type="text/css" href="produtor/fonts/iconic/css/material-design-iconic-font.min.css" >
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 <!--===============================================================================================-->	
@@ -22,8 +22,8 @@
 <!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="produtor/css/util.css">
+	<link rel="stylesheet" type="text/css" href="produtor/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -180,7 +180,7 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="produtor/js/main.js"></script>
   	
 </body>
 </html>

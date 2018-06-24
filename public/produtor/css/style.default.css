@@ -2766,6 +2766,11 @@ a {
   text-decoration: none;
 }
 
+.a-btn-edit{
+  color: #fff;
+  text-decoration: none;
+}
+
 a:focus, a:hover {
   color: #3b25e6;
   text-decoration: underline;

@@ -44,10 +44,10 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
-            <li ><a href="/dashboardprodutor"> <i class="icon-home"></i>Página principal </a></li>        
-            <li class="active" ><a href="/gerenciarprodutos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
+            <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
+            <li class="active"><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
-            <li ><a href="/assinaturpausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
+            <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
@@ -62,7 +62,7 @@
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/dashboardprod">Página principal</a></li>
+              <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
               <li class="breadcrumb-item active">Estoque         </li>
             </ul>
           </div>
@@ -72,9 +72,8 @@
                 <div class="col-lg-12">
                   <div class="card">
                     <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button>
-                        <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                      <div class="dropdown">    
+                      <a href="/adicionar-produto" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-success btn-sm"><i class="fa fa-ellipsis-v"></i>Adicionar Produto</button></a>                    
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
@@ -90,12 +89,16 @@
                               <th scope="col">Nome do produto</th>
                               <th scope="col">Valor</th>
                               <th scope="col">Avaliação</th>
+                              <th scope="col">Editar produto</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="...">
+                                  </br></br>
+                                  <input id="fileInput" type="file" class="form-control-file">
+                              </td>
                               <td>Tomate</td>
                               <td>R$10,00</td>
                               <td><div class="progress">
@@ -104,10 +107,15 @@
                                     </div>
                                   </div>
                               </td>
+                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                              </td>
                             </tr>
                             <tr>
                             <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="...">
+                                  </br></br>
+                                  <input id="fileInput" type="file" class="form-control-file">
+                              </td>
                               <td>Tomate</td>
                               <td>R$10,00</td>
                               <td><div class="progress">
@@ -116,10 +124,15 @@
                                     </div>
                                   </div>
                               </td>
+                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                              </td>
                             </tr>
                             <tr>
                             <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="...">
+                                  </br></br>
+                                  <input id="fileInput" type="file" class="form-control-file">
+                              </td>
                               <td>Tomate</td>
                               <td>R$10,00</td>
                               <td><div class="progress">
@@ -127,6 +140,8 @@
                                       40% 
                                     </div>
                                   </div>
+                              </td>
+                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
                               </td>
                             </tr>
                           </tbody>

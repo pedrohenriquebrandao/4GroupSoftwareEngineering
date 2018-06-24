@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gerencia de produtos</title>
+    <title>Adicionar produtos</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -56,14 +56,14 @@
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Estoque</h2>
+              <h2 class="no-margin-bottom">Adicionar Produto</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="/dashboardprod">Página principal</a></li>
-              <li class="breadcrumb-item active">Estoque         </li>
+              <li class="breadcrumb-item active">Adicionar Produto        </li>
             </ul>
           </div>
           <section class="tables">   
@@ -73,8 +73,8 @@
                   <div class="card">
                     <div class="card-close">
                       <div class="dropdown">
-                        <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button>
-                        <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                        <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center"><i class="fa fa-ellipsis-v"></i>Editar</button>
+                        
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
@@ -84,51 +84,23 @@
                       <div class="table-responsive-xl">                       
                         <table class="table table-striped table-hover">                        
                           <thead>
-                            <tr>
+                            <tr>                            
                               <th scope="col">ID</th>
                               <th scope="col">Imagem</th>
                               <th scope="col">Nome do produto</th>
-                              <th scope="col">Valor</th>
-                              <th scope="col">Avaliação</th>
+                              <th scope="col">Valor</th>                                                         
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
-                              <td>Tomate</td>
-                              <td>R$10,00</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
-                                  </div>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="...">
+                                  </br></br>
+                                  <input id="fileInput" type="file" class="form-control-file">
                               </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
                               <td>Tomate</td>
-                              <td>R$10,00</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
-                                  </div>
-                              </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
-                              <td>Tomate</td>
-                              <td>R$10,00</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
-                                  </div>
-                              </td>
-                            </tr>
+                              <td>R$10,00</td>                              
+                            </tr>                            
                           </tbody>
                         </table>
                       </div>
