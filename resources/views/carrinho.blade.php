@@ -59,10 +59,10 @@
             <tr>
               <td scope="row" colspan="2">
                 <div class="produto">
-                  <div>
+                  <div class="posicao" height: 100px;>
                     <img src="{!! asset('image/logocadastrar.png') !!}" height="50" alt="">
                   </div>
-                  <div>
+                  <div class="posicao">
                     <p class="titulo-produto">Produto X</p>
                     <p class="descricao-produto">Vendido e Entregue por: XXX</p>
                     <p class="descricao-produto">Quantidade: XXX</p>
@@ -74,10 +74,19 @@
             </tr>
             <tr>
               <td scope="row">
+                <div>
                 <div class="posicao">
-                  <label for="">Digite cep para calcular o frete:</label>
-                  <input type="text" class="form-control" id="frete" placeholder="Digite o frete">
-                  <button class="btn btn-dark ">Calcular Frete</button>
+                  <label class= for="">Digite o cep para calcular o frete:</label>
+                </div>
+                <div class="posicao">
+                  <input type="text" class="form-control col-md-12" id="frete" placeholder="Digite o frete">
+                </div>
+                <div class="posicao">
+                  <button class="btn btn-dark">Calcular Frete</button>
+                </div>  
+                
+                  
+                  
                 </div>
               </td>
               <td>

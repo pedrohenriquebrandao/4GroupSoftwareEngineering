@@ -33,22 +33,23 @@
 
     <section class="container space">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <h2 class="bg-primary">PAGAMENTO</h2>
                 <div>
-                    <form action="">
+                    <form action="" class="form mt-4">
                         <div class="form-group">
                             <label for="num">Número do Cartão</label>
-                            <input type="text" class="form-control" id="num">
+                            <input type="text" class="form-control col-md-4" id="num">
                         </div>
                         <div class="form-group">
                             <label for="nome">Nome do Titular</label>
-                            <input type="text" class="form-control" aria-describedby="nomeHelp" id="nome">
+                            <input type="text" class="form-control col-md-6" aria-describedby="nomeHelp" id="nome">
                             <small id="nomeHelp" class="form-text text-muted">Insira o nome como está gravado no cartão.</small>
                         </div>
                         <div class="form-group">
                             <label for="data">Data de validade</label>
-                            <select class="form-control" id="data">
+                            <div class="row">
+                            <select class="form-control col-md-2 ml-3" id="data">
                                 <option>Mês</option>
                                 <option>01</option>
                                 <option>02</option>
@@ -63,7 +64,7 @@
                                 <option>11</option>
                                 <option>12</option>
                             </select>
-                            <select class="form-control" id="data">
+                            <select class="form-control col-md-2 ml-1" id="data">
                                 <option>Ano</option>
                                 <option>18</option>
                                 <option>19</option>
@@ -75,15 +76,16 @@
                                 <option>25</option>
                                 <option>26</option>
                             </select>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="codigo">Código de Segurança</label>
-                            <input type="text" class="form-control" aria-describedby="codigoHelp" id="codigo">
+                            <input type="text" class="form-control col-md-1" aria-describedby="codigoHelp" id="codigo">
                             <small id="codigoHelp" class="form-text text-muted">Encontra-se atrás do cartão.</small>
                         </div>
                         <div class="form-group">
-                            <label for="duramento">Duramento da assinatura</label>
-                            <select class="form-control" id="duramento">
+                            <label for="duramento">Duração da Assinatura (meses)</label>
+                            <select class="form-control col-md-1" id="duramento">
                                 <option>01</option>
                                 <option>02</option>
                                 <option>03</option>
@@ -101,7 +103,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <h2 class="bg-dark">RESUMO DO PEDIDO</h2>
             </div>
         </div>

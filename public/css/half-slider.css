@@ -38,7 +38,9 @@ button{
 }
 
 .produto{
-  display: block;
+  display: FLEX;
+  ALIGN-ITEMS: center;
+  justify-content: space-around;
 }
 
 .titulo-produto{
@@ -48,4 +50,9 @@ button{
 
 .descricao-produto{
   font-size: 12px;  
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
