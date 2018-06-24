@@ -107,7 +107,7 @@
                                     </div>
                                   </div>
                               </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
                               </td>
                             </tr>
                             <tr>
@@ -124,7 +124,7 @@
                                     </div>
                                   </div>
                               </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
                               </td>
                             </tr>
                             <tr>
@@ -141,7 +141,7 @@
                                     </div>
                                   </div>
                               </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
                               </td>
                             </tr>
                           </tbody>
