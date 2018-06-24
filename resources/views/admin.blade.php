@@ -9,11 +9,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css" >
+	<link rel="stylesheet" type="text/css" href="produtor/fonts/iconic/css/material-design-iconic-font.min.css" >
 
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="produtor/css/util.css">
+	<link rel="stylesheet" type="text/css" href="produtor/css/main.css">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -40,7 +40,7 @@
 					</div>
 					
 					<div class="text-right p-t-8 p-b-13">
-						<a href="/recsenha">
+						<a href="/recuperar-senha">
 							Esqueceu a senha?
 						</a>
 					</div>

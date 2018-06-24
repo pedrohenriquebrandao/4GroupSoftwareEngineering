@@ -5,6 +5,7 @@ use App\Produtor;
 use App\Endereco;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Auth;
 
 class ControllerProdutor extends Controller
 {
@@ -68,4 +69,5 @@ class ControllerProdutor extends Controller
 
         return Validator::make($data, $regras, $mensagens);
     }
+    
 }

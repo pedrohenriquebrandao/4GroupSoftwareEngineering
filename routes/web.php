@@ -1,4 +1,4 @@
-<?php
+<?php   
 
 /*
 |--------------------------------------------------------------------------
@@ -25,25 +25,49 @@ Route::get('cadastrar', function () {
 Route::get('admin', function () {
     return view('admin');
 });
-Route::get('recsenha', function () {
-    return view('recsenha');
+Route::get('recuperar-senha', function () {
+    return view('recuperar-senha');
 });
-Route::get('cadastrarProdutor', function () {
-    return view('cadastrarProdutor');
+Route::get('cadastrar-produtor', function () {
+    return view('cadastrar-produtor');
 });
+
 Route::get('recsenhaconfirm', function () {
     return view('recsenhaconfirm');
 });
-Route::get('perfilProdutor', function () {
-    return view('perfilProdutor');
+Route::get('perfil-produtor', function () {
+    return view('perfil-produtor');
 });
 Route::get('carrinho', function () {
     return view('carrinho');
 });
+Route::get('dashboard-produtor', function () {
+    return view('dashboard-produtor');
+});
+
+Route::get('tables', function () {
+    return view('tables');
+});
+Route::get('forms', function () {
+    return view('forms');
+}); 
 Route::get('pagamento', function () {
     return view('pagamento');
+});
+Route::get('assinaturas-ativas', function () {
+    return view('assinaturas-ativas');
+});
+Route::get('gerenciar-produtos', function () {
+    return view('gerenciar-produtos');
+});
+Route::get('navbar-produtor', function () {
+    return view('navbar-produtor');
+});
+Route::get('adicionar-produtos', function () {
+    return view('adicionar-produtos');
 });
 
 Route::post("/cadUsuario", "LoginController@cadLogin");
 
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
+
