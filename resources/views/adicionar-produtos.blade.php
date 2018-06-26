@@ -44,8 +44,8 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
-            <li class="active"><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
-            <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
+            <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
+            <li class="active" ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
             <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
@@ -73,7 +73,7 @@
                   <div class="card">
                     <div class="card-close">
                       <div class="dropdown">
-                        <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center"><i class="fa fa-ellipsis-v"></i>Editar</button>
+                        <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button>
                         
                       </div>
                     </div>
@@ -88,6 +88,7 @@
                               <th scope="col">ID</th>
                               <th scope="col">Imagem</th>
                               <th scope="col">Nome do produto</th>
+                              <th scope="col">Quantidade</th>
                               <th scope="col">Valor</th>                                                         
                             </tr>
                           </thead>
@@ -98,8 +99,10 @@
                                   </br></br>
                                   <input id="fileInput" type="file" class="form-control-file">
                               </td>
-                              <td>Tomate</td>
-                              <td>R$10,00</td>                              
+                              <td><input type="text" class="form-control" placeholder="Digite o nome do produto" id="produto"></td>
+                              <td><input type="text" class="form-control" placeholder="Digite a quantidade do produto" id="quantidade"></td>
+                              <td><input type="text" class="form-control" placeholder="Digite o valor do produto" id="valor"></td>
+                                                            
                             </tr>                            
                           </tbody>
                         </table>

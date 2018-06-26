@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gerencia de produtos</title>
+    <title>Assinaturas ativas</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -44,9 +44,9 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
-            <li class="active"><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
+            <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
-            <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
+            <li  class="active"><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
             <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
@@ -56,14 +56,14 @@
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Estoque</h2>
+              <h2 class="no-margin-bottom">Assinaturas ativas</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/dashboardprod">Página principal</a></li>
-              <li class="breadcrumb-item active">Estoque         </li>
+              <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
+              <li class="breadcrumb-item active">Assinaturas ativas        </li>
             </ul>
           </div>
           <section class="tables">   
@@ -71,14 +71,10 @@
               <div class="row">         
                 <div class="col-lg-12">
                   <div class="card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger"><i class="fa fa-ellipsis-v"></i>Editar</button>
-                        <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                      </div>
+                    <div class="card-close">                      
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Produtos</h3>
+                      <h3 class="h4">Entregas realizadas</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
@@ -88,8 +84,9 @@
                               <th scope="col">ID</th>
                               <th scope="col">Imagem</th>
                               <th scope="col">Nome do produto</th>
-                              <th scope="col">Valor</th>
-                              <th scope="col">Avaliação</th>
+                              <th scope="col">Nome do assinante</th>
+                              <th scope="col">Quantidade</th>
+                              <th scope="col">Endereço de entrega</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -97,43 +94,63 @@
                               <th scope="row">1</th>
                               <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
                               <td>Tomate</td>
-                              <td>R$10,00</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
-                                  </div>
-                              </td>
+                              <td>Eduardo Marques</td>
+                              <td>10 kilos</td>
+                              <td>Rua:</br>Bairro:</br>Cidade:</br>CEP:</td>
                             </tr>
-                            <tr>
-                            <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
-                              <td>Tomate</td>
-                              <td>R$10,00</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
-                                  </div>
-                              </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
-                              <td>Tomate</td>
-                              <td>R$10,00</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
-                                  </div>
-                              </td>
-                            </tr>
+                            <tr>                            
                           </tbody>
                         </table>
                       </div>
+                    </div>              
+                   </div>
+                </div>                
+              </div>
+            </div>
+          </section>
+
+          <section class="tables">   
+            <div class="container-fluid">
+              <div class="row">         
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-close">               
+                                                              
                     </div>
-                  </div>
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Entregas pendentes</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive-xl">                       
+                        <table class="table table-striped table-hover">                        
+                          <thead>
+                            <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">Imagem</th>
+                              <th scope="col">Nome do produto</th>
+                              <th scope="col">Nome do assinante</th>
+                              <th scope="col">Quantidade</th>
+                              <th scope="col">Endereço de entrega</th>
+                              <th scope="col">Produto enviado</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td>Tomate</td>
+                              <td>Eduardo Marques</td>
+                              <td>10 kilos</td>
+                              <td>Rua:</br>Bairro:</br>Cidade:</br>CEP:</td>
+                              <td><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-success btn-sm"><i class="fa fa-ellipsis-v"></i>Enviado</button></td>
+
+                            </tr>
+                            <tr>                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>              
+                   </div>
                 </div>                
               </div>
             </div>
@@ -167,3 +184,5 @@
     <script src="produtor/js/front.js"></script>
   </body>
 </html>
+
+                  
