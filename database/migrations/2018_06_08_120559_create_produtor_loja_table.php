@@ -14,7 +14,7 @@ class CreateProdutorLojaTable extends Migration
     {
         Schema::create('produtor_loja', function (Blueprint $table) {
             $table->increments('id');
-            $table->tinyInteger('cnpj');
+            $table->integer('cnpj')->unsigned();
             $table->string('nome');
             $table->timestamps();
         });

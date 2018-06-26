@@ -14,9 +14,9 @@ class CreateConsumidorPedidoTable extends Migration
      {
         Schema::create('consumidor_pedido', function (Blueprint $table) {
             $table->increments('id');
-            $table->tinyInteger('finalizado');
-            $table->tinyInteger('pendente');
-            $table->tinyInteger('cancelado');
+            $table->integer('finalizado')->unsigned();
+            $table->integer('pendente')->unsigned();
+            $table->integer('cancelado')->unsigned();
             $table->timestamps();
         });
     }

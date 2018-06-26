@@ -16,8 +16,8 @@ class CreateConsumidorCartaoTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('validade', 8);
-            $table->tinyInteger('codCartao');
-            $table->tinyInteger('numCartao');
+            $table->integer('codCartao')->unsigned();
+            $table->integer('numCartao')->unsigned();
             $table->timestamps();
         });
     }
