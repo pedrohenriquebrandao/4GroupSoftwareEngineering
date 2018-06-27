@@ -71,3 +71,4 @@ Route::post("/cadUsuario", "LoginController@cadLogin");
 
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
 
+Route::get('/usuarios', 'ControllerUsuario@index');

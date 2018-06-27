@@ -12,7 +12,7 @@ class CreateConsumidorUsuarioTable extends Migration
      */
     public function up()
     {
-        Schema::create('consumidor_usuario', function (Blueprint $table) {
+        Schema::create('usuarios', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cpf')->unique();
             $table->string('nome');
@@ -31,7 +31,7 @@ class CreateConsumidorUsuarioTable extends Migration
      */
     public function down()
     {
-        Schema::drop('consumidor_usuario');
+        Schema::drop('usuarios');
     }
 
 }
