@@ -46,8 +46,9 @@
           <ul class="list-unstyled">
             <li class="active"><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
+            <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
             <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
-            <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
+            <li ><a href="/assinaturas-pausadas-pendentes"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>

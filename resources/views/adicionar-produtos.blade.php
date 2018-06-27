@@ -45,9 +45,10 @@
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
-            <li class="active" ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
-            <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
-            <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
+            <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
+            <li  class="active"><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
+            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
+            <li ><a href="/assinaturas-pausadas-pendentes"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
@@ -78,18 +79,19 @@
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Produtos</h3>
+                      <h3 class="h4">Produto</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
-                        <table class="table table-striped table-hover">                        
+                        <table class="table table-hover">                        
                           <thead>
                             <tr>                            
                               <th scope="col">ID</th>
                               <th scope="col">Imagem</th>
-                              <th scope="col">Nome do produto</th>
-                              <th scope="col">Quantidade</th>
-                              <th scope="col">Valor</th>                                                         
+                              <th scope="col">Informações</th>
+                              <th scope="col">Frete</th>                              
+                              <th scope="col">Tipo de produto</th>  
+                              <th scope="col">Adicionar promoção</th>                                                         
                             </tr>
                           </thead>
                           <tbody>
@@ -99,12 +101,49 @@
                                   </br></br>
                                   <input id="fileInput" type="file" class="form-control-file">
                               </td>
-                              <td><input type="text" class="form-control" placeholder="Digite o nome do produto" id="produto"></td>
-                              <td><input type="text" class="form-control" placeholder="Digite a quantidade do produto" id="quantidade"></td>
-                              <td><input type="text" class="form-control" placeholder="Digite o valor do produto" id="valor"></td>
-                                                            
-                            </tr>                            
+                              <td><input type="text" class="form-control" placeholder="Nome do produto" id="produto"></br>
+                                  <input type="text" class="form-control" placeholder="Quantidade do produto" id="quantidade"></br>
+                                  <input type="text" class="form-control" placeholder="Valor do produto" id="valor"></br>
+                                  <input type="text" class="form-control" placeholder="Promoção do produto" id="promoção"></br>
+                              </td>
+                              <td>                                  
+                                  <div class="i-checks">
+                                    <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template">
+                                    <label for="checkboxCustom1">Grátis</label>
+                                  </div> 
+                                  <div><input type="text" class="form-control" placeholder="Quantidade" id="quantidade"></div>   
+                                  <div class="i-checks">
+                                    <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Padrão</label>
+                                  </div>
+                                  <div class="i-checks"> 
+                                    <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Por quantidade</label>
+                                  </div>
+                              </td>
+                              <td> 
+                                <input type="text" class="form-control" placeholder="Tipo" id="tipoDeProduto">  
+                              </td>        
+                              <td>
+                                <input type="text" class="form-control" placeholder="Promoção" id="promoção">
+                              </td>                          
+                            </tr>
                           </tbody>
+                            <div class="card-body">
+                              <div class="table-responsive">                       
+                                <table class="table table-striped table-hover">                        
+                                  <thead>
+                                    <tr>                            
+                                      <th scope="col">Descrição do produto</th> </tr>
+                                  </thead>
+                                  <tbody>
+                                    <th scope="row"></th>
+                                    <td><div class="form-group" style="padding:auto">
+                                          <label for="descricao">Digite a descrição do produto</label>
+                                          <textarea class="form-control" rows="5" id="descricao"></textarea>
+                                        </div> 
+                                    </td>
+                                  </tbody>
+                              </div>
+                            </div>
                         </table>
                       </div>
                     </div>
@@ -113,15 +152,17 @@
               </div>
             </div>
           </section>
+          
+              
           <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>Your company &copy; 2017-2019</p>
+                  <p>Colheita Feliz&copy; 2018</p>
                 </div>
                 <div class="col-sm-6 text-right">
-                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
+                  <p>Design by 4 Group Software Engineering</p>
                   <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                 </div>
               </div>

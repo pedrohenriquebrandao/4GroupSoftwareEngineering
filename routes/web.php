@@ -54,8 +54,8 @@ Route::get('forms', function () {
 Route::get('pagamento', function () {
     return view('pagamento');
 });
-Route::get('assinaturas-ativas', function () {
-    return view('assinaturas-ativas');
+Route::get('assinaturas-ativas-pendentes', function () {
+    return view('assinaturas-ativas-pendentes');
 });
 Route::get('gerenciar-produtos', function () {
     return view('gerenciar-produtos');
@@ -65,6 +65,9 @@ Route::get('navbar-produtor', function () {
 });
 Route::get('adicionar-produtos', function () {
     return view('adicionar-produtos');
+});
+Route::get('assinaturas-pausadas', function () {
+    return view('assinaturas-pausadas');
 });
 
 Route::post("/cadUsuario", "LoginController@cadLogin");
