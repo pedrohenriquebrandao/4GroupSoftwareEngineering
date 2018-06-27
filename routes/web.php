@@ -60,8 +60,8 @@ Route::get('assinaturas-ativas-pendentes', function () {
 Route::get('gerenciar-produtos', function () {
     return view('gerenciar-produtos');
 });
-Route::get('navbar-produtor', function () {
-    return view('navbar-produtor');
+Route::get('navbarprodutor', function () {
+    return view('navbarprodutor');
 });
 Route::get('adicionar-produtos', function () {
     return view('adicionar-produtos');
