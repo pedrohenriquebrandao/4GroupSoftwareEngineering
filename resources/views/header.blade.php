@@ -32,7 +32,7 @@
                 </li>
                 <!-- -->
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#carrinho">
+                    <a class="nav-link js-scroll-trigger" href="/carrinho">
                         CARRINHO
                         <i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i>
                     </a>
