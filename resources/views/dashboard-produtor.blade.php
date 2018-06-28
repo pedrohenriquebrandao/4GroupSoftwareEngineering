@@ -47,10 +47,10 @@
             <li class="active"><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
-            <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
+            <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
             <li ><a href="/assinaturas-pausadas-pendentes"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
+            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
+            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
         </nav>
         <div class="content-inner">    
@@ -87,7 +87,7 @@
                 <div class="col-xl-3 col-sm-6" style="padding-left:1px">
                   <div class="item d-flex align-items-center">
                     <div class="icon bg-green"><i class="icon-mail"></i></div>
-                    <div class="title"><a href="/comentarios"><span>Novos<br>Comentários</span></a>
+                    <div class="title"><a href="/comentarios-produtor"><span>Novos<br>Comentários</span></a>
                       <div class="progress">
                         <div role="progressbar" style="width: 50%; height: 4px; " aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
                       </div>

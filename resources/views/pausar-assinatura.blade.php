@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Assinaturas ativas</title>
+    <title>Pausar assinatura</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -47,9 +47,9 @@
             <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
-            <li  class="active"><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
+            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
             <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
+            <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
         </nav>
@@ -57,102 +57,49 @@
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Assinaturas ativas</h2>
+              <h2 class="no-margin-bottom">Pausar assinatura</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
-              <li class="breadcrumb-item active">Assinaturas ativas        </li>
+              <li class="breadcrumb-item active">Pausar assinatura        </li>
             </ul>
-          </div>
+          </div>  
           <section class="tables">   
             <div class="container-fluid">
               <div class="row">         
                 <div class="col-lg-12">
                   <div class="card">
-                    <div class="card-close">                      
+                    <div class="card-close">
+                      <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button>                                                          
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Entregas realizadas</h3>
+                      <h3 class="h4">Pausar assinatura</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
                         <table class="table table-striped table-hover">                        
                           <thead>
                             <tr>
-                              <th scope="col">ID</th>
-                              <th scope="col">Imagem</th>
-                              <th scope="col">Nome do produto</th>
-                              <th scope="col">Nome do assinante</th>
-                              <th scope="col">Quantidade</th>
-                              <th scope="col">Endereço de entrega</th>
-                              <th scope="col">Detalhes da assinatura</th>
-                              <th scope="col">Pausar assinatura</th>
+                              <th scope="col">Detalhe da assinatura</th>
+                              <th scope="col">Motivo da pausa na assinatura:</th>                             
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
-                              <td>Tomate</td>
-                              <td>Eduardo Marques</td>
-                              <td>10 kilos</td>
-                              <td>Rua:</br>Bairro:</br>Cidade:</br>CEP:</td>
-                              <td><a href="/detalhe-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Ver assinatura</button></a>
-                              <td><a href="/pausar-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Pausar</button></a>
-
-                            </tr>
-                            <tr>                            
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>              
-                   </div>
-                </div>                
-              </div>
-            </div>
-          </section>
-
-          <section class="tables">   
-            <div class="container-fluid">
-              <div class="row">         
-                <div class="col-lg-12">
-                  <div class="card">
-                    <div class="card-close">               
-                                                              
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Entregas pendentes</h3>
-                    </div>
-                    <div class="card-body">
-                      <div class="table-responsive-xl">                       
-                        <table class="table table-striped table-hover">                        
-                          <thead>
-                            <tr>
-                              <th scope="col">ID</th>
-                              <th scope="col">Imagem</th>
-                              <th scope="col">Nome do produto</th>
-                              <th scope="col">Nome do assinante</th>
-                              <th scope="col">Quantidade</th>
-                              <th scope="col">Endereço de entrega</th>
-                              <th scope="col">Detalhes da assinatura</th>
-                              <th scope="col">Enviar produto</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
-                              <td>Tomate</td>
-                              <td>Eduardo Marques</td>
-                              <td>10 kilos</td>
-                              <td>Rua:</br>Bairro:</br>Cidade:</br>CEP:</td>
-                              <td><a href="/detalhe-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Ver assinatura</button></a>
-                              <td><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-success btn-sm"><i class="fa fa-ellipsis-v"></i>Enviar</button></td>
-
-                            </tr>
+                              <td><b>Assinante:</b></br>
+                                  <b>Produto:</b></br>
+                                  <b>Quantidade:</b></br>
+                                  <b>CEP:</b></td>
+                              <td>
+                                <div class="form-group" style="padding:auto">
+                                  <label for="descricao"></label>
+                                  <textarea class="form-control" rows="5" id="descricao"></textarea>
+                                </div>
+                              </td>
+                             </tr>
                             <tr>                            
                           </tbody>
                         </table>
@@ -168,10 +115,10 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>Your company &copy; 2017-2019</p>
+                  <p>Colheita Feliz&copy; 2018</p>
                 </div>
                 <div class="col-sm-6 text-right">
-                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
+                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">4 Group Software Engeenering</a></p>
                   <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                 </div>
               </div>

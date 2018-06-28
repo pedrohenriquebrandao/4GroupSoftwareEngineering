@@ -47,10 +47,10 @@
             <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li  class="active"><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
-            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
-            <li ><a href="/assinaturas-pausadas-pendentes"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
+            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
+            <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
+            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
+            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
         </nav>
         <div class="content-inner">
@@ -74,7 +74,7 @@
                   <div class="card">
                     <div class="card-close">
                       <div class="dropdown">
-                        <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button>
+                        <a href="/gerenciar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button></a>
                         
                       </div>
                     </div>
@@ -89,7 +89,7 @@
                               <th scope="col">ID</th>
                               <th scope="col">Imagem</th>
                               <th scope="col">Informações</th>
-                              <th scope="col">Frete</th>                              
+                              <th scope="col">Tipo de Frete</th>                              
                               <th scope="col">Tipo de produto</th>  
                               <th scope="col">Adicionar promoção</th>                                                         
                             </tr>
@@ -111,7 +111,7 @@
                                     <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template">
                                     <label for="checkboxCustom1">Grátis</label>
                                   </div> 
-                                  <div><input type="text" class="form-control" placeholder="Quantidade" id="quantidade"></div>   
+                                  <div><input type="text" class="form-control" placeholder="Quantidade" id="quantidade"></div> </br>  
                                   <div class="i-checks">
                                     <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Padrão</label>
                                   </div>

@@ -74,9 +74,24 @@ Route::get('cadastrar-admin', function () {
     return view('cadastrar-admin');
 });
 
+Route::get('comentarios-produtor', function () {
+    return view('comentarios-produtor');
+});
+
+Route::get('pausar-assinatura', function () {
+    return view('pausar-assinatura');
+});
+
+Route::get('avaliacao-produtor', function () {
+    return view('avaliacao-produtor');
+});
+
 Route::post("/cadUsuario", "ControllerUsuario@cadUsuario");
+
 Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
+
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
 
 Route::get('/usuarios', 'ControllerUsuario@index');
+
 Route::get('/admins', 'ControllerUsuario@index');

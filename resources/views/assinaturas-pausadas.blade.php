@@ -47,10 +47,10 @@
             <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
-            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas</a></li>
+            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
             <li class="active"><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li ><a href="/avaliacoes"> <i class=" icon-check"></i>Avaliações</a></li>      
+            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
+            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
         </nav>
         <div class="content-inner">
@@ -89,7 +89,7 @@
                               <th scope="col">Nome do assinante</th>
                               <th scope="col">Quantidade</th>
                               <th scope="col">Endereço de entrega</th>
-                             
+                              <th scope="col">Detalhes da assinatura</th>                             
                             </tr>
                           </thead>
                           <tbody>
@@ -100,9 +100,8 @@
                               <td>Eduardo Marques</td>
                               <td>10 kilos</td>
                               <td>Rua:</br>Bairro:</br>Cidade:</br>CEP:</td>
+                              <td><a href="/detalhe-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Ver assinatura</button></a>
                              </tr>
-                             <!-- <td><a href="/assinaturas-ativas-pendentes" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Pausar</button></a> -->
-
                             <tr>                            
                           </tbody>
                         </table>
