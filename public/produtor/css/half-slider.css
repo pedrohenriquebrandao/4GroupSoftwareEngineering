@@ -20,11 +20,19 @@
 }
 
 .posicao{
-  display: inline-block;
+  display: block;
 }
 
 .direita{
   float: right;
+}
+
+.esquerda{
+  float: left;
+}
+
+.fundo{
+  background-color: #dc3545;
 }
 
 button{
@@ -48,11 +56,57 @@ button{
   font-weight: bold;
 }
 
-.descricao-produto{
-  font-size: 12px;  
+.hs{
+  color: #dc3545;
 }
 
 p{
   margin-top: 0;
   margin-bottom: 0.5rem;
+}
+
+.outside{
+  list-style-position: outside;
+  list-style-type: none;
+  font-size: 12px;  
+}
+
+ul{
+  padding: 0;
+}
+
+.hs-pagamento{
+  color: white;
+}
+
+.item-cor{
+  background-color: #E3E3E3;
+}
+
+.end-pedido{
+  padding: 15px 15px 15px 25px;
+}
+
+.linha-vertical {
+  border: 1px solid #C1C0C0;
+  border-width: thin;
+}
+
+.item-pedido{
+  margin-top: 30px;
+}
+
+.cor-secund{
+  background-color: rgb(241, 241, 241);
+}
+
+.negrito{
+  font-weight: bold;
+}
+
+.botaoModal{
+  width: 100%;
+  height: 110px;
+  text-align: left;
+  margin-bottom: 10px;
 }

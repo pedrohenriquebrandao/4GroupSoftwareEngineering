@@ -21,7 +21,7 @@
 
 
   <!-- Custom styles for this template -->
-  <link href="css/half-slider.css" rel="stylesheet">
+  <link href="produtor/css/half-slider.css" rel="stylesheet">
 
 </head>
 
@@ -32,40 +32,42 @@
   @include ('header')
 
   <section class="container space">
-    <div class="row">
-      <div class="col-md-7">
-        <h2>Carrinho</h1>
+    <div class="row space">
+      <div class="col-md-8">
+        <h2 class="hs">Carrinho</h1>
       </div>
-      <div class="col-md-5 direita">
+      <div class="col-md-4 direita">
         <a href="/">Continuar Comprando</a>
-        <button class="btn btn-success">Concluir</button>
+        <button class="btn btn-danger">Concluir</button>
       </div>
     </div>
 
-    <div class="space">
-      <div>
+    <div class="space row">
+      <div class="col-md-12">
         <table class="table table-bordered " width="100%">
-          <thead>
+          <thead class="thead-light">
             <tr>
               <th scope="col" colspan=2>
-                <h4>Assinaturas</h4>
+                <h5 class="hs">Assinaturas</h5>
               </th>
               <th scope="col">
-                <h4>Preço</h4>
+                <h5 class="hs">Preço</h5>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td scope="row" colspan="2">
-                <div class="produto">
-                  <div class="posicao" height: 100px;>
-                    <img src="{!! asset('image/logocadastrar.png') !!}" height="50" alt="">
+                <div class="row">
+                  <div class="posicao col-md-3" height: 100px;>
+                    <img src="{!! asset('image/maca.jpg') !!}" width="125px" alt="">
                   </div>
-                  <div class="posicao">
+                  <div class="posicao col-md-9">
                     <p class="titulo-produto">Produto X</p>
-                    <p class="descricao-produto">Vendido e Entregue por: XXX</p>
-                    <p class="descricao-produto">Quantidade: XXX</p>
+                    <ul class="outside">
+                      <li>Vendido e Entregue por: XXX</li>
+                      <li>Quantidade: XXX</li>
+                    </ul>
                     <a href="http://">Remover</a>
                   </div>
                 </div>
@@ -74,35 +76,42 @@
             </tr>
             <tr>
               <td scope="row">
-                <div>
-                <div class="posicao">
-                  <label class= for="">Digite o cep para calcular o frete:</label>
-                </div>
-                <div class="posicao">
-                  <input type="text" class="form-control col-md-12" id="frete" placeholder="Digite o frete">
-                </div>
-                <div class="posicao">
-                  <button class="btn btn-dark">Calcular Frete</button>
-                </div>  
-                
-                  
-                  
+                <div class="row">
+                  <div class="posicao col-md-4">
+                    <label class=f or="">Digite o cep para calcular o frete:</label>
+                  </div>
+                  <div class="posicao col-md-4">
+                    <input type="text" class="form-control" id="frete" placeholder="Digite o frete">
+                  </div>
+                  <div class="posicao col-md-4">
+                    <button class="btn btn-dark">Calcular Frete</button>
+                  </div>
                 </div>
               </td>
               <td>
-                <h5 class="direita">FRETE</h5>
+                <h6 class="direita">FRETE</h6>
               </td>
               <td>XXX</td>
             </tr>
             <tr>
               <th scope="row" colspan="2">
-                <h5 class="direita">TOTAL</h5>
+                <h6 class="direita">TOTAL</h6>
               </th>
               <td>XXX</td>
             </tr>
           </tbody>
         </table>
 
+      </div>
+    </div>
+
+        <div class="row space">
+      <div class="col-md-8">
+      <a href="/">Limpar Carrinho</a>
+      </div>
+      <div class="col-md-4 direita">
+        <a href="/">Continuar Comprando</a>
+        <button class="btn btn-danger">Concluir</button>
       </div>
     </div>
   </section>
