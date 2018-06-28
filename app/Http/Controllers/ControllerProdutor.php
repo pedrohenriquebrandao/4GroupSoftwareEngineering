@@ -12,7 +12,7 @@ class ControllerProdutor extends Controller
     private $endereco_controller;
     private $produtor;
 
-    public function __construct(EnderecoController $endereco_controller){
+    public function __construct(ControllerEndereco $endereco_controller){
         $this->endereco_controller = $endereco_controller;
         $this->produtor = new Produtor();
     }
@@ -64,7 +64,6 @@ class ControllerProdutor extends Controller
             'numero.required' => 'Campo numero obrigatório',
             'cidade.required' => 'Campo Cidade obrigatório',
             'estado.required' => 'Campo Estado obrigatório',
-            'complemento.required' => 'Campo Complemento obrigatório'
         ];
 
         return Validator::make($data, $regras, $mensagens);

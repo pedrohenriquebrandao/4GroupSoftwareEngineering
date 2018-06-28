@@ -6,7 +6,7 @@ use App\Usuario; //Caso não venha importado, fazer importação.
 use Illuminate\Support\Facades\Validator; //Necessário importar o validator do facades para validação.
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class ControllerLogin extends Controller
 {
     private $usuario_controller;
     private $login;

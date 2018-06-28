@@ -16,6 +16,7 @@ class CreateConsumidorUsuarioTable extends Migration
             $table->increments('id');
             $table->string('cpf')->unique();
             $table->string('nome');
+            $table->string('email');
             $table->string('sexo', 10);
             $table->string('telefone', 10);
             $table->integer('login_id')->unsigned();

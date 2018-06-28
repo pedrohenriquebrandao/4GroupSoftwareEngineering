@@ -10,12 +10,13 @@ class Usuario extends Model
 {
     protected $fillable = [
         'id',
-        'nome',
         'cpf',
+        'nome',
+        'email',
         'sexo',
         'telefone',
         'login_id'
     ];
 
-    protected $table = 'consumidor_usuario';
+    protected $table = 'usuarios';
 }

@@ -1,32 +1,31 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Usuario;
+use App\Admin;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
-class ControllerUsuario extends Controller
+class ControllerAdmin extends Controller
 {
     public function index(){
-        return view('dashboard-admin.clientes');
+        return view('dashboard-admin.admins');
     }
 
-    public function cadUsuario(Request $request){
+    public function cadAdmin(Request $request){
         $validacao = $this->validacao($request->all());
 
         if($validacao->fails()){
             return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
         }
         
-        $usuario = new Usuario();
-        $usuario->email = $request->email;
-        $usuario->cpf = $request->cpf;
-        $usuario->nome = $request->nome;
-        $usuario->sexo = $request->sexo;
-        $usuario->telefone = $request->telefone;
-
+        $admin = new Admin();
+        $admin->email = $request->email;
+        $admin->senha = $request->senha;
+        $admin->nome = $request->nome;
+        $admin->telefone = $request->telefone;
+        
         try{
-            $usuario->save();
+            $admin->save();
         }catch(\Exception $e){
             var_dump($e->getMessage());
         }
@@ -34,18 +33,16 @@ class ControllerUsuario extends Controller
     }
 
     public function validacao($data){
-        $regras['cpf'] = 'required|min:9';
-        $regras['nome'] = 'required';
         $regras['email'] = 'required';
-        $regras['sexo'] = 'required';
+        $regras['senha'] = 'required|size:6';
+        $regras['nome'] = 'required';
         $regras['telefone'] = 'required';
         
         $mensagens = [
             'nome.required' => 'Campo Nome é obrigatório',
-            'cpf.required' => 'Campo CPF é obrigatório',
-            'cnpj.size' => 'CPF deve conter 9 digitos',
-            'sexo.required' => 'Campo sexo é obrigatório',
             'email.required' => 'Campo email é obrigatório',
+            'senha.required' => 'Campo senha é obrigatório',
+            'telefone.required' => 'Campo telefone é obrigatório',
         ];
 
         return Validator::make($data, $regras, $mensagens);

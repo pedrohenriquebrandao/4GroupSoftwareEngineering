@@ -70,8 +70,13 @@ Route::get('assinaturas-pausadas', function () {
     return view('assinaturas-pausadas');
 });
 
-Route::post("/cadUsuario", "LoginController@cadLogin");
+Route::get('cadastrar-admin', function () {
+    return view('cadastrar-admin');
+});
 
+Route::post("/cadUsuario", "ControllerUsuario@cadUsuario");
+Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
 
 Route::get('/usuarios', 'ControllerUsuario@index');
+Route::get('/admins', 'ControllerUsuario@index');

@@ -5,7 +5,7 @@ use App\Endereco;
 use App\Produtor;
 use Illuminate\Http\Request;
 
-class EnderecoController extends Controller
+class ControllerEndereco extends Controller
 {
     public function AddEnderecoProdutor(Request $request){
         $endereco = Endereco::create($request->all());
