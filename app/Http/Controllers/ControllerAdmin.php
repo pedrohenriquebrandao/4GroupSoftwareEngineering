@@ -18,23 +18,14 @@ class ControllerAdmin extends Controller
             return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
         }
         
-        $admin = new Admin();
-        $admin->email = $request->email;
-        $admin->senha = $request->senha;
-        $admin->nome = $request->nome;
-        $admin->telefone = $request->telefone;
-        
-        try{
-            $admin->save();
-        }catch(\Exception $e){
-            var_dump($e->getMessage());
-        }
+        Admin::create($request->all());
         return redirect("/");   
     }
 
     public function validacao($data){
         $regras['email'] = 'required';
-        $regras['senha'] = 'required|size:6';
+        $regras['senha'] = 'required|min:6';
+        $regras['confirmasenha'] = 'required|same:senha';
         $regras['nome'] = 'required';
         $regras['telefone'] = 'required';
         
@@ -42,6 +33,9 @@ class ControllerAdmin extends Controller
             'nome.required' => 'Campo Nome é obrigatório',
             'email.required' => 'Campo email é obrigatório',
             'senha.required' => 'Campo senha é obrigatório',
+            'senha.min' => 'A senha deve conter no mínimo 6 caracteres',
+            'confirmasenha.required' => 'Campo confirmação de senha necessário',
+            'confirmasenha.same' => 'A confirmação de senha não condiz com a senha informada',
             'telefone.required' => 'Campo telefone é obrigatório',
         ];
 

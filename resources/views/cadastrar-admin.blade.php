@@ -56,11 +56,11 @@
 								{{$errors->first('senha')}}
 							</span>
 						@endif
-						<input class="input100" type="password" name="senha" value="{{old('Senha')}}" placeholder="Digite sua senha">
+						<input class="input100" type="password" name="senha" value="{{old('senha')}}" placeholder="Digite sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
-					<div class="wrap-input100 {{$errors->has('senha') ? 'has-error' : ''}}">
+					<div class="wrap-input100 {{$errors->has('confirmasenha') ? 'has-error' : ''}}">
 						<span class="label-input100">Confirmar Senha</span>
 						@if($errors->has('confirmasenha'))
 							<span class="label-input100 help-block" style="color: red">
