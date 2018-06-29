@@ -12,7 +12,6 @@ class Usuario extends Model
         'id',
         'cpf',
         'nome',
-        'email',
         'sexo',
         'telefone',
         'login_id'

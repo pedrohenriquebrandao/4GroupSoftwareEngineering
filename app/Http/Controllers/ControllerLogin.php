@@ -11,12 +11,12 @@ class ControllerLogin extends Controller
     private $usuario_controller;
     private $login;
 
-    public function __construct(UsuarioController $usuario_controller){
+    public function __construct(ControllerUsuario $usuario_controller){
         $this->usuario_controller = $usuario_controller;
         $this->login = new Login();
     }
 
-    public function cadLogin(Request $request){
+    public function cadUsuario(Request $request){
         $validacao = $this->validacao($request->all()); //Chama o método de validação passando os dados como parâmetro
 
         //Verifica se houve algum dado que não passou na verificação e retorna o erro!

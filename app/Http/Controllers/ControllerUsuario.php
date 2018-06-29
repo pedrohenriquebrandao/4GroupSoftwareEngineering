@@ -11,6 +11,15 @@ class ControllerUsuario extends Controller
         return view('dashboard-admin.clientes');
     }
 
+    public function cadastrarUsuario(Usuario $usuario){
+        try{
+            $usuario->save();
+        } catch(\Exception $e){
+            var_dump($e->getMessage());
+            //return "Erro: ".$e->getMessage();
+        }
+    }
+
     public function cadUsuario(Request $request){
         $validacao = $this->validacao($request->all());
 

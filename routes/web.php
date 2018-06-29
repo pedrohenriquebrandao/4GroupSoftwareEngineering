@@ -96,7 +96,7 @@ Route::get('detalhe-assinatura', function () {
     return view('detalhe-assinatura');
 });
 
-Route::post("/cadUsuario", "ControllerUsuario@cadUsuario");
+Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
 
 Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
 
