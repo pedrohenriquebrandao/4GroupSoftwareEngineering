@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Avaliações</title>
+    <title>Criar promoção</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -50,21 +50,21 @@
             <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
             <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li class="active"><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
+            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
         </nav>
         <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Avaliações</h2>
+              <h2 class="no-margin-bottom">Criar Promoção</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
-              <li class="breadcrumb-item active">Avaliações        </li>
+              <li class="breadcrumb-item active">Criar Promoção        </li>
             </ul>
           </div>  
           <section class="tables">   
@@ -73,26 +73,32 @@
                 <div class="col-lg-12">
                   <div class="card">
                     <div class="card-close">             
-                                                         
+                      <div class="dropdown">
+                        <a href="/gerenciar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button></a>
+                        
+                      </div>                                   
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Avaliações</h3>
+                      <h3 class="h4">Criar Promoção</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
                         <table class="table table-striped table-hover">                        
                           <thead>
                             <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">Imagem</th>
                               <th scope="col">Produto</th>
-                              <th scope="col">Assinante</th>
-                              <th scope="col">Avaliação</th>                                                         
+                              <th scope="col">Promoção</th>                                                          
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <th scope="row"><b>Nome:</b></th>
-                              <td><b>Usuário:</b></td>
-                              <td>...</td>                              
+                              <th scope="row">1</th>
+                              <td><img src="image/tomate.jfif" class="img-responsive rounded" alt="..."></td>
+                              <td><b>Nome: </b>Tomate</td>
+                              <td><input type="text" class="form-control" placeholder="Digite a promoção" id="promocao"></br>
+                              </td>                              
                              </tr>
                             <tr>                            
                           </tbody>
@@ -109,10 +115,10 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>Your company &copy; 2017-2019</p>
+                  <p>Colheita Feliz &copy; 2018</p>
                 </div>
                 <div class="col-sm-6 text-right">
-                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
+                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">4 Group Software Engineering</a></p>
                   <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                 </div>
               </div>

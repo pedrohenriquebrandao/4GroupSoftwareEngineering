@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Comentários</title>
+    <title>Avaliações</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -49,22 +49,22 @@
             <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
             <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
             <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li class="active"><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
+            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
+            <li class="active"><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
         </nav>
         <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Comentários</h2>
+              <h2 class="no-margin-bottom">Avaliações</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
-              <li class="breadcrumb-item active">Comentários        </li>
+              <li class="breadcrumb-item active">Avaliações        </li>
             </ul>
           </div>  
           <section class="tables">   
@@ -76,53 +76,31 @@
                                                          
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Comentários</h3>
+                      <h3 class="h4">Avaliações</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
-                        <table class="table table-hover">                        
+                        <table class="table table-striped table-hover">                        
                           <thead>
                             <tr>
+                              <th scope="col">Produto <i class="fa fa-camera-retro fa-lg"></i></th>
                               <th scope="col">Assinante</th>
-                              <th scope="col">Produto</th>
-                              <th scope="col">Comentário/Data</th>                             
+                              <th scope="col">Avaliação</th>                                                         
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td><div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div></br>
-                              <b>Usuario: </b>DYBALA</td>
-                              <td><b>Nome:</b> Ovo</td>
+                              <th scope="row">
+                                <img src="image/tomate.jfif" class="img-responsive" alt="..."></br></br>
+                                <b>Nome:</b>
+                              </th>
                               <td>
-                                <div class="form-group" style="padding:auto">
-                                  <label for="descricao">28/06/2018</label>
-                                  <textarea  disabled class="form-control" rows="5" id="descricao"></textarea>
-                                </div>
-                                
-                              </td>
+                                <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div></br>
+                                <b>Usuário:</b></td>
+                              <td><i class="fa fa-camera-retro fa-lg"></i></td>                              
                              </tr>
                             <tr>                            
                           </tbody>
-                            <div class="card-body">
-                                <div class="table-responsive">                                                           
-                                  <table class="table table-striped table-hover">                        
-                                    <thead>
-                                      <tr>                            
-                                        <th scope="col">Responder comentário</th> </tr>
-                                    </thead>
-                                    <tbody>
-                                      <th scope="row"></th>
-                                      <td><div class="form-group" style="padding:auto">
-                                            <label for="descricao"></label>
-                                            <textarea class="form-control" rows="5" id="descricao"></textarea></br>
-                                            <div class="dropdown">
-                                              <a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Enviar</button></a>
-                                            </div>
-                                          </div> 
-                                      </td>
-                                    </tbody>
-                                </div>
-                              </div>
                         </table>
                       </div>
                     </div>              

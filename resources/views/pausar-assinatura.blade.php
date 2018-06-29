@@ -49,7 +49,7 @@
             <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
             <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
             <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li ><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
+            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
         </nav>
@@ -73,7 +73,7 @@
                 <div class="col-lg-12">
                   <div class="card">
                     <div class="card-close">
-                      <button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button>                                                          
+                        <a href="/assinaturas-pausadas" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button></a>
                     </div>
                     <div class="card-header d-flex align-items-center">
                       <h3 class="h4">Pausar assinatura</h3>
@@ -83,7 +83,7 @@
                         <table class="table table-striped table-hover">                        
                           <thead>
                             <tr>
-                              <th scope="col">Detalhe da assinatura</th>
+                              <th scope="col">Detalhe da assinatura:</th>
                               <th scope="col">Motivo da pausa na assinatura:</th>                             
                             </tr>
                           </thead>

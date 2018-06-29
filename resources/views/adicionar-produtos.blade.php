@@ -90,14 +90,13 @@
                               <th scope="col">Imagem</th>
                               <th scope="col">Informações</th>
                               <th scope="col">Tipo de Frete</th>                              
-                              <th scope="col">Tipo de produto</th>  
-                              <th scope="col">Adicionar promoção</th>                                                         
+                              <th scope="col">Tipo de produto</th>                                                                                      
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="...">
+                              <td><img src="image/addImagem.jpg" class="img-responsive" style="width:40%" alt="...">
                                   </br></br>
                                   <input id="fileInput" type="file" class="form-control-file">
                               </td>
@@ -121,12 +120,10 @@
                               </td>
                               <td> 
                                 <input type="text" class="form-control" placeholder="Tipo" id="tipoDeProduto">  
-                              </td>        
-                              <td>
-                                <input type="text" class="form-control" placeholder="Promoção" id="promoção">
-                              </td>                          
+                              </td>       
+                                                        
                             </tr>
-                          </tbody>
+                          </tbody>                          
                             <div class="card-body">
                               <div class="table-responsive">                       
                                 <table class="table table-striped table-hover">                        

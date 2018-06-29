@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Comentários</title>
+    <title>Detalhe da assinatura</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -49,7 +49,7 @@
             <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
             <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
             <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li class="active"><a href="/comentarios"> <i class="icon-mail"></i>Comentários</a></li>   
+            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
         </nav>
@@ -57,72 +57,60 @@
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Comentários</h2>
+              <h2 class="no-margin-bottom">Detalhe da assinatura</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
-              <li class="breadcrumb-item active">Comentários        </li>
+              <li class="breadcrumb-item active">Detalhe da assinatura        </li>
             </ul>
-          </div>  
+          </div>
           <section class="tables">   
             <div class="container-fluid">
               <div class="row">         
                 <div class="col-lg-12">
                   <div class="card">
-                    <div class="card-close">             
-                                                         
+                    <div class="card-close">                      
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Comentários</h3>
+                      <h3 class="h4">Detalhe da assinatura</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
-                        <table class="table table-hover">                        
+                        <table class="table table-striped table-hover">                        
                           <thead>
                             <tr>
-                              <th scope="col">Assinante</th>
-                              <th scope="col">Produto</th>
-                              <th scope="col">Comentário/Data</th>                             
+                              <th scope="col">ID</th>
+                              <th scope="col">Produto</th>                              
+                              <th scope="col">Nome do assinante</th>
+                              <th scope="col">Quantidade do pedido</th>
+                              <th scope="col">Endereço de entrega</th>
+                              <th scope="col">Perído da assinatura</th>
+                              <th scope="col">Outras informações</th>                              
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td><div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div></br>
-                              <b>Usuario: </b>DYBALA</td>
-                              <td><b>Nome:</b> Ovo</td>
-                              <td>
-                                <div class="form-group" style="padding:auto">
-                                  <label for="descricao">28/06/2018</label>
-                                  <textarea  disabled class="form-control" rows="5" id="descricao"></textarea>
-                                </div>
-                                
+                              <th scope="row">1</th>
+                              <td><b>Nome:</b></br></br>
+                                  <img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              
+                              <td>Eduardo Marques</td>
+                              <td>10 kilos</td>
+                              <td><b>Rua:</b></br><b>Bairro:</b></br><b>Cidade:</b></br><b>CEP:</b></td>
+                              <td><b>Duração total:</b>
+                                  <b>Período atual:</b>
                               </td>
-                             </tr>
+                              <td><b>Status:</b></br>
+                                  <b>Tipo de entrega:</b></br>
+                                  <b>Tipo de frete:</b></br>
+                              </td>
+
+                            </tr>
                             <tr>                            
                           </tbody>
-                            <div class="card-body">
-                                <div class="table-responsive">                                                           
-                                  <table class="table table-striped table-hover">                        
-                                    <thead>
-                                      <tr>                            
-                                        <th scope="col">Responder comentário</th> </tr>
-                                    </thead>
-                                    <tbody>
-                                      <th scope="row"></th>
-                                      <td><div class="form-group" style="padding:auto">
-                                            <label for="descricao"></label>
-                                            <textarea class="form-control" rows="5" id="descricao"></textarea></br>
-                                            <div class="dropdown">
-                                              <a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Enviar</button></a>
-                                            </div>
-                                          </div> 
-                                      </td>
-                                    </tbody>
-                                </div>
-                              </div>
                         </table>
                       </div>
                     </div>              
@@ -130,16 +118,16 @@
                 </div>                
               </div>
             </div>
-          </section>
+          </section>         
           <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>Colheita Feliz &copy; 2018</p>
+                  <p>Your company &copy; 2017-2019</p>
                 </div>
                 <div class="col-sm-6 text-right">
-                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">4 Group Software Engineering</a></p>
+                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
                   <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                 </div>
               </div>

@@ -98,11 +98,12 @@
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="...">
+                              <td><img src="image/tomate.jfif" class="img-responsive" style="width:auto" alt="...">
+                              
                                   </br></br>
                                   <input id="fileInput" type="file" class="form-control-file">
                               </td>
-                              <td><b>Nome:</b> Tomate</br> <b>Valor:</b> R$10,00</br><b>Quantidade em estoque:</b> 50 kilos</br><b>Promoção:</b></br><b>Frete:</b></td>
+                              <td><b>Nome:</b> Tomate</br> <b>Valor:</b> R$10,00</br><b>Quantidade em estoque:</b> 50 kilos</br><b>Promoção:</b></br><b>Tipo de Frete:</b></td>
                               <td>20</td>
                               <td><div class="progress">
                                     <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
@@ -110,52 +111,12 @@
                                     </div>
                                   </div>
                               </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-warning btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                              <td><a href="/editar-produto" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-warning btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
                               </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Excluir</button></a></td>
-                              <td><a href="/criar-promoção" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Promoção</button></a>
+                              <td><a href="/editar-produto" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Excluir</button></a></td>
+                              <td><a href="/criar-promocao" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Promoção</button></a>
                               </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td><img src="image/tomate.jfif" class="img-responsive" alt="...">
-                                  </br></br>
-                                  <input id="fileInput" type="file" class="form-control-file">
-                              </td>
-                              <td><b>Nome:</b> Tomate</br> <b>Valor:</b> R$10,00</br><b>Quantidade em estoque:</b> 50 kilos</br><b>Promoção:</b></br><b>Frete:</b></td>
-                              <td>20</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
-                                  </div>
-                              </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-warning btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
-                              </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Excuir</button></a></td>
-                              <td><a href="/criar-promoção" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Promoção</button></a>
-                              </td>
-                            </tr>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td><img src="image/tomate.jfif" class="img-responsive" alt="...">
-                                  </br></br>
-                                  <input id="fileInput" type="file" class="form-control-file">
-                              </td>
-                              <td><b>Nome:</b> Tomate</br> <b>Valor:</b> R$10,00</br><b>Quantidade em estoque:</b> 50 kilos</br><b>Promoção:</b></br><b>Frete:</b></td>
-                              <td>20</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
-                                  </div>
-                              </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-warning btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
-                              </td>
-                              <td><a href="/editar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a></td>
-                              <td><a href="/criar-promoção" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Promoção</button></a>
-                              </td>
-                            </tr>
+                            </tr>                            
                           </tbody>
                         </table>
                       </div>

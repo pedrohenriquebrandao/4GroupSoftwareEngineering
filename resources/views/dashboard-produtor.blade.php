@@ -47,8 +47,8 @@
             <li class="active"><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
-            <li ><a href="/assinaturas-ativas"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
-            <li ><a href="/assinaturas-pausadas-pendentes"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
+            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
+            <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
             <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
           </ul>
@@ -63,7 +63,7 @@
                 <div class="col-xl-3 col-sm-6">
                   <div class="item d-flex align-items-center">
                     <div class="icon bg-violet"><i class="icon-user"></i></div>
-                    <div class="title"><a href="/pedidos-de-assinaturas"><span>Pedidos de<br>Assinaturas</span></a>
+                    <div class="title"><a href="/assinaturas-ativas-pendentes"><span>Pedidos de<br>Assinaturas</span></a>
                       <div class="progress">
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
                       </div>
@@ -75,7 +75,7 @@
                 <div class="col-xl-3 col-sm-6" >
                   <div class="item d-flex align-items-center">
                     <div class="icon bg-yellow"><i class="icon-padnote"></i></div>
-                    <div class="title"><a href="/avaliacoes"><span>Novas <br>Avaliações</span></a>
+                    <div class="title"><a href="/avaliacoes-produtor"><span>Novas <br>Avaliações</span></a>
                       <div class="progress">
                         <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-yellow"></div>
                       </div>

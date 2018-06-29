@@ -82,8 +82,18 @@ Route::get('pausar-assinatura', function () {
     return view('pausar-assinatura');
 });
 
-Route::get('avaliacao-produtor', function () {
-    return view('avaliacao-produtor');
+Route::get('avaliacoes-produtor', function () {
+    return view('avaliacoes-produtor');
+});
+
+Route::get('criar-promocao', function () {
+    return view('criar-promocao');
+});
+Route::get('editar-produto', function () {
+    return view('editar-produto');
+});
+Route::get('detalhe-assinatura', function () {
+    return view('detalhe-assinatura');
 });
 
 Route::post("/cadUsuario", "ControllerUsuario@cadUsuario");
