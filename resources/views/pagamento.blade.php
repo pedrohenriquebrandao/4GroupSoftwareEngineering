@@ -39,13 +39,17 @@
                 <h5 class="fundo hs-pagamento">PAGAMENTO</h5>
                 <div>
                     <form action="" class="form mt-4">
+                        <div class="mb-3 ml-1">
+                            <button type="button" class="btn btn-success col-12" data-toggle="modal" data-target="#modalCartao">Usar cartão salvo</button>
+                        </div>
+                            
                         <div class="form-group">
                             <label for="num">Número do Cartão</label>
-                            <input type="text" class="form-control col-md-4" id="num" placeholder="EX: 4012001037141112">
+                            <input type="text" class="form-control col-md-6" id="num" maxlength="16" placeholder="EX: 4012001037141112">
                         </div>
                         <div class="form-group">
                             <label for="nome">Nome do Titular</label>
-                            <input type="text" placeholder="EX: ANTÔNIO S CERQUEIRA" class="form-control col-md-6" aria-describedby="nomeHelp" id="nome">
+                            <input type="text" placeholder="EX: ANTÔNIO S CERQUEIRA" maxlength="30" class="form-control col-md-6" aria-describedby="nomeHelp" id="nome">
                             <small id="nomeHelp" class="form-text text-muted">Insira o nome como está gravado no cartão.</small>
                         </div>
                         <div class="form-group">
@@ -82,7 +86,7 @@
                         </div>
                         <div class="form-group">
                             <label for="codigo">Código de Segurança</label>
-                            <input type="text" placeholder="EX: 111" class="form-control col-md-2" aria-describedby="codigoHelp" id="codigo">
+                            <input type="text" maxlength="3" placeholder="EX: 111" class="form-control col-md-2" aria-describedby="codigoHelp" id="codigo">
                             <small id="codigoHelp" class="form-text text-muted">Encontra-se atrás do cartão.</small>
                         </div>
                         <div class="form-group">
@@ -103,7 +107,16 @@
                             </select>
                         </div>
 
-                        <button class="btn btn-danger">Concluir Compra</button>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="checkCartao">
+                            <label class="form-check-label" for="checkCartao">Salvar cartão para futuras compras</label>
+                        </div>
+
+                        <div class="mt-1 ml-1">
+                            <button class="btn btn-danger col-12">Concluir Compra</button>
+                        </div>
+
+                        
                     </form>
                 </div>
             </div>
@@ -130,7 +143,7 @@
 
                         <div>
                             <p>Deseja alterar o endereço?</p>
-                            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">Alterar Enredeço</button>
+                            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalEnd">Alterar Enredeço</button>
                         </div>
                     </div>
                 </div>
@@ -177,8 +190,8 @@
     <!-- Footer -->
     <!-- @include('footer')
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Endereço -->
+    <div class="modal fade" id="modalEnd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -198,6 +211,33 @@
                         <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
                         <h5>Rua A, 500 - Casa</h5>
                         <p><span>Feira de Santana</span>, <span>Centro</span> - <span>00000000-00</span></p> 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cartão -->
+    <div class="modal fade" id="modalCartao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cartões</h5>
+                    <button type="button" class="close col-md-2" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
+                            <h5>ANTÔNIO S CERQUEIRA - VISA</h5>
+                            <p><span>40**********1112</span>, <span>111</span> - <span>11/21</span></p> 
+                        </button>
+                    </div>
+                    <div>
+                        <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
+                         
                         </button>
                     </div>
                 </div>
