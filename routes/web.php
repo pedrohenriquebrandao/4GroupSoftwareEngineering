@@ -96,6 +96,30 @@ Route::get('detalhe-assinatura', function () {
     return view('detalhe-assinatura');
 });
 
+Route::get('dashboard-consumidor', function () {
+    return view('dashboard-consumidor');
+});
+
+Route::get('enderecos-consumidor', function () {
+    return view('enderecos-consumidor');
+});
+
+Route::get('mensagens-consumidor', function () {
+    return view('mensagens-consumidor');
+});
+
+Route::get('minhas-assinaturas', function () {
+    return view('minhas-assinaturas');
+});
+
+Route::get('dados-consumidor', function () {
+    return view('dados-consumidor');
+});
+
+Route::get('cartoes-consumidor', function () {
+    return view('cartoes-consumidor');
+});
+
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
 
 Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
