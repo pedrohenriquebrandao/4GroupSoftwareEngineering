@@ -17,5 +17,5 @@ class Usuario extends Model
         'login_id'
     ];
 
-    protected $table = 'usuarios';
+    protected $table = 'consumidor_usuarios';
 }

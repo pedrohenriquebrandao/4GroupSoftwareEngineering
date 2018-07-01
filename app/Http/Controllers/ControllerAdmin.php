@@ -23,7 +23,7 @@ class ControllerAdmin extends Controller
     }
 
     public function validacao($data){
-        $regras['email'] = 'required';
+        $regras['email'] = 'required|email';
         $regras['senha'] = 'required|min:6';
         $regras['confirmasenha'] = 'required|same:senha';
         $regras['nome'] = 'required';
@@ -32,6 +32,7 @@ class ControllerAdmin extends Controller
         $mensagens = [
             'nome.required' => 'Campo Nome é obrigatório',
             'email.required' => 'Campo email é obrigatório',
+            'email.email' => 'E-mail inserido invalido',
             'senha.required' => 'Campo senha é obrigatório',
             'senha.min' => 'A senha deve conter no mínimo 6 caracteres',
             'confirmasenha.required' => 'Campo confirmação de senha necessário',
