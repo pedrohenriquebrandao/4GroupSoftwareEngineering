@@ -28,7 +28,7 @@ class ControllerLogin extends Controller
 
         //Passa os dados recebidos da tela de cadastro para o controller de usuários
         $usuario = new Usuario();
-        $usuario->nome = $request->nome;
+        $usuario->nome = $request->nome ." ".$request->sobrenome;
         $usuario->cpf = $request->cpf;
         $usuario->sexo = $request->sexo;
         $usuario->telefone = $request->telefone;
@@ -46,6 +46,7 @@ class ControllerLogin extends Controller
         {
             if($data['nome'] || $data['cpf'] || $data['sexo'] || $data['telefone']){
                 $regras['nome'] = 'required|min:5'; //Campo nome requerido e deve conter no mínimo 5 digitos;
+                $regras['sobrenome'] = 'required|min:5';
                 $regras['cpf'] = 'required|size:11'; //CPF requerido e deve conter somente 11 digitos;
                 $regras['sexo'] = 'required'; //Sexo requerido;
                 $regras['telefone'] = 'required|min:8'; //Telefone requerido e deve conter no minimo 8 digitos;
@@ -59,6 +60,8 @@ class ControllerLogin extends Controller
         $mensagens = [
             'nome.required' => 'Campo Nome é obrigatório',
             'nome.min' => 'Campo nome deve conter no minimo 5 caracteres',
+            'sobrenome.required' => 'Sobrenome é obrigatório',
+            'sobrenome.min' => 'Campo sobrenome deve conter no mínimo 5 caracteres',
             'cpf.required' => 'Campo CPF é obrigatório',
             'cpf.size' => 'Campo CPF deve conter 11 digitos',
             'sexo.required' => 'Obrigatório selecionar o sexo',

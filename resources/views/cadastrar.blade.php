@@ -97,7 +97,7 @@
 						<span class="focus-input100" data-symbol="&#xf2c3;"></span>
 					</div>
 
-					<div class="wrap-input100 m-b-23 {{$errors->has('email') ? 'has-error' : ''}}">
+					<div class="wrap-input100 m-b-23 {{$errors->has('nome') ? 'has-error' : ''}}">
 						<span class="label-input100">Nome</span>
 						@if($errors->has('nome'))
 							<span class="label-input100 help-block" style="color: red">
@@ -108,8 +108,13 @@
 						<span class="focus-input100" data-symbol="&#xf20d;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+					<div class="wrap-input100 validate-input m-b-23 {{$errors->has('sobrenome') ? 'has-error' : ''}}">
 						<span class="label-input100">Sobrenome</span>
+						@if($errors->has('sobrenome'))
+							<span class="label-input100 help-block" style="color: red">
+								{{$errors->first('sobrenome')}}
+							</span>
+						@endif
 						<input class="input100" type="text" name="sobrenome" value="{{old('sobrenome')}}" placeholder="Digite seu sobrenome">
 						<span class="focus-input100" data-symbol="&#xf20d;"></span>
 					</div>		
