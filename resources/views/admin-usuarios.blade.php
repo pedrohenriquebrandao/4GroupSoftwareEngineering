@@ -29,7 +29,7 @@
     <div class="page">
       <!-- Main Navbar-->
       <header class="header">
-        @include('navbarprodutor')
+        @include('admin-navbar')
       </header>
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
@@ -38,33 +38,32 @@
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">Joao e o pé de feijão</h1>
-              <p>Fazendeiro</p>
+              <h1 class="h4">Marco</h1>
+              <p>Admin-mor</p>
             </div>
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
-          <ul class="list-unstyled">
-            <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
-            <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
-            <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
-            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
-            <li class="active"><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
+          <ul class="list-unstyled">                    
+            <li ><a href="/admin-dashboard"> <i class="icon-grid"></i>Status</a></li>
+            <li class="active"><a href="/admin-usuarios"> <i class="icon-user"></i>Usuários</a></li>
+            <li ><a href="/administradores"> <i class="icon-user"></i>Administradores</a></li>
+            <li ><a href="/admin-detalhes-assinatura"> <i class="icon-list-1"></i>Assinaturas</a></li>
+            <li ><a href=""> <i class="icon-interface-windows"></i>Gerar Backup do Banco de Dados</a></li>  
+            <li ><a href=""> <i class="icon-website"></i>Gerar Relatório</a></li>             
           </ul>
         </nav>
         <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Assinaturas pausadas</h2>
+              <h2 class="no-margin-bottom">Usuários</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
-              <li class="breadcrumb-item active">Assinaturas pausadas        </li>
+              <li class="breadcrumb-item active">Usuários        </li>
             </ul>
           </div>  
           <section class="tables">   
@@ -76,7 +75,7 @@
                                                          
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Assinaturas pausadas</h3>
+                      <h3 class="h4">Usuários</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
@@ -84,23 +83,21 @@
                           <thead>
                             <tr>
                               <th scope="col">ID</th>
-                              <th scope="col">Imagem</th>
-                              <th scope="col">Nome do produto</th>
-                              <th scope="col">Nome do assinante</th>
-                              <th scope="col">Quantidade</th>
-                              <th scope="col">Endereço de entrega</th>
-                              <th scope="col">Detalhes da assinatura</th>                             
+                              <th scope="col">Usuário</th>
+                              <th scope="col">Tipo de usuário</th>
+                              <th scope="col">E-mail</th>
+                              <th scope="col">Status</th>                              
+                              <th scope="col">Banir</th>                             
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
-                              <td>Tomate</td>
-                              <td>Eduardo Marques</td>
-                              <td>10 kilos</td>
-                              <td>Rua:</br>Bairro:</br>Cidade:</br>CEP:</td>
-                              <td><a href="/detalhe-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Ver assinatura</button></a>
+                              <td><b>User: </b>@joaopedro</td>
+                              <td>Consumidor</td>
+                              <td>joaopedro@gmail.com</td>
+                              <td><b>Usuário: </b>Ativo</td>
+                              <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
                              </tr>
                             <tr>                            
                           </tbody>

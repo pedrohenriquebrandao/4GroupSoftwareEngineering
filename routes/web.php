@@ -44,7 +44,6 @@ Route::get('carrinho', function () {
 Route::get('dashboard-produtor', function () {
     return view('dashboard-produtor');
 });
-
 Route::get('tables', function () {
     return view('tables');
 });
@@ -63,6 +62,7 @@ Route::get('gerenciar-produtos', function () {
 Route::get('navbarprodutor', function () {
     return view('navbarprodutor');
 });
+
 Route::get('adicionar-produtos', function () {
     return view('adicionar-produtos');
 });
@@ -120,6 +120,31 @@ Route::get('cartoes-consumidor', function () {
     return view('cartoes-consumidor');
 });
 
+// ------ ROTAS ADMIN ------- //
+Route::get('admin-dashboard', function () {
+    return view('admin-dashboard');
+});
+Route::get('admin-usuarios', function () {
+    return view('admin-usuarios');
+});
+Route::get('administradores', function () {
+    return view('administradores');
+});
+Route::get('admin-permisao-edit', function () {
+    return view('admin-permisao-edit');
+});
+Route::get('admin-navbar', function () {
+    return view('admin-navbar');
+});
+Route::get('admin-assinaturas', function () {
+    return view('admin-assinaturas');
+});
+Route::get('admin-detalhes-assinatura', function () {
+    return view('admin-detalhes-assinatura');
+});
+
+
+// ------- ROTAS BANCO DE DADOS ------- //
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
 
 Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");

@@ -29,7 +29,7 @@
     <div class="page">
       <!-- Main Navbar-->
       <header class="header">
-         @include('navbarprodutor')
+         @include('admin-navbar')
       </header>
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
@@ -38,17 +38,18 @@
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">Zezin</h1>
+              <h1 class="h4">Marco</h1>
+              <p>Admin-Mor</p>
             </div>
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
-          <ul class="list-unstyled">
-            <li><a href="/dashboard-consumidor"> <i class="icon-home"></i>Página principal </a></li>        
-            <li class="active"><a href="/minhas-assinaturas"> <i class="icon-list"></i>Minhas Assinaturas</a></li>
-            <li ><a href="/dados-consumidor"> <i class="icon-user"></i>Meus Dados</a></li>
-            <li ><a href="/enderecos-consumidor"> <i class="icon-form"></i>Meus Endereços</a></li>
-            <li ><a href="/cartoes-consumidor"> <i class="icon-bars"></i>Meus Cartões</a></li>
-            <li ><a href="/mensagens-consumidor"> <i class="icon-mail"></i>Mensagens</a></li>         
+          <ul class="list-unstyled">                    
+            <li class="active"><a href="/admin-dashboard"> <i class="icon-grid"></i>Status</a></li>
+            <li ><a href="/admin-usuarios"> <i class="icon-user"></i>Usuários</a></li>
+            <li ><a href="/administradores"> <i class="icon-user"></i>Administradores</a></li>
+            <li ><a href="/admin-detalhes-assinatura"> <i class="icon-list-1"></i>Assinaturas</a></li>
+            <li ><a href=""> <i class="icon-interface-windows"></i>Gerar Backup do Banco de Dados</a></li>  
+            <li ><a href=""> <i class="icon-website"></i>Gerar Relatório</a></li>             
           </ul>
         </nav>
         <div class="content-inner">    
@@ -58,56 +59,69 @@
             <div class="container-fluid">
               <div class="row bg-white has-shadow">
                 <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
+                <div class="col-xl-4 col-sm-6">
                   <div class="item d-flex align-items-center">
                     <div class="icon bg-violet"><i class="icon-user"></i></div>
-                    <div class="title"><a href="/assinaturas-ativas-pendentes"><span>Minhas<br>Assinaturas</span></a>
+                    <div class="title"><a href="/admin-usuarios"><span>Usuários</span></a>
                       <div class="progress">
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>4</strong></div>
+                    <div class="number"><strong>25</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
-                <div class="col-xl-3 col-sm-6" >
+                <div class="col-xl-4 col-sm-6" >
                   <div class="item d-flex align-items-center">
                     <div class="icon bg-yellow"><i class="icon-padnote"></i></div>
-                    <div class="title"><a href="/avaliacoes-produtor"><span>Meus<br>Endereços</span></a>
+                    <div class="title"><a href="/admin-usuarios"><span>Produtores<br>Cadastrados</span></a>
                       <div class="progress">
                         <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-yellow"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>3</strong></div>
+                    <div class="number"><strong>70</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
-                <div class="col-xl-3 col-sm-6" style="padding-left:1px">
+                <div class="col-xl-4 col-sm-6" style="padding-left:1px">
                   <div class="item d-flex align-items-center">
                     <div class="icon bg-green"><i class="icon-mail"></i></div>
-                    <div class="title"><a href="/comentarios-produtor"><span>Minhas<br>Mensagens</span></a>
+                    <div class="title"><a href="/admin-assinaturas"><span>Assinaturas</span></a>
                       <div class="progress">
                         <div role="progressbar" style="width: 50%; height: 4px; " aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
                       </div>
                     </div>
-                    <div class="number" style="padding-right:50px"><strong>10</strong></div>
+                    <div class="number" style="padding-right:50px"><strong>40</strong></div>
                   </div>
                 </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-orange"><i class="icon-check"></i></div>
-                    <div class="title"><a href="/assinaturas-pausadas"><span>Meus<br>Cartões</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>2</strong></div>
-                  </div>
-                </div> 
+                <!-- Item -->                
               </div>
             </div>
-          </section>      
+          </section>
+          <!-- Dashboard Header Section    -->
+          <section class="dashboard-header">
+            <div class="container-fluid">
+              <div class="row">                
+                <!-- Line Chart            -->
+                <div class="chart col-lg-8 col-12">
+                  <div class="line-chart bg-white d-flex align-items-center justify-content-center has-shadow">
+                    <canvas id="lineCahrt"></canvas>
+                  </div>
+                </div>
+                <div class="chart col-lg-4 col-12">
+                  <!-- Bar Chart   -->
+                  <div class="bar-chart has-shadow bg-white">
+                    <div class="title"><strong class="text-violet">95%</strong><br><small>Porcentagem de vendas</small></div>
+                    <canvas id="barChartHome"></canvas>
+                  </div>
+                  <!-- Numbers-->
+                  <div class="statistic d-flex align-items-center bg-white has-shadow">
+                    <div class="icon bg-orange"><i class="fa fa-line-chart"></i></div>
+                    <div class="text"><strong>99.9%</strong><br><small>Taxa de Sucesso</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>          
           <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">

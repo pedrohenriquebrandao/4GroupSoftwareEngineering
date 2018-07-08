@@ -43,40 +43,38 @@
             </div>
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
-          <ul class="list-unstyled">
-            <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
-            <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
-            <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
-            <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
-            <li class="active"><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
-            <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
+          <ul class="list-unstyled">                    
+            <li ><a href="/admin-dashboard"> <i class="icon-grid"></i>Status</a></li>
+            <li ><a href="/admin-usuarios"> <i class="icon-user"></i>Usuários</a></li>
+            <li ><a href="/administradores"> <i class="icon-user"></i>Administradores</a></li>
+            <li class="active" ><a href="/admin-detalhes-assinatura"> <i class="icon-list-1"></i>Assinaturas</a></li>
+            <li ><a href=""> <i class="icon-interface-windows"></i>Gerar Backup do Banco de Dados</a></li>  
+            <li ><a href=""> <i class="icon-website"></i>Gerar Relatório</a></li>             
           </ul>
         </nav>
         <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Assinaturas pausadas</h2>
+              <h2 class="no-margin-bottom">Detalhes da assinatura</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
-              <li class="breadcrumb-item active">Assinaturas pausadas        </li>
+              <li class="breadcrumb-item active">Detalhes da assinatura        </li>
             </ul>
-          </div>  
+          </div>
           <section class="tables">   
             <div class="container-fluid">
               <div class="row">         
                 <div class="col-lg-12">
                   <div class="card">
-                    <div class="card-close">             
-                                                         
+                    <div class="card-close">                      
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Assinaturas pausadas</h3>
+                      <h3 class="h4">Detalhes da assinatura</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
@@ -84,24 +82,32 @@
                           <thead>
                             <tr>
                               <th scope="col">ID</th>
-                              <th scope="col">Imagem</th>
-                              <th scope="col">Nome do produto</th>
+                              <th scope="col">Produto</th>                              
                               <th scope="col">Nome do assinante</th>
-                              <th scope="col">Quantidade</th>
+                              <th scope="col">Quantidade do pedido</th>
                               <th scope="col">Endereço de entrega</th>
-                              <th scope="col">Detalhes da assinatura</th>                             
+                              <th scope="col">Perído da assinatura</th>
+                              <th scope="col">Outras informações</th>                              
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
-                              <td>Tomate</td>
+                              <td><b>Nome:</b></br></br>
+                                  <img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              
                               <td>Eduardo Marques</td>
                               <td>10 kilos</td>
-                              <td>Rua:</br>Bairro:</br>Cidade:</br>CEP:</td>
-                              <td><a href="/detalhe-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Ver assinatura</button></a>
-                             </tr>
+                              <td><b>Rua:</b></br><b>Bairro:</b></br><b>Cidade:</b></br><b>CEP:</b></td>
+                              <td><b>Duração total:</b>
+                                  <b>Período atual:</b>
+                              </td>
+                              <td><b>Status:</b></br>
+                                  <b>Tipo de entrega:</b></br>
+                                  <b>Tipo de frete:</b></br>
+                              </td>
+
+                            </tr>
                             <tr>                            
                           </tbody>
                         </table>
@@ -111,16 +117,16 @@
                 </div>                
               </div>
             </div>
-          </section>
+          </section>         
           <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>Colheita Feliz &copy; 2018</p>
-                  </div>
-                  <div class="col-sm-6 text-right">
-                    <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">4 Group Software Engineering</a></p>
+                  <p>Your company &copy; 2017-2019</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
                   <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                 </div>
               </div>
