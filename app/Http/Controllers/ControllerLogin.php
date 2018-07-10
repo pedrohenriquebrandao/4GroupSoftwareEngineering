@@ -12,6 +12,7 @@ class ControllerLogin extends Controller
     private $login;
 
     public function __construct(ControllerUsuario $usuario_controller){
+        $this->middleware('auth:usuario');
         $this->usuario_controller = $usuario_controller;
         $this->login = new Login();
     }

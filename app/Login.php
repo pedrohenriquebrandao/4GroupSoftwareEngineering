@@ -5,9 +5,14 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\Usuario as Authenticatable;
+use Auth;
 
-class Login extends Model
+class Login extends Authenticatable
 {
+    use Notifiable; //Necessário para autenticação(Login)
+
+    protected $guard = 'usuario';
+
     protected $fillable = [
         'email',
         'senha'

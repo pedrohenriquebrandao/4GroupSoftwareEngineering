@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class ControllerAdmin extends Controller
 {
-    public function index(){
-        return view('dashboard-admin.admins');
+    public function __construct(){
+        $this->middleware('auth:admin');
     }
 
     public function cadAdmin(Request $request){
@@ -41,5 +41,10 @@ class ControllerAdmin extends Controller
         ];
 
         return Validator::make($data, $regras, $mensagens);
+    }
+
+    //Funcções de retorno de view para as rotas de admin;
+    public function index(){
+        return view('dashboard-admin.admins');
     }
 }

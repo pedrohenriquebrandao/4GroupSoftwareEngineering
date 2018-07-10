@@ -121,6 +121,8 @@ Route::get('cartoes-consumidor', function () {
 });
 
 // ------ ROTAS ADMIN ------- //
+//Grupo de rotas para o admin
+
 Route::get('admin-dashboard', function () {
     return view('admin-dashboard');
 });
