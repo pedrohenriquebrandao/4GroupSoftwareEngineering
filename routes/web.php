@@ -16,33 +16,33 @@ Route::get('/', function () {
 });
 
 Route::get('login', function () {
-    return view('login');
+    return view('auth.login');
 });
 
 Route::get('cadastrar', function () {
-    return view('cadastrar');
+    return view('auth.cadastrar');
 });
 Route::get('admin', function () {
     return view('admin');
 });
 Route::get('recuperar-senha', function () {
-    return view('recuperar-senha');
+    return view('auth.recuperar-senha');
 });
 Route::get('cadastrar-produtor', function () {
-    return view('cadastrar-produtor');
+    return view('auth.cadastrar-produtor');
 });
 
 Route::get('recsenhaconfirm', function () {
-    return view('recsenhaconfirm');
+    return view('auth.recsenhaconfirm');
 });
 Route::get('perfil-produtor', function () {
     return view('perfil-produtor');
 });
 Route::get('carrinho', function () {
-    return view('carrinho');
+    return view('usuario.carrinho');
 });
 Route::get('dashboard-produtor', function () {
-    return view('dashboard-produtor');
+    return view('produtor.dashboard-produtor');
 });
 Route::get('tables', function () {
     return view('tables');
@@ -51,98 +51,100 @@ Route::get('forms', function () {
     return view('forms');
 }); 
 Route::get('pagamento', function () {
-    return view('pagamento');
+    return view('usuario.pagamento');
 });
 Route::get('assinaturas-ativas-pendentes', function () {
-    return view('assinaturas-ativas-pendentes');
+    return view('produtor.assinaturas-ativas-pendentes');
 });
 Route::get('gerenciar-produtos', function () {
-    return view('gerenciar-produtos');
+    return view('produtor.gerenciar-produtos');
 });
 Route::get('navbarprodutor', function () {
     return view('navbarprodutor');
 });
 
 Route::get('adicionar-produtos', function () {
-    return view('adicionar-produtos');
+    return view('produtor.adicionar-produtos');
 });
 Route::get('assinaturas-pausadas', function () {
     return view('assinaturas-pausadas');
 });
 
 Route::get('cadastrar-admin', function () {
-    return view('cadastrar-admin');
+    return view('auth.cadastrar-admin');
 });
 
 Route::get('comentarios-produtor', function () {
-    return view('comentarios-produtor');
+    return view('produtor.comentarios-produtor');
 });
 
 Route::get('pausar-assinatura', function () {
-    return view('pausar-assinatura');
+    return view('produtor.pausar-assinatura');
 });
 
 Route::get('avaliacoes-produtor', function () {
-    return view('avaliacoes-produtor');
+    return view('produtor.avaliacoes-produtor');
 });
 
 Route::get('criar-promocao', function () {
-    return view('criar-promocao');
+    return view('produtor.criar-promocao');
 });
 Route::get('editar-produto', function () {
-    return view('editar-produto');
+    return view('produtor.editar-produto');
 });
 Route::get('detalhe-assinatura', function () {
-    return view('detalhe-assinatura');
+    return view('produtor.detalhe-assinatura');
 });
 
 Route::get('dashboard-consumidor', function () {
-    return view('dashboard-consumidor');
+    return view('usuario.dashboard-consumidor');
 });
 
 Route::get('enderecos-consumidor', function () {
-    return view('enderecos-consumidor');
+    return view('usuario.enderecos-consumidor');
 });
 
 Route::get('mensagens-consumidor', function () {
-    return view('mensagens-consumidor');
+    return view('usuario.mensagens-consumidor');
 });
 
 Route::get('minhas-assinaturas', function () {
-    return view('minhas-assinaturas');
+    return view('usuario.minhas-assinaturas');
 });
 
 Route::get('dados-consumidor', function () {
-    return view('dados-consumidor');
+    return view('usuario.dados-consumidor');
 });
 
 Route::get('cartoes-consumidor', function () {
-    return view('cartoes-consumidor');
+    return view('usuario.cartoes-consumidor');
 });
 
 // ------ ROTAS ADMIN ------- //
 //Grupo de rotas para o admin
 
+Route::get('admin', function(){
+    return view('auth.admin-login');
+});
+
 Route::get('admin-dashboard', function () {
-    return view('admin-dashboard');
+    return view('admin.admin-dashboard');
 });
 Route::get('admin-usuarios', function () {
-    return view('admin-usuarios');
+    return view('admin.admin-usuarios');
 });
 Route::get('administradores', function () {
-    return view('administradores');
+    return view('admin.administradores');
 });
 Route::get('admin-permisao-edit', function () {
-    return view('admin-permisao-edit');
+    return view('admin.admin-permisao-edit');
 });
-Route::get('admin-navbar', function () {
-    return view('admin-navbar');
-});
+
 Route::get('admin-assinaturas', function () {
-    return view('admin-assinaturas');
+    return view('admin.admin-assinaturas');
 });
 Route::get('admin-detalhes-assinatura', function () {
-    return view('admin-detalhes-assinatura');
+    return view('admin.admin-detalhes-assinatura');
 });
 
 

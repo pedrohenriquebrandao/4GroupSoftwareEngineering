@@ -29,7 +29,7 @@
     <div class="page">
       <!-- Main Navbar-->
       <header class="header">
-        @include('admin-navbar')
+        @include('admin/admin-navbar')
       </header>
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->
@@ -46,7 +46,7 @@
           <ul class="list-unstyled">                    
             <li ><a href="/admin-dashboard"> <i class="icon-grid"></i>Status</a></li>
             <li ><a href="/admin-usuarios"> <i class="icon-user"></i>Usuários</a></li>
-            <li class="active"><a href="/administradores"> <i class="icon-user"></i>Administradores</a></li>
+            <li ><a href="/administradores"> <i class="icon-user"></i>Administradores</a></li>
             <li ><a href="/admin-detalhes-assinatura"> <i class="icon-list-1"></i>Assinaturas</a></li>
             <li ><a href=""> <i class="icon-interface-windows"></i>Gerar Backup do Banco de Dados</a></li>  
             <li ><a href=""> <i class="icon-website"></i>Gerar Relatório</a></li>             
@@ -56,14 +56,14 @@
           <!-- Page Header-->
           <header class="page-header">
             <div class="container-fluid">
-              <h2 class="no-margin-bottom">Administradores</h2>
+              <h2 class="no-margin-bottom">Editar Administrador</h2>
             </div>
           </header>
           <!-- Breadcrumb-->
           <div class="breadcrumb-holder container-fluid">
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="/dashboard-produtor">Página principal</a></li>
-              <li class="breadcrumb-item active">Administradores</li>
+              <li class="breadcrumb-item active">Editar Administrador</li>
             </ul>
           </div>  
           <section class="tables">   
@@ -72,10 +72,11 @@
                 <div class="col-lg-12">
                   <div class="card">
                     <div class="card-close">             
-                                                         
+                    <a href="/editar-user-admin" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button></a>
+                            
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Administradores</h3>
+                      <h3 class="h4">Editar Administrador</h3>
                     </div>
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
@@ -86,9 +87,7 @@
                               <th scope="col">Administrador</th>
                               <th scope="col">Tipo de admin</th>
                               <th scope="col">E-mail</th>
-                              <th scope="col">Status</th>
-                              <th scope="col">Editar</th>
-                              <th scope="col">Banir</th>                             
+                              <th scope="col">Mudar permissão de acesso</th>                                                          
                             </tr>
                           </thead>
                           <tbody>
@@ -97,9 +96,14 @@
                               <td><b>User: </b>@joaopedro</td>
                               <td>Normal</td>
                               <td>joaopedro@gmail.com</td>
-                              <td><b>Admin: </b>Ativo</td>
-                              <td><a href="/admin-permisao-edit" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
-                              <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
+                              <td>
+                                  <div class="i-checks">
+                                    <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Admin Normal</label>
+                                  </div>
+                                  <div class="i-checks"> 
+                                    <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Admin-Mor</label>
+                                  </div>
+                              </td>                              
                              </tr>
                             <tr>                            
                           </tbody>
