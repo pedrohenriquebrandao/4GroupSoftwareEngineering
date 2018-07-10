@@ -21,22 +21,33 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({!! asset('image/bgAdmin.png') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="POST" action="{{ route('admin.login.submit') }}">
+				@csrf
 					<center><img style=""  src="{!! asset('image/logoAdmin.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Campo obrigatório">
 						<span class="label-input100">E-mail</span>
-						<input class="input100" type="text" name="e-mail" placeholder="Digite seu e-mail">
+						<input class="input100 {{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" name="email" value="{{ old('email') }}" placeholder="Digite seu e-mail">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
+						@if ($errors->has('email'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
+					<div class="wrap-input100 validate-input" data-validate="Campo obrigatório">
 						<span class="label-input100">Senha</span>
-						<input class="input100" type="senha" name="pass" placeholder="Digite sua senha">
+						<input class="input100 {{ $errors->has('email') ? ' is-invalid' : '' }}" type="senha" name="senha" value="{{ old('senha') }}" placeholder="Digite sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
+						@if ($errors->has('senha'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('senha') }}</strong>
+                            </span>
+                        @endif
 					</div>
 					
 					<div class="text-right p-t-8 p-b-13">

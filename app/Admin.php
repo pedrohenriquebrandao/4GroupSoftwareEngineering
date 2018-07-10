@@ -2,10 +2,8 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\Admin as Authenticatable;
-use Auth;
 
 class Admin extends Authenticatable
 {

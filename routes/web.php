@@ -19,6 +19,9 @@ Route::get('login', function () {
     return view('auth.login');
 });
 
+//Rota de login do usuario
+Route::post('login', 'Auth\UsuarioLoginController@login')->name('usuario.login');
+
 Route::get('cadastrar', function () {
     return view('auth.cadastrar');
 });
@@ -121,15 +124,18 @@ Route::get('cartoes-consumidor', function () {
 });
 
 // ------ ROTAS ADMIN ------- //
-//Grupo de rotas para o admin
 
 Route::get('admin', function(){
     return view('auth.admin-login');
 });
 
+//Rota de login do adm
+Route::post('admin', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
 Route::get('admin-dashboard', function () {
     return view('admin.admin-dashboard');
-});
+})->name('admin.dashboard');
+
 Route::get('admin-usuarios', function () {
     return view('admin.admin-usuarios');
 });
@@ -146,7 +152,6 @@ Route::get('admin-assinaturas', function () {
 Route::get('admin-detalhes-assinatura', function () {
     return view('admin.admin-detalhes-assinatura');
 });
-
 
 // ------- ROTAS BANCO DE DADOS ------- //
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
