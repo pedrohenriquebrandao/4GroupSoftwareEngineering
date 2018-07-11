@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// -------- ROTAS HOMEPAGE -------- //
 
 Route::get('/', function () {
     return view('home');
@@ -19,27 +20,24 @@ Route::get('/home', function(){
     return view('who');
 });
 
+Route::get('pagamento', function () {
+    return view('usuario.pagamento');
+});
+
 Route::get('entrarConsumidor', function () {
     return view('auth.consumidor');
 });
 
-//Rota de login do usuario
-Route::get('loginConsumidor', 'Auth\UsuarioLoginController@loginConsumidor')->name('consumidor.login'); //Rota de tela de login
+Route::get('carrinho', function () {
+    return view('usuario.carrinho');
+});
 
-Route::post('loginConsumidor', 'Auth\UsuarioLoginController@login')->name('consumidor.login.submit'); //Rota de login
-
-Route::get('logoutConsumidor', 'Auth\UsuarioLoginController@logout')->name('consumidor.logout'); //Rota de logout
-
-Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')->name('paginaInicial'); //Rota da tela inicial para usuário
-
-Route::get('dashboard-consumidor', 'ControllerUsuario@index')->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
+// ------ ROTAS DE CADASTRO --------- //
 
 Route::get('cadastrar', function () {
     return view('auth.cadastrar');
 });
-Route::get('admin', function () {
-    return view('admin');
-});
+
 Route::get('recuperar-senha', function () {
     return view('auth.recuperar-senha');
 });
@@ -50,24 +48,18 @@ Route::get('cadastrar-produtor', function () {
 Route::get('recsenhaconfirm', function () {
     return view('auth.recsenhaconfirm');
 });
-Route::get('perfil-produtor', function () {
-    return view('perfil-produtor');
-});
-Route::get('carrinho', function () {
-    return view('usuario.carrinho');
-});
+
+// ------ ROTAS DASHBOARD PRODUTOR ------ //
+
+
 Route::get('dashboard-produtor', function () {
     return view('produtor.dashboard-produtor');
 });
-Route::get('tables', function () {
-    return view('tables');
+
+Route::get('comentarios-produtor', function () {
+    return view('produtor.comentarios-produtor');
 });
-Route::get('forms', function () {
-    return view('forms');
-}); 
-Route::get('pagamento', function () {
-    return view('usuario.pagamento');
-});
+
 Route::get('assinaturas-ativas-pendentes', function () {
     return view('produtor.assinaturas-ativas-pendentes');
 });
@@ -83,14 +75,6 @@ Route::get('adicionar-produtos', function () {
 });
 Route::get('assinaturas-pausadas', function () {
     return view('assinaturas-pausadas');
-});
-
-Route::get('cadastrar-admin', function () {
-    return view('auth.cadastrar-admin');
-});
-
-Route::get('comentarios-produtor', function () {
-    return view('produtor.comentarios-produtor');
 });
 
 Route::get('pausar-assinatura', function () {
@@ -137,22 +121,23 @@ Route::get('cartoes-consumidor', function () {
 
 // ------ ROTAS ADMIN ------- //
 
-Route::get('admin', function(){
-    return view('auth.admin-login');
+Route::get('admin-sidebar', function () {
+    return view('admin-sidebar');
 });
 
-//Rota de login do adm
-Route::get('loginAdmin', 'Auth\AdminLoginController@loginAdm')->name('admin.login'); //Rota de tela de login
+Route::get('cadastrar-admin', function () {
+    return view('auth.cadastrar-admin');
+});
 
-Route::post('loginAdmin', 'Auth\AdminLoginController@login')->name('admin.login.submit'); //Rota de login
-
-Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')->name('admin.logout'); //Rota de logout
-
-Route::get('admin-dashboard', 'ControllerAdmin@index')->name('admin.dashboard'); //Rota para o dashboard admin;
-
+<<<<<<< HEAD
 //Route::get('admin-dashboard', function () {
 //    return view('admin.admin-dashboard');
 //})->name('admin.dashboard');
+=======
+Route::get('admin', function () {
+    return view('admin');
+});
+>>>>>>> be1a4daf4588b5d31f6282791fd2da904fd703b6
 
 Route::get('admin-usuarios', function () {
     return view('admin.admin-usuarios');
@@ -173,8 +158,28 @@ Route::get('admin-detalhes-assinatura', function () {
 Route::get('visao-produto/{id}', function ($id) {
     return view('visao-produto', ['id'=> $id]);
 });
+Route::get('admin', function(){
+    return view('auth.admin-login');
+});
 
-// ------- ROTAS BANCO DE DADOS ------- //
+// ------- ROTAS BACK-END ------- //
+
+// ----------- ROTAS ADMIN ------------//
+// ------- Rota de login do adm -------//
+Route::get('loginAdmin', 'Auth\AdminLoginController@loginAdm')->name('admin.login'); //Rota de tela de login
+
+Route::post('loginAdmin', 'Auth\AdminLoginController@login')->name('admin.login.submit'); //Rota de login
+
+Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')->name('admin.logout'); //Rota de logout
+
+Route::get('admin-dashboard', 'ControllerAdmin@index')->name('admin.dashboard'); //Rota para o dashboard admin;
+
+Route::get('admin-dashboard', function () {
+    return view('admin.admin-dashboard');
+})->name('admin.dashboard');
+
+// ------- ROTAS DE CADASTRO ------- //
+
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
 
 Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
@@ -184,5 +189,18 @@ Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro d
 Route::get('/usuarios', 'ControllerUsuario@index');
 
 Route::get('/admins', 'ControllerUsuario@index');
+
+// ---- ROTA DE LOGIN DE USUARIO ---- //
+Route::get('loginConsumidor', 'Auth\UsuarioLoginController@loginConsumidor')->name('consumidor.login'); //Rota de tela de login
+
+Route::post('loginConsumidor', 'Auth\UsuarioLoginController@login')->name('consumidor.login.submit'); //Rota de login
+
+Route::get('logoutConsumidor', 'Auth\UsuarioLoginController@logout')->name('consumidor.logout'); //Rota de logout
+
+Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')->name('paginaInicial'); //Rota da tela inicial para usuário
+
+Route::get('dashboard-consumidor', 'ControllerUsuario@index')->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
+
+
 
 Auth::routes();
