@@ -150,9 +150,9 @@ Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')->name('admin.logou
 
 Route::get('admin-dashboard', 'ControllerAdmin@index')->name('admin.dashboard'); //Rota para o dashboard admin;
 
-Route::get('admin-dashboard', function () {
-    return view('admin.admin-dashboard');
-})->name('admin.dashboard');
+//Route::get('admin-dashboard', function () {
+//    return view('admin.admin-dashboard');
+//})->name('admin.dashboard');
 
 Route::get('admin-usuarios', function () {
     return view('admin.admin-usuarios');

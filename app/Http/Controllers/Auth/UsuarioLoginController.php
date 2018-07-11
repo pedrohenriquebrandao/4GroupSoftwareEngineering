@@ -36,7 +36,7 @@ class UsuarioLoginController extends Controller
     public function logout()
     {
         Auth::guard('consumidor')->logout();
-        return redirect('loginConsumidor');
+        return redirect('/');
     }
 
     //Rotas para o consumidor;
@@ -45,6 +45,6 @@ class UsuarioLoginController extends Controller
     }
 
     public function paginaInicial(){
-        return view('/');
+        return view('home');
     }
 }

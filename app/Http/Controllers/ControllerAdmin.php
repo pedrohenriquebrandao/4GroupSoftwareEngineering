@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ControllerAdmin extends Controller
 {
     public function __construct(){
-        //$this->middleware('auth:admin');
+        $this->middleware('auth:admin');
     }
 
     public function cadAdmin(Request $request){
@@ -33,7 +33,7 @@ class ControllerAdmin extends Controller
         }
         
         //$request->password = Hash::make($request->password);
-        //Admin::create($admin->all());
+        //Admin::create($request->all());
         return redirect("/");   
     }
 

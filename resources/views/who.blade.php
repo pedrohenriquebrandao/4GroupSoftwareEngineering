@@ -38,6 +38,8 @@
                         <p class="text-success" style="color: green">
                             Você está logado como <strong>ADMIN!</strong>
                             <br>
+                            <strong>ID: </strong> {{ auth()->guard('admin')->user()->id }}
+                            <br>
                             <strong>Nome: </strong> {{ auth()->guard('admin')->user()->nome }}
                             <br>
                             <strong>E-mail:</strong> {{auth()->guard('admin')->user()->email}}
@@ -55,6 +57,8 @@
                     @if (Auth::guard('consumidor')->check())
                         <p class="text-success" style="color: green">
                             Você está logado como <strong>CONSUMIDOR!</strong>
+                            <br>
+                            <strong>ID: </strong> {{ auth()->guard('consumidor')->user()->id }}
                             <br>
                             <strong>E-mail:</strong> {{auth()->guard('consumidor')->user()->email}}
                         </p>
