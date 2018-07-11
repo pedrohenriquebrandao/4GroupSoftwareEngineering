@@ -84,22 +84,25 @@
                           <thead>
                             <tr>
                               <th scope="col">Produto <i class="fa fa-camera-retro fa-lg"></i></th>
-                              <th scope="col">Assinante</th>
-                              <th scope="col">Avaliação</th>                                                         
+                              <th style=" padding-left: 100px;" scope="col">Assinante</th>
+                              <th style=" padding-left: 100px;" scope="col">Avaliação</th>                                                         
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row">
                                 <img src="image/tomate.jfif" class="img-responsive" alt="..."></br></br>
-                                <b>Nome:</b>
+                                <b>Nome: </b>Tomate
                               </th>
-                              <td>
+                              <td style=" padding-left: 100px;" >
                                 <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div></br>
-                                <b>Usuário:</b></td>
-                              <td><i class="fa fa-camera-retro fa-lg"></i></td>                              
-                             </tr>
-                            <tr>                            
+                                <b>Usuário: </b>@joaopedro</td>
+                              <td style=" padding-left: 100px;">
+                                  <b>Gostei: </b>10  <img src="image/like.png" class="img-responsive" width="10%" alt="...">       </br>     
+                                  <b>Não gostei: </b>1  <img src="image/unlike.png" class="img-responsive" width="9%" alt="...">                      
+                              </td>
+                                                      
+                              </tr>                                                        
                           </tbody>
                         </table>
                       </div>
