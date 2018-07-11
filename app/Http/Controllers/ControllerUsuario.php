@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 
 class ControllerUsuario extends Controller
 {
-    public function index(){
-        return view('dashboard-admin.clientes');
-    }
 
     public function cadastrarUsuario(Usuario $usuario){
         try{
@@ -58,5 +55,10 @@ class ControllerUsuario extends Controller
         ];
 
         return Validator::make($data, $regras, $mensagens);
+    }
+
+    //Funções de rotas para o consumidor;
+    public function index(){
+        return view('usuario.dashboard-consumidor');
     }
 }

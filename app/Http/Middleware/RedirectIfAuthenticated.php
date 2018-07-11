@@ -15,10 +15,29 @@ class RedirectIfAuthenticated
      * @param  string|null  $guard
      * @return mixed
      */
+
+    /*Pelo que entendi, verifica se o usuário está logado,
+    caso esteja, se ele tentar acessar a página de login é redirecionado para a página especificada;*/
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+        switch ($guard) {
+            case 'admin':
+                if(Auth::guard($guard)->check()){ //Verifica se está logado, se estiver, redireciona-o para o dashboard;
+                    return redirect()->route('admin.dashboard');
+                }
+                break;
+            
+            case 'consumidor':
+                if(Auth::guard($guard)->check()){ //Verifica se está logado, se estiver, redireciona-o para o dashboard;
+                    return redirect()->route('consumidor.dashboard');
+                }
+                break;
+
+            default:
+                if (Auth::guard($guard)->check()) {
+                    return redirect('/');
+                }
+                break;
         }
 
         return $next($request);

@@ -34,4 +34,9 @@ class AdminLoginController extends Controller
         Auth::guard('admin')->logout();
         return redirect('/');
     }
+
+    //Rotas de autenticação do adm
+    public function loginAdm(){
+        return view('auth.admin-login');
+    }
 }

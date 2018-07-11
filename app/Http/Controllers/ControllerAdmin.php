@@ -45,6 +45,6 @@ class ControllerAdmin extends Controller
 
     //Funcções de retorno de view para as rotas de admin;
     public function index(){
-        return view('dashboard-admin.admins');
+        return view('admin.admin-dashboard');
     }
 }

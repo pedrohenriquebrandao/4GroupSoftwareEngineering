@@ -50,7 +50,7 @@
         </p>
     @else
         <p class="text-danger">
-            Você está desconectado como <strong>ADMIN!</strong>
+            Você está desconectado como <strong>CONSUMIDOR!</strong>
         </p>
     @endif
 </body>

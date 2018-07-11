@@ -23,11 +23,9 @@ class UsuarioLoginController extends Controller
 
         //Tentativa de logar o usuário
         if ( Auth::guard('consumidor')->attempt(['email' => $request->email, 'password' => $request->password]) ) {
-            return "Sucesso! Deus seja Louvado!!!";
             //Se for bem sucedido, redireciona para o local pretendido;
             return redirect()->intended( route('admin.dashboard') );
         }else {
-            return "Fé, eu vou conseguir!!!";
             //se mal sucedido, redireciona de volta para o login com os dados do formulário
             return redirect()->back()->withInput( $request->only('email') );
         }
@@ -37,6 +35,10 @@ class UsuarioLoginController extends Controller
     {
         Auth::guard('consumidor')->logout();
         return redirect('/');
+    }
+
+    public function loginConsumidor(){
+        return view('auth.consumidor-login');
     }
 
     public function paginaInicial(){

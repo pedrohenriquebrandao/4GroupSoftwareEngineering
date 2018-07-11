@@ -24,9 +24,15 @@ Route::get('entrarConsumidor', function () {
 });
 
 //Rota de login do usuario
-Route::post('consumidorEntrar', 'Auth\UsuarioLoginController@login')->name('consumidor');
+Route::get('loginConsumidor', 'Auth\UsuarioLoginController@loginConsumidor')->name('consumidor.login'); //Rota de tela de login
 
-Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')->name('paginaInicial');
+Route::post('loginConsumidor', 'Auth\UsuarioLoginController@login')->name('consumidor.login.submit'); //Rota de login
+
+Route::get('logoutConsumidor', 'Auth\AdminLoginController@logout')->name('consumidor.logout'); //Rota de logout
+
+Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')->name('paginaInicial'); //Rota da tela inicial para usuário
+
+Route::get('dashboard-consumidor', 'ControllerUsuario@index')->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
 
 Route::get('cadastrar', function () {
     return view('auth.cadastrar');
@@ -105,9 +111,9 @@ Route::get('detalhe-assinatura', function () {
     return view('produtor.detalhe-assinatura');
 });
 
-Route::get('dashboard-consumidor', function () {
-    return view('usuario.dashboard-consumidor');
-});
+//Route::get('dashboard-consumidor', function () {
+//    return view('usuario.dashboard-consumidor');
+//});
 
 Route::get('enderecos-consumidor', function () {
     return view('usuario.enderecos-consumidor');
@@ -136,9 +142,13 @@ Route::get('admin', function(){
 });
 
 //Rota de login do adm
-Route::post('admin', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+Route::get('loginAdmin', 'Auth\AdminLoginController@loginAdm')->name('admin.login'); //Rota de tela de login
 
-Route::get('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+Route::post('loginAdmin', 'Auth\AdminLoginController@login')->name('admin.login.submit'); //Rota de login
+
+Route::get('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout'); //Rota de logout
+
+Route::get('admin-dashboard', 'ControllerAdmin@index')->name('admin.dashboard'); //Rota para o dashboard admin;
 
 Route::get('admin-dashboard', function () {
     return view('admin.admin-dashboard');
