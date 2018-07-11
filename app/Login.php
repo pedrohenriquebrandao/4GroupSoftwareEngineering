@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\Login as Authenticatable;
+use Auth;
 
 class Login extends Authenticatable
 {
@@ -13,7 +14,7 @@ class Login extends Authenticatable
 
     protected $fillable = [
         'email',
-        'senha'
+        'password'
     ];
 
     protected $table = 'consumidor_login';

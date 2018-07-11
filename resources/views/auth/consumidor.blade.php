@@ -32,8 +32,8 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url({!! asset('image/ingred.png') !!});">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
-					@csrf
+				<form class="login100-form validate-form" method="POST" action="{{ route('consumidor') }}">
+				{{ csrf_field() }}
 					<center><img style=""  src="{!! asset('image/logoEntrar.png') !!}" height= "130"></center>
 					<span class="login100-form-title p-b-49" >					
 						<!--Entrar-->
@@ -52,11 +52,11 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 						<span class="label-input100">Senha</span>
-						<input class="input100 {{ $errors->has('senha') ? ' is-invalid' : '' }}" type="senha" name="senha" value="{{ old('senha') }}" placeholder="Digite sua senha">
+						<input class="input100 {{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password" value="{{ old('password') }}" placeholder="Digite sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
-						@if ($errors->has('senha'))
+						@if ($errors->has('password'))
                             <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('senha') }}</strong>
+                                <strong>{{ $errors->first('password') }}</strong>
                             </span>
                         @endif
 					</div>

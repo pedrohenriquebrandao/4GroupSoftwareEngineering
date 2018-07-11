@@ -41,9 +41,9 @@ return [
             'provider' => 'users',
         ],
         //Guard para usuário
-        'usuario' => [
+        'consumidor' => [
             'driver' => 'session',
-            'provider' => 'usuarios',
+            'provider' => 'consumidores',
         ],
         //Guard para admins
         'admin' => [
@@ -81,9 +81,9 @@ return [
         ],
 
         //provider para usuário
-        'usuarios' => [
+        'consumidores' => [
             'driver' => 'eloquent',
-            'model' => App\Usuario::class,
+            'model' => App\Login::class,
         ],
         
         //provider para admin

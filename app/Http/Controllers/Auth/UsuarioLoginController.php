@@ -9,24 +9,37 @@ use Auth;
 class UsuarioLoginController extends Controller
 {
     public function __construct(){
-        $this->middleware('guest:usuario');
+        $this->middleware('guest:consumidor');
     }
 
     public function login(Request $request){
+        //dd($request->email, $request->password);
+        
         //Validar dados do formulário
         $this->validate($request, [
             'email' => 'required|email',
-            'senha' => 'required|min6'
+            'password' => 'required|min:6'
         ]);
 
         //Tentativa de logar o usuário
-        if ( Auth::guard('usuario')->attempt(['email' => $request->email, 'senha' => $request->senha],
-         $request->remember) ) {
+        if ( Auth::guard('consumidor')->attempt(['email' => $request->email, 'password' => $request->password]) ) {
+            return "Sucesso! Deus seja Louvado!!!";
             //Se for bem sucedido, redireciona para o local pretendido;
-            return redirect()->intended( route('/') );
+            return redirect()->intended( route('admin.dashboard') );
         }else {
+            return "Fé, eu vou conseguir!!!";
             //se mal sucedido, redireciona de volta para o login com os dados do formulário
-            return redirect()->back()-withInput( $request->only('email', 'remember') );
+            return redirect()->back()->withInput( $request->only('email') );
         }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('consumidor')->logout();
+        return redirect('/');
+    }
+
+    public function paginaInicial(){
+        return view('/');
     }
 }

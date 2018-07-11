@@ -15,7 +15,7 @@ class CreateAdmAdministradorTable extends Migration
         Schema::create('adm_administrador', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
-            $table->string('senha');
+            $table->string('password');
             $table->string('nome');
             $table->integer('telefone')->unsigned();
             $table->timestamps();

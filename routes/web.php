@@ -15,12 +15,18 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('login', function () {
-    return view('auth.login');
+Route::get('/home', function(){
+    return view('who');
+});
+
+Route::get('entrarConsumidor', function () {
+    return view('auth.consumidor');
 });
 
 //Rota de login do usuario
-Route::post('login', 'Auth\UsuarioLoginController@login')->name('usuario.login');
+Route::post('consumidorEntrar', 'Auth\UsuarioLoginController@login')->name('consumidor');
+
+Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')->name('paginaInicial');
 
 Route::get('cadastrar', function () {
     return view('auth.cadastrar');
@@ -132,6 +138,8 @@ Route::get('admin', function(){
 //Rota de login do adm
 Route::post('admin', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 
+Route::get('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
+
 Route::get('admin-dashboard', function () {
     return view('admin.admin-dashboard');
 })->name('admin.dashboard');
@@ -163,3 +171,5 @@ Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro d
 Route::get('/usuarios', 'ControllerUsuario@index');
 
 Route::get('/admins', 'ControllerUsuario@index');
+
+Auth::routes();

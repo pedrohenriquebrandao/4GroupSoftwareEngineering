@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ControllerAdmin extends Controller
 {
     public function __construct(){
-        $this->middleware('auth:admin');
+        //$this->middleware('auth:admin');
     }
 
     public function cadAdmin(Request $request){
@@ -24,8 +24,8 @@ class ControllerAdmin extends Controller
 
     public function validacao($data){
         $regras['email'] = 'required|email';
-        $regras['senha'] = 'required|min:6';
-        $regras['confirmasenha'] = 'required|same:senha';
+        $regras['password'] = 'required|min:6';
+        $regras['confirmasenha'] = 'required|same:password';
         $regras['nome'] = 'required';
         $regras['telefone'] = 'required';
         
@@ -33,8 +33,8 @@ class ControllerAdmin extends Controller
             'nome.required' => 'Campo Nome é obrigatório',
             'email.required' => 'Campo email é obrigatório',
             'email.email' => 'E-mail inserido invalido',
-            'senha.required' => 'Campo senha é obrigatório',
-            'senha.min' => 'A senha deve conter no mínimo 6 caracteres',
+            'password.required' => 'Campo senha é obrigatório',
+            'password.min' => 'A senha deve conter no mínimo 6 caracteres',
             'confirmasenha.required' => 'Campo confirmação de senha necessário',
             'confirmasenha.same' => 'A confirmação de senha não condiz com a senha informada',
             'telefone.required' => 'Campo telefone é obrigatório',
