@@ -160,6 +160,9 @@ Route::get('admin-assinaturas', function () {
 Route::get('admin-detalhes-assinatura', function () {
     return view('admin.admin-detalhes-assinatura');
 });
+Route::get('visao-produto/{id}', function ($id) {
+    return view('visao-produto', ['id'=> $id]);
+});
 
 // ------- ROTAS BANCO DE DADOS ------- //
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");

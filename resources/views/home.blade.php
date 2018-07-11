@@ -14,8 +14,10 @@
     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     
     <!-- Custom styles for this template -->
@@ -28,58 +30,66 @@
     <!-- Navigation -->
     
 @include ('header')
-    <header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('https://sportlife.com.br/wp-content/uploads/2017/09/benef%C3%ADcios-da-ma%C3%A7%C3%A3-para-o-corpo-humano-iloveimg-resized.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Produto 1</h3>
-              <p>Descrição blá blá blá</p>
-            </div>
-          </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://www.greenme.com.br/images/usos-beneficios/alface-beneficios.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Produto 2</h3>
-              <p>Descrição blá blá blá</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('https://sfagro.uol.com.br/wp-content/uploads/2016/05/1005_tomate.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Produto 3</h3>
-              <p>Descrição blá blá blá</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" style="max-height:25rem" src="https://sportlife.com.br/wp-content/uploads/2017/09/benef%C3%ADcios-da-ma%C3%A7%C3%A3-para-o-corpo-humano-iloveimg-resized.jpg" alt="First slide">
       </div>
-    </header>
+      <div class="carousel-item">
+        <img class="d-block w-100" style="max-height:25rem" src="https://www.greenme.com.br/images/usos-beneficios/alface-beneficios.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" style="max-height:25rem" src="https://sfagro.uol.com.br/wp-content/uploads/2016/05/1005_tomate.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
     <!-- Cards-->
     <hr>
     <div class="container">
         <div class="row text-center">
-          @include('card')
-          @include('card')
-          @include('card')
-          @include('card')
-          @include('card')
-          @include('card')
-          @include('card')
-          @include('card')
+          <?php
+            $produtos = collect([
+              (object)[
+                'id'=> '1',
+                'nome'=> 'Cenoura',
+                'descricao'=> 'É uma raiz da cor laranja',
+                'imagem'=> 'https://tudoela.com/wp-content/uploads/2016/07/beneficios-da-cenoura-e1469051921958.jpg',
+              ],
+              (object)[
+                'id'=> '2',
+                'nome'=> 'Couve flor',
+                'descricao'=> 'É uma <i>frôr</i> de <i>cumê</i>. É a <i>frôr</i>, não a <i>fôia</i>',
+                'imagem'=> 'https://segredodefinicaomuscular.com/wp-content/uploads/2017/09/Receita-De-Arroz-De-Couve-Flor-Low-Carb.jpg',
+              ],
+              (object)[
+                'id'=> '3',
+                'nome'=> 'Chuchu',
+                'descricao'=> 'Chuchu é você meu bem',
+                'imagem'=> 'https://tudoela.com/wp-content/uploads/2016/09/conheca-os-beneficios-e-as-propriedade-do-chuchu.jpg',
+              ],
+              (object)[
+                'id'=> '4',
+                'nome'=> 'Tomate',
+                'descricao'=> 'Vermelho pra dá uma cor',
+                'imagem'=> 'https://www.naturalcura.com.br/wp-content/uploads/2018/02/benef%C3%ADcio-do-tomate.jpg',
+              ],
+            ]);
+
+          ?>
+          @each('card', $produtos, 'produto')
         </div>
     </div>
     <hr>
