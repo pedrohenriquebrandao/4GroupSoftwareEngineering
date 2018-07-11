@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Login; //Caso não venha importado, fazer importação.
 use App\Usuario; //Caso não venha importado, fazer importação.
 use Illuminate\Support\Facades\Validator; //Necessário importar o validator do facades para validação.
+use Illuminate\Support\Facades\Hash; //Facade hash para senha
 use Illuminate\Http\Request;
 
 class ControllerLogin extends Controller

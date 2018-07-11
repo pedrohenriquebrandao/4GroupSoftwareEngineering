@@ -38,7 +38,11 @@
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">Marco</h1>
+              @if(Auth::guard('admin')->check())
+                {{ auth()->guard('admin')->user()->nome }}
+              @else
+                <h1 class="h4">User</h1>
+              @endif
               <p>Admin-Mor</p>
             </div>
           </div>

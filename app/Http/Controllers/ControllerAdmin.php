@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Admin;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash; //Facade hash para senha
 use Illuminate\Http\Request;
 
 class ControllerAdmin extends Controller
@@ -18,7 +19,21 @@ class ControllerAdmin extends Controller
             return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
         }
         
-        Admin::create($request->all());
+        $admin = new Admin();
+        $admin->email = $request->email;
+        $admin->password = Hash::make($request->password);
+        $admin->nome = $request->nome;
+        $admin->telefone = $request->telefone;
+        
+        try{
+            $admin->save();
+        } catch(\Exception $e){
+            var_dump($e->getMessage());
+            //return "Erro: ".$e->getMessage();
+        }
+        
+        //$request->password = Hash::make($request->password);
+        //Admin::create($admin->all());
         return redirect("/");   
     }
 

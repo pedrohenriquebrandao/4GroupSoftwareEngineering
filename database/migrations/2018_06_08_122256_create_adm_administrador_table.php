@@ -18,6 +18,7 @@ class CreateAdmAdministradorTable extends Migration
             $table->string('password');
             $table->string('nome');
             $table->integer('telefone')->unsigned();
+            $table->rememberToken();
             $table->timestamps();
         });
     }

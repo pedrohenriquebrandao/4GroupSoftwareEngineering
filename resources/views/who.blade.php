@@ -24,34 +24,50 @@
     <title>Document</title>
 </head>
 <body>
-    @if (Auth::guard('admin')->check())
-        <p class="text-success">
-            Você está logado como <strong>ADMIN!</strong>
-            <br>
-            <strong>Nome: </strong> {{ auth()->guard('admin')->user()->nome }}
-            <br>
-            <strong>E-mail:</strong> {{auth()->guard('admin')->user()->email}}
-            <br>
-            <strong>Telefone: </strong> {{ auth()->guard('admin')->user()->telefone }}
-        </p>
-    @else
-        <p class="text-danger">
-            Você está desconectado como <strong>ADMIN!</strong>
-        </p>
-    @endif
-    <br>
-    <hr>
-    <br>
-    @if (Auth::guard('consumidor')->check())
-        <p class="text-success">
-            Você está logado como <strong>CONSUMIDOR!</strong>
-            <br>
-            <strong>E-mail:</strong> {{auth()->guard('consumidor')->user()->email}}
-        </p>
-    @else
-        <p class="text-danger">
-            Você está desconectado como <strong>CONSUMIDOR!</strong>
-        </p>
-    @endif
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <center>
+                    <br>
+                    <div class="card-header" style="color: blue">Usuarios</div>
+                    <hr>
+                    <br>
+                    <div class="card-body">
+                    @if (Auth::guard('admin')->check())
+                        <p class="text-success" style="color: green">
+                            Você está logado como <strong>ADMIN!</strong>
+                            <br>
+                            <strong>Nome: </strong> {{ auth()->guard('admin')->user()->nome }}
+                            <br>
+                            <strong>E-mail:</strong> {{auth()->guard('admin')->user()->email}}
+                            <br>
+                            <strong>Telefone: </strong> {{ auth()->guard('admin')->user()->telefone }}
+                        </p>
+                    @else
+                        <p class="text-danger" style="color: red">
+                            Você está desconectado como <strong>ADMIN!</strong>
+                        </p>
+                    @endif
+                    <br>
+                    <hr>
+                    <br>
+                    @if (Auth::guard('consumidor')->check())
+                        <p class="text-success" style="color: green">
+                            Você está logado como <strong>CONSUMIDOR!</strong>
+                            <br>
+                            <strong>E-mail:</strong> {{auth()->guard('consumidor')->user()->email}}
+                        </p>
+                    @else
+                        <p class="text-danger" style="color: red">
+                            Você está desconectado como <strong>CONSUMIDOR!</strong>
+                        </p>
+                    @endif
+                    </div>
+                </div>
+                </center>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

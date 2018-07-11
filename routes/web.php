@@ -28,7 +28,7 @@ Route::get('loginConsumidor', 'Auth\UsuarioLoginController@loginConsumidor')->na
 
 Route::post('loginConsumidor', 'Auth\UsuarioLoginController@login')->name('consumidor.login.submit'); //Rota de login
 
-Route::get('logoutConsumidor', 'Auth\AdminLoginController@logout')->name('consumidor.logout'); //Rota de logout
+Route::get('logoutConsumidor', 'Auth\UsuarioLoginController@logout')->name('consumidor.logout'); //Rota de logout
 
 Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')->name('paginaInicial'); //Rota da tela inicial para usuário
 
@@ -146,7 +146,7 @@ Route::get('loginAdmin', 'Auth\AdminLoginController@loginAdm')->name('admin.logi
 
 Route::post('loginAdmin', 'Auth\AdminLoginController@login')->name('admin.login.submit'); //Rota de login
 
-Route::get('admin/logout', 'Auth\AdminLoginController@logout')->name('admin.logout'); //Rota de logout
+Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')->name('admin.logout'); //Rota de logout
 
 Route::get('admin-dashboard', 'ControllerAdmin@index')->name('admin.dashboard'); //Rota para o dashboard admin;
 

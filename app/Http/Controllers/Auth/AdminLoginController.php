@@ -9,9 +9,10 @@ use Auth;
 class AdminLoginController extends Controller
 {
     public function __construct(){
-        $this->middleware('guest:admin');
+        $this->middleware('guest:admin')->except('logout'); //Excessão para logout no middleware;
     }
     
+    //Login do administrador;
     public function login(Request $request){
         //Validar dados do formulário
         $this->validate($request, [
@@ -29,10 +30,11 @@ class AdminLoginController extends Controller
         }
     }
     
-    public function logout(Request $request)
+    //Logout Administrador;
+    public function logout()
     {
         Auth::guard('admin')->logout();
-        return redirect('/');
+        return redirect('loginAdmin');
     }
 
     //Rotas de autenticação do adm

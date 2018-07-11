@@ -39,12 +39,23 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        SUA CONTA <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        @if(Auth::guard('consumidor')->check())
+                            {{auth()->guard('consumidor')->user()->email}} <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        @else
+                            SUA CONTA <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        @endif
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/login">LOGIN</a>
-                        <a class="dropdown-item" href="/dashboard-produtor">PRODUTOR</a>
-                        <a class="dropdown-item" href="javascript://">ADMINISTRADOR</a>
+                        @if(Auth::guard('consumidor')->check())
+                            <a class="dropdown-item" href="{{route('consumidor.login')}}">PRODUTOR</a>
+                            <a class="dropdown-item" href="{{route('admin.login')}}">ADMINISTRADOR</a>
+                            <a class="dropdown-item" href="{{route('consumidor.logout')}}">Logout</a>
+                        @else
+                            <a class="dropdown-item" href="{{route('consumidor.login')}}">LOGIN</a>
+                            <a class="dropdown-item" href="{{route('consumidor.login')}}">PRODUTOR</a>
+                            <a class="dropdown-item" href="{{route('admin.login')}}">ADMINISTRADOR</a>
+                        @endif
+                        
                     </div>
                 </li>
                 
