@@ -83,23 +83,33 @@
                               <th scope="col">Administrador</th>
                               <th scope="col">Tipo de admin</th>
                               <th scope="col">E-mail</th>
-                              <th scope="col">Status</th>
+                              <th scope="col">Telefone</th>
                               <th scope="col">Editar</th>
                               <th scope="col">Banir</th>                             
                             </tr>
                           </thead>
+                          @forelse($listaAdm as $lista)
                           <tbody>
                             <tr>
-                              <th scope="row">1</th>
-                              <td><b>User: </b>@joaopedro</td>
-                              <td>Normal</td>
-                              <td>joaopedro@gmail.com</td>
-                              <td><b>Admin: </b>Ativo</td>
-                              <td><a href="/admin-permisao-edit" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
-                              <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
+                                <th scope="row">{{$lista->id}}</th>
+                                <td><b>User: </b>{{$lista->nome}}</td>
+                                <td>Normal</td>
+                                <td>{{$lista->email}}</td>
+                                <td><b>Telefone: </b>{{$lista->telefone}}</td>
+                                <td><a href="/admin-permisao-edit" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                                <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
+                              @empty
+                                <th scope="row">1</th>
+                                <td><b>User: </b>@joaopedro</td>
+                                <td>Normal</td>
+                                <td>joaopedro@gmail.com</td>
+                                <td><b>Admin: </b>Ativo</td>
+                                <td><a href="/admin-permisao-edit" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                                <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
                              </tr>
                             <tr>                            
                           </tbody>
+                          @endforelse
                         </table>
                       </div>
                     </div>              

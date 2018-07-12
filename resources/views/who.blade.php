@@ -5,22 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="produtor/fonts/iconic/css/material-design-iconic-font.min.css" >
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="produtor/css/util.css">
-	<link rel="stylesheet" type="text/css" href="produtor/css/main.css">
     <title>Document</title>
 </head>
 <body>
@@ -67,6 +51,19 @@
                             Você está desconectado como <strong>CONSUMIDOR!</strong>
                         </p>
                     @endif
+
+                    <hr>
+                    <br><br>
+
+                    @forelse($listaAdm as $lista)
+                        <strong>Nome: </strong> {{$lista->nome}} <br>
+                        <strong>E-mail: </strong> {{$lista->email}} <br>
+                        <strong>Telefone: </strong> {{$lista->telefone}} <br>
+                        <strong>ID: </strong> {{$lista->id}} <br>
+                        <hr>
+                    @empty
+                    <strong>Nenhum admin cadastrado!</strong>
+                    @endforelse
                     </div>
                 </div>
                 </center>

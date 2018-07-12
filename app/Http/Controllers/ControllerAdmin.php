@@ -5,6 +5,7 @@ use App\Admin;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash; //Facade hash para senha
 use Illuminate\Http\Request;
+use DB;
 
 class ControllerAdmin extends Controller
 {
@@ -61,5 +62,23 @@ class ControllerAdmin extends Controller
     //Funcções de retorno de view para as rotas de admin;
     public function index(){
         return view('admin.admin-dashboard');
+    }
+
+    public function listaUsuarios(){
+        return view('admin.admin-usuarios');
+    }
+
+    public function listaAdmins(){
+        //Pega todos os cadastros da tabela de administrador e guarda em '$listaAdm';
+        $listaAdm = DB::table('adm_administrador')->get();
+        
+        //Duas formas de retornar para a view;
+        //-- 1º --//
+        /*return view('who', [
+            'listaAdm' => $listaAdm
+        ]);*/
+
+        //-- 2º Usando compact --//
+        return view('admin.administradores', compact('listaAdm'));
     }
 }

@@ -16,10 +16,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home', function(){
-    return view('who');
-});
-
 Route::get('pagamento', function () {
     return view('usuario.pagamento');
 });
@@ -129,22 +125,10 @@ Route::get('cadastrar-admin', function () {
     return view('auth.cadastrar-admin');
 });
 
-<<<<<<< HEAD
-//Route::get('admin-dashboard', function () {
-//    return view('admin.admin-dashboard');
-//})->name('admin.dashboard');
-=======
-Route::get('admin', function () {
-    return view('admin');
-});
->>>>>>> be1a4daf4588b5d31f6282791fd2da904fd703b6
+Route::get('admin-usuarios', 'ControllerAdmin@listaUsuarios')->name('listaUsuarios');
 
-Route::get('admin-usuarios', function () {
-    return view('admin.admin-usuarios');
-});
-Route::get('administradores', function () {
-    return view('admin.administradores');
-});
+Route::get('administradores', 'ControllerAdmin@listaAdmins')->name('listaAdmins');
+
 Route::get('admin-permisao-edit', function () {
     return view('admin.admin-permisao-edit');
 });
@@ -174,10 +158,6 @@ Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')->name('admin.logou
 
 Route::get('admin-dashboard', 'ControllerAdmin@index')->name('admin.dashboard'); //Rota para o dashboard admin;
 
-Route::get('admin-dashboard', function () {
-    return view('admin.admin-dashboard');
-})->name('admin.dashboard');
-
 // ------- ROTAS DE CADASTRO ------- //
 
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
@@ -201,6 +181,12 @@ Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')->name('
 
 Route::get('dashboard-consumidor', 'ControllerUsuario@index')->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
 
+// Rota de testes Back //
 
+Route::get('/who', function(){
+    return view('who');
+});
+
+Route::get("/listarAdm", "ControllerAdmin@listaAdmins");
 
 Auth::routes();
