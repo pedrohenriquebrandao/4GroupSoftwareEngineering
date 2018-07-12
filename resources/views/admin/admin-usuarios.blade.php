@@ -81,23 +81,36 @@
                             <tr>
                               <th scope="col">ID</th>
                               <th scope="col">Usuário</th>
-                              <th scope="col">Tipo de usuário</th>
+                              <th scope="col">CPF</th>
                               <th scope="col">E-mail</th>
+                              <th scope="col">Sexo</th>
+                              <th scope="col">Telefone</th>
                               <th scope="col">Status</th>                              
                               <th scope="col">Banir</th>                             
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td><b>User: </b>@joaopedro</td>
-                              <td>Consumidor</td>
-                              <td>joaopedro@gmail.com</td>
-                              <td><b>Usuário: </b>Ativo</td>
-                              <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
-                             </tr>
-                            <tr>                            
-                          </tbody>
+                          @forelse($listaUsuarios as $lista)
+                            <tbody>
+                              <tr>
+                                <th scope="row">{{$lista->id}}</th>
+                                <td>{{$lista->nome}}</td>
+                                <td>{{$lista->cpf}}</td>
+                                <td>{{$lista->email}}</td>
+                                <td>{{$lista->sexo}}</td>
+                                <td>{{$lista->telefone}}</td>
+                                <td><b>Usuário: </b>Ativo</td>
+                                <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
+                              @empty
+                                <th scope="row">1</th>
+                                <td><b>User: </b>@joaopedro</td>
+                                <td>Consumidor</td>
+                                <td>joaopedro@gmail.com</td>
+                                <td><b>Usuário: </b>Ativo</td>
+                                <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
+                              </tr>
+                              <tr>                            
+                            </tbody>
+                          @endforelse
                         </table>
                       </div>
                     </div>              

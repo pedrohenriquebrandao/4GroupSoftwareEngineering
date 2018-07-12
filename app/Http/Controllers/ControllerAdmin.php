@@ -65,7 +65,11 @@ class ControllerAdmin extends Controller
     }
 
     public function listaUsuarios(){
-        return view('admin.admin-usuarios');
+        $listaUsuarios = DB::table('consumidor_login')
+        ->join('consumidor_usuarios', 'consumidor_login.id', '=', 'consumidor_usuarios.login_id')
+        ->select('consumidor_login.*', 'consumidor_usuarios.*')->get();
+
+        return view('admin.admin-usuarios', compact('listaUsuarios'));
     }
 
     public function listaAdmins(){

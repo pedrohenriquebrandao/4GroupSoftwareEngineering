@@ -64,14 +64,14 @@
 						<input class="input100" type="text" name="email" value="{{old('email')}}" placeholder="Digite seu e-mail">
 					</div>
 
-					<div class="wrap-input100 {{$errors->has('senha') ? 'has-error' : ''}}">
+					<div class="wrap-input100 {{$errors->has('password') ? 'has-error' : ''}}">
 						<span class="label-input100">Senha</span>
-						@if($errors->has('senha'))
+						@if($errors->has('password'))
 							<span class="label-input100 help-block" style="color: red">
-								{{$errors->first('senha')}}
+								{{$errors->first('password')}}
 							</span>
 						@endif
-						<input class="input100" type="password" name="senha" value="{{old('Senha')}}" placeholder="Digite sua senha">
+						<input class="input100" type="password" name="password" value="{{old('password')}}" placeholder="Digite sua senha">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 

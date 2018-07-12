@@ -55,8 +55,8 @@ class ControllerLogin extends Controller
         }
 
         $regras['email'] = 'required|email'; //Verifica o preenchimento do e-mail e se o e-mail é valido.
-        $regras['senha'] = 'required';
-        $regras['confirmasenha'] = 'required|same:senha'; //Verifica o preenchimento da confirmação de senha e se é igual ao campo senha;
+        $regras['password'] = 'required';
+        $regras['confirmasenha'] = 'required|same:password'; //Verifica o preenchimento da confirmação de senha e se é igual ao campo senha;
 
         $mensagens = [
             'nome.required' => 'Campo Nome é obrigatório',
@@ -70,7 +70,7 @@ class ControllerLogin extends Controller
             'telefone.min' => 'Campo Telefone deve conter no mínimo 8 digitos',
             'email.required' => 'Campo email obrigatório',
             'email.email' => 'E-mail inserido invalido',
-            'senha.required' => 'Campo senha obrigatório',
+            'password.required' => 'Campo senha obrigatório',
             'confirmasenha.required' => 'Confirmação de senha necessária',
             'confirmasenha.same' => 'Confirmação de senha difere do campo senha'
         ];
