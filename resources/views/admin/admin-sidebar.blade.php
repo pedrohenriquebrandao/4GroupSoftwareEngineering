@@ -4,5 +4,5 @@
     @else
     <h1 class="h4">User</h1>
     @endif
-    <p>Admin-Mor</p>
+    <p>Administrador</p>
 </div>

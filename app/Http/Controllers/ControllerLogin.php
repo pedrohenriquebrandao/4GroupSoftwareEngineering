@@ -6,6 +6,7 @@ use App\Usuario; //Caso não venha importado, fazer importação.
 use Illuminate\Support\Facades\Validator; //Necessário importar o validator do facades para validação.
 use Illuminate\Support\Facades\Hash; //Facade hash para senha
 use Illuminate\Http\Request;
+use DB;
 
 class ControllerLogin extends Controller
 {
@@ -25,8 +26,12 @@ class ControllerLogin extends Controller
             return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
         }
 
-        $login = Login::create($request->all());
-
+        //Passo os dados de $request para $data para realizar a criptografia da senha (necessário para o login nativo do frameword);
+        $data = $request->all();
+        $data['password'] = Hash::make($data['password']);
+        
+        $login = Login::create($data); //Cadastra o usuário no banco;
+        
         //Passa os dados recebidos da tela de cadastro para o controller de usuários
         $usuario = new Usuario();
         $usuario->nome = $request->nome ." ".$request->sobrenome;
