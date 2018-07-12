@@ -117,13 +117,11 @@ Route::get('cartoes-consumidor', function () {
 
 // ------ ROTAS ADMIN ------- //
 
-Route::get('admin-sidebar', function () {
-    return view('admin-sidebar');
-});
-
 Route::get('cadastrar-admin', function () {
     return view('auth.cadastrar-admin');
 });
+
+Route::get('admin-dashboard', 'ControllerAdmin@dashboard')->name('admin.dashboard'); //Rota para o dashboard admin;
 
 Route::get('admin-usuarios', 'ControllerAdmin@listaUsuarios')->name('listaUsuarios');
 
@@ -136,14 +134,13 @@ Route::get('admin-permisao-edit', function () {
 Route::get('admin-assinaturas', function () {
     return view('admin.admin-assinaturas');
 });
+
 Route::get('admin-detalhes-assinatura', function () {
     return view('admin.admin-detalhes-assinatura');
 });
+
 Route::get('visao-produto/{id}', function ($id) {
     return view('visao-produto', ['id'=> $id]);
-});
-Route::get('admin', function(){
-    return view('auth.admin-login');
 });
 
 // ------- ROTAS BACK-END ------- //
@@ -156,7 +153,6 @@ Route::post('loginAdmin', 'Auth\AdminLoginController@login')->name('admin.login.
 
 Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')->name('admin.logout'); //Rota de logout
 
-Route::get('admin-dashboard', 'ControllerAdmin@index')->name('admin.dashboard'); //Rota para o dashboard admin;
 
 // ------- ROTAS DE CADASTRO ------- //
 

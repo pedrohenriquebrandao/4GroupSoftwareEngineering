@@ -64,7 +64,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>25</strong></div>
+                    <div class="number"><strong>{{$totalUsuarios}}</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -76,7 +76,7 @@
                         <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-yellow"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>70</strong></div>
+                    <div class="number"><strong>{{$totalProdutores}}</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -88,7 +88,7 @@
                         <div role="progressbar" style="width: 50%; height: 4px; " aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
                       </div>
                     </div>
-                    <div class="number" style="padding-right:50px"><strong>40</strong></div>
+                    <div class="number" style="padding-right:50px"><strong>{{$totalAssinaturas}}</strong></div>
                   </div>
                 </div>
                 <!-- Item -->                

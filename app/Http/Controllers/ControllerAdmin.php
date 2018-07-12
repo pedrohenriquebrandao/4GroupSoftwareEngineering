@@ -60,8 +60,13 @@ class ControllerAdmin extends Controller
     }
 
     //Funcções de retorno de view para as rotas de admin;
-    public function index(){
-        return view('admin.admin-dashboard');
+    public function dashboard(){
+        $totalUsuarios = DB::table('consumidor_usuarios')->count();
+        $totalProdutores = DB::table('produtores')->count();
+        $totalAssinaturas = DB::table('consumidor_assinatura')->count();
+        
+        //dd($totalUsuarios, $totalProdutores, $totalAssinaturas);
+        return view('admin.admin-dashboard', compact('totalUsuarios', 'totalProdutores', 'totalAssinaturas'));
     }
 
     public function listaUsuarios(){
