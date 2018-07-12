@@ -33,27 +33,27 @@
                 <!-- -->
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="/carrinho">
-                        CARRINHO
+                        Carrinho
                         <i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="/loginConsumidor" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         @if(Auth::guard('consumidor')->check())
                             {{auth()->guard('consumidor')->user()->email}} <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                         @else
-                            SUA CONTA <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                            Entrar <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                         @endif
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         @if(Auth::guard('consumidor')->check())
-                            <a class="dropdown-item" href="{{route('consumidor.login')}}">PRODUTOR</a>
-                            <a class="dropdown-item" href="{{route('admin.login')}}">ADMINISTRADOR</a>
+                            <a class="dropdown-item" href="{{route('consumidor.login')}}">Produtor</a>
+                            <a class="dropdown-item" href="{{route('admin.login')}}">Administrador</a>
                             <a class="dropdown-item" href="{{route('consumidor.logout')}}">Logout</a>
                         @else
-                            <a class="dropdown-item" href="{{route('consumidor.login')}}">LOGIN</a>
-                            <a class="dropdown-item" href="{{route('consumidor.login')}}">PRODUTOR</a>
-                            <a class="dropdown-item" href="{{route('admin.login')}}">ADMINISTRADOR</a>
+                            <a class="dropdown-item" href="{{route('consumidor.login')}}">Login</a>
+                            <a class="dropdown-item" href="{{route('consumidor.login')}}">Produtor</a>
+                            <a class="dropdown-item" href="{{route('admin.login')}}">Administrador</a>
                         @endif
                         
                     </div>

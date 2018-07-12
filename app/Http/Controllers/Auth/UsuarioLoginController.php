@@ -25,7 +25,7 @@ class UsuarioLoginController extends Controller
         //Tentativa de logar o usuário
         if ( Auth::guard('consumidor')->attempt(['email' => $request->email, 'password' => $request->password]) ) {
             //Se for bem sucedido, redireciona para o local pretendido;
-            return redirect()->intended( route('consumidor.home') );
+            return redirect()->intended( route('paginaInicial') );
         }else {
             //se mal sucedido, redireciona de volta para o login com os dados do formulário
             return redirect()->back()->withInput( $request->only('email') );
