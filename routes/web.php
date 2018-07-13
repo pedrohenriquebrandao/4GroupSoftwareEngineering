@@ -12,9 +12,8 @@
 */
 // -------- ROTAS HOMEPAGE -------- //
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get("/", "HomeController@index")
+->name('/');
 
 Route::get('pagamento', function () {
     return view('usuario.pagamento');

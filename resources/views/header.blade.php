@@ -39,8 +39,9 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/loginConsumidor" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- Verifica se o usuário está logado, se estiver exibe o seu nome, caso contrário exibe e opção de login -->
                         @if(Auth::guard('consumidor')->check())
-                            {{auth()->guard('consumidor')->user()->email}} <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                            {{$usuario->nome}} <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                         @else
                             Entrar <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                         @endif
