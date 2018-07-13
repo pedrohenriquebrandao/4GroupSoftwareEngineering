@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!-- Font Awesome CSS-->
+<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"><style>
 .bg-lightgray{
     background-color: rgb(173, 30, 25);
     
@@ -12,7 +13,7 @@
 }
 
 </style>
-
+    
 <footer class="container-fluid text-center bg-lightgray">
 <!--Facebook-->
 <div class="float">

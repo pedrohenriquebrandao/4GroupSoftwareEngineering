@@ -47,6 +47,9 @@ Route::get('recsenhaconfirm', function () {
 
 // ------ ROTAS DASHBOARD PRODUTOR ------ //
 
+Route::get('produtor-sidebar', function () {
+    return view('produtor.produtor-sidebar');
+});
 
 Route::get('dashboard-produtor', function () {
     return view('produtor.dashboard-produtor');
@@ -115,17 +118,11 @@ Route::get('cartoes-consumidor', function () {
     return view('usuario.cartoes-consumidor');
 });
 
-// ------ ROTAS ADMIN ------- //
+// ---------------- ROTAS ADMIN ---------------- //
 
 Route::get('cadastrar-admin', function () {
     return view('auth.cadastrar-admin');
 });
-
-Route::get('admin-dashboard', 'ControllerAdmin@dashboard')->name('admin.dashboard'); //Rota para o dashboard admin;
-
-Route::get('admin-usuarios', 'ControllerAdmin@listaUsuarios')->name('listaUsuarios');
-
-Route::get('administradores', 'ControllerAdmin@listaAdmins')->name('listaAdmins');
 
 Route::get('admin-permisao-edit', function () {
     return view('admin.admin-permisao-edit');
@@ -143,15 +140,28 @@ Route::get('visao-produto/{id}', function ($id) {
     return view('visao-produto', ['id'=> $id]);
 });
 
+Route::get('admin-dashboard', 'ControllerAdmin@dashboard')
+    ->name('admin.dashboard'); //Rota para o dashboard admin;
+
+Route::get('admin-usuarios', 'ControllerAdmin@listaUsuarios')
+    ->name('listaUsuarios');
+
+Route::get('administradores', 'ControllerAdmin@listaAdmins')
+    ->name('listaAdmins');
+
 // ------- ROTAS BACK-END ------- //
 
 // ----------- ROTAS ADMIN ------------//
 // ------- Rota de login do adm -------//
-Route::get('loginAdmin', 'Auth\AdminLoginController@loginAdm')->name('admin.login'); //Rota de tela de login
 
-Route::post('loginAdmin', 'Auth\AdminLoginController@login')->name('admin.login.submit'); //Rota de login
+Route::get('loginAdmin', 'Auth\AdminLoginController@loginAdm')
+    ->name('admin.login'); //Rota de tela de login
 
-Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')->name('admin.logout'); //Rota de logout
+Route::post('loginAdmin', 'Auth\AdminLoginController@login')
+    ->name('admin.login.submit'); //Rota de login
+
+Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')
+    ->name('admin.logout'); //Rota de logout
 
 
 // ------- ROTAS DE CADASTRO ------- //
@@ -167,15 +177,21 @@ Route::get('/usuarios', 'ControllerUsuario@index');
 Route::get('/admins', 'ControllerUsuario@index');
 
 // ---- ROTA DE LOGIN DE USUARIO ---- //
-Route::get('loginConsumidor', 'Auth\UsuarioLoginController@loginConsumidor')->name('consumidor.login'); //Rota de tela de login
 
-Route::post('loginConsumidor', 'Auth\UsuarioLoginController@login')->name('consumidor.login.submit'); //Rota de login
+Route::get('loginConsumidor', 'Auth\UsuarioLoginController@loginConsumidor')
+    ->name('consumidor.login'); //Rota de tela de login
 
-Route::get('logoutConsumidor', 'Auth\UsuarioLoginController@logout')->name('consumidor.logout'); //Rota de logout
+Route::post('loginConsumidor', 'Auth\UsuarioLoginController@login')
+    ->name('consumidor.login.submit'); //Rota de login
 
-Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')->name('paginaInicial'); //Rota da tela inicial para usuário
+Route::get('logoutConsumidor', 'Auth\UsuarioLoginController@logout')
+    ->name('consumidor.logout'); //Rota de logout
 
-Route::get('dashboard-consumidor', 'ControllerUsuario@index')->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
+Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')
+    ->name('paginaInicial'); //Rota da tela inicial para usuário
+
+Route::get('dashboard-consumidor', 'ControllerUsuario@index')
+    ->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
 
 // Rota de testes Back //
 

@@ -37,8 +37,9 @@
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-              @include('produtor-sidebar')
+              @include('produtor/produtor-sidebar')
           </div>
+      
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li class="active"><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
@@ -131,7 +132,7 @@
                 </div>
               </div>
             </div>          
-          <!-- Page Footer-->
+          <!-- Page Footer-->  
           <footer class="main-footer">
             <div class="container-fluid">
               <div class="row">
@@ -140,10 +141,11 @@
                 </div>                
               </div>
             </div>
-          </footer>
+          </footer>        
         </div>
       </div>
     </div>
+    
     <!-- JavaScript files-->
     <script src="produtor/jquery/jquery.min.js"></script>
     <script src="produtor/popper.js/umd/popper.min.js"> </script>
