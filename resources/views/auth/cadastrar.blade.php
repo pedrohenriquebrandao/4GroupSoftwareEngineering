@@ -40,7 +40,7 @@
 
 					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
-							Fazer cadastro por
+							<hr>Fazer cadastro por:<hr>
 						</span>
 					</div>
 					<div class="flex-c-m">
@@ -52,7 +52,11 @@
 							<i class="fa fa-google"></i>
 						</a>						
 					</div>
-
+					<div class="txt1 text-center p-t-54 p-b-20">
+						<span>
+							<hr>ou preencha os campos abaixo:<hr>
+						</span>
+					</div>
 					<div class="wrap-input100 m-b-23 {{$errors->has('email') ? 'has-error' : ''}}">
 						<span class="label-input100">E-mail</span>
 						@if($errors->has('email'))
