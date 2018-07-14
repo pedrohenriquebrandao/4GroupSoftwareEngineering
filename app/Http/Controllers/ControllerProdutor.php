@@ -13,6 +13,7 @@ class ControllerProdutor extends Controller
     private $produtor;
 
     public function __construct(ControllerEndereco $endereco_controller){
+        $this->middleware('auth:consumidor');
         $this->endereco_controller = $endereco_controller;
         $this->produtor = new Produtor();
     }
@@ -30,6 +31,7 @@ class ControllerProdutor extends Controller
         $produtor->nome = $request->nome;
         $produtor->cnpj = $request->cnpj;
         $produtor->endereco_id = $id_endereco;
+        $produtor->login_id = auth()->guard('consumidor')->user()->id;
 
         try{
             $produtor->save();
@@ -67,6 +69,11 @@ class ControllerProdutor extends Controller
         ];
 
         return Validator::make($data, $regras, $mensagens);
+    }
+
+    //Funções de rotas para produtor
+    public function cadastroProdutor(){
+        return view('auth.cadastrar-produtor');
     }
     
 }

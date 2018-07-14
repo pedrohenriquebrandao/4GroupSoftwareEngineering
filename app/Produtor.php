@@ -10,7 +10,8 @@ class Produtor extends Model
         'id',
         'nome',
         'cnpj',
-        'endereco_id'
+        'endereco_id',
+        'login_id'
     ];
 
     protected $table = 'produtores';

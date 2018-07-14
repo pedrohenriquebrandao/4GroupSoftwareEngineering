@@ -51,19 +51,6 @@
                             Você está desconectado como <strong>CONSUMIDOR!</strong>
                         </p>
                     @endif
-
-                    <hr>
-                    <br><br>
-
-                    @forelse($listaAdm as $lista)
-                        <strong>Nome: </strong> {{$lista->nome}} <br>
-                        <strong>E-mail: </strong> {{$lista->email}} <br>
-                        <strong>Telefone: </strong> {{$lista->telefone}} <br>
-                        <strong>ID: </strong> {{$lista->id}} <br>
-                        <hr>
-                    @empty
-                    <strong>Nenhum admin cadastrado!</strong>
-                    @endforelse
                     </div>
                 </div>
                 </center>

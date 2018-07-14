@@ -30,13 +30,18 @@ class HomeController extends Controller
         if (Auth::guard('consumidor')->check()) {
             $id = auth()->guard('consumidor')->user()->id;
             
+            //Obtém os dados da tabela consumidor_usuários do usuário logado;
             $usuario = DB::table('consumidor_login')
             ->join('consumidor_usuarios', 'consumidor_login.id', '=', 'consumidor_usuarios.login_id')
             ->select('consumidor_login.*', 'consumidor_usuarios.*')
             ->where('consumidor_login.id', $id)->first();
+
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
             
-            //dd($usuario);
-            return view('home', compact('usuario'));
+            //dd($possuiLoja);
+
+            return view('home', compact('usuario', 'possuiLoja'));
         } else {
             return view('home');
         }

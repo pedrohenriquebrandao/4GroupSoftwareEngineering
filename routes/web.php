@@ -29,6 +29,18 @@ Route::get('carrinho', function () {
 
 // ------ ROTAS DE CADASTRO --------- //
 
+Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
+
+Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
+
+Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
+
+Route::get('/usuarios', 'ControllerUsuario@index');
+
+Route::get('cadastrar-produtor', "ControllerProdutor@cadastroProdutor")->name('cadastrar.loja');
+
+Route::get('/admins', 'ControllerUsuario@index');
+
 Route::get('cadastrar', function () {
     return view('auth.cadastrar');
 });
@@ -36,23 +48,25 @@ Route::get('cadastrar', function () {
 Route::get('recuperar-senha', function () {
     return view('auth.recuperar-senha');
 });
-Route::get('cadastrar-produtor', function () {
-    return view('auth.cadastrar-produtor');
-});
+
 
 Route::get('recsenhaconfirm', function () {
     return view('auth.recsenhaconfirm');
 });
 
+// ------ ROTAS DASHBOARD CONSUMIDOR ------//
+Route::get('dashboard-consumidor', 'ControllerUsuario@index')
+    ->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
+
 // ------ ROTAS DASHBOARD PRODUTOR ------ //
+Route::get('dashboard-produtor', function () {
+    return view('produtor.dashboard-produtor');
+})->name('produtor.dashboard');
 
 Route::get('produtor-sidebar', function () {
     return view('produtor.produtor-sidebar');
 });
 
-Route::get('dashboard-produtor', function () {
-    return view('produtor.dashboard-produtor');
-});
 
 Route::get('comentarios-produtor', function () {
     return view('produtor.comentarios-produtor');
@@ -118,6 +132,14 @@ Route::get('cartoes-consumidor', function () {
 });
 
 // ---------------- ROTAS ADMIN ---------------- //
+Route::get('admin-dashboard', 'ControllerAdmin@dashboard')
+    ->name('admin.dashboard'); //Rota para o dashboard admin;
+
+Route::get('admin-usuarios', 'ControllerAdmin@listaUsuarios')
+    ->name('listaUsuarios');
+
+Route::get('administradores', 'ControllerAdmin@listaAdmins')
+    ->name('listaAdmins');
 
 Route::get('cadastrar-admin', function () {
     return view('auth.cadastrar-admin');
@@ -139,14 +161,6 @@ Route::get('visao-produto/{id}', function ($id) {
     return view('visao-produto', ['id'=> $id]);
 });
 
-Route::get('admin-dashboard', 'ControllerAdmin@dashboard')
-    ->name('admin.dashboard'); //Rota para o dashboard admin;
-
-Route::get('admin-usuarios', 'ControllerAdmin@listaUsuarios')
-    ->name('listaUsuarios');
-
-Route::get('administradores', 'ControllerAdmin@listaAdmins')
-    ->name('listaAdmins');
 
 // ------- ROTAS BACK-END ------- //
 
@@ -162,19 +176,6 @@ Route::post('loginAdmin', 'Auth\AdminLoginController@login')
 Route::get('logoutAdmin', 'Auth\AdminLoginController@logout')
     ->name('admin.logout'); //Rota de logout
 
-
-// ------- ROTAS DE CADASTRO ------- //
-
-Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
-
-Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
-
-Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
-
-Route::get('/usuarios', 'ControllerUsuario@index');
-
-Route::get('/admins', 'ControllerUsuario@index');
-
 // ---- ROTA DE LOGIN DE USUARIO ---- //
 
 Route::get('loginConsumidor', 'Auth\UsuarioLoginController@loginConsumidor')
@@ -189,8 +190,6 @@ Route::get('logoutConsumidor', 'Auth\UsuarioLoginController@logout')
 Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')
     ->name('paginaInicial'); //Rota da tela inicial para usuário
 
-Route::get('dashboard-consumidor', 'ControllerUsuario@index')
-    ->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
 
 // Rota de testes Back //
 
