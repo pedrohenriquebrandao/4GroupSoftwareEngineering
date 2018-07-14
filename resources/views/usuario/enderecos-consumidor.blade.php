@@ -166,11 +166,39 @@
                         <label for="bairro">Bairro:</label>
                         <input type="text" class="form-control" id="bairro" placeholder="Digite seu bairro">
                       </div>
+                      <div class="row">
+                        <div class="form-group col">
+                          <label for="cep">Cep:</label>
+                          <input type="text" class="form-control" id="cep" placeholder="Digite o CEP">
+                        </div>
+                        <div class="form-group col">
+                          <label for="num">Número:</label>
+                          <input type="text" class="form-control" id="num" placeholder="Digite o número">
+                        </div>
+                      </div>
                       <div class="form-group">
-                        <label for=""></label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nome do Endereço">
+                          <label for="cidade">Cidade:</label>
+                          <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade">
+                      </div>
+                      <div class="form-group">
+                          <label for="estado">Estado:</label>
+                          <input type="text" class="form-control" id="estado" placeholder="Digite o Estado">
+                        </div>
+
+                        <div class="row">
+                        <div class="form-group col">
+                          <label for="comp">Complemento:</label>
+                          <input type="text" class="form-control" id="comp" placeholder="Digite o complemento">
+                        </div>
+                        <div class="form-group col">
+                          <label for="zona">Zona:</label>
+                          <input type="text" class="form-control" id="zona" placeholder="Digite a zona">
+                        </div>
                       </div>
                     </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-add" data-dismiss="modal">Adicionar</button>
                 </div>
             </div>
         </div>

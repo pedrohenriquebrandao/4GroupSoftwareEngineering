@@ -78,6 +78,7 @@
               </div>
             </div>
 
+            <button class="btn btn-primary col-md-5" data-toggle="modal" data-target="#modalEnd">Adicionar Cartão</button>
           
 
           </div>
@@ -95,6 +96,74 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal Endereço -->
+  <div class="modal fade" id="modalEnd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Adicionar Cartão</h5>
+                    <button type="button" class="close col-md-2" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                    <div class="form-group">
+                            <label for="num">Número do Cartão</label>
+                            <input type="text" class="form-control" id="num" maxlength="16" placeholder="EX: 4012001037141112">
+                        </div>
+                        <div class="form-group">
+                            <label for="nome">Nome do Titular</label>
+                            <input type="text" placeholder="EX: ANTÔNIO S CERQUEIRA" maxlength="30" class="form-control" aria-describedby="nomeHelp" id="nome">
+                            <small id="nomeHelp" class="form-text text-muted">Insira o nome como está gravado no cartão.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data de validade</label>
+                            <div class="row">
+                                <select class="form-control col-md-2 ml-3" id="data">
+                                    <option>Mês</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <select class="form-control col-md-2 ml-1" id="data">
+                                    <option>Ano</option>
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                    <option>21</option>
+                                    <option>22</option>
+                                    <option>23</option>
+                                    <option>24</option>
+                                    <option>25</option>
+                                    <option>26</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="codigo">Código de Segurança</label>
+                            <input type="text" maxlength="3" placeholder="EX: 111" class="form-control col-md-2" aria-describedby="codigoHelp" id="codigo">
+                            <small id="codigoHelp" class="form-text text-muted">Encontra-se atrás do cartão.</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-add" data-dismiss="modal">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript files-->
     <script src="produtor/jquery/jquery.min.js"></script>
     <script src="produtor/popper.js/umd/popper.min.js"> </script>
