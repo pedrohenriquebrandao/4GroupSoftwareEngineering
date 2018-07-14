@@ -110,3 +110,33 @@ ul{
   text-align: left;
   margin-bottom: 10px;
 }
+
+.meu-end{
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  padding: 20p 15px 15px 20px;
+}
+
+.sizeFont{
+  font-size: 14px;
+}
+
+.btnEnd{
+  width: 120px;
+  height: 40px;
+}
+
+.meu-card{
+  height: 160px;
+  background-color: rgb(255, 255, 255);
+  padding: 20p 15px 15px 20px;
+}
+
+.conteudo{
+  height: 90px;
+}
+
+.btn-add{
+  width: 100%;
+  height: 100%;
+}

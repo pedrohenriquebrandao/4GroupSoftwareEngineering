@@ -187,7 +187,7 @@ input {
 }
 
 .bg-red {
-  background: #ff7676 !important;
+  background: rgb(173, 30, 25) !important;
   color: #fff;
 }
 

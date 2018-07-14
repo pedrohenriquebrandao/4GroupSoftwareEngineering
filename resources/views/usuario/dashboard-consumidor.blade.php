@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Colheita Feliz</title>
+    <title>Perfil do Produtor</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -20,7 +20,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="produtor/css/custom.css">
     <!-- Favicon-->
-    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="produtor/css/half-slider.css" rel="stylesheet">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -36,14 +36,9 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <!-- Verifica o sexo do usuário para selecionar o avatar -->
-            @if($usuario->sexo == 'fem')
-              <div class="avatar"><img src="produtor/img/avatar-f.png" alt="..." class="img-fluid rounded-circle"></div>
-            @else
-              <div class="avatar"><img src="produtor/img/avatar-m.png" alt="..." class="img-fluid rounded-circle"></div>
-            @endif
+            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-              <h1 class="h4">{{$usuario->nome}}</h1>
+              <h1 class="h4">Zezin</h1>
             </div>
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
@@ -71,7 +66,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>{{$assinaturas}}</strong></div>
+                    <div class="number"><strong>4</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -83,7 +78,7 @@
                         <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-yellow"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>{{$endereco}}</strong></div>
+                    <div class="number"><strong>3</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -107,7 +102,7 @@
                         <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>{{$cartao}}</strong></div>
+                    <div class="number"><strong>2</strong></div>
                   </div>
                 </div> 
               </div>

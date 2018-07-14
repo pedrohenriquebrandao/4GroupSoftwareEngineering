@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Colheita Feliz</title>
+    <title>Carrinho</title>
 
     <!-- Bootstrap core CSS >
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -232,7 +232,7 @@
                     <div>
                         <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
                             <h5>ANTÔNIO S CERQUEIRA - VISA</h5>
-                            <p><span>40**********1112</span>, <span>111</span> - <span>11/21</span></p> 
+                            <p><span>4012001037141112</span>, <span>123</span> - <span>12/2022</span></p> 
                         </button>
                     </div>
                     <div>
