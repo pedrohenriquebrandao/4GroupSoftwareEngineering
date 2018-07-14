@@ -18,6 +18,8 @@ class CreateConsumidorCartaoTable extends Migration
             $table->string('validade', 8);
             $table->integer('codCartao')->unsigned();
             $table->integer('numCartao')->unsigned();
+            $table->integer('login_id')->unsigned();
+            $table->foreign('login_id')->references('id')->on('consumidor_login')->onDelete('cascade');
             $table->timestamps();
         });
     }

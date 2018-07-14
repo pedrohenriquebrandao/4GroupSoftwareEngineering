@@ -55,7 +55,7 @@ Route::get('recsenhaconfirm', function () {
 });
 
 // ------ ROTAS DASHBOARD CONSUMIDOR ------//
-Route::get('dashboard-consumidor', 'ControllerUsuario@index')
+Route::get('dashboard-consumidor', 'ControllerUsuario@dashboard')
     ->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
 
 // ------ ROTAS DASHBOARD PRODUTOR ------ //

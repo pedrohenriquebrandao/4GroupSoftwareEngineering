@@ -20,8 +20,10 @@ class CreateConsumidorEnderecoTable extends Migration
             $table->string('numero');
             $table->string('cidade');
             $table->string('estado');
-            $table->string('complemento');
+            $table->string('complemento')->nullable();
             $table->string('zona');
+            $table->integer('login_id')->unsigned()->nullable();
+            $table->foreign('login_id')->references('id')->on('consumidor_login')->onDelete('cascade');
             $table->timestamps();
         });
     }

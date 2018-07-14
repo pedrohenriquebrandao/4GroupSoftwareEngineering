@@ -15,7 +15,8 @@ class Endereco extends Model
         'cidade',
         'estado',
         'complemento',
-        'zona'
+        'zona',
+        'login_id'
     ];
 
     protected $table = 'consumidor_endereco';

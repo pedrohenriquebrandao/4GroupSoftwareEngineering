@@ -10,6 +10,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>                
         </div>
-        <div><h2 class="no-margin-bottom" style="padding-right:270px">Gerencia da Loja</h2></div>
+        <div><h2 class="no-margin-bottom" style="padding-right:270px">Minha Conta</h2></div>
     </div>       
 </nav>

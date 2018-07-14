@@ -38,7 +38,7 @@ class ControllerProdutor extends Controller
         }catch(\Exception $e){
             var_dump($e->getMessage());
         }
-        return redirect("/")->with("message", "Produtor criado com sucesso!");
+        return redirect("dashboard-produtor")->with("message", "Produtor criado com sucesso!");
     }
 
     public function validacao($data){
@@ -52,7 +52,6 @@ class ControllerProdutor extends Controller
         $regras['numero'] = 'required';
         $regras['cidade'] = 'required';
         $regras['estado'] = 'required';
-        $regras['complemento'] = 'required';
 
         $mensagens = [
             'nome.required' => 'Campo Nome é obrigatório',

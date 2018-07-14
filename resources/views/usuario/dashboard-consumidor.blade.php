@@ -36,9 +36,14 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            <!-- Verifica o sexo do usuário para selecionar o avatar -->
+            @if($usuario->sexo == 'fem')
+              <div class="avatar"><img src="produtor/img/avatar-f.png" alt="..." class="img-fluid rounded-circle"></div>
+            @else
+              <div class="avatar"><img src="produtor/img/avatar-m.png" alt="..." class="img-fluid rounded-circle"></div>
+            @endif
             <div class="title">
-              <h1 class="h4">Zezin</h1>
+              <h1 class="h4">{{$usuario->nome}}</h1>
             </div>
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
@@ -66,7 +71,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>4</strong></div>
+                    <div class="number"><strong>{{$assinaturas}}</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -78,7 +83,7 @@
                         <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-yellow"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>3</strong></div>
+                    <div class="number"><strong>{{$endereco}}</strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -102,7 +107,7 @@
                         <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>2</strong></div>
+                    <div class="number"><strong>{{$cartao}}</strong></div>
                   </div>
                 </div> 
               </div>

@@ -17,10 +17,10 @@ class CreateProdutorTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('cnpj');
-            $table->integer('endereco_id')->unsigned();
             $table->integer('login_id')->unsigned();
-            $table->foreign('endereco_id')->references('id')->on('consumidor_endereco')->onDelete('cascade');
+            $table->integer('endereco_id')->unsigned();
             $table->foreign('login_id')->references('id')->on('consumidor_login')->onDelete('cascade');
+            $table->foreign('endereco_id')->references('id')->on('endereco_id')->onDelete('cascade');
             $table->timestamps();
         });
     }

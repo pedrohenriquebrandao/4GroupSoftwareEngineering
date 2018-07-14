@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 use App\Usuario;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use DB;
 
 class ControllerUsuario extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth:consumidor')->except('cadastrarUsuario');
+    }
 
     public function cadastrarUsuario(Usuario $usuario){
         try{
@@ -15,28 +20,6 @@ class ControllerUsuario extends Controller
             var_dump($e->getMessage());
             //return "Erro: ".$e->getMessage();
         }
-    }
-
-    public function cadUsuario(Request $request){
-        $validacao = $this->validacao($request->all());
-
-        if($validacao->fails()){
-            return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
-        }
-        
-        $usuario = new Usuario();
-        $usuario->email = $request->email;
-        $usuario->cpf = $request->cpf;
-        $usuario->nome = $request->nome;
-        $usuario->sexo = $request->sexo;
-        $usuario->telefone = $request->telefone;
-
-        try{
-            $usuario->save();
-        }catch(\Exception $e){
-            var_dump($e->getMessage());
-        }
-        return redirect("/");   
     }
 
     public function validacao($data){
@@ -58,7 +41,24 @@ class ControllerUsuario extends Controller
     }
 
     //Funções de rotas para o consumidor;
-    public function index(){
-        return view('usuario.dashboard-consumidor');
+    public function dashboard(){
+        $id = auth()->guard('consumidor')->user()->id; //Pega o id do usuário logado
+
+        //Pega os dados do usuário da tabela de usuários;
+        $usuario = DB::table('consumidor_login')
+            ->join('consumidor_usuarios', 'consumidor_login.id', '=', 'consumidor_usuarios.login_id')
+            ->select('consumidor_login.*', 'consumidor_usuarios.*')
+            ->where('consumidor_login.id', $id)->first();
+
+        $assinaturas =  DB::table('consumidor_assinatura')->where('login_id', $id)->count();
+        $cartao =  DB::table('consumidor_cartao')->where('login_id', $id)->count();
+        $endereco =  DB::table('consumidor_endereco')->where('login_id', $id)->count();
+        
+        return view('usuario.dashboard-consumidor', compact(
+            'usuario',
+            'assinaturas',
+            'cartao',
+            'endereco'
+        ));
     }
 }
