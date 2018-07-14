@@ -28,57 +28,27 @@
 <body>    
     @include ('header')
 
-    <div class="container" style="padding: 10px 0">
+    <div class="container mt-4">
         <div class="row">
           <div class="col-md-4">
               <img src="https://tudoela.com/wp-content/uploads/2016/07/beneficios-da-cenoura-e1469051921958.jpg" 
               class="rounded float-left img-fluid img-thumbnail" alt="...">
           </div>
           <div class="col-md-8">
-              <form>
-                <div class="form-group row">
-                  <label for="staticEmail" class="col-sm-4 col-form-label">NOME</label>
-                  <div class="col-sm-8">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Cenoura">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="staticEmail" class="col-sm-4 col-form-label">VENDEDOR</label>
-                  <div class="col-sm-8">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Fazenda Suprennio">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="staticEmail" class="col-sm-4 col-form-label">DESCRIÇÃO</label>
-                  <div class="col-sm-8">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="A melhor cenoura da cidade inteirinha">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-4 col-form-label">FRETE</label>
-                  <div class="col-sm-8">
-                      <select id="inputState" class="form-control" aria-placeholder="Escolher...">
-                        <option>Pago</option>
-                        <option>Grátis</option>
-                        <option>Retirar na loja</option>
-                      </select>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-4 col-form-label">TIPO DE ASSINATURA</label>
-                  <div class="col-sm-8">
-                      <select id="inputState" class="form-control" aria-placeholder="Escolher...">
-                        <option>1 mês</option>
-                        <option>2 meses</option>
-                        <option>6 meses</option>
-                        <option>12 meses</option>
-                      </select>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <a href="/carrinho" class="btn btn-primary">+ Adicionar ao carrinho</a>
-                </div>
-              </form>
+              <div>
+              <h2>Cenoura - 1kg</h2>
+              </div>
+              <div>
+              <h5>Vendido por: João Pé de Feijão</h5>
+              </div>
+              <div>
+              <h6>Descrição:</h6>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo facere quidem nam maxime cumque temporibus quas assumenda dolor id porro ut magnam, iste a quae deserunt explicabo quis provident. Blanditiis.</p>
+              </div>
+              <div>
+              <h6>Avaliações:</h6>
+
+              </div>
           </div>
         </div>
     </div>

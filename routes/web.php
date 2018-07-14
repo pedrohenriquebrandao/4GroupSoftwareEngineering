@@ -27,6 +27,10 @@ Route::get('carrinho', function () {
     return view('usuario.carrinho');
 });
 
+Route::get('visao-produto', function () {
+    return view('visao-produto');
+});
+
 // ------ ROTAS DE CADASTRO --------- //
 
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
