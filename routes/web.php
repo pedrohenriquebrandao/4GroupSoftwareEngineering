@@ -37,6 +37,12 @@ Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
 
 Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
 
+Route::get('cadastrar-admin', 'ControllerAdmin@telaCadastro');
+
+/*Route::get('cadastrar-admin', function () {
+    return view('auth.cadastrar-admin');
+}); */
+
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
 
 Route::get('/usuarios', 'ControllerUsuario@index');
@@ -144,10 +150,6 @@ Route::get('admin-usuarios', 'ControllerAdmin@listaUsuarios')
 
 Route::get('administradores', 'ControllerAdmin@listaAdmins')
     ->name('listaAdmins');
-
-Route::get('cadastrar-admin', function () {
-    return view('auth.cadastrar-admin');
-});
 
 Route::get('admin-permisao-edit', function () {
     return view('admin.admin-permisao-edit');
