@@ -4,5 +4,10 @@
     @else
     <h1 class="h4">User</h1>
     @endif
-    <p>Administrador</p>
+    
+    @if(Auth::guard('admin')->user()->tipo == 'master')
+        <p>Admin Master</p>
+    @else
+        <p>Admin Comum</p>
+    @endif
 </div>

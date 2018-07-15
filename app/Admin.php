@@ -16,7 +16,8 @@ class Admin extends Authenticatable
         'email',
         'password',
         'nome',
-        'telefone'
+        'telefone',
+        'tipo'
     ];
 
     protected $table = 'adm_administrador';

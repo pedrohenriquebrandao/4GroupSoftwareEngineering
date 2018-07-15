@@ -25,6 +25,7 @@ class ControllerAdmin extends Controller
         $admin->password = Hash::make($request->password);
         $admin->nome = $request->nome;
         $admin->telefone = $request->telefone;
+        $admin->tipo = "comum";
         
         try{
             $admin->save();
@@ -79,7 +80,7 @@ class ControllerAdmin extends Controller
 
     public function listaAdmins(){
         //Pega todos os cadastros da tabela de administrador e guarda em '$listaAdm';
-        $listaAdm = DB::table('adm_administrador')->get();
+        $listaAdm = DB::table('adm_administrador')->where('tipo', 'comum')->get();
         
         //Duas formas de retornar para a view;
         //-- 1º --//
