@@ -45,8 +45,8 @@
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">                    
-              <li class="active"><a href="/admin-dashboard"> <i class="icon-grid"></i>Status</a></li>
-              <li ><a href="/admin-usuarios"> <i class="icon-user"></i>Usuários</a></li>
+              <li ><a href="/admin-dashboard"> <i class="icon-grid"></i>Status</a></li>
+              <li class="active"><a href="/admin-usuarios"> <i class="icon-user"></i>Usuários</a></li>
               @if(Auth::guard('admin')->user()->tipo == 'master')
                   <li ><a href="/administradores"> <i class="icon-user"></i>Administradores</a></li>
               @endif

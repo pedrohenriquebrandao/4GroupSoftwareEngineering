@@ -6,8 +6,8 @@
     @endif
     
     @if(Auth::guard('admin')->user()->tipo == 'master')
-        <p>Admin Master</p>
+        <p>Admin <strong>Master</strong></p>
     @else
-        <p>Admin Comum</p>
+        <p>Admin <strong>Comum</strong></p>
     @endif
 </div>
