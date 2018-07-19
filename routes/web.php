@@ -78,8 +78,9 @@ Route::post('adicionar-produtos', 'ControllerProdutor@addProduto')->name('produt
 Route::get('gerenciar-produtos', 'ControllerProdutor@gerenciarProdutos')->name('produtor.produtos');
 
 //Chama a rota da tela de edição de produto passando o id do produto como parametro: "{id}";
-Route::get("/editar-produto", "ControllerProdutor@editarProduto");
+Route::get("/{id}/editar-produto", "ControllerProdutor@editarProduto");
 
+Route::post('editar-produto', 'ControllerProdutor@updateProduto')->name('produtor.update');
 
 Route::get('produtor-sidebar', function () {
     return view('produtor.produtor-sidebar');
