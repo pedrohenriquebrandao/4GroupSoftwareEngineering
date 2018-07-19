@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Frutas</title>
+		<title>Tubérculos</title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -55,7 +55,7 @@
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
 							<li><a href="/principal">Página inicial</a></li>
-							<li><a href="/index-promocoes">Frutas</a></li>
+							<li><a href="/index-promocoes">Tubérculos</a></li>
 						</ul>
 					</div>
 				</div>
