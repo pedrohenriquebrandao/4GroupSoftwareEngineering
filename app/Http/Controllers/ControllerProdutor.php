@@ -167,13 +167,36 @@ class ControllerProdutor extends Controller
         return view('produtor.gerenciar-produtos', compact('loja', 'produtos'));
     }
 
-    public function editarProduto(){
+    public function editarProduto($id){
         $idProdutor = Auth::guard('consumidor')->user()->id; //Pega o id do usuário logado;
         //Recupera os dados do produtor pelo id do usuário logado;
         $loja = DB::table('produtores')->where('produtores.login_id', $idProdutor)->first();
         
-        //$produto = Produto::find($id); //Recupera o produto pelo id;
+        $produto = Produto::find($id); //Recupera o produto pelo id;
         
         return view("produtor.editar-produto", compact('loja', 'produto'));
+    }
+
+    public function updateProduto(Request $request){
+        //$validacao = $this->validacaoProduto($request->all());
+        
+        //if($validacao->fails()){
+          //  return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
+        //}
+
+        $produto = Produto::find($request->id);
+
+        $imagem = $request->imagem;
+        
+        //Verifica se há imagem selecionada e se é valida.
+        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+            
+            //Nome final da imagem;
+            $nameFile = $request->imagem;
+            //Salva a imagem na pasta storage/app/public/imagem-produtos
+            $upload = $request->imagem->storeAs('imagem-produtos', $nameFile);
+        }
+        $update = $produto->update($request->all());
+        return redirect("gerenciar-produtos")->with("message", "Produto cadastrado com sucesso!");
     }
 }
