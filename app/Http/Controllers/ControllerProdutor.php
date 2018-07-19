@@ -140,8 +140,8 @@ class ControllerProdutor extends Controller
         $regras['nome'] = 'required|min:3';
         $regras['descricao'] = 'required';
         $regras['tipo'] = 'required';
-        $regras['valor'] = 'required';
-        $regras['imagem'] = 'required';
+        //$regras['valor'] = 'required';
+        //$regras['imagem'] = 'required';
         $regras['fretegratis'] = 'required';
 
         $mensagens = [
@@ -149,8 +149,8 @@ class ControllerProdutor extends Controller
             'nome.min' => 'Campo nome deve ter no mínimo 3 letras',
             'tipo.required' => 'Campo tipo é obrigatório',
             'descricao.required' => 'Campo descricao é obrigatório',
-            'imagem.required' => 'Necessário selecionar uma imagem para o produto',
-            'valor.required' => 'Necessário informar um valor',
+            //'imagem.required' => 'Necessário selecionar uma imagem para o produto',
+            //'valor.required' => 'Necessário informar um valor',
             'fretegratis' => 'Necessário informar quantidade para frete grátis'
         ];
 
@@ -178,25 +178,34 @@ class ControllerProdutor extends Controller
     }
 
     public function updateProduto(Request $request){
-        //$validacao = $this->validacaoProduto($request->all());
-        
-        //if($validacao->fails()){
-          //  return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
-        //}
+        $data = $request->all();
 
-        $produto = Produto::find($request->id);
+        $validacao = $this->validacaoProduto($request->all());
+
+        if($validacao->fails()){
+            return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
+        }
+
+        $produto = Produto::find($request->id); //Recupera o produto pelo id;
 
         $imagem = $request->imagem;
         
         //Verifica se há imagem selecionada e se é valida.
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
-            
+            $name = $produto->imagem;
+
+            //Pega a extensão da imagem.
+            $extension = $request->imagem->extension();
+
             //Nome final da imagem;
-            $nameFile = $request->imagem;
+            $nameFile = "{$name}.{$extension}";
+            $data['imagem'] = $nameFile;
+
             //Salva a imagem na pasta storage/app/public/imagem-produtos
             $upload = $request->imagem->storeAs('imagem-produtos', $nameFile);
         }
-        $update = $produto->update($request->all());
+        
+        $update = $produto->update($data);
         return redirect("gerenciar-produtos")->with("message", "Produto cadastrado com sucesso!");
     }
 }
