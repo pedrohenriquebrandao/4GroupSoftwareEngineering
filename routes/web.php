@@ -47,6 +47,10 @@ Route::get('index-nav', function () {
     return view('index-nav');
 });
 
+Route::get('index-frutas', function () {
+    return view('index-frutas');
+});
+
 
 // ------ ROTAS DE CADASTRO --------- //
 

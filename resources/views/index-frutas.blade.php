@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Colheita Feliz</title>
+		<title>Frutas</title>
 
  		<!-- Google font -->
  		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -55,7 +55,7 @@
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
 							<li><a href="/principal">Página inicial</a></li>
-							<li><a href="/index-promocoes">Promoções</a></li>
+							<li><a href="/index-promocoes">Frutas</a></li>
 						</ul>
 					</div>
 				</div>
@@ -75,14 +75,14 @@
 					<div id="aside" class="col-md-3">
 						<!-- aside Widget -->
 						<div class="aside">
-							<h3 class="aside-title">Categorias</h3>
+							<h3 class="aside-title">Vendidos por</h3>
 							<div class="checkbox-filter">
 
 								<div class="input-checkbox">
 									<input type="checkbox" id="category-1">
 									<label for="category-1">
 										<span></span>
-										Frutas
+										Kilo-gramas
 										<small>(120)</small>
 									</label>
 								</div>
@@ -91,7 +91,7 @@
 									<input type="checkbox" id="category-2">
 									<label for="category-2">
 										<span></span>
-										Verduras
+										Caixa
 										<small>(740)</small>
 									</label>
 								</div>
@@ -100,7 +100,7 @@
 									<input type="checkbox" id="category-3">
 									<label for="category-3">
 										<span></span>
-										Tubérculos
+										Gramas
 										<small>(1450)</small>
 									</label>
 								</div>
@@ -109,7 +109,7 @@
 									<input type="checkbox" id="category-4">
 									<label for="category-4">
 										<span></span>
-										Sementes
+										Unidade
 										<small>(578)</small>
 									</label>
 								</div>								
@@ -126,7 +126,7 @@
 						<!-- /aside Widget -->
 
 						<!-- aside Widget -->
-						<
+						
 						<!-- /aside Widget -->
 					</div>
 					<!-- /ASIDE -->
