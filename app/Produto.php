@@ -12,7 +12,8 @@ class Produto extends Model
         'descricao',
         'tipo',
         'qtd_frete_gratis',
-        'imagem'
+        'imagem',
+        'produtor_id'
     ];
 
     protected $table = 'produtor_produto';

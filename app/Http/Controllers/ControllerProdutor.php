@@ -95,6 +95,8 @@ class ControllerProdutor extends Controller
     }
     
     public function addProduto(Request $request){
+        $id = Auth::guard('consumidor')->user()->id;
+
         $validacao = $this->validacaoProduto($request->all());
         
         if($validacao->fails()){
@@ -106,7 +108,7 @@ class ControllerProdutor extends Controller
         //Verifica se há imagem selecionada e se é valida.
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
             //Seleciona um nome para a imagem.
-            $name = uniqid(date('HisYmd'))."".Auth::guard('consumidor')->user()->id;
+            $name = uniqid(date('HisYmd'))."".$id;
             //Pega a extensão da imagem.
             $extension = $request->imagem->extension();
             
@@ -122,7 +124,10 @@ class ControllerProdutor extends Controller
         $produto->tipo = $request->tipo;
         $produto->qtd_frete_gratis = $request->fretegratis;
         $produto->imagem = $nameFile;
-
+        //Pega o id do produtor/loja no banco de dados.
+        $idProdutor = DB::table('produtores')->select('id')->where('login_id', $id)->first();
+        $produto->produtor_id = $idProdutor->id;
+        
         try{
             $produto->save();
         }catch(\Exception $e){
