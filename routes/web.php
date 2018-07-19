@@ -73,9 +73,9 @@ Route::post('adicionar-produtos', 'ControllerProdutor@addProduto')->name('produt
 
 Route::get('gerenciar-produtos', 'ControllerProdutor@gerenciarProdutos')->name('produtor.produtos');
 
-/*Route::get('gerenciar-produtos', function () {
-    return view('produtor.gerenciar-produtos');
-});*/
+//Chama a rota da tela de edição de produto passando o id do produto como parametro: "{id}";
+Route::get("/editar-produto", "ControllerProdutor@editarProduto");
+
 
 Route::get('produtor-sidebar', function () {
     return view('produtor.produtor-sidebar');
@@ -106,9 +106,6 @@ Route::get('avaliacoes-produtor', function () {
 
 Route::get('criar-promocao', function () {
     return view('produtor.criar-promocao');
-});
-Route::get('editar-produto', function () {
-    return view('produtor.editar-produto');
 });
 Route::get('detalhe-assinatura', function () {
     return view('produtor.detalhe-assinatura');

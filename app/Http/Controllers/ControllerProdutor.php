@@ -166,4 +166,14 @@ class ControllerProdutor extends Controller
 
         return view('produtor.gerenciar-produtos', compact('loja', 'produtos'));
     }
+
+    public function editarProduto(){
+        $idProdutor = Auth::guard('consumidor')->user()->id; //Pega o id do usuário logado;
+        //Recupera os dados do produtor pelo id do usuário logado;
+        $loja = DB::table('produtores')->where('produtores.login_id', $idProdutor)->first();
+        
+        //$produto = Produto::find($id); //Recupera o produto pelo id;
+        
+        return view("produtor.editar-produto", compact('loja', 'produto'));
+    }
 }
