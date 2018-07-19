@@ -36,11 +36,7 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-            <div class="title">
-              <h1 class="h4">Joao e o pé de feijão</h1>
-              <p>Fazendeiro</p>
-            </div>
+            @include('produtor/produtor-sidebar')
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
@@ -85,7 +81,6 @@
                         <table class="table table-striped table-hover">                        
                           <thead>
                             <tr>
-                              <th scope="col">ID</th>
                               <th scope="col">Imagem</th>
                               <th scope="col">Informações do Produto</th>
                               <th scope="col">Assinaturas</th>
@@ -96,27 +91,34 @@
                             </tr>
                           </thead>
                           <tbody>
+                            @forelse($produtos as $produto)
                             <tr>
-                              <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" style="width:auto" alt="...">
-                              
-                                  </br></br>
-                                  <input id="fileInput" type="file" class="form-control-file">
+                              <td>
+                                <img src="{{url('storage/imagem-produtos/'.$produto->imagem)}}" alt="{{$produto->imagem}}" class="img-responsive" style="width: 100px">
                               </td>
-                              <td><b>Nome:</b> Tomate</br> <b>Valor:</b> R$10,00</br><b>Quantidade em estoque:</b> 50 kilos</br><b>Promoção:</b></br><b>Tipo de Frete:</b></td>
+                              <td>
+                                <b>Nome:</b> {{$produto->nome}}</br> <b>Tipo:</b> {{$produto->tipo}}</br><b>Promoção:</b></br><b>Quantidade para frete gratis: </b>{{$produto->qtd_frete_gratis}}
+                              </td>
                               <td>20</td>
-                              <td><div class="progress">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                      40% 
-                                    </div>
+                              <td>
+                                <div class="progress">
+                                  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    40% 
                                   </div>
+                                </div>
                               </td>
-                              <td><a href="/editar-produto" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-warning btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                              <td>
+                                <a href="/editar-produto" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-warning btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
                               </td>
-                              <td><a href="/editar-produto" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Excluir</button></a></td>
-                              <td><a href="/criar-promocao" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Promoção</button></a>
+                              <td>
+                                <a href="/editar-produto" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Excluir</button></a>
                               </td>
-                            </tr>                            
+                              <td>
+                                <a href="/criar-promocao" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Promoção</button></a>
+                              </td>
+                            </tr>
+                            @empty
+                            @endforelse                         
                           </tbody>
                         </table>
                       </div>

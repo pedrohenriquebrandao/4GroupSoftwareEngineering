@@ -67,12 +67,19 @@ Route::get('dashboard-consumidor', 'ControllerUsuario@dashboard')
 // ------ ROTAS DASHBOARD PRODUTOR ------ //
 Route::get('dashboard-produtor', 'ControllerProdutor@dashboard')->name('produtor.dashboard');
 
+Route::get('adicionar-produtos', 'ControllerProdutor@telaAddProduto')->name('produtor.adicionar.produto');
+
+Route::post('adicionar-produtos', 'ControllerProdutor@addProduto')->name('produtor.adicionar');
+
+Route::get('gerenciar-produtos', 'ControllerProdutor@gerenciarProdutos')->name('produtor.produtos');
+
+/*Route::get('gerenciar-produtos', function () {
+    return view('produtor.gerenciar-produtos');
+});*/
+
 Route::get('produtor-sidebar', function () {
     return view('produtor.produtor-sidebar');
 });
-
-Route::get('adicionar-produtos', 'ControllerProdutor@telaAddProduto')->name('produtor.adicionar.produto');
-Route::post('adicionar-produtos', 'ControllerProdutor@addProduto')->name('produtor.adicionar');
 
 Route::get('comentarios-produtor', function () {
     return view('produtor.comentarios-produtor');
@@ -80,9 +87,6 @@ Route::get('comentarios-produtor', function () {
 
 Route::get('assinaturas-ativas-pendentes', function () {
     return view('produtor.assinaturas-ativas-pendentes');
-});
-Route::get('gerenciar-produtos', function () {
-    return view('produtor.gerenciar-produtos');
 });
 Route::get('navbarprodutor', function () {
     return view('navbarprodutor');

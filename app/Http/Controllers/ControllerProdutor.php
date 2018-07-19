@@ -89,7 +89,7 @@ class ControllerProdutor extends Controller
     public function telaAddProduto(){
         $id = Auth::guard('consumidor')->user()->id;
 
-        $loja = DB::table('produtores')->where('produtores.id', $id)->first();
+        $loja = DB::table('produtores')->where('produtores.login_id', $id)->first();
 
         return view('produtor.adicionar-produtos', compact('loja'));
     }
@@ -155,5 +155,15 @@ class ControllerProdutor extends Controller
         ];
 
         return Validator::make($data, $regras, $mensagens);
+    }
+
+    public function gerenciarProdutos(){
+        $id = Auth::guard('consumidor')->user()->id;
+
+        $loja = DB::table('produtores')->where('produtores.login_id', $id)->first();
+        $produtos = DB::table('produtor_produto')->where('produtor_produto.produtor_id', $loja->id)->get();
+        //dd($produtos);
+
+        return view('produtor.gerenciar-produtos', compact('loja', 'produtos'));
     }
 }

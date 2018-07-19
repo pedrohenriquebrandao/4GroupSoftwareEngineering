@@ -72,7 +72,7 @@
                   <div class="col-lg-12">
                     <div class="card">
                       <div class="card-close">      
-                        <input type="submit" name="adicionar" value="Adicionar">
+                        <input class="btn btn-success btn-sm" type="submit" name="adicionar" value="Salvar">
                       </div>
                       <div class="card-header d-flex align-items-center">
                         <h3 class="h4">Produto</h3>
