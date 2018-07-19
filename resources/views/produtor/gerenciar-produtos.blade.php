@@ -98,6 +98,7 @@
                               </td>
                               <td>
                                 <b>Nome:</b> {{$produto->nome}}</br> <b>Tipo:</b> {{$produto->tipo}}</br><b>Promoção:</b></br><b>Quantidade para frete gratis: </b>{{$produto->qtd_frete_gratis}}
+                                <br><b>Descrição: </b> {{$produto->descricao}}
                               </td>
                               <td>20</td>
                               <td>
