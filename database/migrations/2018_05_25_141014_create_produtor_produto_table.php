@@ -18,6 +18,7 @@ class CreateProdutorProdutoTable extends Migration
             $table->string('descricao');
             $table->string('tipo');
             $table->string('qtd_frete_gratis');
+            $table->string('imagem');
             $table->timestamps();
         });
     }

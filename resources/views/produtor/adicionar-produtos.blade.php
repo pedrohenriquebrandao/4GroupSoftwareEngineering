@@ -36,11 +36,7 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-            <div class="title">
-              <h1 class="h4">Joao e o pé de feijão</h1>
-              <p>Fazendeiro</p>
-            </div>
+            @include('produtor/produtor-sidebar')
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
@@ -67,87 +63,143 @@
               <li class="breadcrumb-item active">Adicionar Produto        </li>
             </ul>
           </div>
-          <section class="tables">   
-            <div class="container-fluid">
-              <div class="row">         
-                <div class="col-lg-12">
-                  <div class="card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <a href="/gerenciar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button></a>
-                        
+
+          <section class="tables">
+            <form method="POST" action="{{ route('produtor.adicionar') }}" enctype="multipart/form-data">
+            {{ csrf_field() }}  
+              <div class="container-fluid">
+                <div class="row">         
+                  <div class="col-lg-12">
+                    <div class="card">
+                      <div class="card-close">      
+                        <input type="submit" name="adicionar" value="Adicionar">
                       </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Produto</h3>
-                    </div>
-                    <div class="card-body">
-                      <div class="table-responsive-xl">                       
-                        <table class="table table-hover">                        
-                          <thead>
-                            <tr>                            
-                              <th scope="col">ID</th>
-                              <th scope="col">Imagem</th>
-                              <th scope="col">Informações</th>
-                              <th scope="col">Tipo de Frete</th>                              
-                              <th scope="col">Tipo de produto</th>                                                                                      
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td><img src="image/addImagem.jpg" class="img-responsive" style="width:40%" alt="...">
+                      <div class="card-header d-flex align-items-center">
+                        <h3 class="h4">Produto</h3>
+                      </div>
+                      @if (session('message'))
+                        <div class="alert alert-success">
+                            {{ session('message') }}
+                        </div>
+                       @endif
+                      <div class="card-body">
+                        <div class="table-responsive-xl">                       
+                          <table class="table table-hover">                        
+                            <thead>
+                              <tr>
+                                <th scope="col">Imagem</th>
+                                <th scope="col">Informações</th>
+                                <th scope="col">Tipo de Frete</th>                              
+                                <th scope="col">Tipo de produto</th>                                                                                      
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <img src="image/addImagem.jpg" class="img-responsive" style="width:40%" alt="...">
                                   </br></br>
-                                  <input id="fileInput" type="file" class="form-control-file">
-                              </td>
-                              <td><input type="text" class="form-control" placeholder="Nome do produto" id="produto"></br>
-                                  <input type="text" class="form-control" placeholder="Quantidade do produto" id="quantidade"></br>
-                                  <input type="text" class="form-control" placeholder="Valor do produto" id="valor"></br>
-                                  <input type="text" class="form-control" placeholder="Promoção do produto" id="promoção"></br>
-                              </td>
-                              <td>                                  
-                                  <div class="i-checks">
-                                    <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template">
-                                    <label for="checkboxCustom1">Grátis</label>
+                                  <input type="file" class="form-control-file" name="imagem" value="{{old('imagem')}}" accept="image/*" />
+                                  @if($errors->has('imagem'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('imagem')}}
+                                    </span>
+                                  @endif
+                                </td>
+                                <td>
+                                  <input type="text" class="form-control" placeholder="Nome do produto" name="nome" value="{{old('nome')}}"></br>
+                                  @if($errors->has('nome'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('nome')}}
+                                    </span>
+                                  @endif
+                                  <input type="number" class="form-control" placeholder="Valor do produto" name="valor" value="{{old('valor')}}"></br>
+                                  @if($errors->has('valor'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('valor')}}
+                                    </span>
+                                  @endif
+                                  <input type="number" class="form-control" placeholder="Promoção do produto" name="promocao" value="{{old('promocao')}}"></br>
+                                  @if($errors->has('promocao'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('promocao')}}
+                                    </span>
+                                  @endif
+                                </td>
+                                <td>
+                                  <label for="checkboxCustom1">Quantidade para frete grátis</label>
+                                  <input type="number" class="form-control" placeholder="" name="fretegratis" value="{{old('fretegratis')}}"></br>
+                                  @if($errors->has('fretegratis'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('fretegratis')}}
+                                    </span>
+                                  @endif                             
+                                    <div class="i-checks">
+                                      <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template">
+                                      <label for="checkboxCustom1">Grátis</label>
+                                    </div> 
+                                    <div><input type="text" class="form-control" placeholder="Quantidade" id="quantidade"></div> </br>  
+                                    <div class="i-checks">
+                                      <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Padrão</label>
+                                    </div>
+                                    <div class="i-checks"> 
+                                      <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Por quantidade</label>
+                                    </div>
+                                </td>
+                                <td>		
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="fruta" checked>
+                                    <label class="form-check-label" for="radioUrnaba">Fruta</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="legume" checked>
+                                    <label class="form-check-label" for="radioRural">Legume</label>  
+                                  </div>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="verdura" checked>
+                                    <label class="form-check-label" for="radioRural">Verdura</label>  
+                                  </div>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="folha" checked>
+                                    <label class="form-check-label" for="radioRural">Folha</label>  
+                                  </div>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="graos" checked>
+                                    <label class="form-check-label" for="radioRural">Grãos</label>  
                                   </div> 
-                                  <div><input type="text" class="form-control" placeholder="Quantidade" id="quantidade"></div> </br>  
-                                  <div class="i-checks">
-                                    <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Padrão</label>
-                                  </div>
-                                  <div class="i-checks"> 
-                                    <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Por quantidade</label>
-                                  </div>
-                              </td>
-                              <td> 
-                                <input type="text" class="form-control" placeholder="Tipo" id="tipoDeProduto">  
-                              </td>       
-                                                        
-                            </tr>
-                          </tbody>                          
-                            <div class="card-body">
-                              <div class="table-responsive">                       
-                                <table class="table table-striped table-hover">                        
-                                  <thead>
-                                    <tr>                            
-                                      <th scope="col">Descrição do produto</th> </tr>
-                                  </thead>
-                                  <tbody>
-                                    <th scope="row"></th>
-                                    <td><div class="form-group" style="padding:auto">
-                                          <label for="descricao">Digite a descrição do produto</label>
-                                          <textarea class="form-control" rows="5" id="descricao"></textarea>
-                                        </div> 
-                                    </td>
-                                  </tbody>
+                                </td>       
+                                                          
+                              </tr>
+                            </tbody>                          
+                              <div class="card-body">
+                                <div class="table-responsive">                       
+                                  <table class="table table-striped table-hover">                        
+                                    <thead>
+                                      <tr>                            
+                                        <th scope="col">Descrição do produto</th> </tr>
+                                    </thead>
+                                    <tbody>
+                                      <th scope="row"></th>
+                                      <td><div class="form-group" style="padding:auto">
+                                            <label for="descricao">Digite a descrição do produto</label>
+                                            @if($errors->has('descricao'))
+                                              <span class="label-input100 help-block" style="color: red">
+                                                {{$errors->first('descricao')}}
+                                              </span>
+                                            @endif
+                                            <textarea class="form-control" rows="5" name="descricao" value="{{old('descricao')}}"></textarea>
+                                          </div> 
+                                      </td>
+                                    </tbody>
+                                </div>
                               </div>
-                            </div>
-                        </table>
+                          </table>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>                
+                  </div>                
+                </div>
               </div>
-            </div>
+            </form>
           </section>
           
               

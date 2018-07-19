@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 use App\Produtor;
 use App\Endereco;
+use App\Produto;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Auth;
+use DB;
+use Illuminate\Http\UploadedFile;
 
 class ControllerProdutor extends Controller
 {
@@ -74,5 +77,78 @@ class ControllerProdutor extends Controller
     public function cadastroProdutor(){
         return view('auth.cadastrar-produtor');
     }
+
+    public function dashboard(){
+        $id = Auth::guard('consumidor')->user()->id;
+
+        $loja = DB::table('produtores')->where('produtores.id', $id)->first();
+        //dd($id, $loja);
+        return view('produtor.dashboard-produtor', compact('loja'));
+    }
+
+    public function telaAddProduto(){
+        $id = Auth::guard('consumidor')->user()->id;
+
+        $loja = DB::table('produtores')->where('produtores.id', $id)->first();
+
+        return view('produtor.adicionar-produtos', compact('loja'));
+    }
     
+    public function addProduto(Request $request){
+        $validacao = $this->validacaoProduto($request->all());
+        
+        if($validacao->fails()){
+            return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
+        }
+        
+        $imagem = $request->imagem;
+        
+        //Verifica se há imagem selecionada e se é valida.
+        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+            //Seleciona um nome para a imagem.
+            $name = uniqid(date('HisYmd'))."".Auth::guard('consumidor')->user()->id;
+            //Pega a extensão da imagem.
+            $extension = $request->imagem->extension();
+            
+            //Nome final da imagem;
+            $nameFile = "{$name}.{$extension}";
+            //Salva a imagem na pasta storage/app/public/imagem-produtos
+            $upload = $request->imagem->storeAs('imagem-produtos', $nameFile);
+        }
+
+        $produto = new Produto();
+        $produto->nome = $request->nome;
+        $produto->descricao = $request->descricao;
+        $produto->tipo = $request->tipo;
+        $produto->qtd_frete_gratis = $request->fretegratis;
+        $produto->imagem = $nameFile;
+
+        try{
+            $produto->save();
+        }catch(\Exception $e){
+            var_dump($e->getMessage());
+        }
+        return redirect("adicionar-produtos")->with("message", "Produto cadastrado com sucesso!");
+    }
+
+    public function validacaoProduto($data){
+        $regras['nome'] = 'required|min:3';
+        $regras['descricao'] = 'required';
+        $regras['tipo'] = 'required';
+        $regras['valor'] = 'required';
+        $regras['imagem'] = 'required';
+        $regras['fretegratis'] = 'required';
+
+        $mensagens = [
+            'nome.required' => 'Campo Nome é obrigatório',
+            'nome.min' => 'Campo nome deve ter no mínimo 3 letras',
+            'tipo.required' => 'Campo tipo é obrigatório',
+            'descricao.required' => 'Campo descricao é obrigatório',
+            'imagem.required' => 'Necessário selecionar uma imagem para o produto',
+            'valor.required' => 'Necessário informar um valor',
+            'fretegratis' => 'Necessário informar quantidade para frete grátis'
+        ];
+
+        return Validator::make($data, $regras, $mensagens);
+    }
 }

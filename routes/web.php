@@ -39,10 +39,6 @@ Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
 
 Route::get('cadastrar-admin', 'ControllerAdmin@telaCadastro');
 
-/*Route::get('cadastrar-admin', function () {
-    return view('auth.cadastrar-admin');
-}); */
-
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
 
 Route::get('/usuarios', 'ControllerUsuario@index');
@@ -69,14 +65,14 @@ Route::get('dashboard-consumidor', 'ControllerUsuario@dashboard')
     ->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
 
 // ------ ROTAS DASHBOARD PRODUTOR ------ //
-Route::get('dashboard-produtor', function () {
-    return view('produtor.dashboard-produtor');
-})->name('produtor.dashboard');
+Route::get('dashboard-produtor', 'ControllerProdutor@dashboard')->name('produtor.dashboard');
 
 Route::get('produtor-sidebar', function () {
     return view('produtor.produtor-sidebar');
 });
 
+Route::get('adicionar-produtos', 'ControllerProdutor@telaAddProduto')->name('produtor.adicionar.produto');
+Route::post('adicionar-produtos', 'ControllerProdutor@addProduto')->name('produtor.adicionar');
 
 Route::get('comentarios-produtor', function () {
     return view('produtor.comentarios-produtor');
@@ -92,9 +88,6 @@ Route::get('navbarprodutor', function () {
     return view('navbarprodutor');
 });
 
-Route::get('adicionar-produtos', function () {
-    return view('produtor.adicionar-produtos');
-});
 Route::get('assinaturas-pausadas', function () {
     return view('assinaturas-pausadas');
 });
@@ -116,10 +109,6 @@ Route::get('editar-produto', function () {
 Route::get('detalhe-assinatura', function () {
     return view('produtor.detalhe-assinatura');
 });
-
-//Route::get('dashboard-consumidor', function () {
-//    return view('usuario.dashboard-consumidor');
-//});
 
 Route::get('enderecos-consumidor', function () {
     return view('usuario.enderecos-consumidor');
