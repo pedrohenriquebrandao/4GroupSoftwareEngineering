@@ -101,16 +101,25 @@
                                   <input type="file" class="form-control-file" name="imagem" value="{{$produto->imagem}}" accept="image/*" />
                                 </td>
                                 <td>
-                                  <input type="hidden" name="id" value="{{$produto->id}}">
-                                  <input type="text" class="form-control" name="nome" value="{{$produto->nome}}"></br>
+                                <input type="hidden" name="id" value="{{$produto->id}}">
+                                <input type="text" class="form-control" placeholder="Nome do produto" name="nome" value="{{$produto->nome}}"></br>
                                   @if($errors->has('nome'))
                                     <span class="label-input100 help-block" style="color: red">
                                       {{$errors->first('nome')}}
                                     </span>
                                   @endif
-                                  <input type="text" class="form-control" ></br>
-                                  <input type="text" class="form-control" ></br>
-                                  <input type="text" class="form-control" ></br>
+                                  <input type="number" class="form-control" placeholder="Valor do produto" name="valor" value="{{$produto->valor}}"></br>
+                                  @if($errors->has('valor'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('valor')}}
+                                    </span>
+                                  @endif
+                                  <input type="number" class="form-control" placeholder="Promoção do produto" name="promocao" value="{{$produto->promocao}}"></br>
+                                  @if($errors->has('promocao'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('promocao')}}
+                                    </span>
+                                  @endif
                                 </td>
                                 <td>
                                   <label for="checkboxCustom1">Quantidade para frete grátis</label>
