@@ -51,6 +51,20 @@ Route::get('index-frutas', function () {
     return view('index-frutas');
 });
 
+Route::get('index-verduras', function () {
+    return view('index-verduras');
+});
+
+Route::get('index-tuberculos', function () {
+    return view('index-tuberculos');
+});
+
+Route::get('index-sementes', function () {
+    return view('index-sementes');
+});
+
+
+
 
 // ------ ROTAS DE CADASTRO --------- //
 
