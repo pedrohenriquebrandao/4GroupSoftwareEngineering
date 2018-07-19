@@ -31,6 +31,10 @@ Route::get('visao-produto', function () {
     return view('visao-produto');
 });
 
+Route::get('principal', function () {
+    return view('principal');
+});
+
 // ------ ROTAS DE CADASTRO --------- //
 
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
