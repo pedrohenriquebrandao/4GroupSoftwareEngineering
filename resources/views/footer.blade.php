@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-xs-6">
+            <div class="col-md-3 col-xs-6" style="padding-left:20px;">
                 <div class="footer">
                     <h3 class="footer-title">Categorias</h3>
                     <ul class="footer-links">

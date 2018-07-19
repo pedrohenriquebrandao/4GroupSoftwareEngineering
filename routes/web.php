@@ -35,6 +35,11 @@ Route::get('principal', function () {
     return view('principal');
 });
 
+Route::get('index-header', function () {
+    return view('index-header');
+});
+
+
 // ------ ROTAS DE CADASTRO --------- //
 
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
