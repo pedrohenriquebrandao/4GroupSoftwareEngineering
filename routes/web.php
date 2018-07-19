@@ -39,6 +39,14 @@ Route::get('index-header', function () {
     return view('index-header');
 });
 
+Route::get('index-promocoes', function () {
+    return view('index-promocoes');
+});
+
+Route::get('index-nav', function () {
+    return view('index-nav');
+});
+
 
 // ------ ROTAS DE CADASTRO --------- //
 

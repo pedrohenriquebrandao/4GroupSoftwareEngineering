@@ -45,26 +45,7 @@
 		<!-- /HEADER -->
 
 		<!-- NAVIGATION -->
-		<nav id="navigation">
-			<!-- container -->
-			<div class="container">
-				<!-- responsive-nav -->
-				<div id="responsive-nav">
-					<!-- NAV -->
-					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Página inicial</a></li>
-						<li><a href="#">Promoções</a></li>
-						<li><a href="#">Frutas</a></li>
-						<li><a href="#">Verduras</a></li>
-						<li><a href="#">Tubérculos</a></li>
-						<li><a href="#">Sementes</a></li>						
-					</ul>
-					<!-- /NAV -->
-				</div>
-				<!-- /responsive-nav -->
-			</div>
-			<!-- /container -->
-		</nav>
+		@include('index-nav')
 		<!-- /NAVIGATION -->
 
 		<!-- SECTION -->

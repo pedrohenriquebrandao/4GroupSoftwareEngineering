@@ -35,7 +35,7 @@
                 <div class="header-ctn">
                     <!-- LOGIN -->
                     <div>
-                        <a href="#">
+                        <a href="/loginConsumidor">
                             <i class="fa fa-user"></i>
                             <span>Entre ou cadastre-se</span>										
                         </a>
