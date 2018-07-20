@@ -12,14 +12,10 @@
 */
 // -------- ROTAS HOMEPAGE -------- //
 
-Route::get("/", "HomeController@index")
-->name('/');
+/*Route::get("/", "HomeController@index")
+->name('/');*/
 
-Route::get("principal", "HomeController@indexPrincipal")->name('principal');
-
-/*Route::get('principal', function () {
-    return view('principal');
-});*/
+Route::get("/", "HomeController@indexPrincipal")->name('/');
 
 Route::get('pagamento', function () {
     return view('usuario.pagamento');
