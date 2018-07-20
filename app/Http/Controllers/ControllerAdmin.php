@@ -5,12 +5,13 @@ use App\Admin;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash; //Facade hash para senha
 use Illuminate\Http\Request;
+use Auth;
 use DB;
 
 class ControllerAdmin extends Controller
 {
     public function __construct(){
-        $this->middleware('auth:admin')->except('cadAdmin');
+        //$this->middleware('auth:admin')->except('cadAdmin');
     }
 
     public function cadAdmin(Request $request){
@@ -25,6 +26,7 @@ class ControllerAdmin extends Controller
         $admin->password = Hash::make($request->password);
         $admin->nome = $request->nome;
         $admin->telefone = $request->telefone;
+        $admin->tipo = "comum";
         
         try{
             $admin->save();
@@ -60,6 +62,16 @@ class ControllerAdmin extends Controller
     }
 
     //Funcções de retorno de view para as rotas de admin;
+    public function telaCadastro(){
+        //Verifica se o admin logado é do tipo comum, se for é redirecionado para o dashboard de admin;
+        //Desta forma, somente admin master consegue acessar a página de cadastro de admins;
+        if (Auth::guard('admin')->user()->tipo == 'comum') {
+            return redirect()->route('admin.dashboard');
+        }
+
+        return view('auth.cadastrar-admin');
+    }
+    
     public function dashboard(){
         $totalUsuarios = DB::table('consumidor_usuarios')->count();
         $totalProdutores = DB::table('produtores')->count();
@@ -79,7 +91,7 @@ class ControllerAdmin extends Controller
 
     public function listaAdmins(){
         //Pega todos os cadastros da tabela de administrador e guarda em '$listaAdm';
-        $listaAdm = DB::table('adm_administrador')->get();
+        $listaAdm = DB::table('adm_administrador')->where('tipo', 'comum')->get();
         
         //Duas formas de retornar para a view;
         //-- 1º --//

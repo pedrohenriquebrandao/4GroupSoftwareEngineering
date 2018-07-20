@@ -36,17 +36,23 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+              @if(Auth::guard('admin')->user()->tipo == 'master')
+                <div class="avatar"><img src="produtor/img/admin-master.png" alt="..." class="img-fluid rounded-circle"></div>
+              @else
+                <div class="avatar"><img src="produtor/img/admin-comum.png" alt="..." class="img-fluid rounded-circle"></div>
+              @endif
               @include('admin/admin-sidebar')
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">                    
-            <li ><a href="/admin-dashboard"> <i class="icon-grid"></i>Status</a></li>
-            <li ><a href="/admin-usuarios"> <i class="icon-user"></i>Usuários</a></li>
-            <li class="active"><a href="/administradores"> <i class="icon-user"></i>Administradores</a></li>
-            <li ><a href="/admin-detalhes-assinatura"> <i class="icon-list-1"></i>Assinaturas</a></li>
-            <li ><a href=""> <i class="icon-interface-windows"></i>Gerar Backup do Banco de Dados</a></li>  
-            <li ><a href=""> <i class="icon-website"></i>Gerar Relatório</a></li>             
+              <li ><a href="/admin-dashboard"> <i class="icon-grid"></i>Status</a></li>
+              <li ><a href="/admin-usuarios"> <i class="icon-user"></i>Usuários</a></li>
+              @if(Auth::guard('admin')->user()->tipo == 'master')
+                  <li class="active"><a href="/administradores"> <i class="icon-user"></i>Administradores</a></li>
+              @endif
+              <li ><a href="/admin-detalhes-assinatura"> <i class="icon-list-1"></i>Assinaturas</a></li>
+              <li ><a href=""> <i class="icon-interface-windows"></i>Gerar Backup do Banco de Dados</a></li>  
+              <li ><a href=""> <i class="icon-website"></i>Gerar Relatório</a></li>             
           </ul>
         </nav>
         <div class="content-inner">
@@ -99,13 +105,6 @@
                                 <td><a href="/admin-permisao-edit" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
                                 <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
                               @empty
-                                <th scope="row">1</th>
-                                <td><b>User: </b>@joaopedro</td>
-                                <td>Normal</td>
-                                <td>joaopedro@gmail.com</td>
-                                <td><b>Admin: </b>Ativo</td>
-                                <td><a href="/admin-permisao-edit" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
-                                <td><a href="" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Banir</button></a>
                              </tr>
                             <tr>                            
                           </tbody>
@@ -119,18 +118,8 @@
             </div>
           </section>
           <!-- Page Footer-->
-          <footer class="main-footer">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-sm-6">
-                  <p>Colheita Feliz &copy; 2018</p>
-                  </div>
-                  <div class="col-sm-6 text-right">
-                    <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">4 Group Software Engineering</a></p>
-                  <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                </div>
-              </div>
-            </div>
+          <footer id="footer">
+            @include('footer')
           </footer>
         </div>
       </div>

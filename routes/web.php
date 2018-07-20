@@ -12,8 +12,10 @@
 */
 // -------- ROTAS HOMEPAGE -------- //
 
-Route::get("/", "HomeController@index")
-->name('/');
+/*Route::get("/", "HomeController@index")
+->name('/');*/
+
+Route::get("/", "HomeController@indexPrincipal")->name('/');
 
 Route::get('pagamento', function () {
     return view('usuario.pagamento');
@@ -27,11 +29,56 @@ Route::get('carrinho', function () {
     return view('usuario.carrinho');
 });
 
+Route::get('visao-produto', function () {
+    return view('visao-produto');
+});
+
+
+Route::get('index-header', function () {
+    return view('index-header');
+});
+
+Route::get('index-promocoes', function () {
+    return view('index-promocoes');
+});
+
+Route::get('index-nav', function () {
+    return view('index-nav');
+});
+
+Route::get('index-frutas', function () {
+    return view('index-frutas');
+});
+
+Route::get('index-verduras', function () {
+    return view('index-verduras');
+});
+
+Route::get('index-tuberculos', function () {
+    return view('index-tuberculos');
+});
+
+Route::get('index-sementes', function () {
+    return view('index-sementes');
+});
+
+Route::get('visao-loja', function () {
+    return view('visao-loja');
+});
+
+Route::get('index-lojas', function () {
+    return view('index-lojas');
+});
+
+
+
 // ------ ROTAS DE CADASTRO --------- //
 
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
 
 Route::post("/cadAdmin", "ControllerAdmin@cadAdmin");
+
+Route::get('cadastrar-admin', 'ControllerAdmin@telaCadastro');
 
 Route::post("/cadProdutor", "ControllerProdutor@cadProdutor"); //Cria cadastro de Produtor no Banco de Dados.
 
@@ -59,14 +106,24 @@ Route::get('dashboard-consumidor', 'ControllerUsuario@dashboard')
     ->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
 
 // ------ ROTAS DASHBOARD PRODUTOR ------ //
-Route::get('dashboard-produtor', function () {
-    return view('produtor.dashboard-produtor');
-})->name('produtor.dashboard');
+Route::get('dashboard-produtor', 'ControllerProdutor@dashboard')->name('produtor.dashboard');
+
+Route::get('adicionar-produtos', 'ControllerProdutor@telaAddProduto')->name('produtor.adicionar.produto');
+
+Route::post('adicionar-produtos', 'ControllerProdutor@addProduto')->name('produtor.adicionar');
+
+Route::get('gerenciar-produtos', 'ControllerProdutor@gerenciarProdutos')->name('produtor.produtos');
+
+//Chama a rota da tela de edição de produto passando o id do produto como parametro: "{id}";
+Route::get("/{id}/editar-produto", "ControllerProdutor@editarProduto");
+
+Route::post('editar-produto', 'ControllerProdutor@updateProduto')->name('produtor.update');
+
+Route::get("/{id}/excluir-produto", "ControllerProdutor@excluirProduto")->name('produtor.excluir');
 
 Route::get('produtor-sidebar', function () {
     return view('produtor.produtor-sidebar');
 });
-
 
 Route::get('comentarios-produtor', function () {
     return view('produtor.comentarios-produtor');
@@ -75,16 +132,14 @@ Route::get('comentarios-produtor', function () {
 Route::get('assinaturas-ativas-pendentes', function () {
     return view('produtor.assinaturas-ativas-pendentes');
 });
-Route::get('gerenciar-produtos', function () {
-    return view('produtor.gerenciar-produtos');
-});
 Route::get('navbarprodutor', function () {
     return view('navbarprodutor');
 });
 
-Route::get('adicionar-produtos', function () {
-    return view('produtor.adicionar-produtos');
+Route::get('consumidor-sidebar', function () {
+    return view('consumidor-sidebar');
 });
+
 Route::get('assinaturas-pausadas', function () {
     return view('assinaturas-pausadas');
 });
@@ -100,16 +155,9 @@ Route::get('avaliacoes-produtor', function () {
 Route::get('criar-promocao', function () {
     return view('produtor.criar-promocao');
 });
-Route::get('editar-produto', function () {
-    return view('produtor.editar-produto');
-});
 Route::get('detalhe-assinatura', function () {
     return view('produtor.detalhe-assinatura');
 });
-
-//Route::get('dashboard-consumidor', function () {
-//    return view('usuario.dashboard-consumidor');
-//});
 
 Route::get('enderecos-consumidor', function () {
     return view('usuario.enderecos-consumidor');
@@ -140,10 +188,6 @@ Route::get('admin-usuarios', 'ControllerAdmin@listaUsuarios')
 
 Route::get('administradores', 'ControllerAdmin@listaAdmins')
     ->name('listaAdmins');
-
-Route::get('cadastrar-admin', function () {
-    return view('auth.cadastrar-admin');
-});
 
 Route::get('admin-permisao-edit', function () {
     return view('admin.admin-permisao-edit');

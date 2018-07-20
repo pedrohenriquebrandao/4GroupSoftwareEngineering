@@ -24,6 +24,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="produtor/css/util.css">
 	<link rel="stylesheet" type="text/css" href="produtor/css/main.css">
+
 <!--===============================================================================================-->
 </head>
 <body>
@@ -173,7 +174,9 @@
 	
 
 	<div id="dropDownSelect1"></div>
-	@include('footer')
+	<footer id="footer">
+		@include('footer')
+	</footer>
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -190,6 +193,7 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="produtor/js/main.js"></script>
+	
   	
 </body>
 </html>

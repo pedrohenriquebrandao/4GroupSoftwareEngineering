@@ -10,7 +10,7 @@ class ControllerUsuario extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth:consumidor')->except('cadastrarUsuario');
+        //$this->middleware('auth:consumidor')->except('cadastrarUsuario');
     }
 
     public function cadastrarUsuario(Usuario $usuario){
@@ -50,8 +50,11 @@ class ControllerUsuario extends Controller
             ->select('consumidor_login.*', 'consumidor_usuarios.*')
             ->where('consumidor_login.id', $id)->first();
 
+        //Recebe quantas assinaturas o cliente logado possui no banco de dados;
         $assinaturas =  DB::table('consumidor_assinatura')->where('login_id', $id)->count();
+        //Recebe quantas cartões o cliente logado possui no banco de dados;
         $cartao =  DB::table('consumidor_cartao')->where('login_id', $id)->count();
+        //Recebe quantos endereços o cliente logado possui no banco de dados;        
         $endereco =  DB::table('consumidor_endereco')->where('login_id', $id)->count();
         
         return view('usuario.dashboard-consumidor', compact(

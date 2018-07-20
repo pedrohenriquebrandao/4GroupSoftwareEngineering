@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Colheita Feliz</title>
+    <title>Perfil do Produtor</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -20,7 +20,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="produtor/css/custom.css">
     <!-- Favicon-->
-    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="produtor/css/half-slider.css" rel="stylesheet">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -35,17 +35,7 @@
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center">
-            <!-- Verifica o sexo do usuário para selecionar o avatar -->
-            @if($usuario->sexo == 'fem')
-              <div class="avatar"><img src="produtor/img/avatar-f.png" alt="..." class="img-fluid rounded-circle"></div>
-            @else
-              <div class="avatar"><img src="produtor/img/avatar-m.png" alt="..." class="img-fluid rounded-circle"></div>
-            @endif
-            <div class="title">
-              <h1 class="h4">{{$usuario->nome}}</h1>
-            </div>
-          </div>
+            @include('usuario.consumidor-sidebar')
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li class="active"><a href="/dashboard-consumidor"> <i class="icon-home"></i>Página principal </a></li>        
@@ -107,6 +97,8 @@
                         <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
                       </div>
                     </div>
+                    <!-- Se caso der algum erro por causa das variaveis, comentar a linha da variável e "descomentar" a outra! -->
+                    <!-- <div class="number"><strong> 5 </strong></div> -->
                     <div class="number"><strong>{{$cartao}}</strong></div>
                   </div>
                 </div> 

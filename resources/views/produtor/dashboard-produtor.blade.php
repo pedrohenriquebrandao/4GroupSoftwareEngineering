@@ -36,7 +36,6 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
               @include('produtor/produtor-sidebar')
           </div>
       
@@ -133,15 +132,9 @@
               </div>
             </div>          
           <!-- Page Footer-->  
-          <footer class="main-footer">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-xl-8 col-sm-6">
-                  <p>4Group&copy; 2018</p>
-                </div>                
-              </div>
-            </div>
-          </footer>        
+          <footer id="footer">
+            @include('footer')
+          </footer>       
         </div>
       </div>
     </div>

@@ -35,12 +35,13 @@
   background-color: #dc3545;
 }
 
+/*
 button{
   padding: 0 20px;
   width: 50%;
   height: 50px;
 }
-
+*/
 .espacemento{
   padding-right: 10px;
 }
@@ -109,4 +110,47 @@ ul{
   height: 110px;
   text-align: left;
   margin-bottom: 10px;
+}
+
+.meu-end{
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  padding: 20p 15px 15px 20px;
+}
+
+.sizeFont{
+  font-size: 14px;
+}
+
+.btnEnd{
+  width: 120px;
+  height: 40px;
+}
+
+.meu-card{
+  height: 160px;
+  background-color: rgb(255, 255, 255);
+  padding: 20p 15px 15px 20px;
+}
+
+.conteudo{
+  height: 90px;
+}
+
+.btn-add{
+  width: 100%;
+  height: 100%;
+}
+
+.borda-top{
+  width: 100px;
+}
+
+.estrelas input[type=radio]{
+	display: none;
+}.estrelas label i.fa:before{
+	content: '\f005';
+	color: #FC0;
+}.estrelas  input[type=radio]:checked  ~ label i.fa:before{
+	color: #CCC;
 }

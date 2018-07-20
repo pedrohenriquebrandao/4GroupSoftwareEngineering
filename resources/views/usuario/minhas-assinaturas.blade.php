@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Colheita Feliz</title>
+    <title>Perfil do Produtor</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -35,12 +35,7 @@
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-            <div class="title">
-              <h1 class="h4">Zezin</h1>
-            </div>
-          </div>
+          @include('usuario.consumidor-sidebar')
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li><a href="/dashboard-consumidor"> <i class="icon-home"></i>Página principal </a></li>        
@@ -53,61 +48,114 @@
         </nav>
         <div class="content-inner">    
           
-          <!-- Dashboard Counts Section-->
-          <section class="dashboard-counts no-padding-bottom">
+        <section class="tables">   
             <div class="container-fluid">
-              <div class="row bg-white has-shadow">
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-violet"><i class="icon-user"></i></div>
-                    <div class="title"><a href="/assinaturas-ativas-pendentes"><span>Minhas<br>Assinaturas</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
-                      </div>
+              <div class="row">         
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-close">                      
                     </div>
-                    <div class="number"><strong>4</strong></div>
-                  </div>
-                </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6" >
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-yellow"><i class="icon-padnote"></i></div>
-                    <div class="title"><a href="/avaliacoes-produtor"><span>Meus<br>Endereços</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-yellow"></div>
-                      </div>
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Assinaturas Ativas</h3>
                     </div>
-                    <div class="number"><strong>3</strong></div>
-                  </div>
-                </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6" style="padding-left:1px">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-green"><i class="icon-mail"></i></div>
-                    <div class="title"><a href="/comentarios-produtor"><span>Minhas<br>Mensagens</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 50%; height: 4px; " aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
+                    <div class="card-body">
+                      <div class="table-responsive-xl">                       
+                        <table class="table table-striped table-hover">                        
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col">Nome do produto</th>
+                              <th scope="col">Fornecedor</th>
+                              <th scope="col">Quantidade</th>
+                              <th scope="col">Endereço de entrega</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td>Tomate</td>
+                              <td>Pé de pranta</td>
+                              <td>10 kilos</td>
+                              <td>
+                                Rua:
+                                </br>
+                                Bairro:
+                                </br>
+                                Cidade:
+                                </br>
+                                CEP:
+                                </br>
+                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalEnd">Trocar Endereço</button>
+
+                              </td>
+                            </tr>
+                            <tr>                            
+                          </tbody>
+                        </table>
+                        <a href="/detalhe-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Ver assinatura</button></a>
+                        <a href="/pausar-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Pausar Assinatura</button></a>
                       </div>
-                    </div>
-                    <div class="number" style="padding-right:50px"><strong>10</strong></div>
-                  </div>
-                </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-orange"><i class="icon-check"></i></div>
-                    <div class="title"><a href="/assinaturas-pausadas"><span>Meus<br>Cartões</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>2</strong></div>
-                  </div>
-                </div> 
+                    </div>              
+                   </div>
+                </div>                
               </div>
             </div>
-          </section>      
+          </section>
+
+          <section class="tables">   
+            <div class="container-fluid">
+              <div class="row">         
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-close">                      
+                    </div>
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Assinaturas Pausadas</h3>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive-xl">                       
+                        <table class="table table-striped table-hover">                        
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col">Nome do produto</th>
+                              <th scope="col">Fornecedor</th>
+                              <th scope="col">Quantidade</th>
+                              <th scope="col">Endereço de entrega</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><img src="image/tomate.jfif" class="img-responsive" alt="..."></td>
+                              <td>Tomate</td>
+                              <td>Pé de pranta</td>
+                              <td>10 kilos</td>
+                              <td>
+                                Rua:
+                                </br>
+                                Bairro:
+                                </br>
+                                Cidade:
+                                </br>
+                                CEP:
+                                </br>
+                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalEnd">Trocar Endereço</button>
+
+                              </td>
+                            </tr>
+                            <tr>                            
+                          </tbody>
+                        </table>
+                        <a href="/detalhe-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Ver assinatura</button></a>
+                        <a href="/pausar-assinatura" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-success btn-sm"><i class="fa fa-ellipsis-v"></i>Ativar Assinatura</button></a>
+                      </div>
+                    </div>              
+                   </div>
+                </div>                
+              </div>
+            </div>
+          </section>
+                
           <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">
@@ -120,6 +168,34 @@
           </footer>
         </div>
       </div>
+    </div>
+
+    <!-- Modal Endereço -->
+    <div class="modal fade" id="modalEnd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">  
+                    <h5 class="modal-title" id="exampleModalLabel">Endereços</h5>
+                    <button type="button" class="close col-md-2" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
+                        <h5>Rua A, 500 - Casa</h5>
+                        <p><span>Feira de Santana</span>, <span>Centro</span> - <span>00000000-00</span></p> 
+                        </button>
+                    </div>
+                    <div>
+                        <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
+                        <h5>Rua A, 500 - Casa</h5>
+                        <p><span>Feira de Santana</span>, <span>Centro</span> - <span>00000000-00</span></p> 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- JavaScript files-->
     <script src="produtor/jquery/jquery.min.js"></script>

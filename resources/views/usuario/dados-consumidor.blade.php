@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Colheita Feliz</title>
+    <title>Perfil do Produtor</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -35,12 +35,7 @@
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-            <div class="title">
-              <h1 class="h4">Zezin</h1>
-            </div>
-          </div>
+          @include('usuario.consumidor-sidebar')
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li ><a href="/dashboard-consumidor"> <i class="icon-home"></i>Página principal </a></li>        
@@ -53,61 +48,37 @@
         </nav>
         <div class="content-inner">    
           
-          <!-- Dashboard Counts Section-->
-          <section class="dashboard-counts no-padding-bottom">
-            <div class="container-fluid">
-              <div class="row bg-white has-shadow">
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-violet"><i class="icon-user"></i></div>
-                    <div class="title"><a href="/assinaturas-ativas-pendentes"><span>Minhas<br>Assinaturas</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>4</strong></div>
-                  </div>
+          <div class="container">
+            <div class="ml-3 mt-4 mr-3">
+              <form action="">
+              <div class="row">
+                <div class="form-group col-5">
+                  <label for="">Nome:</label>
+                  <input type="text"class="form-control" value="João">
                 </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6" >
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-yellow"><i class="icon-padnote"></i></div>
-                    <div class="title"><a href="/avaliacoes-produtor"><span>Meus<br>Endereços</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-yellow"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>3</strong></div>
-                  </div>
+                <div class="form-group col-5">
+                  <label for="">Sobrenome:</label>
+                  <input type="text" value="Silva" class="form-control">
                 </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6" style="padding-left:1px">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-green"><i class="icon-mail"></i></div>
-                    <div class="title"><a href="/comentarios-produtor"><span>Minhas<br>Mensagens</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 50%; height: 4px; " aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
-                      </div>
-                    </div>
-                    <div class="number" style="padding-right:50px"><strong>10</strong></div>
-                  </div>
+                <div class="form-group col-5">
+                  <label for="">Telefone:</label>
+                  <input type="text" class="form-control" value="7599192912">
                 </div>
-                <!-- Item -->
-                <div class="col-xl-3 col-sm-6">
-                  <div class="item d-flex align-items-center">
-                    <div class="icon bg-orange"><i class="icon-check"></i></div>
-                    <div class="title"><a href="/assinaturas-pausadas"><span>Meus<br>Cartões</span></a>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                      </div>
-                    </div>
-                    <div class="number"><strong>2</strong></div>
-                  </div>
-                </div> 
-              </div>
+                <div class="form-group col-5">
+                  <label for="">CPF:</label>
+                  <input type="text" class="form-control" value="07399192912" readonly>
+                </div>
+                <div class="form-group col-5">
+                  <label for="">Email:</label>
+                  <input type="text" class="form-control" value="joao@gmail.com" readonly >
+                </div>
+                  
+                </div>
+              </form>
+              <button class="btn btn-success col-5">Salvar Alterações</button>
             </div>
-          </section>      
+          </div>
+          
           <!-- Page Footer-->
           <footer class="main-footer">
             <div class="container-fluid">

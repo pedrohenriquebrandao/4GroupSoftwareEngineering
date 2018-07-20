@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Colheita Feliz</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
     <!-- Fontastic Custom icon font-->
-    <link rel="stylesheet" href="produtor/css/fontastic.css">
+    <link rel="stylesheet" href="/produtor/css/fontastic.css">
     <!-- Google fonts - Poppins -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <link rel="stylesheet" href="/https://fonts.googleapis.com/css?family=Poppins:300,400,700">
     <!-- theme stylesheet-->
-    <link rel="stylesheet" href="produtor/css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="/produtor/css/style.default.css" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="produtor/css/custom.css">
+    <link rel="stylesheet" href="/produtor/css/custom.css">
     <!-- Favicon-->
-    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="/css/half-slider.css" rel="stylesheet">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -36,21 +36,18 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-            <div class="title">
-              <h1 class="h4">Joao e o pé de feijão</h1>
-              <p>Fazendeiro</p>
-            </div>
+            @include('produtor/produtor-sidebar')
           </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li ><a href="/dashboard-produtor"> <i class="icon-home"></i>Página principal </a></li>        
             <li ><a href="/gerenciar-produtos"> <i class="icon-grid"></i>Gerenciar produtos</a></li>
             <li ><a href="/adicionar-produtos"> <i class="icon-presentation"></i>Adicionar produtos</a></li>
+            <li class="active"><a href="/avaliacoes-produtor"> <i class=""></i>Editar Produto</a></li>      
             <li ><a href="/assinaturas-ativas-pendentes"> <i class="icon-list-1"></i>Assinaturas ativas/pendentes</a></li>
             <li ><a href="/assinaturas-pausadas"> <i class="icon-clock"></i>Assinaturas pausadas</a></li>  
             <li ><a href="/comentarios-produtor"> <i class="icon-mail"></i>Comentários</a></li>   
-            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>      
+            <li ><a href="/avaliacoes-produtor"> <i class=" icon-check"></i>Avaliações</a></li>
           </ul>
         </nav>
         <div class="content-inner">
@@ -67,103 +64,144 @@
               <li class="breadcrumb-item active">Editar produto        </li>
             </ul>
           </div>
-          <section class="tables">   
-            <div class="container-fluid">
-              <div class="row">         
-                <div class="col-lg-12">
-                  <div class="card">
-                    <div class="card-close">
-                      <div class="dropdown">
-                        <a href="/gerenciar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger d-flex align-items-center btn-sm"><i class="fa fa-ellipsis-v"></i>Salvar</button></a>
-                        
+          @if (session('message'))
+                        <div class="alert alert-success">
+                            {{ session('message') }}
+                        </div>
+                       @endif
+          <section class="tables">
+            <form method="POST" action="{{ route('produtor.update') }}" enctype="multipart/form-data">
+            {{ csrf_field() }}
+              <div class="container-fluid">
+                <div class="row">         
+                  <div class="col-lg-12">
+                    <div class="card">
+                      <div class="card-close">
+                      <input class="btn btn-success btn-sm" type="submit" name="adicionar" value="Salvar">
                       </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                      <h3 class="h4">Produto</h3>
-                    </div>
-                    <div class="card-body">
-                      <div class="table-responsive-xl">                       
-                        <table class="table table-hover">                        
-                          <thead>
-                            <tr>                            
-                              <th scope="col">ID</th>
-                              <th scope="col">Imagem</th>
-                              <th scope="col">Informações</th>
-                              <th scope="col">Tipo de Frete</th>                              
-                              <th scope="col">Tipo de produto</th>                                                                                        
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td><img src="image/tomate.jfif" class="img-responsive" style="width:auto" alt="...">
+                      <div class="card-header d-flex align-items-center">
+                        <h3 class="h4">Produto</h3>
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive-xl">                       
+                          <table class="table table-hover">                        
+                            <thead>
+                              <tr>
+                                <th scope="col">Imagem</th>
+                                <th scope="col">Informações</th>
+                                <th scope="col">Tipo de Frete</th>                              
+                                <th scope="col">Tipo de produto</th>                                                                                        
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <img src="{{url('storage/imagem-produtos/'.$produto->imagem)}}" class="img-responsive" style="width: 200px">
                                   </br></br>
-                                  <input id="fileInput" type="file" class="form-control-file">
-                              </td>
-                              <td><input type="text" class="form-control" placeholder="Tomate" id="produto"></br>
-                                  <input type="text" class="form-control" placeholder="50 kg" id="quantidade"></br>
-                                  <input type="text" class="form-control" placeholder="10,00" id="valor"></br>
-                                  <input type="text" class="form-control" placeholder="sem promoção" id="promoção"></br>
-                              </td>
-                              <td>                                  
+                                  <input type="file" class="form-control-file" name="imagem" value="{{$produto->imagem}}" accept="image/*" />
+                                </td>
+                                <td>
+                                <input type="hidden" name="id" value="{{$produto->id}}">
+                                <input type="text" class="form-control" placeholder="Nome do produto" name="nome" value="{{$produto->nome}}"></br>
+                                  @if($errors->has('nome'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('nome')}}
+                                    </span>
+                                  @endif
+                                  <input type="number" class="form-control" placeholder="Valor do produto" name="valor" value="{{$produto->valor}}"></br>
+                                  @if($errors->has('valor'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('valor')}}
+                                    </span>
+                                  @endif
+                                  <input type="number" class="form-control" placeholder="Promoção do produto" name="promocao" value="{{$produto->promocao}}"></br>
+                                  @if($errors->has('promocao'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('promocao')}}
+                                    </span>
+                                  @endif
+                                </td>
+                                <td>
+                                  <label for="checkboxCustom1">Quantidade para frete grátis</label>
+                                  <input type="number" class="form-control" placeholder="" name="fretegratis" value="{{$produto->qtd_frete_gratis}}"></br>
+                                  @if($errors->has('fretegratis'))
+                                    <span class="label-input100 help-block" style="color: red">
+                                      {{$errors->first('fretegratis')}}
+                                    </span>
+                                  @endif                        
                                   <div class="i-checks">
                                     <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template">
                                     <label for="checkboxCustom1">Grátis</label>
                                   </div> 
-                                  <div><input type="text" class="form-control" placeholder="Quantidade" id="quantidade"></div> </br>  
-                                  <div class="i-checks">
+                                  <div>
+                                    <input type="text" class="form-control" placeholder="Quantidade" id="quantidade"></div> </br>  
+                                    <div class="i-checks">
                                     <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Padrão</label>
                                   </div>
                                   <div class="i-checks"> 
                                     <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Por quantidade</label>
                                   </div>
-                              </td>
-                              <td> 
-                                <input type="text" class="form-control" placeholder="Fruta" id="tipoDeProduto">  
-                              </td>    
-                                                        
-                            </tr>
-                          </tbody>
-                            <div class="card-body">
-                              <div class="table-responsive">                       
-                                <table class="table table-striped table-hover">                        
-                                  <thead>
-                                    <tr>                            
-                                      <th scope="col">Descrição do produto</th> </tr>
-                                  </thead>
-                                  <tbody>
-                                    <th scope="row"></th>
-                                    <td><div class="form-group" style="padding:auto">
-                                          <label for="descricao">Digite a descrição do produto</label>
-                                          <textarea class="form-control" rows="5" id="descricao"></textarea>
-                                        </div> 
-                                    </td>
-                                  </tbody>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="fruta" checked>
+                                    <label class="form-check-label" for="radioUrnaba">Fruta</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="legume" checked>
+                                    <label class="form-check-label" for="radioRural">Legume</label>  
+                                  </div>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="verdura" checked>
+                                    <label class="form-check-label" for="radioRural">Verdura</label>  
+                                  </div>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="folha" checked>
+                                    <label class="form-check-label" for="radioRural">Folha</label>  
+                                  </div>
+                                  <div class="form-check">
+                                    <input type="radio" class="form-check-input" name="tipo" value="graos" checked>                                    <label class="form-check-label" for="radioRural">Grãos</label>  
+                                  </div>
+                                </td>    
+                                                          
+                              </tr>
+                            </tbody>
+                              <div class="card-body">
+                                <div class="table-responsive">                       
+                                  <table class="table table-striped table-hover">                        
+                                    <thead>
+                                      <tr>                            
+                                        <th scope="col">Descrição do produto</th> </tr>
+                                    </thead>
+                                    <tbody>
+                                      <th scope="row"></th>
+                                      <td><div class="form-group" style="padding:auto">
+                                            <label for="descricao">Digite a descrição do produto</label>
+                                            @if($errors->has('descricao'))
+                                              <span class="label-input100 help-block" style="color: red">
+                                                {{$errors->first('descricao')}}
+                                              </span>
+                                            @endif
+                                            <textarea class="form-control" rows="5" name="descricao">{{$produto->descricao}}</textarea>
+                                          </div> 
+                                      </td>
+                                    </tbody>
+                                </div>
                               </div>
-                            </div>
-                        </table>
+                          </table>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>                
+                  </div>                
+                </div>
               </div>
-            </div>
+            </form>
           </section>
           
               
           <!-- Page Footer-->
-          <footer class="main-footer">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-sm-6">
-                  <p>Colheita Feliz&copy; 2018</p>
-                </div>
-                <div class="col-sm-6 text-right">
-                  <p>Design by 4 Group Software Engineering</p>
-                  <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                </div>
-              </div>
-            </div>
+          <footer id="footer">
+            @include('footer')
           </footer>
         </div>
       </div>
