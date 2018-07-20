@@ -57,11 +57,11 @@
                         <div class="footer">
                             <h3 class="footer-title">Categorias</h3>
                             <ul class="footer-links">
-                                <li><a href="#">Promoções</a></li>
-                                <li><a href="#">Verduras</a></li>
-                                <li><a href="#">Frutas</a></li>
-                                <li><a href="#">Tubérculos</a></li>
-                                <li><a href="#">Sementes</a></li>
+                                <li><a href="/index-promocoes">Promoções</a></li>
+                                <li><a href="/index-verduras">Verduras</a></li>
+                                <li><a href="/index-frutas">Frutas</a></li>
+                                <li><a href="/index-tuberculos">Tubérculos</a></li>
+                                <li><a href="/index-sementes">Sementes</a></li>
                             </ul>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             <h3 class="footer-title">Serviço</h3>
                             <ul class="footer-links">
                                 <li><a href="#">Minha conta</a></li>
-                                <li><a href="#">Ver carrinho</a></li>									
+                                <li><a href="/pagamento">Ver carrinho</a></li>									
                                 <li><a href="#">Ajuda</a></li>
                             </ul>
                         </div>

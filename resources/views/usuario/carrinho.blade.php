@@ -29,7 +29,7 @@
 
   <!-- Navigation -->
 
-  @include ('header')
+  @include ('index-header')
 
   <section class="container space">
     <div class="row space">
@@ -38,7 +38,7 @@
       </div>
       <div class="col-md-4 direita">
         <a href="/">Continuar Comprando</a>
-        <button class="btn btn-danger">Concluir</button>
+        <a href="/pagamento"><button class="btn btn-danger">Concluir</button></a>
       </div>
     </div>
 
@@ -111,15 +111,15 @@
       </div>
       <div class="col-md-4 direita">
         <a href="/">Continuar Comprando</a>
-        <button class="btn btn-danger">Concluir</button>
+        <a href="/pagamento"><button class="btn btn-danger">Concluir</button></a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <!-- @include('footer')
-    
-    <!-- Bootstrap core JavaScript -->
+  <footer id="footer">
+		@include('footer')
+	</footer>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 

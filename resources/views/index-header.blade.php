@@ -73,14 +73,12 @@
         <!-- /LOGIN -->
 
                     <!-- CARRINHO -->
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#">
+                    <div >				    
+                        <a href="/carrinho">
                             <i class="fa fa-shopping-cart"></i>
                             <span>Carrinho de assinaturas</span>
                             <div class="qty">3</div>
-                        </a>
-                        
-                        
+                        </a>                  
                     </div>
                     <!-- /CARRINHO -->
 
