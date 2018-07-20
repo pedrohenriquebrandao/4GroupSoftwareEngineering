@@ -52,6 +52,8 @@
 	
 
 	<div id="dropDownSelect1"></div>
-	@include('footer')
+	<footer id="footer">
+		@include('footer')
+	</footer>
 </body>
 </html>
