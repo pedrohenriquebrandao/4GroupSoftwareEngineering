@@ -65,9 +65,9 @@ class ControllerAdmin extends Controller
     public function telaCadastro(){
         //Verifica se o admin logado é do tipo comum, se for é redirecionado para o dashboard de admin;
         //Desta forma, somente admin master consegue acessar a página de cadastro de admins;
-        if (Auth::guard('admin')->user()->tipo == 'comum') {
-            return redirect()->route('admin.dashboard');
-        }
+        //if (Auth::guard('admin')->user()->tipo == 'comum') {
+        //    return redirect()->route('admin.dashboard');
+        //}
 
         return view('auth.cadastrar-admin');
     }
