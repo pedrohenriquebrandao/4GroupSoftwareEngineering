@@ -88,10 +88,10 @@ class ControllerProdutor extends Controller
 
     public function telaAddProduto(){
         $id = Auth::guard('consumidor')->user()->id;
-
+        $usuario = $this->getDadosConsumidor();
         $loja = DB::table('produtores')->where('produtores.login_id', $id)->first();
 
-        return view('produtor.adicionar-produtos', compact('loja'));
+        return view('produtor.adicionar-produtos', compact('loja', 'usuario'));
     }
     
     public function addProduto(Request $request){
@@ -215,5 +215,18 @@ class ControllerProdutor extends Controller
         $delete = $produto->delete($id);
 
         return redirect("gerenciar-produtos")->with("message", "Produto excluido com sucesso!");
+    }
+
+    //----- métodos de apoio -----//
+    private function getDadosConsumidor(){
+        $id = Auth::guard('consumidor')->user()->id;
+        
+        //Obtém os dados da tabela consumidor_usuários do usuário logado;
+        $usuario = DB::table('consumidor_login')
+        ->join('consumidor_usuarios', 'consumidor_login.id', '=', 'consumidor_usuarios.login_id')
+        ->select('consumidor_login.*', 'consumidor_usuarios.*')
+        ->where('consumidor_login.id', $id)->first();
+
+        return $usuario;
     }
 }
