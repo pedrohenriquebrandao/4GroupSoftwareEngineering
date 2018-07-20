@@ -36,13 +36,6 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           @include('usuario.consumidor-sidebar')
-          <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-            <div class="title">
-              <h1 class="h4">Zezin</h1>
-            </div>
-          </div>
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li ><a href="/dashboard-consumidor"> <i class="icon-home"></i>Página principal </a></li>        

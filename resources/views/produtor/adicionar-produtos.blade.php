@@ -29,7 +29,7 @@
     <div class="page">
       <!-- Main Navbar-->
       <header class="header">
-        @include('navbarprodutor')
+        @include('index-header')
       </header>
       <div class="page-content d-flex align-items-stretch"> 
         <!-- Side Navbar -->

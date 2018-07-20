@@ -70,8 +70,6 @@ Route::get('index-lojas', function () {
     return view('index-lojas');
 });
 
-
-
 // ------ ROTAS DE CADASTRO --------- //
 
 Route::post("/cadUsuario", "ControllerLogin@cadUsuario");
@@ -102,8 +100,17 @@ Route::get('recsenhaconfirm', function () {
 });
 
 // ------ ROTAS DASHBOARD CONSUMIDOR ------//
-Route::get('dashboard-consumidor', 'ControllerUsuario@dashboard')
-    ->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
+Route::get('dashboard-consumidor', 'ControllerUsuario@dashboard')->name('consumidor.dashboard'); //Rota para o dashboard do consumidor;
+
+Route::get('minhas-assinaturas', 'ControllerUsuario@assinaturas')->name('consumidor.assinaturas');
+
+Route::get('dados-consumidor', 'ControllerUsuario@dadosConsumidor')->name('consumidor.dados');
+
+Route::get('enderecos-consumidor', 'ControllerUsuario@enderecosConsumidor')->name('consumidor.endereco');
+
+Route::get('cartoes-consumidor', 'ControllerUsuario@cartoesConsumidor')->name('consumidor.cartoes');
+
+Route::get('mensagens-consumidor', 'ControllerUsuario@mensagensConsumidor')->name('consumidor.mensagens');
 
 // ------ ROTAS DASHBOARD PRODUTOR ------ //
 Route::get('dashboard-produtor', 'ControllerProdutor@dashboard')->name('produtor.dashboard');
@@ -159,26 +166,6 @@ Route::get('detalhe-assinatura', function () {
     return view('produtor.detalhe-assinatura');
 });
 
-Route::get('enderecos-consumidor', function () {
-    return view('usuario.enderecos-consumidor');
-});
-
-Route::get('mensagens-consumidor', function () {
-    return view('usuario.mensagens-consumidor');
-});
-
-Route::get('minhas-assinaturas', function () {
-    return view('usuario.minhas-assinaturas');
-});
-
-Route::get('dados-consumidor', function () {
-    return view('usuario.dados-consumidor');
-});
-
-Route::get('cartoes-consumidor', function () {
-    return view('usuario.cartoes-consumidor');
-});
-
 // ---------------- ROTAS ADMIN ---------------- //
 Route::get('admin-dashboard', 'ControllerAdmin@dashboard')
     ->name('admin.dashboard'); //Rota para o dashboard admin;
@@ -204,7 +191,6 @@ Route::get('admin-detalhes-assinatura', function () {
 Route::get('visao-produto/{id}', function ($id) {
     return view('visao-produto', ['id'=> $id]);
 });
-
 
 // ------- ROTAS BACK-END ------- //
 

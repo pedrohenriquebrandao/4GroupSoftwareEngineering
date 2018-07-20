@@ -16,7 +16,7 @@ class ControllerProdutor extends Controller
     private $produtor;
 
     public function __construct(ControllerEndereco $endereco_controller){
-        //$this->middleware('auth:consumidor');
+        $this->middleware('auth:consumidor');
         $this->endereco_controller = $endereco_controller;
         $this->produtor = new Produtor();
     }

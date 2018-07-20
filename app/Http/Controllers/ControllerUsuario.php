@@ -10,7 +10,7 @@ class ControllerUsuario extends Controller
 {
 
     public function __construct(){
-        //$this->middleware('auth:consumidor')->except('cadastrarUsuario');
+        $this->middleware('auth:consumidor')->except('cadastrarUsuario');
     }
 
     public function cadastrarUsuario(Usuario $usuario){
@@ -63,5 +63,44 @@ class ControllerUsuario extends Controller
             'cartao',
             'endereco'
         ));
+    }
+
+    public function assinaturas(){
+        $usuario = $this->getDados();
+        return view('usuario.minhas-assinaturas', compact('usuario'));
+    }
+
+    public function dadosConsumidor(){
+        $usuario = $this->getDados();
+        return view('usuario.dados-consumidor', compact('usuario'));
+    }
+
+    public function enderecosConsumidor(){
+        $usuario = $this->getDados();
+        return view('usuario.enderecos-consumidor', compact('usuario'));
+    }
+
+    public function cartoesConsumidor(){
+        $usuario = $this->getDados();
+        return view('usuario.cartoes-consumidor', compact('usuario'));
+    }
+
+    public function mensagensConsumidor(){
+        $usuario = $this->getDados();
+        return view('usuario.mensagens-consumidor', compact('usuario'));
+    }
+
+    //------- Funções de apoio ---------//
+
+    private function getDados(){
+        $id = auth()->guard('consumidor')->user()->id; //Pega o id do usuário logado
+
+        //Pega os dados do usuário da tabela de usuários;
+        $usuario = DB::table('consumidor_login')
+            ->join('consumidor_usuarios', 'consumidor_login.id', '=', 'consumidor_usuarios.login_id')
+            ->select('consumidor_login.*', 'consumidor_usuarios.*')
+            ->where('consumidor_login.id', $id)->first();
+        
+        return $usuario;
     }
 }
