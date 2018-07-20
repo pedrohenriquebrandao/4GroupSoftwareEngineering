@@ -15,6 +15,12 @@
 Route::get("/", "HomeController@index")
 ->name('/');
 
+Route::get("principal", "HomeController@indexPrincipal")->name('principal');
+
+/*Route::get('principal', function () {
+    return view('principal');
+});*/
+
 Route::get('pagamento', function () {
     return view('usuario.pagamento');
 });
@@ -31,9 +37,6 @@ Route::get('visao-produto', function () {
     return view('visao-produto');
 });
 
-Route::get('principal', function () {
-    return view('principal');
-});
 
 Route::get('index-header', function () {
     return view('index-header');

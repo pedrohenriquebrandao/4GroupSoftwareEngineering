@@ -565,7 +565,6 @@ textarea.input {
 
 .cart-dropdown .cart-list {
   max-height: 180px;
-  overflow-y: scroll;
   margin-bottom: 15px;
 }
 
