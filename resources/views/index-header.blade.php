@@ -34,13 +34,43 @@
             <div class="col-md-3 clearfix">
                 <div class="header-ctn">
                     <!-- LOGIN -->
-                    <div>
-                        <a href="/loginConsumidor">
-                            <i class="fa fa-user"></i>
-                            <span>Entre ou cadastre-se</span>										
-                        </a>
+                    @if(Auth::guard('consumidor')->check())
+                    <div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="">
+							<i class="fa fa-user"></i>
+							<span>{{$usuario->nome}}</span>
+						</a>
+					    <div class="cart-dropdown">
+							<div class="cart-list">
+                                <center>
+                                    <div>
+                                        <a class="dropdown-item" href="{{route('consumidor.dashboard')}}"> <span>Meu Perfil</span></a>
+                                        <hr>
+                                        <a class="dropdown-item" href="{{route('admin.login')}}"> <span>Administrador</span></a>
+                                    </div>
+                                </center>
+							</div>
+							<div class="cart-btns">
+                                @if($possuiLoja)
+                                    <a href="{{route('produtor.dashboard')}}">Minha Loja</a>
+                                @else
+                                    <a href="{{route('cadastrar.loja')}}">Cadastrar Loja</a>
+                                @endif
+								<a href="{{route('consumidor.logout')}}">Logout  <i class="fa fa-arrow-circle-right"></i></a>
+							</div>
+						</div>
                     </div>
-                    <!-- /LOGIN -->
+                    @else
+                    <div class="dropdown">
+						<a href="/loginConsumidor">
+							<i class="fa fa-user"></i>
+							<span>Entre ou cadastre-se</span>
+						</a>
+                    </div>
+                    @endif
+                <div>
+            </div>
+        <!-- /LOGIN -->
 
                     <!-- CARRINHO -->
                     <div class="dropdown">
