@@ -126,14 +126,8 @@
               </div>
             </div>          
           <!-- Page Footer-->
-          <footer class="main-footer">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-xl-8 col-sm-6">
-                  <p>4Group&copy; 2018</p>
-                </div>                
-              </div>
-            </div>
+          <footer id="footer">
+            @include('footer')
           </footer>
         </div>
       </div>

@@ -35,16 +35,7 @@
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
-          <div class="sidebar-header d-flex align-items-center">
-            @if($usuario->sexo == "masc")
-              <div class="avatar"><img src="produtor/img/avatar-m.png" alt="..." class="img-fluid rounded-circle"></div>
-            @else
-            <div class="avatar"><img src="produtor/img/avatar-f.png" alt="..." class="img-fluid rounded-circle"></div>
-            @endif
-            <div class="title">
-              <h1 class="h4">{{$usuario->nome}}</h1>
-            </div>
-          </div>
+            @include('consumidor-sidebar')
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li class="active"><a href="/dashboard-consumidor"> <i class="icon-home"></i>Página principal </a></li>        

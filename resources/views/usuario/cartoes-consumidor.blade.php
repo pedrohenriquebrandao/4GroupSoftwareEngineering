@@ -32,8 +32,10 @@
          @include('navbarprodutor')
       </header>
       <div class="page-content d-flex align-items-stretch"> 
-        <!-- Side Navbar -->
+        <!-- Side Navbar -->      
         <nav class="side-navbar">
+          <!-- Sidebar Header-->
+          @include('consumidor-sidebar')
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="produtor/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
@@ -163,7 +165,9 @@
             </div>
         </div>
     </div>
-
+    <footer id="footer">
+      @include('footer')
+    </footer>
     <!-- JavaScript files-->
     <script src="produtor/jquery/jquery.min.js"></script>
     <script src="produtor/popper.js/umd/popper.min.js"> </script>

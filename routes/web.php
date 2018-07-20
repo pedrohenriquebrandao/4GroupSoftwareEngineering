@@ -134,6 +134,10 @@ Route::get('navbarprodutor', function () {
     return view('navbarprodutor');
 });
 
+Route::get('consumidor-sidebar', function () {
+    return view('consumidor-sidebar');
+});
+
 Route::get('assinaturas-pausadas', function () {
     return view('assinaturas-pausadas');
 });
