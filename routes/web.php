@@ -62,6 +62,9 @@ Route::get('index-sementes', function () {
     return view('index-sementes');
 });
 
+Route::get('visao-loja', function () {
+    return view('visao-loja');
+});
 
 
 
