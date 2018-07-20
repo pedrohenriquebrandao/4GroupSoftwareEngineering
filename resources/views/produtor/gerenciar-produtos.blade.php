@@ -70,12 +70,17 @@
                   <div class="card">
                     <div class="card-close">
                       <div class="dropdown">    
-                      <a href="/adicionar-produtos" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-success btn-sm"><i class="fa fa-ellipsis-v"></i>Adicionar Produto</button></a>                    
+                      <a href="/adicionar-produtos" class="a-btn-edit"><button type="button" aria-haspopup="true" aria-expanded="false" class="btn btn-success btn-sm">Adicionar Produto</button></a>                    
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
                       <h3 class="h4">Produtos</h3>
                     </div>
+                    @if (session('message'))
+                      <div class="alert alert-success">
+                        {{ session('message') }}
+                      </div>
+                    @endif
                     <div class="card-body">
                       <div class="table-responsive-xl">                       
                         <table class="table table-striped table-hover">                        
@@ -109,13 +114,13 @@
                                 </div>
                               </td>
                               <td>
-                                <a href="{{url("/$produto->id/editar-produto")}}" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-warning btn-sm"><i class="fa fa-ellipsis-v"></i>Editar</button></a>
+                                <a href="{{url("/$produto->id/editar-produto")}}" class="a-btn-edit"><button type="button" aria-haspopup="true" aria-expanded="false" class="btn btn-warning btn-sm">Editar</button></a>
                               </td>
                               <td>
-                                <a href="/editar-produto" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm"><i class="fa fa-ellipsis-v"></i>Excluir</button></a>
+                                <a href="{{url("/$produto->id/excluir-produto")}}" class="a-btn-edit"><button type="button" aria-haspopup="true" aria-expanded="false" class="btn btn-danger btn-sm">Excluir</button></a>
                               </td>
                               <td>
-                                <a href="/criar-promocao" class="a-btn-edit"><button type="button" id="closeCard3" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm"><i class="fa fa-ellipsis-v"></i>Promoção</button></a>
+                                <a href="/criar-promocao" class="a-btn-edit"><button type="button" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-sm">Promoção</button></a>
                               </td>
                             </tr>
                             @empty
