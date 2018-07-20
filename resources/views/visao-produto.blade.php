@@ -54,8 +54,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
-							<li><a href="#">Página inicial</a></li>
-							<li class="activer"><a href="#">Produto</a></li>							
+							<li><a href="/">Página inicial</a></li>
+							<li class="activer"><a href="/visao-produto">Produto</a></li>							
 						</ul>
 					</div>
 				</div>
@@ -119,7 +119,7 @@
 									<b>Gostei: </b>10 <br> <img src="image/like.png" class="img-responsive" width="5%" alt="...">        
                                   	<b>| Não gostei: </b>1  <br> <img src="image/unlike.png" class="img-responsive" width="5%" alt="...">      
 								</div>
-								<a class="review-link" href="#">Quantidade de avaliações: 10 | Adicionar a sua</a>
+								<a class="review-link" href="/visao-produto">Quantidade de avaliações: 10 | Adicionar a sua</a>
 							</div>
 							<div>
 								<h3 class="product-price">R$8.00 <del class="product-old-price">$9.00</del></h3>

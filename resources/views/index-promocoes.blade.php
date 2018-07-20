@@ -54,8 +54,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
-							<li><a href="/principal">Página inicial</a></li>
-							<li class="activer"><a href="/index-promocoes">Promoções</a></li>
+							<li><a href="/">Página inicial</a></li>
+							<li class="active"><a href="/index-promocoes">Promoções</a></li>
 						</ul>
 					</div>
 				</div>
