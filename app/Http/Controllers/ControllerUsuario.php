@@ -10,7 +10,7 @@ class ControllerUsuario extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth:consumidor')->except('cadastrarUsuario');
+        //$this->middleware('auth:consumidor')->except('cadastrarUsuario');
     }
 
     public function cadastrarUsuario(Usuario $usuario){

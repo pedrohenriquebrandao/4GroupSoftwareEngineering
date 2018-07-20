@@ -9,7 +9,7 @@ use Auth;
 class AdminLoginController extends Controller
 {
     public function __construct(){
-        $this->middleware('guest:admin')->except('logout'); //Excessão para logout no middleware;
+        //$this->middleware('guest:admin')->except('logout'); //Excessão para logout no middleware;
     }
     
     //Login do administrador;

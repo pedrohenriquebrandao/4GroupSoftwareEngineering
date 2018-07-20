@@ -9,7 +9,7 @@ use Auth;
 class UsuarioLoginController extends Controller
 {
     public function __construct(){
-        $this->middleware('guest:consumidor')->except('logout'); //Exception para logout no middleware;
+        //$this->middleware('guest:consumidor')->except('logout'); //Exception para logout no middleware;
     }
 
     //Login consumidor;
