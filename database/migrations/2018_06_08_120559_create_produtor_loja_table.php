@@ -16,6 +16,8 @@ class CreateProdutorLojaTable extends Migration
             $table->increments('id');
             $table->integer('cnpj')->unsigned();
             $table->string('nome');
+            $table->integer('id_produtor');
+            $table->foreign('id_produtor')->references('id')->on('produtor');
             $table->timestamps();
         });
     }

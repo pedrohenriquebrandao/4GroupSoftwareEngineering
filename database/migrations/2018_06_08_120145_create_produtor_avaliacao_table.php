@@ -14,11 +14,12 @@ class CreateProdutorAvaliacaoTable extends Migration
     {
         Schema::create('produtor_avaliacao', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('ruim')->unsigned();
-            $table->integer('pessimo')->unsigned();
-            $table->integer('mediano')->unsigned();
-            $table->integer('bom')->unsigned();
-            $table->integer('otimo')->unsigned();
+            $table->enum('tipo', ['Pessimo', 'Ruim', 'Medio', 'Bom', 'Ótimo']);
+            $table->text('feedback')->nullable();
+            $table->integer('id_produto');
+            $table->integer('id_usuario');
+            $table->foreign('id_produto')->references('id')->on('produtor_produto');
+            $table->foreign('id_usuario')->references('id')->on('consumidor_login');
             $table->timestamps();
             
         });
