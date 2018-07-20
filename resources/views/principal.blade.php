@@ -9,23 +9,23 @@
 		<title>Colheita Feliz</title>
 
 		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+		<link href="/https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="index/css/bootstrap.min.css"/>
+		<link type="/text/css" rel="stylesheet" href="index/css/bootstrap.min.css"/>
 
 		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href="index/css/slick.css"/>
-		<link type="text/css" rel="stylesheet" href="index/css/slick-theme.css"/>
+		<link type="/text/css" rel="stylesheet" href="index/css/slick.css"/>
+		<link type="/text/css" rel="stylesheet" href="index/css/slick-theme.css"/>
 
 		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href="index/css/nouislider.min.css"/>
+		<link type="/text/css" rel="stylesheet" href="index/css/nouislider.min.css"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="index/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/index/css/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="index/css/style.css"/>
+		<link type="text/css" rel="/stylesheet" href="index/css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -851,12 +851,12 @@
 		<!-- /FOOTER -->
 
 		<!-- jQuery Plugins -->
-		<script src="index/js/jquery.min.js"></script>
-		<script src="index/js/bootstrap.min.js"></script>
-		<script src="index/js/slick.min.js"></script>
-		<script src="index/js/nouislider.min.js"></script>
-		<script src="index/js/jquery.zoom.min.js"></script>
-		<script src="index/js/main.js"></script>
+		<script src="public/index/js/jquery.min.js"></script>
+		<script src="public/index/js/bootstrap.min.js"></script>
+		<script src="public/index/js/slick.min.js"></script>
+		<script src="public/index/js/nouislider.min.js"></script>
+		<script src="public/index/js/jquery.zoom.min.js"></script>
+		<script src="public/index/js/main.js"></script>
 
 	</body>
 </html>
