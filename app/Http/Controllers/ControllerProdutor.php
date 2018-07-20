@@ -208,4 +208,12 @@ class ControllerProdutor extends Controller
         $update = $produto->update($data);
         return redirect("gerenciar-produtos")->with("message", "Produto cadastrado com sucesso!");
     }
+
+    public function excluirProduto($id){
+        $produto = Produto::find($id); //Recupera o produto pelo id;
+        
+        $delete = $produto->delete($id);
+
+        return redirect("gerenciar-produtos")->with("message", "Produto excluido com sucesso!");
+    }
 }

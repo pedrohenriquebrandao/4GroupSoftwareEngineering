@@ -43,7 +43,7 @@
       <!-- Side Navbar -->
       <nav class="side-navbar">
         <!-- Sidebar Header-->
-        @include('consumidor-sidebar')
+        @include('usuario.consumidor-sidebar')
         <!-- Sidebar Navidation Menus-->
         <span class="heading">Menu</span>
         <ul class="list-unstyled">

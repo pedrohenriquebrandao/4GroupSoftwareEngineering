@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" role="navigation" style="background-color:rgb(173, 30, 25);padding-right: 220px;">
     <div class="container">
         <div>
-            <a style="margin-right: 100px" class="navbar-brand js-scroll-trigger" href="#page-top">
+            <a style="margin-right: 100px" class="navbar-brand js-scroll-trigger" href="/">
                 <img src="{!! asset('image/logo.png') !!}" height="80">
                 <img src="{!! asset('image/nomelogo.png') !!}" height="70">
             </a>

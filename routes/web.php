@@ -115,6 +115,8 @@ Route::get("/{id}/editar-produto", "ControllerProdutor@editarProduto");
 
 Route::post('editar-produto', 'ControllerProdutor@updateProduto')->name('produtor.update');
 
+Route::get("/{id}/excluir-produto", "ControllerProdutor@excluirProduto")->name('produtor.excluir');
+
 Route::get('produtor-sidebar', function () {
     return view('produtor.produtor-sidebar');
 });

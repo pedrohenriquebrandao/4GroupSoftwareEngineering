@@ -35,7 +35,7 @@
         <!-- Side Navbar -->
         <nav class="side-navbar">
           <!-- Sidebar Header-->
-          @include('consumidor-sidebar')
+          @include('usuario.consumidor-sidebar')
           <!-- Sidebar Navidation Menus--><span class="heading">Menu</span>
           <ul class="list-unstyled">
             <li ><a href="/dashboard-consumidor"> <i class="icon-home"></i>Página principal </a></li>        
