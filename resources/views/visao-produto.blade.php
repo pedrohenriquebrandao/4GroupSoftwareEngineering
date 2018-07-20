@@ -116,13 +116,13 @@
 							<h2 class="product-name">VENDIDO POR: PRODUTOR JOÃOZIN</h2>
 							<div>
 								<div class="product-rating">
-									<b>Gostei: </b>10 <br> <img src="image/like.png" class="img-responsive" width="5%" alt="...">        
-                                  	<b>| Não gostei: </b>1  <br> <img src="image/unlike.png" class="img-responsive" width="5%" alt="...">      
+									<b>Gostei: </b>10  <img src="image/like.png" class="img-responsive" width="5%" alt="...">        
+                                  	<b>| Não gostei: </b>1   <img src="image/unlike.png" class="img-responsive" width="5%" alt="...">      
 								</div>
-								<a class="review-link" href="/visao-produto">Quantidade de avaliações: 10 | Adicionar a sua</a>
+								<a class="review-link" href="/visao-produto">Quantidade de avaliações: 10</a>
 							</div>
 							<div>
-								<h3 class="product-price">R$8.00 <del class="product-old-price">$9.00</del></h3>
+								<h3 class="product-price">R$8.00 <del class="product-old-price">R$9.00</del></h3>
 								<span class="product-available">Em estoque</span>
 							</div>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -160,12 +160,14 @@
 					<!-- /Product details -->
 
 					<!-- Product tab -->
+					<!-- Product tab -->
 					<div class="col-md-12">
 						<div id="product-tab">
 							<!-- product tab nav -->
 							<ul class="tab-nav">
-								<li class="active"><a data-toggle="tab" href="#tab1">Descrição</a></li>								
+								<li class="active"><a data-toggle="tab" href="#tab1">Descrição</a></li>
 								
+								<li><a data-toggle="tab" href="#tab3">Avaliação</a></li>
 							</ul>
 							<!-- /product tab nav -->
 
@@ -179,9 +181,40 @@
 										</div>
 									</div>
 								</div>
-								<!-- /tab1  -->							
+								<!-- /tab1  -->								
 
-								
+								<!-- tab3  -->
+								<div id="tab3" class="tab-pane fade in">
+									<div class="row">
+										<!-- Rating -->
+										
+										<!-- /Rating -->
+
+										<!-- Reviews -->
+										
+										<!-- /Reviews -->
+
+										<!-- Review Form -->
+										<div class="col-md-12">
+											<div id="review-form">
+												<form class="review-form">
+													<input class="input" type="text" placeholder="Seu nome">
+													<input class="input" type="email" placeholder="Seu e-mail">
+													<textarea class="input" placeholder="Sua avaliação"></textarea>
+													<div class="input-rating">														
+														<div class="product-rating col-md-3">
+															<b>Gostei </b> <button><img src="image/like.png" class="img-responsive" width="10%" alt="...">  </button> </br>    
+															<b>Não gostei </b>  <button> <img src="image/unlike.png" class="img-responsive" width="5%" alt="...">  </button>     
+														</div>
+													</div>
+													<button class="primary-btn">Enviar</button>
+												</form>
+											</div>
+										</div>
+										<!-- /Review Form -->
+									</div>
+								</div>
+								<!-- /tab3  -->
 							</div>
 							<!-- /product tab content  -->
 						</div>
