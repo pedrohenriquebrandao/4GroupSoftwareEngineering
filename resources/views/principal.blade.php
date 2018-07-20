@@ -61,8 +61,8 @@
 								<img src="index/img/verduras.png" alt="">
 							</div>
 							<div class="shop-body">
-								<a href="#" class="cta-btn"><h3>Lojas de<br>Verduras</h3></a>
-								<a href="#" class="cta-btn">Assine agora <i class="fa fa-arrow-circle-right"></i></a>
+								<a href="/index-lojas" class="cta-btn"><h3>Lojas de<br>Verduras</h3></a>
+								<a href="/index-lojas" class="cta-btn">Assine agora <i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -75,8 +75,8 @@
 								<img src="index/img/frutas.jpg" alt="">
 							</div>
 							<div class="shop-body">
-								<a href="#" class="cta-btn"><h3>Lojas de<br>Frutas</h3></a>
-								<a href="#" class="cta-btn">Assine agora<i class="fa fa-arrow-circle-right"></i></a>
+								<a href="/index-lojas" class="cta-btn"><h3>Lojas de<br>Frutas</h3></a>
+								<a href="/index-lojas" class="cta-btn">Assine agora<i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -89,8 +89,8 @@
 								<img src="index/img/tuberculos.jpg" alt="">
 							</div>
 							<div class="shop-body">
-								<a href="#" class="cta-btn"><h3>Lojas de<br>Tubérculos</h3></a>
-								<a href="#" class="cta-btn">Assine agora<i class="fa fa-arrow-circle-right"></i></a>
+								<a href="/index-lojas" class="cta-btn"><h3>Lojas de<br>Tubérculos</h3></a>
+								<a href="/index-lojas" class="cta-btn">Assine agora<i class="fa fa-arrow-circle-right"></i></a>
 							</div>
 						</div>
 					</div>

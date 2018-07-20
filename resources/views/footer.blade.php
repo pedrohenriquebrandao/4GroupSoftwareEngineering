@@ -41,7 +41,7 @@
             <div class="container">
                 <!-- row -->
                 <div class="row">
-                    <div class="col-md-3 col-xs-6">
+                    <div class="col-md-3 col-xs-6" style="padding-left:90px;">
                         <div class="footer">
                             <h3 class="footer-title">Sobre nós</h3>
                             <p style="font-color:white;">Site de assinaturas de produtos orgânicos.</p>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-xs-6" style="padding-left:20px;">
+                    <div class="col-md-3 col-xs-6" style="padding-left:90px;">
                         <div class="footer">
                             <h3 class="footer-title">Categorias</h3>
                             <ul class="footer-links">
@@ -68,7 +68,7 @@
 
                     <div class="clearfix visible-xs"></div>
 
-                    <div class="col-md-3 col-xs-6">
+                    <div class="col-md-3 col-xs-6" style="padding-left:60px;">
                         <div class="footer">
                             <h3 class="footer-title">Informações</h3>
                             <ul class="footer-links">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-xs-6">
+                    <div class="col-md-3 col-xs-6" style="padding-left:60px;">
                         <div class="footer">
                             <h3 class="footer-title">Serviço</h3>
                             <ul class="footer-links">

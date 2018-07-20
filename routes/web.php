@@ -66,6 +66,10 @@ Route::get('visao-loja', function () {
     return view('visao-loja');
 });
 
+Route::get('index-lojas', function () {
+    return view('index-lojas');
+});
+
 
 
 // ------ ROTAS DE CADASTRO --------- //
