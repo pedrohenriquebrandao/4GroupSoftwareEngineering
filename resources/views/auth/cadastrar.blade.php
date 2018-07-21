@@ -132,14 +132,12 @@
 							</span>
 						@endif
 						<div class="row">
-							<div class="form-check col-sm-6 p-t-10 p-b-10 p-l-10">
-								<input type="radio" class="form-check-input" name="sexo" id="radioMasc" value="masc" checked>
-								<label class="form-check-label" for="radioUrnaba">Masculino</label>
-							</div>
-							<div class="form-check col-sm-6 p-l-10">
-								<input type="radio" class="form-check-input" name="sexo" id="radioFem" value="fem" checked>
+							<div class="form-check col-sm-6 p-t-10 p-b-10 p-l-10" style="padding-left: 25px;">
+								<input type="radio" class="form-check-input" name="sexo" id="radioMasc" value="masc">
+								<label class="form-check-label" for="radioUrnaba">Masculino</label></br>
+								<input type="radio" class="form-check-input" name="sexo" id="radioFem" value="fem">
 								<label class="form-check-label" for="radioRural">Feminino</label>  
-							</div>
+							</div>							
                     	</div>
 										
 					</div>	
