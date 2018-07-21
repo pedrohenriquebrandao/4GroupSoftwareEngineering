@@ -48,6 +48,7 @@ class HomeController extends Controller
     }
 
     public function indexPrincipal(){
+        $produtos = DB::table('produtor_produto')->get();
         $frutas = DB::table('produtor_produto')->where('tipo', 'fruta')->get();
         $verduras = DB::table('produtor_produto')->where('tipo', 'verdura')->get();
         $outros = DB::table('produtor_produto')->where('tipo', '!=', 'verdura')->where('tipo', '!=', 'fruta')->get();
@@ -61,9 +62,9 @@ class HomeController extends Controller
             //Verifica se o usuário possui loja cadastrada;
             $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
 
-            return view('principal', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'verduras', 'outros', 'lojas'));
+            return view('principal', compact('usuario', 'possuiLoja', 'carrinho', 'produtos', 'frutas', 'verduras', 'outros', 'lojas'));
         } else {
-            return view('principal', compact('frutas', 'verduras', 'outros', 'lojas'));
+            return view('principal', compact('produtos','frutas', 'verduras', 'outros', 'lojas'));
         }
     }
 

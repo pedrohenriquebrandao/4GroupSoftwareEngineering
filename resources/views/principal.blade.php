@@ -130,19 +130,23 @@
 								<div id="tab1" class="tab-pane active">
 									<div class="products-slick" data-nav="#slick-nav-1">
 										<!-- product -->
+										@forelse($produtos as $produto)
 										<div class="product">
 											<div class="product-img">
-												<img src="index/img/batata.jpg" alt="">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NOVO</span>
-												</div>
+												<img src="{{url('storage/imagem-produtos/'.$produto->imagem)}}" alt="{{$produto->imagem}}">
 											</div>
 											<div class="product-body">
-												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
+												<p class="product-category">{{$produto->tipo}}</p>
+												<h3 class="product-name"><a href="#">{{$produto->nome}}</a></h3>
 												<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>		
+												@forelse($lojas as $loja)
+													@if($produto->produtor_id == $loja->id)
+														<h3 class="product-name"><a href="#">Loja: {{$loja->nome}}</a></h3>
+														@break
+													@endif
+												@empty
+													<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+												@endforelse		
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
 													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
 												</div>
@@ -159,106 +163,8 @@
 												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
 											</div>
 										</div>
-										<!-- /product -->
-
-										<!-- product -->
-										<div class="product">
-											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
-												<div class="product-label">
-													<span class="sale">-50%</span>
-													<span class="new">NOVO</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
-												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
-												</div>
-												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
-													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
-												</div>
-												<div class="product-btns">
-													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>-->
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
-											</div>
-										</div>
-										<!-- /product -->
-
-										<!-- product -->
-										<div class="product">
-											<div class="product-img">
-												<img src="image/maca.jpg" alt="">
-												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NOVO</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Maça da loja Hortifrut</a></h3>
-												<h4 class="product-price">R$7.00 <del class="product-old-price">R$8.00</del></h4>
-												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
-												</div>
-												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
-													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
-												</div>
-												<div class="product-btns">
-													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>-->
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
-											</div>
-										</div>
-										<!-- /product -->
-
-										<!-- product -->
-										<div class="product">
-											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
-												<div class="product-label">
-													<span class="sale">-50%</span>
-													<span class="new">NOVO</span>
-												</div>
-											</div>
-											<div class="product-body">
-												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
-												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
-												</div>
-												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
-													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
-												</div>
-												<div class="product-btns">
-													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-													<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
-													<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>-->
-												</div>
-											</div>
-											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
-											</div>
-										</div>
-										<!-- /product -->
-
-										<!-- product -->
-										
+										@empty
+										@endforelse
 										<!-- /product -->
 									</div>
 									<div id="slick-nav-1" class="products-slick-nav"></div>
