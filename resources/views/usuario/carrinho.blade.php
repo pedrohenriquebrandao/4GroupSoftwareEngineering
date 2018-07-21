@@ -36,10 +36,6 @@
       <div class="col-md-8">
         <h2 class="hs">Carrinho</h1>
       </div>
-      <div class="col-md-4 direita">
-        <a href="/">Continuar Comprando</a>
-        <a href="/pagamento"><button class="btn btn-danger">Concluir</button></a>
-      </div>
     </div>
 
     <div class="space row">
@@ -58,21 +54,32 @@
           <tbody>
             <tr>
               <td scope="row" colspan="2">
+            @forelse($produtos as $produto)
                 <div class="row">
                   <div class="posicao col-md-3" height: 100px;>
-                    <img src="{!! asset('image/maca.jpg') !!}" width="125px" alt="">
+                    <img src="{{url('storage/imagem-produtos/'.$produto->imagem)}}" alt="{{$produto->imagem}}" width="125px">
                   </div>
                   <div class="posicao col-md-9">
-                    <p class="titulo-produto">Produto X</p>
+                    <p class="titulo-produto">{{$produto->nome}}</p>
                     <ul class="outside">
-                      <li>Vendido e Entregue por: XXX</li>
-                      <li>Quantidade: XXX</li>
+                        @forelse($lojas as $loja)
+													@if($produto->produtor_id == $loja->id)
+                            <li>Vendido e Entregue por: {{$loja->nome}}</li>
+													@break
+													@endif
+												@empty
+                          <li>Vendido e Entregue por: XXX</li>
+												@endforelse
+                      <li>Tipo: {{$produto->tipo}}</li>
                     </ul>
-                    <a href="http://">Remover</a>
+                    <a href="/"><button class="btn btn-danger">Remover </button></a>
                   </div>
                 </div>
+                <hr>
+              @empty
+              @endforelse
               </td>
-              <td>XXX</td>
+              <td><?php echo rand(30, 100) ?></td>
             </tr>
             <tr>
               <td scope="row">
@@ -101,17 +108,16 @@
             </tr>
           </tbody>
         </table>
-
       </div>
     </div>
 
         <div class="row space">
       <div class="col-md-8">
-      <a href="/">Limpar Carrinho</a>
+      <a href="/"><button class="btn btn-danger">Limpar Carrinho</button></a>
       </div>
       <div class="col-md-4 direita">
-        <a href="/">Continuar Comprando</a>
-        <a href="/pagamento"><button class="btn btn-danger">Concluir</button></a>
+        <a href="/"><button class="btn btn-danger">Continuar Comprando</button> </a>
+        <a href="/pagamento"><button class="btn btn-success">Concluir</button></a>
       </div>
     </div>
   </section>

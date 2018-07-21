@@ -97,14 +97,21 @@ class HomeController extends Controller
 
     public function indexCarrinho(){
         $id = auth()->guard('consumidor')->user()->id;
-        
+
+        $produtos = DB::table('consumidor_carrinho')
+        ->join('produtor_produto', 'consumidor_carrinho.produto_id', '=', 'produtor_produto.id')
+        ->select('produtor_produto.*')->where('consumidor_carrinho.usuario_id', $id)->get();
+
+        $lojas = DB::table('produtor_produto')->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
+        ->select('produtores.id', 'produtores.nome')->where('tipo', 'fruta')->get();
+
         if (Auth::guard('consumidor')->check()) {
             $usuario = $this->getDados();
             $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
             
             //Verifica se o usuário possui loja cadastrada;
             $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-            return view('usuario.carrinho', compact('usuario', 'possuiLoja', 'carrinho'));
+            return view('usuario.carrinho', compact('usuario', 'possuiLoja', 'carrinho', 'produtos', 'lojas'));
         }
 
         return view('usuario.carrinho');
