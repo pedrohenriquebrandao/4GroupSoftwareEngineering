@@ -109,14 +109,21 @@ class HomeController extends Controller
     }
 
     public function pagamento(){
+        $id = auth()->guard('consumidor')->user()->id;
+        $cartoes = DB::table('consumidor_cartao')->where('login_id', $id)->get();
+        $enderecos = DB::table('consumidor_endereco')->where('login_id', $id)->get();
+        
+        $produtos = DB::table('consumidor_carrinho')
+        ->join('produtor_produto', 'consumidor_carrinho.produto_id', '=', 'produtor_produto.id')
+        ->select('produtor_produto.*')->where('consumidor_carrinho.usuario_id', $id)->get();
+
         if (Auth::guard('consumidor')->check()) {
-            $id = auth()->guard('consumidor')->user()->id;
             $usuario = $this->getDados();
             $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
             
             //Verifica se o usuário possui loja cadastrada;
             $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-            return view('usuario.pagamento', compact('usuario', 'carrinho', 'possuiLoja'));
+            return view('usuario.pagamento', compact('usuario', 'carrinho', 'possuiLoja', 'cartoes', 'enderecos', 'produtos'));
         }
         return view('usuario.pagamento', compact('usuario', 'carrinho', 'possuiLoja'));
     }

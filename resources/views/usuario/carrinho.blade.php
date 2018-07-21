@@ -113,11 +113,13 @@
 
         <div class="row space">
       <div class="col-md-8">
-      <a href="{{url("/limparCarrinho")}}"><button class="btn btn-danger">Limpar Carrinho</button></a>
-      </div>
-      <div class="col-md-4 direita">
+        <a href="{{url("/limparCarrinho")}}"><button class="btn btn-danger">Limpar Carrinho</button></a>
         <a href="/"><button class="btn btn-danger">Continuar Comprando</button> </a>
-        <a href="/pagamento"><button class="btn btn-success">Concluir</button></a>
+      </div>
+      <div class="col-md-1 direita">
+        @if($carrinho > 0)
+          <a href="/pagamento"><button class="btn btn-success">Concluir</button></a>
+        @endif
       </div>
     </div>
   </section>

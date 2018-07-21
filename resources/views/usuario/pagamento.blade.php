@@ -111,7 +111,7 @@
                         </div>
 
                         <div class="mt-1 ml-1">
-                            <button class="btn btn-danger col-12">Concluir Compra</button>
+                            <a href=""><button class="btn btn-danger col-12">Concluir Compra</button></a>
                         </div>
 
                         
@@ -124,18 +124,23 @@
                 <div class="item-cor">
                     <div class="end-pedido">
                         <h6>ENDEREÇO DE ENTREGA</h6>
+                        @forelse($enderecos as $e)
                         <ul class="outside">
-                            <li>Rua A, 500 - Casa</li>
+                            <li>Rua {{$e->rua}}, Nº {{$e->numero}}</li>
                             <li>
-                                <span class="negrito">Cidade: </span>Feira de Santana
+                                <span class="negrito">Cidade: </span>{{$e->cidade}}
                             </li>
                             <li>
-                                <span class="negrito">Bairro: </span>Centro
+                                <span class="negrito">Bairro: </span>{{$e->bairro}}
                             </li>
                             <li>
-                                <span class="negrito">CEP: </span>0000000-00
+                                <span class="negrito">CEP: </span>{{$e->cep}}
                             </li>
                         </ul>
+                        @break
+                        @empty
+                            <span>Sem endereço cadastrado</span>
+                        @endforelse
 
                         <div class="linha-vertical"></div>
 
@@ -151,31 +156,20 @@
                         <thead class="item-cor">
                             <tr>
                                 <th scope="col">Item do Pedido</th>
-                                <th scope="col">Qtd</th>
-                                <th scope="col">Preço</th>
+                                <th scope="col">Tipo</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @forelse($produtos as $p)
                             <tr>
-                                <td>Uva</th>
-                                    <td>1kg</td>
-                                    <td>R$6,00</td>
+                                <td>{{$p->nome}}</th>
+                                <td>{{$p->tipo}}</td>
                             </tr>
-                            <tr>
-                                <td>Maça</th>
-                                    <td>5un</td>
-                                    <td>R$2,00</td>
-
-                            </tr>
-                            <tr class="cor-secund">
-                                <td colspan="2">FRETE</th>
-                                    <td>R$2,00</td>
-
-                            </tr>
+                            @empty
+                            @endforelse
                             <tr class="item-cor">
                                 <td colspan="2">TOTAL</th>
-                                    <td>R$10,00</td>
-
+                                    <td>R$<?php echo rand(30, 100) ?></td>
                             </tr>
                         </tbody>
                     </table>
@@ -197,14 +191,7 @@
                 <div class="modal-body">
                     <div>
                         <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
-                        <h5>Rua A, 500 - Casa</h5>
-                        <p><span>Feira de Santana</span>, <span>Centro</span> - <span>00000000-00</span></p> 
-                        </button>
-                    </div>
-                    <div>
-                        <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
-                        <h5>Rua A, 500 - Casa</h5>
-                        <p><span>Feira de Santana</span>, <span>Centro</span> - <span>00000000-00</span></p> 
+                        <h5>Sem endereços cadastrados</h5> 
                         </button>
                     </div>
                 </div>
@@ -223,12 +210,20 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div>
-                        <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
-                            <h5>ANTÔNIO S CERQUEIRA - VISA</h5>
-                            <p><span>4012001037141112</span>, <span>123</span> - <span>12/2022</span></p> 
-                        </button>
-                    </div>
+                    @forelse($cartoes as $cartao)
+                        <div>
+                            <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
+                                <h5>{{$cartao->nome}}}</h5>
+                                <p><span>{{$cartao->numCartao}}</span>, <span>123</span> - <span>{{$cartao->validade}}</span></p> 
+                            </button>
+                        </div>
+                    @empty
+                        <div>
+                            <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
+                                <h5>Sem Cartões cadastrado</h5> 
+                            </button>
+                        </div>
+                    @endforelse
                     <div>
                         <button data-dismiss="modal" class="btn btn-light col-12 botaoModal">
                          
