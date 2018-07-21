@@ -134,14 +134,14 @@
 											<div class="product-img">
 												<img src="index/img/batata.jpg" alt="">
 												<div class="product-label">
-													<span class="sale">-30%</span>
+													<span class="sale">-33%</span>
 													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
-												<p class="product-category">Fruta</p>
+												<p class="product-category">Tubérculo</p>
 												<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
-												<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
+												<h4 class="product-price">R$4.00 <del class="product-old-price">R$6.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>		
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
 													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
@@ -164,22 +164,22 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
+												<img src="index/img/pera2.jpg" alt="">
 												<div class="product-label">
-													<span class="sale">-50%</span>
+													<span class="sale">-20%</span>
 													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
 												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
+												<h3 class="product-name"><a href="#">Assinatura de Pera do produtor Joao Silva</a></h3>
+												<h4 class="product-price">R$8.00 <del class="product-old-price">R$10.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
 													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
 												</div>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
-													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 1 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -198,20 +198,20 @@
 											<div class="product-img">
 												<img src="image/maca.jpg" alt="">
 												<div class="product-label">
-													<span class="sale">-30%</span>
+													<span class="sale">-18%</span>
 													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
 												<p class="product-category">Fruta</p>
 												<h3 class="product-name"><a href="#">Assinatura de Maça da loja Hortifrut</a></h3>
-												<h4 class="product-price">R$7.00 <del class="product-old-price">R$8.00</del></h4>
+												<h4 class="product-price">R$6.50 <del class="product-old-price">R$8.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 7 </label>									
 												</div>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
-													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 3 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -228,17 +228,17 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
+												<img src="index/img/abacaxi.jpg" alt="">
 												<div class="product-label">
-													<span class="sale">-50%</span>
+													<span class="sale">-40%</span>
 													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
 												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
-												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+												<h3 class="product-name"><a href="#">Assinatura de Abacaxi do produtor Joao Silva</a></h3>
+												<h4 class="product-price">R$3.00 <del class="product-old-price">R$5.00</del></h4>
+												<h3 class="product-name"><a href="#">assinatura por unidade</a></h3>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
 													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
 												</div>
@@ -328,19 +328,19 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
+												<img src="index/img/cebola.jpg" alt="">
 												<div class="product-label">
-													<span class="sale">-50%</span>
+													<span class="sale">-40%</span>
 													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
-												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
+												<p class="product-category">Verdura</p>
+												<h3 class="product-name"><a href="#">Assinatura de Cebola do produtor Joao Silva</a></h3>
+												<h4 class="product-price">R$3.00 <del class="product-old-price">R$5.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 7 </label>									
 												</div>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
 													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
@@ -360,22 +360,22 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
+												<img src="index/img/batatadoce.jpg" alt="">
 												<div class="product-label">
-													<span class="sale">-50%</span>
+													<span class="sale">-25%</span>
 													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
-												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
+												<p class="product-category">Tubérculo</p>
+												<h3 class="product-name"><a href="#">Assinatura de Batata Doce do produtor Joao Silva</a></h3>
+												<h4 class="product-price">R$3.00 <del class="product-old-price">R$4.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 9 </label>									
 												</div>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
-													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 1 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -392,19 +392,19 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
+												<img src="index/img/uva.jpg" alt="">
 												<div class="product-label">
-													<span class="sale">-50%</span>
+													<span class="sale">-25%</span>
 													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
 											  <p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
+												<h3 class="product-name"><a href="#">Assinatura de Uva do produtor Pedro Mota</a></h3>
+												<h4 class="product-price">R$6.00 <del class="product-old-price">R$8.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 10 </label>									
 												</div>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
 													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
@@ -424,7 +424,7 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
+												<img src="index/img/mamao.jpg" alt="">
 												<div class="product-label">
 													<span class="sale">-50%</span>
 													<span class="new">NOVO</span>
@@ -432,14 +432,14 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
-												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+												<h3 class="product-name"><a href="#">Assinatura de Mamão Formosa do produtor Joao Silva</a></h3>
+												<h4 class="product-price">R$2.00 <del class="product-old-price">R$4.00</del></h4>
+												<h3 class="product-name"><a href="#">assinatura por unidade</a></h3>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 9 </label>									
 												</div>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
-													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 3 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -456,16 +456,16 @@
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
-												<img src="index/img/coentro.png" alt="">
+												<img src="index/img/gengibre.jpg" alt="">
 												<div class="product-label">
-													<span class="sale">-50%</span>
+													<span class="sale">-16%</span>
 													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
-												<p class="product-category">Fruta</p>
-												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
-												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
+												<p class="product-category">Tubérculo</p>
+												<h3 class="product-name"><a href="#">Assinatura de Gengibre do produtor Alan Alves</a></h3>
+												<h4 class="product-price">R$10.00 <del class="product-old-price">R$12.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
 													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
