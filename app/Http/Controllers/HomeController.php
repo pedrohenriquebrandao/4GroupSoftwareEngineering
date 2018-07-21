@@ -127,6 +127,25 @@ class HomeController extends Controller
 
         return redirect( route('carrinho') );
     }
+    
+    public function removerCarrinho($idProduto){
+        $produto = DB::table('consumidor_carrinho')->where('produto_id', $idProduto)->first();
+        
+        $produtoRemove = Carrinho::find($produto->id); //Recupera o produto pelo id;
+        
+        $delete = $produtoRemove->delete($produto->id);
+        
+        return redirect( route('carrinho') );
+    }
+    
+    public function limparCarrinho(){
+        $id_usuario = auth()->guard('consumidor')->user()->id;
+
+        $delete = DB::table('consumidor_carrinho')
+        ->where('consumidor_carrinho.usuario_id', $id_usuario)->delete();
+
+        return redirect( route('carrinho') );
+    }
 
     public function indexFrutas(){
         $frutas = DB::table('produtor_produto')->where('tipo', 'fruta')->get();

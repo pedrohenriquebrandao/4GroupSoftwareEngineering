@@ -21,6 +21,10 @@ Route::get('carrinho', 'HomeController@indexCarrinho')->name('carrinho');
 
 Route::get("/{id}/carrinho", "HomeController@AddCarrinho")->name("AddCarrinho");
 
+Route::get("/{id}/removerCarrinho", "HomeController@removerCarrinho")->name("removerCarrinho");
+
+Route::get("/limparCarrinho", "HomeController@limparCarrinho")->name("limparCarrinho");
+
 Route::get('index-frutas', 'HomeController@indexFrutas')->name('frutas');
 
 Route::get('index-verduras', 'HomeController@indexVerduras')->name('verduras');

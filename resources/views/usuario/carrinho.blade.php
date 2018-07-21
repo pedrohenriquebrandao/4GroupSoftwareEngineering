@@ -72,7 +72,7 @@
 												@endforelse
                       <li>Tipo: {{$produto->tipo}}</li>
                     </ul>
-                    <a href="/"><button class="btn btn-danger">Remover </button></a>
+                    <a href="{{url("/$produto->id/removerCarrinho")}}"><button class="btn btn-danger">Remover </button></a>
                   </div>
                 </div>
                 <hr>
@@ -113,7 +113,7 @@
 
         <div class="row space">
       <div class="col-md-8">
-      <a href="/"><button class="btn btn-danger">Limpar Carrinho</button></a>
+      <a href="{{url("/limparCarrinho")}}"><button class="btn btn-danger">Limpar Carrinho</button></a>
       </div>
       <div class="col-md-4 direita">
         <a href="/"><button class="btn btn-danger">Continuar Comprando</button> </a>
