@@ -21,7 +21,7 @@
                             <option value="1">Frutas</option>
                             <option value="1">Verduras</option>
                             <option value="1">Tubérculos</option>
-                            <option value="1">Sementes</option>
+                            <option value="1">Cereais</option>
                         </select>
                         <input class="input" placeholder="Pesquise aqui">
                         <button class="search-btn">Pesquisar</button>

@@ -25,15 +25,7 @@
 		<link rel="stylesheet" href="public/index/css/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="/stylesheet" href="public/index/css/style.css"/>
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-
+		<link type="text/css" rel="/stylesheet" href="public/index/css/style.css"/>		
     </head>
 	<body>
 		<!-- HEADER -->
@@ -95,6 +87,7 @@
 						</div>
 					</div>
 					<!-- /shop -->
+					
 				</div>
 				<!-- /row -->
 			</div>
@@ -102,28 +95,32 @@
 		</div>
 		<!-- /SECTION -->
 
+		<!-- section title -->
+		<div id="hot-deal" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="hot-deal">							
+							<h2 class="text-uppercase">PROMOÇÕES</h2>
+							<p>Confira nossas melhores promoções</p>
+							<a class="primary-btn cta-btn" href="/loginConsumidor">Assine agora</a>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /section title -->
+
 		<!-- PROMOÇOES -->
 		<div class="section">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
-				<div class="row">
-
-					<!-- section title -->
-					<div class="col-md-12">
-						<div class="section-title">
-							<h3 class="title">PROMOÇÕES</h3>
-							<div class="section-nav">
-								<!--<ul class="section-tab-nav tab-nav">
-									<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-									<li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-									<li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-									<li><a data-toggle="tab" href="#tab1">Accessories</a></li>
-								</ul> -->
-							</div>
-						</div>
-					</div>
-					<!-- /section title -->
+				<div class="row">	
 
 					<!-- PRODUTOS -->
 					<div class="col-md-12">
@@ -145,13 +142,12 @@
 												<p class="product-category">Fruta</p>
 												<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
 												<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>		
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -179,12 +175,11 @@
 												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
 												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -204,7 +199,7 @@
 												<img src="image/maca.jpg" alt="">
 												<div class="product-label">
 													<span class="sale">-30%</span>
-													<span class="new">Nova</span>
+													<span class="new">NOVO</span>
 												</div>
 											</div>
 											<div class="product-body">
@@ -212,12 +207,11 @@
 												<h3 class="product-name"><a href="#">Assinatura de Maça da loja Hortifrut</a></h3>
 												<h4 class="product-price">R$7.00 <del class="product-old-price">R$8.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -245,12 +239,11 @@
 												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
 												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -289,8 +282,7 @@
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
-						<div class="hot-deal">
-							
+						<div class="hot-deal">							
 							<h2 class="text-uppercase">CONFIRA OS MELHORES PRODUTOS DO NOSSO SITE LOGO ABAIXO </h2>
 							<p>Frutas por até 50% de desconto</p>
 							<a class="primary-btn cta-btn" href="/loginConsumidor">Assine agora</a>
@@ -347,12 +339,11 @@
 												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
 												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -380,12 +371,11 @@
 												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
 												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -413,12 +403,11 @@
 												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
 												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -446,12 +435,11 @@
 												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
 												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -479,12 +467,11 @@
 												<h3 class="product-name"><a href="#">Assinatura de Coentro do produtor Joao Silva</a></h3>
 												<h4 class="product-price">R$5.00 <del class="product-old-price">R$10.00</del></h4>
 												<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-												<div class="product-rating">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+												</div>
+												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>

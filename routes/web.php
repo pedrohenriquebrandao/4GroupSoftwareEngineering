@@ -51,8 +51,8 @@ Route::get('index-nav', function () {
 });
 
 
-Route::get('index-sementes', function () {
-    return view('index-sementes');
+Route::get('index-cereais', function () {
+    return view('index-cereais');
 });
 
 Route::get('visao-loja', function () {

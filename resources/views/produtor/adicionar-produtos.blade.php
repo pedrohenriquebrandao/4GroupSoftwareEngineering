@@ -136,23 +136,23 @@
                                 </td>
                                 <td class="col-lg-2">		
                                   <div class="form-check">
-                                    <input type="radio" class="checkbox-template" name="tipo" value="fruta" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="fruta" >
                                     <label class="form-check-label" for="radioUrnaba">Fruta</label>
                                   </div>
                                   <div class="form-check">
-                                    <input type="radio" class="checkbox-template" name="tipo" value="legume" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="legume" >
                                     <label class="form-check-label" for="radioRural">Legume</label>  
                                   </div>
                                   <div class="form-check">
-                                    <input type="radio" class="checkbox-template" name="tipo" value="verdura" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="verdura" >
                                     <label class="form-check-label" for="radioRural">Verdura</label>  
                                   </div>
                                   <div class="form-check">
-                                    <input type="radio" class="checkbox-template" name="tipo" value="folha" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="folha" >
                                     <label class="form-check-label" for="radioRural">Folha</label>  
                                   </div>
                                   <div class="form-check">
-                                    <input type="radio" class="checkbox-template" name="tipo" value="graos" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="graos" >
                                     <label class="form-check-label" for="radioRural">Grãos</label>  
                                   </div> 
                                 </td>       

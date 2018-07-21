@@ -1,17 +1,16 @@
 <div id="header">
     <!-- container -->
-    <div class="container">
+    <div class="container" style="    margin-left: 0px;">
         <!-- row -->
         <div class="row">
             <!-- LOGO -->
             <div>
-                <a style="margin-left: 0px" class="navbar-brand js-scroll-trigger" href="<?= url('/') ?>">
+                <a class="navbar-brand js-scroll-trigger" href="<?= url('/') ?>">
                     <img src="{!! asset('image/logo.png') !!}" height="80">
                     <img src="{!! asset('image/nomelogo.png') !!}" height="70">
                 </a>							
             </div>
-            <!-- /LOGO -->
-
+            <!-- /LOGO -->           
             <!-- ACCOUNT -->
             <div class="col-md-9 clearfix">
                 <div class="header-ctn">

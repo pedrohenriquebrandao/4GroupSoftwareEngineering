@@ -109,7 +109,7 @@
 									<input type="checkbox" id="category-4">
 									<label for="category-4">
 										<span></span>
-										Sementes
+										Cereais
 										<small>(578)</small>
 									</label>
 								</div>								

@@ -55,7 +55,7 @@
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
 							<li><a href="/">Página inicial</a></li>
-							<li class="active"><a href="/index-promocoes">Sementes</a></li>
+							<li class="active"><a href="/index-promocoes">Cereais</a></li>
 						</ul>
 					</div>
 				</div>
