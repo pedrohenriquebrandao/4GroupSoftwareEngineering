@@ -67,6 +67,19 @@ class HomeController extends Controller
         }
     }
 
+    public function indexLojas(){
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('index-lojas', compact('usuario', 'carrinho', 'possuiLoja'));
+        }
+        return view('index-lojas', compact('usuario', 'carrinho', 'possuiLoja'));
+    }
+
     public function indexCarrinho(){
         if (Auth::guard('consumidor')->check()) {
             $id = auth()->guard('consumidor')->user()->id;

@@ -27,6 +27,8 @@ Route::get('index-tuberculos', 'HomeController@indexTuberculos')->name('tubercul
 
 Route::get('/{id}/visao-produto', 'HomeController@visaoProduto')->name('visaoproduto');
 
+Route::get('index-lojas', 'HomeController@indexLojas')->name('lojas');
+
 Route::get('pagamento', function () {
     return view('usuario.pagamento');
 });
@@ -34,9 +36,6 @@ Route::get('pagamento', function () {
 Route::get('entrarConsumidor', function () {
     return view('auth.consumidor');
 });
-
-
-
 
 Route::get('index-header', function () {
     return view('index-header');
@@ -59,9 +58,6 @@ Route::get('visao-loja', function () {
     return view('visao-loja');
 });
 
-Route::get('index-lojas', function () {
-    return view('index-lojas');
-});
 
 // ------ ROTAS DE CADASTRO --------- //
 
