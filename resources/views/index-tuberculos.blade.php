@@ -166,7 +166,14 @@
 									<p class="product-category">{{$tub->tipo}}</p>
 									<h3 class="product-name"><a href="#">{{$tub->nome}}</a></h3>
 									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">Por: Fazendinha</a></h3>
+									@forelse($lojas as $loja)
+										@if($loja->id == $tub->produtor_id)
+											<h5 class="product-name"><a href="#">Por: {{$loja->nome}}</a></h5>
+											@break
+										@endif
+									@empty
+										<h5 class="product-name"><a href="#">Não foi possível buscar loja</a></h5>
+									@endforelse
 									<div class="product-rating">
 										
 									</div>										

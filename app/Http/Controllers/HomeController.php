@@ -88,7 +88,10 @@ class HomeController extends Controller
         $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
 
         $frutas = DB::table('produtor_produto')->where('tipo', 'fruta')->get();
-        return view('index-frutas', compact('usuario', 'possuiLoja', 'carrinho', 'frutas'));
+        $lojas = DB::table('produtor_produto')->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
+        ->select('produtores.id', 'produtores.nome')->where('tipo', 'fruta')->get();
+        
+        return view('index-frutas', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'lojas'));
     }
     
     public function indexVerduras(){
@@ -99,7 +102,12 @@ class HomeController extends Controller
         $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
 
         $verduras = DB::table('produtor_produto')->where('tipo', 'verdura')->get();
-        return view('index-verduras', compact('usuario', 'possuiLoja', 'carrinho', 'verduras'));
+        $lojas = DB::table('produtor_produto')->where('tipo', 'verdura')
+        ->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
+        ->select('produtores.id', 'produtores.nome')->get();
+        
+        //dd($lojas);
+        return view('index-verduras', compact('usuario', 'possuiLoja', 'carrinho', 'verduras', 'lojas'));
     }
     
     public function indexTuberculos(){
@@ -110,7 +118,10 @@ class HomeController extends Controller
         $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
         
         $tuberculos = DB::table('produtor_produto')->where('tipo', '!=', 'verdura')->where('tipo', '!=', 'fruta')->get();
-        return view('index-tuberculos', compact('usuario', 'possuiLoja', 'carrinho', 'tuberculos'));
+        $lojas = DB::table('produtor_produto')->where('tipo', '!=', 'verdura')->where('tipo', '!=', 'fruta')
+        ->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
+        ->select('produtores.id', 'produtores.nome')->get();
+        return view('index-tuberculos', compact('usuario', 'possuiLoja', 'carrinho', 'tuberculos', 'lojas'));
     }
 
     private function getDados(){
