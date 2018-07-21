@@ -77,7 +77,11 @@
                         <a href="/carrinho">
                             <i class="fa fa-shopping-cart"></i>
                             <span>Carrinho de assinaturas</span>
-                            <div class="qty">3</div>
+                            @if(Auth::guard('consumidor')->check())
+                                <div class="qty">{{$carrinho}}</div>
+                            @else
+                                <div class="qty">0</div>
+                            @endif
                         </a>                  
                     </div>
                     <!-- /CARRINHO -->

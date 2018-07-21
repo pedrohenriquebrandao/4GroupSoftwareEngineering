@@ -151,21 +151,22 @@
 
 						<!-- store products -->
 						<div class="row">
+							@forelse($tuberculos as $tub)
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
+									<img src="{{url('storage/imagem-produtos/'.$tub->imagem)}}" alt="{{$tub->imagem}}">										
 										<div class="product-label">
 											<span class="sale">-30%</span>
 											<span class="new">NOVO</span>
 										</div>
 									</div>
 									<div class="product-body">
-									<p class="product-category">Tubérculo</p>
-									<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
+									<p class="product-category">{{$tub->tipo}}</p>
+									<h3 class="product-name"><a href="#">{{$tub->nome}}</a></h3>
 									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+									<h3 class="product-name"><a href="#">Por: Fazendinha</a></h3>
 									<div class="product-rating">
 										
 									</div>										
@@ -176,224 +177,8 @@
 								</div>
 							</div>
 							<!-- /product -->
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="index/img/cebola.jpg" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
-									</div>
-									<div class="product-body">
-									<p class="product-category">Verdura</p>
-									<h3 class="product-name"><a href="#">Assinatura de Cebolo da loja Fazenda Verde</a></h3>
-									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									<div class="product-rating">
-										
-									</div>										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<div class="clearfix visible-sm visible-xs"></div>
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="index/img/coentro.png" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
-									</div>
-									<div class="product-body">
-									<p class="product-category">Verdura</p>
-									<h3 class="product-name"><a href="#">Assinatura de Coentro da loja Fazenda Verde</a></h3>
-									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									<div class="product-rating">
-										
-									</div>										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<div class="clearfix visible-lg visible-md"></div>
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="index/img/coentro.png" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
-									</div>
-									<div class="product-body">
-									<p class="product-category">Verdura</p>
-									<h3 class="product-name"><a href="#">Assinatura de Coentro da loja Fazenda Verde</a></h3>
-									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									<div class="product-rating">
-										
-									</div>										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<div class="clearfix visible-sm visible-xs"></div>
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
-									</div>
-									<div class="product-body">
-									<p class="product-category">Tubérculo</p>
-									<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
-									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									<div class="product-rating">
-										
-									</div>										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
-									</div>
-									<div class="product-body">
-									<p class="product-category">Tubérculo</p>
-									<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
-									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									<div class="product-rating">
-										
-									</div>										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<div class="clearfix visible-lg visible-md visible-sm visible-xs"></div>
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="index/img/cebola.jpg" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
-									</div>
-									<div class="product-body">
-									<p class="product-category">Verdura</p>
-									<h3 class="product-name"><a href="#">Assinatura de Cebolo da loja Fazenda Verde</a></h3>
-									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									<div class="product-rating">
-										
-									</div>										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="index/img/pera.jpg" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
-									</div>
-									<div class="product-body">
-									<p class="product-category">Fruta</p>
-									<h3 class="product-name"><a href="#">Assinatura de Pêra da loja Fazenda Verde</a></h3>
-									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									<div class="product-rating">
-										
-									</div>										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
-
-							<div class="clearfix visible-sm visible-xs"></div>
-
-							<!-- product -->
-							<div class="col-md-4 col-xs-6">
-								<div class="product">
-									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
-									</div>
-									<div class="product-body">
-									<p class="product-category">Tubérculo</p>
-									<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
-									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-									<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									<div class="product-rating">
-										
-									</div>										
-									</div>
-									<div class="add-to-cart">
-										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-									</div>
-								</div>
-							</div>
-							<!-- /product -->
+							@empty
+							@endforelse
 						</div>
 						<!-- /store products -->
 

@@ -9,8 +9,7 @@
                 <li><a href="/index-promocoes">Promoções</a></li>
                 <li><a href="/index-frutas">Frutas</a></li>
                 <li><a href="/index-verduras">Verduras</a></li>
-                <li><a href="/index-tuberculos">Tubérculos</a></li>
-                <li><a href="/index-sementes">Sementes</a></li>						
+                <li><a href="/index-tuberculos">Tubérculos</a></li>						
             </ul>
             <!-- /NAV -->
         </div>

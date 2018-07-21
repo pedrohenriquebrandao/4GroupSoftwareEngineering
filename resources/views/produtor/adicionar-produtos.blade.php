@@ -105,7 +105,7 @@
                                     </span>
                                   @endif
                                 </td>
-                                <td>
+                                <td class="col-lg-4">
                                   <input type="text" class="form-control" placeholder="Nome do produto" name="nome" value="{{old('nome')}}"></br>
                                   @if($errors->has('nome'))
                                     <span class="label-input100 help-block" style="color: red">
@@ -132,38 +132,27 @@
                                     <span class="label-input100 help-block" style="color: red">
                                       {{$errors->first('fretegratis')}}
                                     </span>
-                                  @endif                             
-                                    <div class="i-checks">
-                                      <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template">
-                                      <label for="checkboxCustom1">Grátis</label>
-                                    </div> 
-                                    <div><input type="text" class="form-control" placeholder="Quantidade" id="quantidade"></div> </br>  
-                                    <div class="i-checks">
-                                      <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Padrão</label>
-                                    </div>
-                                    <div class="i-checks"> 
-                                      <input id="checkboxCustom1" type="checkbox" name="frete" value="" class="checkbox-template"><label for="checkboxCustom1">Por quantidade</label>
-                                    </div>
+                                  @endif
                                 </td>
-                                <td>		
+                                <td class="col-lg-2">		
                                   <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="tipo" value="fruta" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="fruta" checked>
                                     <label class="form-check-label" for="radioUrnaba">Fruta</label>
                                   </div>
                                   <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="tipo" value="legume" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="legume" checked>
                                     <label class="form-check-label" for="radioRural">Legume</label>  
                                   </div>
                                   <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="tipo" value="verdura" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="verdura" checked>
                                     <label class="form-check-label" for="radioRural">Verdura</label>  
                                   </div>
                                   <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="tipo" value="folha" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="folha" checked>
                                     <label class="form-check-label" for="radioRural">Folha</label>  
                                   </div>
                                   <div class="form-check">
-                                    <input type="radio" class="form-check-input" name="tipo" value="graos" checked>
+                                    <input type="radio" class="checkbox-template" name="tipo" value="graos" checked>
                                     <label class="form-check-label" for="radioRural">Grãos</label>  
                                   </div> 
                                 </td>       

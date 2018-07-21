@@ -14,7 +14,10 @@ class CreateConsumidorCarrinhoTable extends Migration
     {
         Schema::create('consumidor_carrinho', function (Blueprint $table) {
             $table->increments('id');
-            $table->float('total');
+            $table->integer('usuario_id');
+            $table->integer('produto_id');
+            $table->foreign('usuario_id')->references('id')->on('consumidor_usuarios')->onDelete('cascade');
+            $table->foreign('produto_id')->references('id')->on('produtor_produto')->onDelete('cascade');
             $table->timestamps();
         });
     }

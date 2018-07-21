@@ -17,6 +17,14 @@
 
 Route::get("/", "HomeController@indexPrincipal")->name('/');
 
+Route::get('carrinho', 'HomeController@indexCarrinho')->name('carrinho');
+
+Route::get('index-frutas', 'HomeController@indexFrutas')->name('frutas');
+
+Route::get('index-verduras', 'HomeController@indexVerduras')->name('verduras');
+
+Route::get('index-tuberculos', 'HomeController@indexTuberculos')->name('tuberculos');
+
 Route::get('pagamento', function () {
     return view('usuario.pagamento');
 });
@@ -25,9 +33,6 @@ Route::get('entrarConsumidor', function () {
     return view('auth.consumidor');
 });
 
-Route::get('carrinho', function () {
-    return view('usuario.carrinho');
-});
 
 Route::get('visao-produto', function () {
     return view('visao-produto');
@@ -46,17 +51,6 @@ Route::get('index-nav', function () {
     return view('index-nav');
 });
 
-Route::get('index-frutas', function () {
-    return view('index-frutas');
-});
-
-Route::get('index-verduras', function () {
-    return view('index-verduras');
-});
-
-Route::get('index-tuberculos', function () {
-    return view('index-tuberculos');
-});
 
 Route::get('index-sementes', function () {
     return view('index-sementes');

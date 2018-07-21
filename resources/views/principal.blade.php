@@ -527,99 +527,25 @@
 						</div>
 
 						<div class="products-widget-slick" data-nav="#slick-nav-3">
+							@forelse($frutas as $fruta)
 							<div>
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="index/img/pera.jpg" alt="">
+										<img src="{{url('storage/imagem-produtos/'.$fruta->imagem)}}" alt="{{$fruta->imagem}}">
 									</div>
 									<div class="product-body">
-										<p class="product-category">FRUTA</p>
+										<p class="product-category">{{$fruta->tipo}}</p>
 										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">PERA</a></h3>
+										<h3 class="product-name"><a href="#">{{$fruta->nome}}</a></h3>
 										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
 										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 									</div>
 								</div>
 								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/pera.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">FRUTA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">PERA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/pera.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">FRUTA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">PERA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- product widget -->
 							</div>
-
-							<div>
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/pera.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">FRUTA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">PERA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/pera.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">FRUTA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">PERA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/pera.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">FRUTA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">PERA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- product widget -->
-							</div>
+							@empty
+							@endforelse
 						</div>
 					</div>
 
@@ -632,99 +558,25 @@
 						</div>
 
 						<div class="products-widget-slick" data-nav="#slick-nav-4">
+							@forelse($verduras as $verdura)
 							<div>
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="index/img/cebola.jpg" alt="">
+										<img src="{{url('storage/imagem-produtos/'.$verdura->imagem)}}" alt="{{$verdura->imagem}}">
 									</div>
 									<div class="product-body">
-										<p class="product-category">VERDURA</p>
+										<p class="product-category">$verdura->tipo</p>
 										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">CEBOLA</a></h3>
+										<h3 class="product-name"><a href="#">$verdura->nome</a></h3>
 										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
 										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 									</div>
 								</div>
 								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/cebola.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">VERDURA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">CEBOLA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/cebola.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">VERDURA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">CEBOLA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- product widget -->
 							</div>
-
-							<div>
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/cebola.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">VERDURA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">CEBOLA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/cebola.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">VERDURA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">CEBOLA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/cebola.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">VERDURA</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">CEBOLA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- product widget -->
-							</div>
+							@empty
+							@endforelse
 						</div>
 					</div>
 
@@ -732,106 +584,32 @@
 
 					<div class="col-md-4 col-xs-6">
 						<div class="section-title">
-							<h4 class="title">TUBÉRCULOS</h4>
+							<h4 class="title">Outros</h4>
 							<div class="section-nav">
 								<div id="slick-nav-5" class="products-slick-nav"></div>
 							</div>
 						</div>
 
 						<div class="products-widget-slick" data-nav="#slick-nav-5">
+							@forelse($outros as $outro)
 							<div>
 								<!-- product widget -->
 								<div class="product-widget">
 									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
+									<img src="{{url('storage/imagem-produtos/'.$outro->imagem)}}" alt="{{$outro->imagem}}">
 									</div>
 									<div class="product-body">
-										<p class="product-category">TUBÉRCULO</p>
+										<p class="product-category">{{$outro->tipo}}</p>
 										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">BATATA</a></h3>
+										<h3 class="product-name"><a href="#">{{$outro->nome}}</a></h3>
 										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
 										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 									</div>
 								</div>
 								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">TUBÉRCULO</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">BATATA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">TUBÉRCULO</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">BATATA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- product widget -->
 							</div>
-
-							<div>
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">TUBÉRCULO</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">BATATA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">TUBÉRCULO</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">BATATA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- /product widget -->
-
-								<!-- product widget -->
-								<div class="product-widget">
-									<div class="product-img">
-										<img src="index/img/batata.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<p class="product-category">TUBÉRCULO</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">BATATA</a></h3>
-										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-									</div>
-								</div>
-								<!-- product widget -->
-							</div>
+							@empty
+							@endforelse
 						</div>
 					</div>
 
