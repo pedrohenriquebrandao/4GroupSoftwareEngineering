@@ -82,6 +82,19 @@ class HomeController extends Controller
         return view('index-lojas', compact('usuario', 'carrinho', 'possuiLoja'));
     }
 
+    public function visaoLoja(){
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('visao-loja', compact('usuario', 'carrinho', 'possuiLoja'));
+        }
+        return view('visao-loja', compact('usuario', 'carrinho', 'possuiLoja'));
+    }
+
     public function indexPromocoes(){
         if (Auth::guard('consumidor')->check()) {
             $id = auth()->guard('consumidor')->user()->id;
@@ -93,6 +106,19 @@ class HomeController extends Controller
             return view('index-promocoes', compact('usuario', 'carrinho', 'possuiLoja'));
         }
         return view('index-promocoes', compact('usuario', 'carrinho', 'possuiLoja'));
+    }
+
+    public function pagamento(){
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('usuario.pagamento', compact('usuario', 'carrinho', 'possuiLoja'));
+        }
+        return view('usuario.pagamento', compact('usuario', 'carrinho', 'possuiLoja'));
     }
 
     public function indexCarrinho(){

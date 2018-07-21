@@ -35,34 +35,19 @@ Route::get('/{id}/visao-produto', 'HomeController@visaoProduto')->name('visaopro
 
 Route::get('index-lojas', 'HomeController@indexLojas')->name('lojas');
 
+Route::get('visao-loja', 'HomeController@visaoLoja')->name('visaoLoja');
+
 Route::get('index-promocoes', 'HomeController@indexPromocoes')->name('promocoes');
 
-Route::get('pagamento', function () {
-    return view('usuario.pagamento');
-});
+Route::get('pagamento', 'HomeController@pagamento')->name('pagamento');
 
 Route::get('entrarConsumidor', function () {
     return view('auth.consumidor');
 });
 
-Route::get('index-header', function () {
-    return view('index-header');
-});
-
-
-Route::get('index-nav', function () {
-    return view('index-nav');
-});
-
-
 Route::get('index-cereais', function () {
     return view('index-cereais');
 });
-
-Route::get('visao-loja', function () {
-    return view('visao-loja');
-});
-
 
 // ------ ROTAS DE CADASTRO --------- //
 
@@ -214,13 +199,9 @@ Route::get('logoutConsumidor', 'Auth\UsuarioLoginController@logout')
 Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')
     ->name('paginaInicial'); //Rota da tela inicial para usuário
 
-
 // Rota de testes Back //
-
 Route::get('/who', function(){
     return view('who');
 });
-
-Route::get("/listarAdm", "ControllerAdmin@listaAdmins");
 
 Auth::routes();
