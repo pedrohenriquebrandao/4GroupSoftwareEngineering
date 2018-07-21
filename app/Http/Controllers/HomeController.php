@@ -90,7 +90,7 @@ class HomeController extends Controller
         $frutas = DB::table('produtor_produto')->where('tipo', 'fruta')->get();
         $lojas = DB::table('produtor_produto')->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
         ->select('produtores.id', 'produtores.nome')->where('tipo', 'fruta')->get();
-        
+
         return view('index-frutas', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'lojas'));
     }
     
@@ -122,6 +122,21 @@ class HomeController extends Controller
         ->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
         ->select('produtores.id', 'produtores.nome')->get();
         return view('index-tuberculos', compact('usuario', 'possuiLoja', 'carrinho', 'tuberculos', 'lojas'));
+    }
+
+    public function visaoProduto($idProduto){
+        $id = auth()->guard('consumidor')->user()->id;
+        $usuario = $this->getDados();
+        $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+        $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+
+        $produto = DB::table('produtor_produto')->where('produtor_produto.id', $idProduto)->first();
+        $loja = DB::table('produtores')->where('produtores.id', $produto->produtor_id)->first();
+        $produtosLoja = DB::table('produtor_produto')->where('produtor_id', $loja->id)
+        ->where('tipo', $produto->tipo)->get();
+        
+        //dd($produtosLoja);
+        return view('visao-produto', compact('usuario', 'carrinho', 'possuiLoja', 'produto', 'loja', 'produtosLoja'));
     }
 
     private function getDados(){

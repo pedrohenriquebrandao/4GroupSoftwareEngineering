@@ -25,6 +25,8 @@ Route::get('index-verduras', 'HomeController@indexVerduras')->name('verduras');
 
 Route::get('index-tuberculos', 'HomeController@indexTuberculos')->name('tuberculos');
 
+Route::get('/{id}/visao-produto', 'HomeController@visaoProduto')->name('visaoproduto');
+
 Route::get('pagamento', function () {
     return view('usuario.pagamento');
 });
@@ -34,9 +36,6 @@ Route::get('entrarConsumidor', function () {
 });
 
 
-Route::get('visao-produto', function () {
-    return view('visao-produto');
-});
 
 
 Route::get('index-header', function () {

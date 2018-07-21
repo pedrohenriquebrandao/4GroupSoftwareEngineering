@@ -9,23 +9,23 @@
 		<title>Produto</title>
 
  		<!-- Google font -->
- 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+ 		<link href="/https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
  		<!-- Bootstrap -->
- 		<link type="text/css" rel="stylesheet" href="index/css/bootstrap.min.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/index/css/bootstrap.min.css"/>
 
  		<!-- Slick -->
- 		<link type="text/css" rel="stylesheet" href="index/css/slick.css"/>
- 		<link type="text/css" rel="stylesheet" href="index/css/slick-theme.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/index/css/slick.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/index/css/slick-theme.css"/>
 
  		<!-- nouislider -->
- 		<link type="text/css" rel="stylesheet" href="index/css/nouislider.min.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/index/css/nouislider.min.css"/>
 
  		<!-- Font Awesome Icon -->
- 		<link rel="stylesheet" href="index/css/font-awesome.min.css">
+ 		<link rel="stylesheet" href="/index/css/font-awesome.min.css">
 
  		<!-- Custom stlylesheet -->
- 		<link type="text/css" rel="stylesheet" href="index/css/style.css"/>
+ 		<link type="text/css" rel="stylesheet" href="/index/css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,17 +75,8 @@
 					<div class="col-md-5 col-md-push-2">
 						<div id="product-main-img">
 							<div class="product-preview">
-								<img src="index/img/pera.jpg" alt="">
+								<img src="{{url('storage/imagem-produtos/'.$produto->imagem)}}" alt="{{$produto->imagem}}">
 							</div>
-
-							<div class="product-preview">
-								<img src="index/img/pera2.jpg" alt="">
-							</div>
-
-							<div class="product-preview">
-								<img src="index/img/pera3.jpg" alt="">
-							</div>
-							
 						</div>
 					</div>
 					<!-- /Product main img -->
@@ -93,18 +84,19 @@
 					<!-- Product thumb imgs -->
 					<div class="col-md-2  col-md-pull-5">
 						<div id="product-imgs">
+						<!-- desabilitado
 							<div class="product-preview">
-								<img src="index/img/pera.jpg" alt="">
+								<img src="" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="index/img/pera2.jpg" alt="">
+								<img src="" alt="">
 							</div>
 
 							<div class="product-preview">
-								<img src="index/img/pera3.jpg" alt="">
+								<img src="" alt="">
 							</div>
-							
+							-->
 						</div>
 					</div>
 					<!-- /Product thumb imgs -->
@@ -112,12 +104,12 @@
 					<!-- Product details -->
 					<div class="col-md-5">
 						<div class="product-details">
-							<h2 class="product-name">Pêra</h2>
-							<h2 class="product-name">VENDIDO POR: PRODUTOR JOÃOZIN</h2>
+							<h2 class="product-name">{{$produto->nome}}</h2>
+							<h4 class="product-name">Vendido por: {{$loja->nome}}</h4>
 							<div>
 								<div class="product-rating">
-									<b>Gostei: </b>10  <img src="image/like.png" class="img-responsive" width="5%" alt="...">        
-                                  	<b>| Não gostei: </b>1   <img src="image/unlike.png" class="img-responsive" width="5%" alt="...">      
+									<b>Gostei: </b>10  <img src="/image/like.png" class="img-responsive" width="5%" alt="...">        
+                                  	<b>| Não gostei: </b>1   <img src="/image/unlike.png" class="img-responsive" width="5%" alt="...">      
 								</div>
 								<a class="review-link" href="/visao-produto">Quantidade de avaliações: 10</a>
 							</div>
@@ -125,7 +117,8 @@
 								<h3 class="product-price">R$8.00 <del class="product-old-price">R$9.00</del></h3>
 								<span class="product-available">Em estoque</span>
 							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<h5><span>Descrição:</span></h5>
+							<p>{{$produto->descricao}}</p>
 
 							<ul class="product-links">
 								<li>Categoria:</li>
@@ -236,15 +229,22 @@
 
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h3 class="title">Produtos parecidos</h3>
+							<h3 class="title">Outros produtos da loja</h3>
 						</div>
 					</div>
 
 					<!-- product -->
+					<?php $count = 0 ?>
+					@forelse($produtosLoja as $outros)
+						<?php $count++ ?>
+						@if($count == 5)
+							@break
+						@endif
+					
 					<div class="col-md-3 col-xs-6">
 						<div class="product">
 							<div class="product-img">
-								<img src="index/img/batata.jpg" alt="">
+							<img src="{{url('storage/imagem-produtos/'.$outros->imagem)}}" alt="{{$outros->imagem}}">
 								<div class="product-label">
 									<span class="sale">-30%</span>
 									<span class="new">NOVO</span>
@@ -252,9 +252,9 @@
 							</div>
 							<div class="product-body">
 							<p class="product-category">Tubérculo</p>
-							<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
+							<h3 class="product-name"><a href="#">{{$outros->nome}}</a></h3>
 							<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-							<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+							<h3 class="product-name"><a href="#">por: {{$loja->nome}}</a></h3>
 							<div class="product-rating">
 								
 							</div>										
@@ -264,88 +264,9 @@
 							</div>
 						</div>
 					</div>
+					@empty
+					@endforelse
 					<!-- /product -->
-
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-						<div class="product">
-							<div class="product-img">
-								<img src="index/img/batata.jpg" alt="">
-								<div class="product-label">
-									<span class="sale">-30%</span>
-									<span class="new">NOVO</span>
-								</div>
-							</div>
-							<div class="product-body">
-							<p class="product-category">Tubérculo</p>
-							<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
-							<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-							<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-							<div class="product-rating">
-								
-							</div>										
-							</div>
-							<div class="add-to-cart">
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-					<!-- /product -->
-
-					<div class="clearfix visible-sm visible-xs"></div>
-
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-						<div class="product">
-							<div class="product-img">
-								<img src="index/img/batata.jpg" alt="">
-								<div class="product-label">
-									<span class="sale">-30%</span>
-									<span class="new">NOVO</span>
-								</div>
-							</div>
-							<div class="product-body">
-							<p class="product-category">Tubérculo</p>
-							<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
-							<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-							<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-							<div class="product-rating">
-								
-							</div>										
-							</div>
-							<div class="add-to-cart">
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-					<!-- /product -->
-
-					<!-- product -->
-					<div class="col-md-3 col-xs-6">
-						<div class="product">
-							<div class="product-img">
-								<img src="index/img/batata.jpg" alt="">
-								<div class="product-label">
-									<span class="sale">-30%</span>
-									<span class="new">NOVO</span>
-								</div>
-							</div>
-							<div class="product-body">
-							<p class="product-category">Tubérculo</p>
-							<h3 class="product-name"><a href="#">Assinatura de Batata da loja Fazenda Verde</a></h3>
-							<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
-							<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
-							<div class="product-rating">
-								
-							</div>										
-							</div>
-							<div class="add-to-cart">
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</button>
-							</div>
-						</div>
-					</div>
-					<!-- /product -->
-
 				</div>
 				<!-- /row -->
 			</div>
@@ -364,12 +285,12 @@
 		<!-- /FOOTER -->
 
 		<!-- jQuery Plugins -->
-		<script src="index/js/jquery.min.js"></script>
-		<script src="index/js/bootstrap.min.js"></script>
-		<script src="index/js/slick.min.js"></script>
-		<script src="index/js/nouislider.min.js"></script>
-		<script src="index/js/jquery.zoom.min.js"></script>
-		<script src="index/js/main.js"></script>
+		<script src="public/index/js/jquery.min.js"></script>
+		<script src="public/index/js/bootstrap.min.js"></script>
+		<script src="public/index/js/slick.min.js"></script>
+		<script src="public/index/js/nouislider.min.js"></script>
+		<script src="public/index/js/jquery.zoom.min.js"></script>
+		<script src="public/index/js/main.js"></script>
 
 	</body>
 </html>

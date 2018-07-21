@@ -164,7 +164,7 @@
 									</div>
 									<div class="product-body">
 									<p class="product-category">{{$verdura->tipo}}</p>
-									<h3 class="product-name"><a href="#">{{$verdura->nome}}</a></h3>
+									<h3 class="product-name"><a href="/{{$verdura->id}}/visao-produto">{{$verdura->nome}}</a></h3>
 									<h4 class="product-price">R$6.00 <del class="product-old-price">R$9.00</del></h4>
 									@forelse($lojas as $loja)
 										@if($loja->id == $verdura->produtor_id)
