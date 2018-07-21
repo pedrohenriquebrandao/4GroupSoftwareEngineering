@@ -11,7 +11,6 @@
    
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" href="produtor/css/fontastic.css">
     <!-- Google fonts - Poppins -->
@@ -21,10 +20,9 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="produtor/css/custom.css">
     <!-- Favicon-->
-    <link href="css/half-slider.css" rel="stylesheet">
+    <link href="produtor/css/half-slider.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="produtor/css/half-slider.css" rel="stylesheet">
 
 </head>
 <body>   
@@ -33,7 +31,7 @@
     <section class="container space">
         <div class="row">
             <div class="col-md-7">
-                <h5 class="fundo hs-pagamento">PAGAMENTO</h5>
+                <h3 class="fundo hs-pagamento">PAGAMENTO</h3>
                 <div>
                     <form action="" class="form mt-4">
                         <div class="mb-3 ml-1">
@@ -42,18 +40,19 @@
                             
                         <div class="form-group">
                             <label for="num"> Número do Cartão</label>
-                            <input type="text" class="form-control col-md-6" id="num" maxlength="16" placeholder="EX: 4012001037141112">
+                            <input type="text" class="form-control col-6" id="num" maxlength="16" placeholder="EX: 4012001037141112">
                         </div>
+                
                         <div class="form-group">
                             <label for="nome">Nome do Titular</label>
-                            <input type="text" placeholder="EX: ANTÔNIO S CERQUEIRA" maxlength="30" class="form-control col-md-6" aria-describedby="nomeHelp" id="nome">
+                            <input type="text" placeholder="EX: ANTÔNIO S CERQUEIRA" maxlength="30" class="form-control col-6" aria-describedby="nomeHelp" id="nome">
                             <small id="nomeHelp" class="form-text text-muted">Insira o nome como está gravado no cartão.</small>
                         </div>
                         <div class="form-group">
                             <label for="data">Data de validade</label>
                            
                                 <div class="row">
-                                    <select class="form-control col-md-3 ml-3" id="data">
+                                    <select class="form-control col-2 ml-3" id="data">
                                         <option>Mês</option>
                                         <option>01</option>
                                         <option>02</option>
@@ -68,7 +67,7 @@
                                         <option>11</option>
                                         <option>12</option>
                                     </select>
-                                    <select class="form-control col-md-2 ml-1" id="data">
+                                    <select class="form-control col-2 ml-1" id="data">
                                         <option>Ano</option>
                                         <option>18</option>
                                         <option>19</option>
@@ -84,17 +83,13 @@
                             </div> 
                         </div>
                         <div class="form-group">
-                            <div class="container">
-                                <div class="row">
-                                    <input type="text" maxlength="3" placeholder="EX: 111" class="form-control col-md-2" aria-describedby="codigoHelp" id="codigo">
-                                    <p> <label for="codigo">Código de Segurança: </label>   </p>      </br>               
-                                    <p> <small id="codigoHelp" class="form-text text-muted">Encontra-se atrás do cartão.</small> </p>
-                                </div>
-                            </div>    
+                                    <label for="codigo">Código de Segurança: </label>
+                                    <input type="text" maxlength="3" placeholder="EX: 111" class="form-control col-2" aria-describedby="codigoHelp" id="codigo">               
+                                    <small id="codigoHelp" class="form-text text-muted">Encontra-se atrás do cartão.</small>    
                         </div>
                         <div class="form-group">
                             <label for="duramento">Duração da Assinatura (meses)</label>
-                            <select class="form-control col-md-2" id="duramento">
+                            <select class="form-control col-2" id="duramento">
                                 <option>01</option>
                                 <option>02</option>
                                 <option>03</option>
@@ -110,9 +105,9 @@
                             </select>
                         </div>
 
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="checkCartao"> <br>
-                            <label class="form-check-label" for="checkCartao">Salvar cartão para futuras compras</label>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="checkCartao">
+                            <label class="form-check-label ml-4" for="checkCartao">Salvar cartão para futuras compras</label>
                         </div>
 
                         <div class="mt-1 ml-1">
@@ -124,7 +119,7 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <h5 class="fundo hs-pagamento">RESUMO DO PEDIDO</h5>
+                <h3 class="fundo hs-pagamento">RESUMO DO PEDIDO</h3>
 
                 <div class="item-cor">
                     <div class="end-pedido">
@@ -247,8 +242,8 @@
 		@include('footer')
 	</footer>
     <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="produtor/js/jquery.min.js"></script>
+    <script src="produtor/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
