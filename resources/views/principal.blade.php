@@ -148,10 +148,10 @@
 													<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 												@endforelse		
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">
-													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: 5 </label>									
+													<i class="fa fa-thumbs-up fa-2x"></i> 	<label>Gostei: <?php echo rand(30, 100) ?> </label>									
 												</div>
 												<div style= "display: -webkit-inline-box; padding-left: 25px;">												
-													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: 2 </label>   
+													<i class="fa fa-thumbs-down fa-2x"></i><label>Não gostei: <?php echo rand(0, 30) ?> </label>   
 												</div>
 												<div class="product-btns">
 													<!--<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
@@ -160,7 +160,7 @@
 												</div>
 											</div>
 											<div class="add-to-cart">
-												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
+											<a href="{{url("/$produto->id/carrinho")}}" class="a-btn-edit"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button></a>
 											</div>
 										</div>
 										@empty

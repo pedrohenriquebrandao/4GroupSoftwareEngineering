@@ -19,6 +19,8 @@ Route::get("/", "HomeController@indexPrincipal")->name('/');
 
 Route::get('carrinho', 'HomeController@indexCarrinho')->name('carrinho');
 
+Route::get("/{id}/carrinho", "HomeController@AddCarrinho")->name("AddCarrinho");
+
 Route::get('index-frutas', 'HomeController@indexFrutas')->name('frutas');
 
 Route::get('index-verduras', 'HomeController@indexVerduras')->name('verduras');
@@ -28,6 +30,8 @@ Route::get('index-tuberculos', 'HomeController@indexTuberculos')->name('tubercul
 Route::get('/{id}/visao-produto', 'HomeController@visaoProduto')->name('visaoproduto');
 
 Route::get('index-lojas', 'HomeController@indexLojas')->name('lojas');
+
+Route::get('index-promocoes', 'HomeController@indexPromocoes')->name('promocoes');
 
 Route::get('pagamento', function () {
     return view('usuario.pagamento');
@@ -41,9 +45,6 @@ Route::get('index-header', function () {
     return view('index-header');
 });
 
-Route::get('index-promocoes', function () {
-    return view('index-promocoes');
-});
 
 Route::get('index-nav', function () {
     return view('index-nav');

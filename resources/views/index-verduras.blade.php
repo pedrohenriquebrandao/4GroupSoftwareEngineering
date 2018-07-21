@@ -157,10 +157,6 @@
 								<div class="product">
 									<div class="product-img">
 									<img src="{{url('storage/imagem-produtos/'.$verdura->imagem)}}" alt="{{$verdura->imagem}}">
-										<div class="product-label">
-											<span class="sale">-30%</span>
-											<span class="new">NOVO</span>
-										</div>
 									</div>
 									<div class="product-body">
 									<p class="product-category">{{$verdura->tipo}}</p>
@@ -217,12 +213,12 @@
 		<!-- /FOOTER -->
 
 		<!-- jQuery Plugins -->
-		<script src="index/js/jquery.min.js"></script>
-		<script src="index/js/bootstrap.min.js"></script>
-		<script src="index/js/slick.min.js"></script>
-		<script src="index/js/nouislider.min.js"></script>
-		<script src="index/js/jquery.zoom.min.js"></script>
-		<script src="index/js/main.js"></script>
+		<script src="public/index/js/jquery.min.js"></script>
+		<script src="public/index/js/bootstrap.min.js"></script>
+		<script src="public/index/js/slick.min.js"></script>
+		<script src="public/index/js/nouislider.min.js"></script>
+		<script src="public/index/js/jquery.zoom.min.js"></script>
+		<script src="public/index/js/main.js"></script>
 
 	</body>
 </html>

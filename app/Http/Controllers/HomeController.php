@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Carrinho;
 use Auth;
 use DB;
 
@@ -81,7 +82,7 @@ class HomeController extends Controller
         return view('index-lojas', compact('usuario', 'carrinho', 'possuiLoja'));
     }
 
-    public function indexCarrinho(){
+    public function indexPromocoes(){
         if (Auth::guard('consumidor')->check()) {
             $id = auth()->guard('consumidor')->user()->id;
             $usuario = $this->getDados();
@@ -89,10 +90,35 @@ class HomeController extends Controller
             
             //Verifica se o usuário possui loja cadastrada;
             $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-            return view('index-frutas', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'lojas'));
+            return view('index-promocoes', compact('usuario', 'carrinho', 'possuiLoja'));
+        }
+        return view('index-promocoes', compact('usuario', 'carrinho', 'possuiLoja'));
+    }
+
+    public function indexCarrinho(){
+        $id = auth()->guard('consumidor')->user()->id;
+        
+        if (Auth::guard('consumidor')->check()) {
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('usuario.carrinho', compact('usuario', 'possuiLoja', 'carrinho'));
         }
 
         return view('usuario.carrinho');
+    }
+
+    public function AddCarrinho($idProduto){
+        $id_usuario = auth()->guard('consumidor')->user()->id;
+
+        $carrinho = new Carrinho();
+        $carrinho->usuario_id = $id_usuario;
+        $carrinho->produto_id = $idProduto;
+        $carrinho->save();
+
+        return redirect( route('carrinho') );
     }
 
     public function indexFrutas(){
