@@ -51,6 +51,7 @@ class HomeController extends Controller
         $frutas = DB::table('produtor_produto')->where('tipo', 'fruta')->get();
         $verduras = DB::table('produtor_produto')->where('tipo', 'verdura')->get();
         $outros = DB::table('produtor_produto')->where('tipo', '!=', 'verdura')->where('tipo', '!=', 'fruta')->get();
+        $lojas = DB::table('produtores')->select('produtores.id', 'produtores.nome')->distinct('id')->get();
         
         if (Auth::guard('consumidor')->check()) {
             $id = auth()->guard('consumidor')->user()->id;
@@ -59,14 +60,24 @@ class HomeController extends Controller
             
             //Verifica se o usuário possui loja cadastrada;
             $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-            
 
-            //dd($frutas, $verduras);
-
-            return view('principal', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'verduras', 'outros'));
+            return view('principal', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'verduras', 'outros', 'lojas'));
         } else {
-            return view('principal', compact('frutas', 'verduras', 'outros'));
+            return view('principal', compact('frutas', 'verduras', 'outros', 'lojas'));
         }
+    }
+
+    public function indexLojas(){
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('index-lojas', compact('usuario', 'carrinho', 'possuiLoja'));
+        }
+        return view('index-lojas', compact('usuario', 'carrinho', 'possuiLoja'));
     }
 
     public function indexCarrinho(){
