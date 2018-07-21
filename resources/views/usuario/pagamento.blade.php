@@ -110,12 +110,12 @@
                             <label class="form-check-label ml-4" for="checkCartao">Salvar cartão para futuras compras</label>
                         </div>
 
-                        <div class="mt-1 ml-1">
-                            <a href=""><button class="btn btn-danger col-12">Concluir Compra</button></a>
-                        </div>
 
                         
                     </form>
+                        <div class="mt-1 ml-1">
+                            <a href="{{url("/finalizar")}}"><button class="btn btn-danger">Concluir Compra</button> </a>
+                        </div>
                 </div>
             </div>
             <div class="col-md-5">

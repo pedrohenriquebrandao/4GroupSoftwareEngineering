@@ -41,6 +41,8 @@ Route::get('index-promocoes', 'HomeController@indexPromocoes')->name('promocoes'
 
 Route::get('pagamento', 'HomeController@pagamento')->name('pagamento');
 
+Route::get('finalizar', 'HomeController@finalizarPagamento')->name('finalizar');
+
 Route::get('entrarConsumidor', function () {
     return view('auth.consumidor');
 });

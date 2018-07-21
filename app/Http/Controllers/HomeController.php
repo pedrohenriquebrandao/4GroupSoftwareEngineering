@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Carrinho;
+use Cliente;
 use Auth;
 use DB;
 
@@ -126,6 +127,37 @@ class HomeController extends Controller
             return view('usuario.pagamento', compact('usuario', 'carrinho', 'possuiLoja', 'cartoes', 'enderecos', 'produtos'));
         }
         return view('usuario.pagamento', compact('usuario', 'carrinho', 'possuiLoja'));
+    }
+
+    public function finalizarPagamento(){
+            $socket = socket_create(AF_INET, SOCK_STREAM, 0);
+
+            $ip_destino = '192.168.25.209';
+            $porta = 9989;
+
+            $ligacao = socket_connect($socket, $ip_destino, $porta);
+
+            $mensagem = "1";
+            $tamanho_envio = strlen($mensagem);
+
+            $operacao_enviar = socket_send($socket, $mensagem, $tamanho_envio, 0);
+
+            $tamanho_resposta = 2045;
+
+            $operacao_receber = socket_recv($socket, $buffer_resposta, $tamanho_resposta, MSG_WAITALL);
+
+            echo "Servidor: <br><hr>".$buffer_resposta;
+
+            socket_close($socket);
+
+        if($buffer_resposta == 1){
+            $id_usuario = auth()->guard('consumidor')->user()->id;
+
+            $delete = DB::table('consumidor_carrinho')
+            ->where('consumidor_carrinho.usuario_id', $id_usuario)->delete();
+
+            return redirect("/")->with("message", "Sucesso!");
+        }
     }
 
     public function indexCarrinho(){

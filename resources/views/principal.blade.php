@@ -39,7 +39,11 @@
 		<!-- NAVIGATION -->
 		@include('index-nav')
 		<!-- /NAVIGATION -->
-
+		@if (session('message'))
+		<script language="JavaScript" TYPE="text/javascript">
+			alert ("Assinatura efetuada com sucesso!")
+		</script>
+        @endif
 		<!-- SECTION -->
 		<div class="section">
 			<!-- container -->
