@@ -14,7 +14,10 @@ class CreateProdutorComentarioTable extends Migration
     {
         Schema::create('produtor_comentario', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('feedback', 120);
+            $table->text('feedback');
+            $table->integer('id_produto');
+            $table->integer('id_login');
+            $table->foreign('id_produto')->references('id')->on('produtor_produto');
             $table->timestamps();
         });
     }

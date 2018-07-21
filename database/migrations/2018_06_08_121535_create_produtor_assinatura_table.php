@@ -19,7 +19,9 @@ class CreateProdutorAssinaturaTable extends Migration
             $table->float('frete');
             $table->string('promocao');
             $table->date('data_assinatura');
-            $table->boolean('status');
+            $table->enum('status', ['Disponível', 'Não Disponível']);
+            $table->integer('id_produtor');
+            $table->foreign('id_produtor')->references('id')->on('produtor');
             $table->timestamps();
         });
     }

@@ -14,9 +14,9 @@ class CreateConsumidorCartaoTable extends Migration
     {
         Schema::create('consumidor_cartao', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome');
-            $table->string('validade', 8);
-            $table->integer('codCartao')->unsigned();
+            $table->string('titular');
+            $table->date('validade');
+            $table->integer('codCartao');
             $table->integer('numCartao')->unsigned();
             $table->integer('login_id')->unsigned();
             $table->foreign('login_id')->references('id')->on('consumidor_login')->onDelete('cascade');

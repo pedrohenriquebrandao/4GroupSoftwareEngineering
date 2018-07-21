@@ -15,6 +15,9 @@ class CreateConsumidorTable extends Migration
         Schema::create('consumidor', function (Blueprint $table) {
             $table->increments('id');
             $table->string('cpf', 11);
+            $table->date('dtNascimento');
+            $table->integer('endereco_id')->nullable();
+            $table->foreign('endereco_id')->references('id')->on('consumidor_endereco');
             $table->timestamps();
         });
     }

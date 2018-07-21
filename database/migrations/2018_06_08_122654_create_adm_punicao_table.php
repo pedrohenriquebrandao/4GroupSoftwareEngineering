@@ -14,12 +14,13 @@ class CreateAdmPunicaoTable extends Migration
     {
         Schema::create('adm_punicao', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email_usuario');
-            $table->string('email_administrador');
-            $table->string('tipo');
-            $table->string('data_inicial');
-            $table->string('data_final');
-            $table->string('descricao');
+            $table->date('dataInicio');
+            $table->date('dataFinal');
+            $table->text('descricao');
+            $table->integer('id_adm');
+            $table->integer('id_usuario');
+            $table->foreign('id_adm')->references('id')->on('adm_administrador');
+            $table->foreign('id_usuario')->references('id')->on('consumidor_login');
             $table->timestamps();
         });
     }

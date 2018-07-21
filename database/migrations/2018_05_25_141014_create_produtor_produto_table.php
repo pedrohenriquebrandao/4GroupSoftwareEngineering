@@ -19,6 +19,7 @@ class CreateProdutorProdutoTable extends Migration
             $table->string('tipo');
             $table->string('qtd_frete_gratis');
             $table->string('imagem');
+            $table->date('validade');
             $table->integer('produtor_id')->unsigned();
             $table->foreign('produtor_id')->references('id')->on('produtores')->onDelete('cascade');
             $table->timestamps();
