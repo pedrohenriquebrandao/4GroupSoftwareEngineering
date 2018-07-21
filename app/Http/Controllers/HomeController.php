@@ -70,73 +70,92 @@ class HomeController extends Controller
     }
 
     public function indexCarrinho(){
-        $id = auth()->guard('consumidor')->user()->id;
-        $usuario = $this->getDados();
-        $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('index-frutas', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'lojas'));
+        }
 
-        //Verifica se o usuário possui loja cadastrada;
-        $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-
-        return view('usuario.carrinho', compact('usuario', 'carrinho', 'possuiLoja'));
+        return view('usuario.carrinho');
     }
 
     public function indexFrutas(){
-        $id = auth()->guard('consumidor')->user()->id;
-
-        $usuario = $this->getDados();
-        $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
-        $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-
         $frutas = DB::table('produtor_produto')->where('tipo', 'fruta')->get();
         $lojas = DB::table('produtor_produto')->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
         ->select('produtores.id', 'produtores.nome')->where('tipo', 'fruta')->get();
-
-        return view('index-frutas', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'lojas'));
+        
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('index-frutas', compact('usuario', 'possuiLoja', 'carrinho', 'frutas', 'lojas'));
+        }
+        return view('index-frutas', compact('frutas', 'lojas'));
     }
     
     public function indexVerduras(){
-        $id = auth()->guard('consumidor')->user()->id;
-
-        $usuario = $this->getDados();
-        $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
-        $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-
         $verduras = DB::table('produtor_produto')->where('tipo', 'verdura')->get();
         $lojas = DB::table('produtor_produto')->where('tipo', 'verdura')
         ->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
         ->select('produtores.id', 'produtores.nome')->get();
         
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('index-verduras', compact('usuario', 'possuiLoja', 'carrinho', 'verduras', 'lojas'));
+        }
+
         //dd($lojas);
-        return view('index-verduras', compact('usuario', 'possuiLoja', 'carrinho', 'verduras', 'lojas'));
+        return view('index-verduras', compact('verduras', 'lojas'));
     }
     
     public function indexTuberculos(){
-        $id = auth()->guard('consumidor')->user()->id;
-
-        $usuario = $this->getDados();
-        $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
-        $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-        
         $tuberculos = DB::table('produtor_produto')->where('tipo', '!=', 'verdura')->where('tipo', '!=', 'fruta')->get();
         $lojas = DB::table('produtor_produto')->where('tipo', '!=', 'verdura')->where('tipo', '!=', 'fruta')
         ->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
         ->select('produtores.id', 'produtores.nome')->get();
-        return view('index-tuberculos', compact('usuario', 'possuiLoja', 'carrinho', 'tuberculos', 'lojas'));
+        
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('index-tuberculos', compact('usuario', 'possuiLoja', 'carrinho', 'tuberculos', 'lojas'));
+        }
+
+        return view('index-tuberculos', compact('tuberculos', 'lojas'));
     }
 
     public function visaoProduto($idProduto){
-        $id = auth()->guard('consumidor')->user()->id;
-        $usuario = $this->getDados();
-        $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
-        $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-
         $produto = DB::table('produtor_produto')->where('produtor_produto.id', $idProduto)->first();
         $loja = DB::table('produtores')->where('produtores.id', $produto->produtor_id)->first();
         $produtosLoja = DB::table('produtor_produto')->where('produtor_id', $loja->id)
         ->where('tipo', $produto->tipo)->get();
-        
+
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('visao-produto', compact('usuario', 'carrinho', 'possuiLoja', 'produto', 'loja', 'produtosLoja'));
+        }
         //dd($produtosLoja);
-        return view('visao-produto', compact('usuario', 'carrinho', 'possuiLoja', 'produto', 'loja', 'produtosLoja'));
+        return view('visao-produto', compact('produto', 'loja', 'produtosLoja'));
     }
 
     private function getDados(){
