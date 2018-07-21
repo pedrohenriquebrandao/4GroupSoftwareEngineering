@@ -536,10 +536,16 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">{{$fruta->tipo}}</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">{{$fruta->nome}}</a></h3>
+										@forelse($lojas as $loja)
+											@if($fruta->produtor_id == $loja->id)
+												<p class="nome-loja">Loja: {{$loja->nome}}</p>
+												@break
+											@endif
+										@empty
+											<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+										@endforelse
+										<h3 class="product-name"><a href="/{{$fruta->id}}/visao-produto">{{$fruta->nome}}</a></h3>
 										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -566,11 +572,17 @@
 										<img src="{{url('storage/imagem-produtos/'.$verdura->imagem)}}" alt="{{$verdura->imagem}}">
 									</div>
 									<div class="product-body">
-										<p class="product-category">$verdura->tipo</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">$verdura->nome</a></h3>
+										<p class="product-category">{{$verdura->tipo}}</p>
+										@forelse($lojas as $loja)
+											@if($verdura->produtor_id == $loja->id)
+												<p class="nome-loja">Loja: {{$loja->nome}}</p>
+												@break
+											@endif
+										@empty
+											<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+										@endforelse
+										<h3 class="product-name"><a href="/{{$verdura->id}}/visao-produto">{{$verdura->nome}}</a></h3>
 										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
 									</div>
 								</div>
 								<!-- /product widget -->
@@ -600,10 +612,24 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">{{$outro->tipo}}</p>
-										<p class="nome-loja">LOJA: VERDAO</p>
-										<h3 class="product-name"><a href="#">{{$outro->nome}}</a></h3>
+										@forelse($lojas as $loja)
+											@if($outro->produtor_id == $loja->id)
+												<p class="nome-loja">Loja: {{$loja->nome}}</p>
+												@break
+											@endif
+										@empty
+											<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+										@endforelse
+										<h3 class="product-name"><a href="/{{$outro->id}}/visao-produto">{{$outro->nome}}</a></h3>
 										<h4 class="product-price">R$9.00<del class="product-old-price">R$12.00</del></h4>
-										<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+										@forelse($lojas as $loja)
+											@if($outro->produtor_id == $loja->id)
+												<h3 class="product-name"><a href="#">Por: {{$loja->nome}}</a></h3>
+												@break
+											@endif
+										@empty
+											<h3 class="product-name"><a href="#">assinatura por kg</a></h3>
+										@endforelse
 									</div>
 								</div>
 								<!-- /product widget -->
