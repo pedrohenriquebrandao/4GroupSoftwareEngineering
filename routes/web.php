@@ -39,7 +39,7 @@ Route::get('index-promocoes', 'HomeController@indexPromocoes')->name('promocoes'
 
 Route::get('pagamento', 'HomeController@pagamento')->name('pagamento');
 
-Route::post("finalizar", "HomeController@finalizarPagamento")->name("finalizar");
+Route::post("finalizar", "HomeController@finalizarPagamento2")->name("finalizar");
 
 Route::get('visao-loja', 'HomeController@visaoLoja')->name('visaoLoja');
 
