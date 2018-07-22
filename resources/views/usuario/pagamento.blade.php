@@ -30,29 +30,45 @@
 
     <section class="container space">
         <div class="row">
+            @if (session('message'))
+                <div class="alert alert-danger">
+                    {{ session('message') }}
+                </div>
+            @endif
             <div class="col-md-7">
                 <h3 class="fundo hs-pagamento">PAGAMENTO</h3>
                 <div>
-                    <form action="" class="form mt-4">
+                    <form action="{{ url('/finalizar') }}" method="POST" class="form mt-4">
+                    {{csrf_field()}}
                         <div class="mb-3 ml-1">
                             <button type="button" class="btn btn-success col-12" data-toggle="modal" data-target="#modalCartao">Usar cartão salvo</button>
                         </div>
                             
                         <div class="form-group">
                             <label for="num"> Número do Cartão</label>
-                            <input type="text" class="form-control col-6" id="num" maxlength="16" placeholder="EX: 4012001037141112">
+                            <input type="text" class="form-control col-6" name="numero" value="{{old('numero')}}" maxlength="16" placeholder="EX: 4012001037141112">
+                            @if($errors->has('numero'))
+                                <span class="label-input100 help-block" style="color: red">
+                                    {{$errors->first('numero')}}
+                                </span>
+						    @endif
                         </div>
                 
                         <div class="form-group">
                             <label for="nome">Nome do Titular</label>
-                            <input type="text" placeholder="EX: ANTÔNIO S CERQUEIRA" maxlength="30" class="form-control col-6" aria-describedby="nomeHelp" id="nome">
+                            <input type="text" placeholder="EX: ANTÔNIO S CERQUEIRA" maxlength="30" class="form-control col-6" aria-describedby="nomeHelp" name="nome" value="{{old('nome')}}">
+                            @if($errors->has('nome'))
+                                <span class="label-input100 help-block" style="color: red">
+                                    {{$errors->first('nome')}}
+                                </span>
+						    @endif
                             <small id="nomeHelp" class="form-text text-muted">Insira o nome como está gravado no cartão.</small>
                         </div>
                         <div class="form-group">
                             <label for="data">Data de validade</label>
                            
                                 <div class="row">
-                                    <select class="form-control col-2 ml-3" id="data">
+                                    <select class="form-control col-2 ml-3" name="mes" value="{{old('mes')}}">
                                         <option>Mês</option>
                                         <option>01</option>
                                         <option>02</option>
@@ -67,7 +83,7 @@
                                         <option>11</option>
                                         <option>12</option>
                                     </select>
-                                    <select class="form-control col-2 ml-1" id="data">
+                                    <select class="form-control col-2 ml-1" name="ano" value="{{old('ano')}}">
                                         <option>Ano</option>
                                         <option>18</option>
                                         <option>19</option>
@@ -84,7 +100,12 @@
                         </div>
                         <div class="form-group">
                                     <label for="codigo">Código de Segurança: </label>
-                                    <input type="text" maxlength="3" placeholder="EX: 111" class="form-control col-2" aria-describedby="codigoHelp" id="codigo">               
+                                    <input type="text" maxlength="3" placeholder="EX: 111" class="form-control col-2" aria-describedby="codigoHelp" name="codigo" value="{{old('codigo')}}">
+                                    @if($errors->has('codigo'))
+                                        <span class="label-input100 help-block" style="color: red">
+                                            {{$errors->first('codigo')}}
+                                        </span>
+						            @endif            
                                     <small id="codigoHelp" class="form-text text-muted">Encontra-se atrás do cartão.</small>    
                         </div>
                         <div class="form-group">
@@ -109,13 +130,10 @@
                             <input type="checkbox" class="form-check-input" id="checkCartao">
                             <label class="form-check-label ml-4" for="checkCartao">Salvar cartão para futuras compras</label>
                         </div>
-
-
-                        
-                    </form>
                         <div class="mt-1 ml-1">
                             <a href="{{url("/finalizar")}}"><button class="btn btn-danger">Concluir Compra</button> </a>
                         </div>
+                    </form>
                 </div>
             </div>
             <div class="col-md-5">

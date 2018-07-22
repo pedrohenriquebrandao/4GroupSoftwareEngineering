@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use App\Carrinho;
 use Cliente;
 use Auth;
@@ -117,24 +118,32 @@ class HomeController extends Controller
     }
 
     public function finalizarPagamento(Request $request){
-            $socket = socket_create(AF_INET, SOCK_STREAM, 0);
+        $validacao = $this->validacaoCartao($request->all());
 
-            $ip_destino = '192.168.25.209';
-            $porta = 9989;
+        if($validacao->fails()){
+            return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
+        }
 
-            $ligacao = socket_connect($socket, $ip_destino, $porta);
+        $mensagem = $request->numero.";".$request->nome.";".$request->mes.$request->ano.";".$request->codigo;
 
-            $mensagem = "1";
-            $tamanho_envio = strlen($mensagem);
+        $socket = socket_create(AF_INET, SOCK_STREAM, 0);
 
-            $operacao_enviar = socket_send($socket, $mensagem, $tamanho_envio, 0);
+        $ip_destino = '192.168.25.209';
+        $porta = 9989;
 
-            $tamanho_resposta = 2045;
+        $ligacao = socket_connect($socket, $ip_destino, $porta);
 
-            $operacao_receber = socket_recv($socket, $buffer_resposta, $tamanho_resposta, MSG_WAITALL);
+        $tamanho_envio = strlen($mensagem);
 
-            socket_close($socket);
+        $operacao_enviar = socket_send($socket, $mensagem, $tamanho_envio, 0);
 
+        $tamanho_resposta = 2045;
+
+        $operacao_receber = socket_recv($socket, $buffer_resposta, $tamanho_resposta, MSG_WAITALL);
+
+        socket_close($socket);
+
+        //resposta == 1: sucesso no pagamento
         if($buffer_resposta == 1){
             $id_usuario = auth()->guard('consumidor')->user()->id;
 
@@ -142,7 +151,43 @@ class HomeController extends Controller
             ->where('consumidor_carrinho.usuario_id', $id_usuario)->delete();
 
             return redirect("/")->with("message", "Sucesso!");
+        }else if($buffer_resposta == 0){
+            //resposta == 0: cliente sem saldo;
+            return redirect()->back()
+            ->with("message", "Compra não efetuada. Por favor, entre em contato com a empresa responsável pelo seu cartão.");
+
         }
+    }
+
+    public function validacaoCartao($data){
+        $regras['numero'] = 'required|size:16';
+        $regras['nome'] = 'required';
+        $regras['codigo'] = 'required|max:3';
+        
+        $mensagens = [
+            'nome.required' => 'Campo Nome é obrigatório',
+            'numero.required' => 'Campo número é obrigatório',
+            'numero.size' => 'O número do cartão deve conter 16 digitos',
+            'codigo.required' => 'Campo código é obrigatório',
+            'codigo.max' => 'O código deve conter no máximo 3 digitos'
+        ];
+
+        return Validator::make($data, $regras, $mensagens);
+    }
+
+    public function finalizarPagamento2(Request $request){
+        $validacao = $this->validacaoCartao($request->all());
+
+        if($validacao->fails()){
+            return redirect()->back()->withErrors($validacao->errors())->withInput($request->all());
+        }
+        
+        $id_usuario = auth()->guard('consumidor')->user()->id;
+
+        $delete = DB::table('consumidor_carrinho')
+        ->where('consumidor_carrinho.usuario_id', $id_usuario)->delete();
+
+        return redirect("/")->with("message", "Sucesso!");
     }
 
     public function indexCarrinho(){
