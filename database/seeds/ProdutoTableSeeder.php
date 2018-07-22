@@ -20,7 +20,7 @@ class ProdutoTableSeeder extends Seeder
         foreach (range(1, 50) as $i) {
             Produto::create([
                 'nome' => $faker->word(),
-                'descricao' => $faker->text(),
+                'descricao' => $faker->sentence(),
                 'tipo' => $faker->word(),
                 'qtd_frete_gratis' => $faker->randomNumber(2),
                 'imagem' => $faker->image(),
