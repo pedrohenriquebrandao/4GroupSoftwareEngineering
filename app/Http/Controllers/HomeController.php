@@ -96,7 +96,6 @@ class HomeController extends Controller
         return view('index-promocoes', compact('usuario', 'carrinho', 'possuiLoja'));
     }
 
-<<<<<<< HEAD
     public function pagamento(){
         $id = auth()->guard('consumidor')->user()->id;
         $cartoes = DB::table('consumidor_cartao')->where('login_id', $id)->get();
@@ -117,7 +116,7 @@ class HomeController extends Controller
         return view('usuario.pagamento', compact('usuario', 'carrinho', 'possuiLoja'));
     }
 
-    public function finalizarPagamento(){
+    public function finalizarPagamento(Request $request){
             $socket = socket_create(AF_INET, SOCK_STREAM, 0);
 
             $ip_destino = '192.168.25.209';
@@ -134,8 +133,6 @@ class HomeController extends Controller
 
             $operacao_receber = socket_recv($socket, $buffer_resposta, $tamanho_resposta, MSG_WAITALL);
 
-            echo "Servidor: <br><hr>".$buffer_resposta;
-
             socket_close($socket);
 
         if($buffer_resposta == 1){
@@ -148,10 +145,15 @@ class HomeController extends Controller
         }
     }
 
-=======
->>>>>>> defb78dc1d95176562712d07beeb71c913f3c76e
     public function indexCarrinho(){
         $id = auth()->guard('consumidor')->user()->id;
+
+        $produtos = DB::table('consumidor_carrinho')
+        ->join('produtor_produto', 'consumidor_carrinho.produto_id', '=', 'produtor_produto.id')
+        ->select('produtor_produto.*')->where('consumidor_carrinho.usuario_id', $id)->get();
+
+        $lojas = DB::table('produtor_produto')->join('produtores', 'produtor_produto.produtor_id', '=', 'produtores.id')
+        ->select('produtores.id', 'produtores.nome')->where('tipo', 'fruta')->get();
         
         if (Auth::guard('consumidor')->check()) {
             $usuario = $this->getDados();
@@ -159,7 +161,7 @@ class HomeController extends Controller
             
             //Verifica se o usuário possui loja cadastrada;
             $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
-            return view('usuario.carrinho', compact('usuario', 'possuiLoja', 'carrinho'));
+            return view('usuario.carrinho', compact('usuario', 'possuiLoja', 'carrinho', 'produtos', 'lojas'));
         }
 
         return view('usuario.carrinho');
@@ -172,6 +174,25 @@ class HomeController extends Controller
         $carrinho->usuario_id = $id_usuario;
         $carrinho->produto_id = $idProduto;
         $carrinho->save();
+
+        return redirect( route('carrinho') );
+    }
+
+    public function removerCarrinho($idProduto){
+        $produto = DB::table('consumidor_carrinho')->where('produto_id', $idProduto)->first();
+        
+        $produtoRemove = Carrinho::find($produto->id); //Recupera o produto pelo id;
+        
+        $delete = $produtoRemove->delete($produto->id);
+        
+        return redirect( route('carrinho') );
+    }
+    
+    public function limparCarrinho(){
+        $id_usuario = auth()->guard('consumidor')->user()->id;
+
+        $delete = DB::table('consumidor_carrinho')
+        ->where('consumidor_carrinho.usuario_id', $id_usuario)->delete();
 
         return redirect( route('carrinho') );
     }
@@ -230,6 +251,19 @@ class HomeController extends Controller
         }
 
         return view('index-tuberculos', compact('tuberculos', 'lojas'));
+    }
+
+    public function visaoLoja(){
+        if (Auth::guard('consumidor')->check()) {
+            $id = auth()->guard('consumidor')->user()->id;
+            $usuario = $this->getDados();
+            $carrinho = DB::table('consumidor_carrinho')->where('usuario_id', '=', $id)->count();
+            
+            //Verifica se o usuário possui loja cadastrada;
+            $possuiLoja =  DB::table('produtores')->where('login_id', $id)->exists();
+            return view('visao-loja', compact('usuario', 'carrinho', 'possuiLoja'));
+        }
+        return view('visao-loja', compact('usuario', 'carrinho', 'possuiLoja'));
     }
 
     public function visaoProduto($idProduto){

@@ -21,6 +21,10 @@ Route::get('carrinho', 'HomeController@indexCarrinho')->name('carrinho');
 
 Route::get("/{id}/carrinho", "HomeController@AddCarrinho")->name("AddCarrinho");
 
+Route::get("/{id}/removerCarrinho", "HomeController@removerCarrinho")->name("removerCarrinho");
+
+Route::get("/limparCarrinho", "HomeController@limparCarrinho")->name("limparCarrinho");
+
 Route::get('index-frutas', 'HomeController@indexFrutas')->name('frutas');
 
 Route::get('index-verduras', 'HomeController@indexVerduras')->name('verduras');
@@ -33,34 +37,19 @@ Route::get('index-lojas', 'HomeController@indexLojas')->name('lojas');
 
 Route::get('index-promocoes', 'HomeController@indexPromocoes')->name('promocoes');
 
-Route::get('pagamento', function () {
-    return view('usuario.pagamento');
-});
+Route::get('pagamento', 'HomeController@pagamento')->name('pagamento');
 
 Route::get('finalizar', 'HomeController@finalizarPagamento')->name('finalizar');
+
+Route::get('visao-loja', 'HomeController@visaoLoja')->name('visaoLoja');
 
 Route::get('entrarConsumidor', function () {
     return view('auth.consumidor');
 });
 
-Route::get('index-header', function () {
-    return view('index-header');
-});
-
-
-Route::get('index-nav', function () {
-    return view('index-nav');
-});
-
-
 Route::get('index-cereais', function () {
     return view('index-cereais');
 });
-
-Route::get('visao-loja', function () {
-    return view('visao-loja');
-});
-
 
 // ------ ROTAS DE CADASTRO --------- //
 
@@ -214,11 +203,8 @@ Route::get('paginaInicial', 'Auth\UsuarioLoginController@paginaInicial')
 
 
 // Rota de testes Back //
-
 Route::get('/who', function(){
     return view('who');
 });
-
-Route::get("/listarAdm", "ControllerAdmin@listaAdmins");
 
 Auth::routes();
